@@ -1,0 +1,7 @@
+# Provisional until Wispr's conversion data arrives (Phase 4).
+penetration: 3.0      # flow_users / employees
+absolute_users: 2.0   # log10(flow_users)
+no_team_plan: 2.0
+no_sso: 1.5
+regulated_industry: 1.0   # healthcare, legal, fintech
+signal: 1.0

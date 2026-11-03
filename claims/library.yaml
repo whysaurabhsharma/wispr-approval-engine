@@ -1,0 +1,51 @@
+# One atomic fact per row. Never strengthen a status word. version increments on any change.
+- id: zdr_enforce_org
+  version: 1
+  topic: privacy
+  claim: "Admins can enforce Zero Data Retention org-wide; Privacy Mode is then locked on for every user."
+  source_id: docs_security_overview
+  source_quote: "Enterprise ZDR lock"
+  checked: 2026-11-03
+  status: confirmed
+  plan_scope: [growth, enterprise]
+  conflicts_with: []
+- id: local_data_policy
+  version: 1
+  topic: governance
+  claim: "Admins can set local data policy: stored normally, deleted after 24 hours, or never stored."
+  source_id: docs_security_overview
+  source_quote: "deleted after 24 hours, or never stored"
+  checked: 2026-11-03
+  status: confirmed
+  plan_scope: [growth, enterprise]
+  conflicts_with: []
+- id: sso_enforced_domain
+  version: 1
+  topic: governance
+  claim: "When SSO is enforced for an enterprise, non-SSO logins for the domain are rejected."
+  source_id: docs_data_security
+  source_quote: "non-SSO logins for the domain are rejected"
+  checked: 2026-11-03
+  status: confirmed
+  plan_scope: [growth, enterprise]
+  conflicts_with: []
+- id: soc2_status
+  version: 1
+  topic: compliance
+  claim: "Public pages disagree on SOC 2 Type II status (business page: audited; privacy overview post: re-audit in progress)."
+  source_id: wf_enterprise_privacy_post
+  source_quote: "re-audit in progress with A-LIGN"
+  checked: 2026-11-03
+  status: conflicting
+  plan_scope: [all]
+  conflicts_with: []
+- id: notetaker_consent_controls
+  version: 1
+  topic: consent
+  claim: "Consent notice features of Notetaker are not described in public docs."
+  source_id: docs_security_overview
+  source_quote: ""
+  checked: 2026-11-03
+  status: unknown
+  plan_scope: [all]
+  conflicts_with: []

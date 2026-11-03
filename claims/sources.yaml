@@ -1,0 +1,15 @@
+# trust: primary | secondary | legal-context | competitor
+- {id: wf_business, url: https://wisprflow.ai/business, type: marketing, trust: primary, recheck_days: 14}
+- {id: wf_pricing, url: https://wisprflow.ai/pricing, type: marketing, trust: primary, recheck_days: 14}
+- {id: wf_enterprise_privacy_post, url: https://wisprflow.ai/post/enterprise-privacy-and-security-overview, type: blog, trust: primary, recheck_days: 30}
+- {id: wf_compliance_note, url: https://wisprflow.ai/post/a-note-on-our-compliance-program, type: blog, trust: primary, recheck_days: 90}
+- {id: wf_new_audit, url: https://wisprflow.ai/post/new-independent-audit, type: blog, trust: primary, recheck_days: 90}
+- {id: docs_security_overview, url: https://docs.wisprflow.ai/articles/3147443438-Security-Overview, type: docs, trust: primary, recheck_days: 30}
+- {id: docs_data_security, url: https://docs.wisprflow.ai/articles/1922179110-data-security-encryption, type: docs, trust: primary, recheck_days: 30}
+- {id: docs_security_faq, url: https://docs.wisprflow.ai/articles/3467817258-security-and-compliance-faq, type: docs, trust: primary, recheck_days: 30}
+- {id: docs_hipaa, url: https://docs.wisprflow.ai/articles/4218718535-hipaa-compliance-healthcare-use, type: docs, trust: primary, recheck_days: 30}
+- {id: docs_privacy_mode, url: https://docs.wisprflow.ai/articles/6274675613-privacy-mode-data-retention, type: docs, trust: primary, recheck_days: 30}
+- {id: docs_subprocessors, url: https://docs.wisprflow.ai/articles/5375461355-subprocessors-third-party-security, type: docs, trust: primary, recheck_days: 30}
+- {id: docs_audit_timeline, url: https://docs.wisprflow.ai/articles/2598522832-timeline-for-new-soc-2-audit, type: docs, trust: primary, recheck_days: 30}
+- {id: ms_fluid_dictation, url: https://support.microsoft.com/en-US/Accessibility/windows/voice-access/fluid-dictation, type: docs, trust: competitor, recheck_days: 90}
+- {id: legal_granola_btlaw, url: https://btlaw.com/en/insights/alerts/2026/what-the-granola-class-action-means-for-companies-building-and-deploying-conversation-capture-tools, type: article, trust: legal-context, recheck_days: 90}

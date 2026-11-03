@@ -1,0 +1,21 @@
+account_id,domain,flow_users,users_by_team,has_team_plan,sso_enabled,employees,industry,it_contact,champion,signals,score,reasons,tier
+sample-12,sample12.example,142,Sales:71;Support:47,false,false,200,healthcare,[find IT lead],[unknown],employee posted about Flow,12.8,absolute_users;penetration;no_team_plan,A
+sample-18,sample18.example,310,Sales:155;Support:103,false,false,900,support-outsourcing,[find IT lead],[unknown],hiring security lead,11.55,absolute_users;penetration;no_team_plan,A
+sample-07,sample07.example,142,Sales:71;Support:47,false,true,200,saas,[find IT lead],[unknown],employee posted about Flow,10.3,absolute_users;penetration;no_team_plan,A
+sample-10,sample10.example,60,Sales:30;Support:20,false,false,3200,fintech,[find IT lead],[unknown],hiring security lead,9.17,absolute_users;no_team_plan;no_sso,A
+sample-08,sample08.example,310,Sales:155;Support:103,true,false,3200,saas,[find IT lead],[unknown],employee posted about Flow,8.06,absolute_users;no_sso;signal,A
+sample-17,sample17.example,310,Sales:155;Support:103,true,true,1800,support-outsourcing,[find IT lead],[unknown],employee posted about Flow,7.02,absolute_users;penetration;signal,A
+sample-06,sample06.example,12,Sales:6;Support:4,false,false,3200,logistics,[find IT lead],[unknown],employee posted about Flow,6.68,absolute_users;no_team_plan;no_sso,B
+sample-16,sample16.example,60,Sales:30;Support:20,false,true,3200,saas,[find IT lead],[unknown],hiring security lead,6.67,absolute_users;no_team_plan;signal,B
+sample-14,sample14.example,35,Sales:17;Support:11,true,false,450,legal,[find IT lead],[unknown],,6.05,absolute_users;no_sso;regulated_industry,B
+sample-19,sample19.example,35,Sales:17;Support:11,true,false,5000,healthcare,[find IT lead],[unknown],,5.63,absolute_users;no_sso;regulated_industry,B
+sample-01,sample01.example,12,Sales:6;Support:4,false,true,900,saas,[find IT lead],[unknown],employee posted about Flow,5.24,absolute_users;no_team_plan;signal,B
+sample-13,sample13.example,35,Sales:17;Support:11,true,true,1800,fintech,[find IT lead],[unknown],hiring security lead,5.2,absolute_users;regulated_industry;signal,B
+sample-03,sample03.example,60,Sales:30;Support:20,true,true,1800,saas,[find IT lead],[unknown],employee posted about Flow,4.76,absolute_users;signal;penetration,C
+sample-15,sample15.example,,,false,false,5000,support-outsourcing,[find IT lead],[unknown],hiring security lead,4.5,no_team_plan;no_sso;signal,C
+sample-02,sample02.example,35,Sales:17;Support:11,true,true,200,saas,[find IT lead],[unknown],,4.14,absolute_users;penetration,C
+sample-11,sample11.example,35,Sales:17;Support:11,true,true,900,support-outsourcing,[find IT lead],[unknown],,3.32,absolute_users;penetration,C
+sample-20,sample20.example,,,false,true,3200,logistics,[find IT lead],[unknown],hiring security lead,3.0,no_team_plan;signal,C
+sample-05,sample05.example,,,false,true,3200,logistics,[find IT lead],[unknown],,2.0,no_team_plan,C
+sample-09,sample09.example,,,true,true,5000,legal,[find IT lead],[unknown],employee posted about Flow,2.0,regulated_industry;signal,C
+sample-04,sample04.example,,,true,true,1800,support-outsourcing,[find IT lead],[unknown],employee posted about Flow,1.0,signal,C
