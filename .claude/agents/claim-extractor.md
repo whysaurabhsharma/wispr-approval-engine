@@ -29,3 +29,4 @@ Rules:
 5. If the quote you want is longer than 14 words, pick the 14-word span that carries the fact.
 6. Hard limit: 25 rows per page. If there are more, keep the facts an approver would ask about first.
 
+7. Legal and news sources: keep attribution. If the page says a complaint, plaintiff or lawsuit alleges or claims something, the claim must say so (for example 'The Otter complaint alleges that...'). Never turn an allegation into a fact about the company. Court rulings are facts about the case, not about the product.
