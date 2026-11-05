@@ -19,3 +19,7 @@
 - {id: docs_data_requests, url: https://docs.wisprflow.ai/articles/8254696706-data-requests-get-a-copy-of-your-data-or-ask-us-to-delete-it, type: docs, trust: primary, recheck_days: 30}
 - {id: ms_fluid_dictation, url: https://support.microsoft.com/en-US/Accessibility/windows/voice-access/fluid-dictation, type: docs, trust: competitor, recheck_days: 90}
 - {id: legal_granola_btlaw, url: https://btlaw.com/en/insights/alerts/2026/what-the-granola-class-action-means-for-companies-building-and-deploying-conversation-capture-tools, type: article, trust: legal-context, recheck_days: 90}
+- {id: comp_willow_security, url: https://willowvoice.com/security, type: marketing, trust: competitor, recheck_days: 30}
+- {id: comp_willow_teams, url: https://willowvoice.com/teams, type: marketing, trust: competitor, recheck_days: 30}
+- {id: comp_apple_dictation, url: https://support.apple.com/guide/mac-help/use-dictation-mh40584/mac, type: docs, trust: competitor, recheck_days: 90}
+- {id: legal_otter_uctoday, url: "https://www.uctoday.com/?p=748128", type: article, trust: legal-context, recheck_days: 90}
