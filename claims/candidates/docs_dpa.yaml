@@ -1,0 +1,241 @@
+- id: dpa_available_every_plan
+  version: 1
+  topic: legal
+  claim: "The standard DPA is available to every dashboard member on every plan, including non-admins."
+  source_id: docs_dpa
+  source_quote: "available to every dashboard member on every plan, including non-admins"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [all]
+  conflicts_with: []
+
+- id: dpa_no_nda_required
+  version: 1
+  topic: legal
+  claim: "Getting the DPA requires no NDA acceptance."
+  source_id: docs_dpa
+  source_quote: "No separate portal sign-in, company-email address, or NDA acceptance is required."
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: dpa_no_portal_or_company_email
+  version: 1
+  topic: legal
+  claim: "Getting the DPA requires no separate portal sign-in and no company-email address."
+  source_id: docs_dpa
+  source_quote: "No separate portal sign-in, company-email address, or NDA acceptance is required."
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: dpa_not_on_flow_api_dashboard
+  version: 1
+  topic: legal
+  claim: "The Flow API dashboard does not list the DPA."
+  source_id: docs_dpa
+  source_quote: "The Flow API dashboard does not list the DPA."
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: dpa_privacy_page_card
+  version: 1
+  topic: legal
+  claim: "The DPA is opened from the Data processing addendum card on the dashboard Privacy page."
+  source_id: docs_dpa
+  source_quote: "Data processing addendum"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: dpa_opens_in_drive_viewer
+  version: 1
+  topic: privacy
+  claim: "The DPA opens in a Google Drive file viewer in a new tab, not downloaded in-page."
+  source_id: docs_dpa
+  source_quote: "in a new tab, without downloading it in-page."
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: dpa_privacy_page_no_request_form
+  version: 1
+  topic: legal
+  claim: "The Privacy page has no DPA request form and no download button."
+  source_id: docs_dpa
+  source_quote: "Privacy has no request form or download button."
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: dpa_billing_separate_url
+  version: 1
+  topic: legal
+  claim: "Billing pages link to a different DPA URL, wisprflow.ai/legal/dpa."
+  source_id: docs_dpa
+  source_quote: "Billing pages use a different DPA URL:"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: dpa_eu_scc_included
+  version: 1
+  topic: legal
+  claim: "The DPA includes the EU Standard Contractual Clauses for transfers out of the EEA."
+  source_id: docs_dpa
+  source_quote: "EU Standard Contractual Clauses (SCCs) for transfers of personal data"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: dpa_uk_addendum_included
+  version: 1
+  topic: legal
+  claim: "The DPA includes a UK Addendum for transfers subject to the UK GDPR."
+  source_id: docs_dpa
+  source_quote: "A UK Addendum for transfers subject to the UK GDPR."
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: dpa_annex_iii_subprocessors
+  version: 1
+  topic: privacy
+  claim: "The DPA includes Annex III, which lists current subprocessors."
+  source_id: docs_dpa
+  source_quote: "Annex III, listing current subprocessors."
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: dpa_subprocessor_notice_10_days
+  version: 1
+  topic: privacy
+  claim: "Wispr gives at least 10 days' prior written notice before adding a new subprocessor; the page says to confirm this against the DPA PDF."
+  source_id: docs_dpa
+  source_quote: "Wispr gives at least 10 days' prior written notice before adding a new subprocessor."
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: dpa_publicly_linked_document
+  version: 1
+  topic: legal
+  claim: "The DPA is a publicly linked document, and support can share the same link or file."
+  source_id: docs_dpa
+  source_quote: "The DPA is a publicly linked document"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: dpa_tia_not_provided_by_wispr
+  version: 1
+  topic: legal
+  claim: "Wispr does not provide a Transfer Impact Assessment."
+  source_id: docs_dpa
+  source_quote: "No. Under the SCC framework, you carry out the TIA"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: dpa_tia_customer_controller_duty
+  version: 1
+  topic: legal
+  claim: "Under the SCC framework, the customer carries out the TIA as data controller."
+  source_id: docs_dpa
+  source_quote: "you carry out the TIA as the data controller"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: dpa_tia_wispr_support
+  version: 1
+  topic: legal
+  claim: "Wispr supports the customer's TIA with the DPA, including the SCCs and Annex III."
+  source_id: docs_dpa
+  source_quote: "Wispr supports it with the DPA (including the SCCs and Annex III)"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: soc2_card_enterprise_only
+  version: 1
+  topic: compliance
+  claim: "The SOC 2 and HIPAA compliance card on Privacy requires an Enterprise plan."
+  source_id: docs_dpa
+  source_quote: "is the only card requiring an Enterprise plan"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+
+- id: soc2_org_entry_enterprise_only
+  version: 1
+  topic: compliance
+  claim: "The SOC 2 entry in Settings > Organization has the same Enterprise plan restriction."
+  source_id: docs_dpa
+  source_quote: "has the same restriction."
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+
+- id: privacy_soc2_card_other_plans_disabled
+  version: 1
+  topic: compliance
+  claim: "On plans other than Enterprise, the Privacy card is disabled."
+  source_id: docs_dpa
+  source_quote: "On other plans, the Privacy card is disabled,"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: dpa_customer_data_processed_us
+  version: 1
+  topic: privacy
+  claim: "All customer data is processed in the United States."
+  source_id: docs_dpa
+  source_quote: "All customer data is processed in the United States;"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: dpa_no_eea_apac_regional_processing
+  version: 1
+  topic: privacy
+  claim: "There is no regional processing in the EEA or Asia-Pacific."
+  source_id: docs_dpa
+  source_quote: "there is no regional processing in the EEA or Asia-Pacific"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: dpa_org_legal_contact_email
+  version: 1
+  topic: legal
+  claim: "Organization or legal DPA requests go to enterprise@wispr.ai."
+  source_id: docs_dpa
+  source_quote: "For organization or legal requests, contact"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []

@@ -1,0 +1,250 @@
+- id: default_on_both_data_switches
+  version: 1
+  topic: consent
+  claim: Both data-sharing switches default to on unless an organization restricts them.
+  source_id: docs_data_sharing
+  source_quote: "Both switches default to on unless restricted"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: model_improvement_off_withholds_content
+  version: 1
+  topic: privacy
+  claim: With model improvement off, audio, transcripts, edits and other personal content are withheld from model improvement and evaluation.
+  source_id: docs_data_sharing
+  source_quote: "For model improvement and evaluation, audio, transcripts, edits and other personal content are withheld"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: model_improvement_off_metadata_still_uploaded
+  version: 1
+  topic: privacy
+  claim: With model improvement off, Flow still uploads dictation details such as word count, duration, app, URL and timestamp.
+  source_id: docs_data_sharing
+  source_quote: "Flow still uploads dictation details such as word count, duration"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: model_improvement_off_no_stop_cloud_processing
+  version: 1
+  topic: privacy
+  claim: Turning off model improvement does not stop cloud processing.
+  source_id: docs_data_sharing
+  source_quote: "Turning it off does not stop cloud processing"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: confidential_content_turn_off_before_recording
+  version: 1
+  topic: privacy
+  claim: For confidential or privileged content, the page advises turning model improvement off before recording.
+  source_id: docs_data_sharing
+  source_quote: "For confidential or privileged content, turn"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: reported_dictation_retained_by_wispr
+  version: 1
+  topic: privacy
+  claim: A dictation a user chooses to report is retained by Wispr.
+  source_id: docs_data_sharing
+  source_quote: "A dictation you choose to report is retained by Wispr"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: reported_dictation_used_for_training
+  version: 1
+  topic: privacy
+  claim: A reported dictation can be used by Wispr to train and evaluate its models.
+  source_id: docs_data_sharing
+  source_quote: "can be used to train and evaluate its models"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: wispr_does_not_sell_user_data
+  version: 1
+  topic: privacy
+  claim: Wispr does not sell user data.
+  source_id: docs_data_sharing
+  source_quote: "Wispr does not sell your data"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: dictation_cloud_storage_stores_history_on_servers
+  version: 1
+  topic: privacy
+  claim: Dictation cloud storage stores dictation transcripts, audio and history on Wispr's servers for cross-device access.
+  source_id: docs_data_sharing
+  source_quote: "Stores dictation transcripts, audio and history on Wispr's servers"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: notetaker_transcripts_stored_in_cloud
+  version: 1
+  topic: privacy
+  claim: Notetaker transcripts and summaries are stored in Wispr's cloud.
+  source_id: docs_data_sharing
+  source_quote: "Notetaker transcripts and summaries are stored in Wispr's cloud"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: notetaker_cloud_storage_no_opt_out
+  version: 1
+  topic: consent
+  claim: Notetaker transcripts and summaries have no setting to opt out of cloud storage.
+  source_id: docs_data_sharing
+  source_quote: "with no setting to opt out"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: desktop_cloud_off_recording_continues_after_confirmation
+  version: 1
+  topic: privacy
+  claim: On desktop, turning cloud storage off does not stop recording once Flow confirms the organization and agreement details.
+  source_id: docs_data_sharing
+  source_quote: "does not stop recording once Flow confirms your organization and agreement details"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: desktop_cloud_off_blocks_recording_while_unconfirmed
+  version: 1
+  topic: privacy
+  claim: On desktop, with cloud storage off, new recordings are blocked while Flow is still confirming details or cannot confirm preferences.
+  source_id: docs_data_sharing
+  source_quote: "blocks new recordings while it is still confirming them"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: hipaa_baa_locks_sharing_off
+  version: 1
+  topic: compliance
+  claim: A signed HIPAA Business Associate Agreement locks data sharing off.
+  source_id: docs_data_sharing
+  source_quote: "A signed HIPAA Business Associate Agreement (BAA) locks sharing off"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: personal_or_org_baa_locks_cloud_storage_off
+  version: 1
+  topic: compliance
+  claim: A personal or organization BAA locks dictation cloud storage off, even if another organization setting permits sharing.
+  source_id: docs_data_sharing
+  source_quote: "A personal or organization BAA locks"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: enterprise_sharing_off_no_model_training
+  version: 1
+  topic: privacy
+  claim: On Enterprise, sharing stays off, so Wispr does not use those organizations' dictation content to improve its models.
+  source_id: docs_data_sharing
+  source_quote: "On Enterprise, sharing stays off, so Wispr does not use"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: enterprise_model_training_off_for_everyone
+  version: 1
+  topic: governance
+  claim: Enterprise model training is off for everyone, with no enable switch.
+  source_id: docs_data_sharing
+  source_quote: "Enterprise model training is"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: teams_pro_model_training_managed_individually
+  version: 1
+  topic: governance
+  claim: For Teams and Pro, model training is managed individually, so each member decides.
+  source_id: docs_data_sharing
+  source_quote: "with no enable switch; Teams and Pro show"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [teams, pro]
+  conflicts_with: []
+- id: enforce_off_for_everyone_requires_enterprise
+  version: 1
+  topic: governance
+  claim: Enforcing model training off for everyone requires upgrading to Enterprise.
+  source_id: docs_data_sharing
+  source_quote: "so each member decides, and enforcing off for everyone requires upgrading to Enterprise"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [teams, pro]
+  conflicts_with: []
+- id: enforce_zero_retention_enterprise_admins_only
+  version: 1
+  topic: governance
+  claim: Only Enterprise admins can change Enforce zero data retention, unless Wispr has locked it or a signed BAA prevents disabling it.
+  source_id: docs_data_sharing
+  source_quote: "only Enterprise admins can change it, unless Wispr has locked it"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: notetaker_works_alongside_baa
+  version: 1
+  topic: compliance
+  claim: Notetaker works alongside a signed BAA, so the user does not need to revoke the BAA to record meetings.
+  source_id: docs_data_sharing
+  source_quote: "Notetaker works alongside a signed personal or organization BAA"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: revoking_baa_does_not_restore_sharing
+  version: 1
+  topic: compliance
+  claim: Revoking a BAA does not turn sharing or dictation cloud storage back on.
+  source_id: docs_data_sharing
+  source_quote: "it does not turn sharing or dictation cloud storage back on"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: sign_out_resets_cloud_storage_to_on
+  version: 1
+  topic: privacy
+  claim: Signing out resets the cloud-storage preference to on.
+  source_id: docs_data_sharing
+  source_quote: "Signing out resets the cloud-storage preference to on"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: unconfirmed_preference_no_audio_sharing
+  version: 1
+  topic: privacy
+  claim: If Flow cannot confirm a sharing preference, agreement or organization policy, it does not share dictation audio.
+  source_id: docs_data_sharing
+  source_quote: "it does not share dictation audio"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: dictation_controls_platforms
+  version: 1
+  topic: product
+  claim: The data sharing and cloud storage controls are available on Mac, Windows, iOS and Android.
+  source_id: docs_data_sharing
+  source_quote: "Mac, Windows, iOS and Android"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []

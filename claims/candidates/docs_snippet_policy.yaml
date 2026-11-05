@@ -1,0 +1,230 @@
+- id: snippet_policy_default_unrestricted
+  version: 1
+  topic: governance
+  claim: "The snippet sharing policy defaults to Unrestricted, which lets any member share org-wide."
+  source_id: docs_snippet_policy
+  source_quote: "(the default) lets any member share org-wide."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [business-tier, growth, enterprise]
+  conflicts_with: []
+- id: snippet_policy_department_only_limits
+  version: 1
+  topic: governance
+  claim: "The Department only snippet sharing policy limits non-admin members to their team's shared library."
+  source_id: docs_snippet_policy
+  source_quote: "limits non-admin members to their team's shared library."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [business-tier, growth, enterprise]
+  conflicts_with: []
+- id: snippet_policy_admin_roles_share_org_wide
+  version: 1
+  topic: governance
+  claim: "Admin, superadmin and IT admin roles can share snippets org-wide under either snippet sharing policy."
+  source_id: docs_snippet_policy
+  source_quote: "Admin, superadmin, and IT admin roles can share org-wide under either policy."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [business-tier, growth, enterprise]
+  conflicts_with: []
+- id: snippet_policy_change_applies_forward_only
+  version: 1
+  topic: governance
+  claim: "A change to the Department only snippet sharing policy applies immediately and forward only."
+  source_id: docs_snippet_policy
+  source_quote: "Applies immediately, forward only"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [business-tier, growth, enterprise]
+  conflicts_with: []
+- id: snippet_policy_existing_entries_stay_visible
+  version: 1
+  topic: governance
+  claim: "Org-wide snippets and dictionary words shared before Department only stay visible and usable."
+  source_id: docs_snippet_policy
+  source_quote: "entries already shared org-wide stay visible and usable."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [business-tier, growth, enterprise]
+  conflicts_with: []
+- id: snippet_policy_non_admin_org_wide_changes_blocked
+  version: 1
+  topic: governance
+  claim: "Under Department only, non-admins are blocked from creating, editing or deleting org-wide snippets and dictionary words."
+  source_id: docs_snippet_policy
+  source_quote: "Non-admins attempting an org-wide create, edit, or delete see the error"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [business-tier, growth, enterprise]
+  conflicts_with: []
+- id: snippet_policy_rename_counts_as_edit
+  version: 1
+  topic: governance
+  claim: "Under Department only, non-admins cannot rename an org-wide entry, even one they created."
+  source_id: docs_snippet_policy
+  source_quote: "Non-admins cannot rename an org-wide entry, even one they created."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [business-tier, growth, enterprise]
+  conflicts_with: []
+- id: snippet_bulk_import_rejects_org_wide
+  version: 1
+  topic: governance
+  claim: "Bulk import writes to the importer's team only and rejects org-wide entries, regardless of policy or role."
+  source_id: docs_snippet_policy
+  source_quote: "rejects org-wide entries, regardless of policy or role."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [business-tier, growth, enterprise]
+  conflicts_with: []
+- id: snippet_share_requires_team_features
+  version: 1
+  topic: product
+  claim: "Org-wide share controls are disabled without team features."
+  source_id: docs_snippet_policy
+  source_quote: "Without team features, share controls are disabled"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [business-tier, growth, enterprise]
+  conflicts_with: []
+- id: snippet_policy_admin_portal_web_only
+  version: 1
+  topic: product
+  claim: "Both the snippet sharing policy and connector access are configured in the admin portal on the web, not the desktop app."
+  source_id: docs_snippet_policy
+  source_quote: "Both policies are configured in the admin portal (web), not the desktop app."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [business-tier, growth, enterprise]
+  conflicts_with: []
+- id: snippet_policy_desktop_apps_pick_up_changes
+  version: 1
+  topic: product
+  claim: "Running desktop apps pick up snippet policy changes automatically, with no restart or refresh."
+  source_id: docs_snippet_policy
+  source_quote: "Running desktop apps pick up policy changes automatically"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [business-tier, growth, enterprise]
+  conflicts_with: []
+- id: settings_change_admin_roles_only
+  version: 1
+  topic: governance
+  claim: "Only admins, superadmins and IT admins can change the snippet sharing policy and connector settings."
+  source_id: docs_snippet_policy
+  source_quote: "Only admins, superadmins, and IT admins can change these settings."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: connector_available_unless_admin_disables
+  version: 1
+  topic: governance
+  claim: "Connectors are available to members unless an admin turns them off in Connector access."
+  source_id: docs_snippet_policy
+  source_quote: "Connectors are available unless an admin turns them off,"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: connector_member_must_authorize
+  version: 1
+  topic: security
+  claim: "Nothing connects automatically; each member must click Connect and complete authorization."
+  source_id: docs_snippet_policy
+  source_quote: "each member must click Connect and complete authorization."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: connector_disable_keeps_member_access
+  version: 1
+  topic: security
+  claim: "Disabling a connector does not revoke access that members already granted."
+  source_id: docs_snippet_policy
+  source_quote: "Disabling a connector does not revoke access members already granted."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: connector_disabled_member_disconnect_only
+  version: 1
+  topic: security
+  claim: "After a connector is disabled, an already-connected member can only Disconnect."
+  source_id: docs_snippet_policy
+  source_quote: "with only Disconnect available."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: connector_toggle_saves_automatically
+  version: 1
+  topic: governance
+  claim: "Connector toggles save automatically, and a failed save rolls the toggle back with an error."
+  source_id: docs_snippet_policy
+  source_quote: "Changes save automatically; if a save fails, the toggle rolls back"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: connector_github_linear_cannot_disable
+  version: 1
+  topic: security
+  claim: "Admins cannot disable the GitHub and Linear connectors."
+  source_id: docs_snippet_policy
+  source_quote: "Cannot be disabled by admins."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: connector_slack_disconnect_deletes_briefs
+  version: 1
+  topic: privacy
+  claim: "Disconnecting the Slack connector may delete briefs that use Slack."
+  source_id: docs_snippet_policy
+  source_quote: "This may delete briefs that use Slack."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: connector_gmail_disconnect_deletes_briefs
+  version: 1
+  topic: privacy
+  claim: "Disconnecting Gmail (Google Automations) permanently deletes all of the member's briefs, and this cannot be undone."
+  source_id: docs_snippet_policy
+  source_quote: "Disconnecting will permanently delete all of your briefs. This can't be undone."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: connector_calendar_no_disconnect_warning
+  version: 1
+  topic: privacy
+  claim: "Disconnecting Google Calendar or Outlook Calendar shows no data-loss warning."
+  source_id: docs_snippet_policy
+  source_quote: "No data-loss warning on disconnect."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: connector_members_view_not_change
+  version: 1
+  topic: governance
+  claim: "Non-admin members can view connector settings but cannot change them."
+  source_id: docs_snippet_policy
+  source_quote: "Non-admin members can view connector settings but not change them;"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: connectors_not_generally_available
+  version: 1
+  topic: product
+  claim: "Several connectors are not yet generally available."
+  source_id: docs_snippet_policy
+  source_quote: "Several connectors are not yet generally available."
+  checked: 2026-11-05
+  status: in-progress
+  plan_scope: [unknown]
+  conflicts_with: []

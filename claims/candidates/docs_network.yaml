@@ -1,0 +1,250 @@
+- id: docs_network_domain_list_incomplete
+  version: 1
+  topic: security
+  claim: "The page says the listed outbound domains are not the complete outbound host list."
+  source_id: docs_network
+  source_quote: "This is not the complete outbound host list"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: docs_network_download_hosts_both
+  version: 1
+  topic: security
+  claim: "Installer and update downloads need both download hosts, dl.wisprflow.ai and dl.wisprflow.com, allowed."
+  source_id: docs_network
+  source_quote: "Actual installer and update downloads; allow both download hosts"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: docs_network_mac_mdm_extra_destination
+  version: 1
+  topic: security
+  claim: "Mac MDM deployments using the app-ownership restore script need an extra download destination allowed."
+  source_id: docs_network
+  source_quote: "Mac MDM deployments that use the app-ownership restore script also need"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: docs_network_root_certificates_respected
+  version: 1
+  topic: security
+  claim: "Flow respects organizational root certificates, including TLS inspection, for dictation."
+  source_id: docs_network
+  source_quote: "Flow respects system proxy settings and organizational root certificates, including TLS inspection"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: docs_network_bad_certificates_fail_dictation
+  version: 1
+  topic: security
+  claim: "Malformed or intermediate-only corporate certificates can make dictation fail."
+  source_id: docs_network
+  source_quote: "malformed or intermediate-only corporate certificates can fail even when other connections work"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: docs_network_bypass_tls_stays_enabled
+  version: 1
+  topic: security
+  claim: "On the dictation inspection bypass, TLS stays enabled and the gateway stops intercepting and re-encrypting the connections."
+  source_id: docs_network
+  source_quote: "TLS stays enabled. The gateway stops intercepting and re-encrypting these connections"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: docs_network_dlp_cannot_inspect_bypass
+  version: 1
+  topic: compliance
+  claim: "DLP tools that need decrypted traffic cannot inspect the bypassed Flow endpoints."
+  source_id: docs_network
+  source_quote: "DLP tools that need decrypted traffic cannot inspect these endpoints"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: docs_network_other_controls_remain
+  version: 1
+  topic: compliance
+  claim: "Endpoint DLP, DNS controls and egress-volume monitoring remain available with the dictation bypass."
+  source_id: docs_network
+  source_quote: "Endpoint DLP, DNS controls, egress-volume monitoring, and other controls"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: docs_network_wildcard_list_required
+  version: 1
+  topic: security
+  claim: "The dictation bypass needs the complete wildcard destination list, including *.wisprflow.com."
+  source_id: docs_network
+  source_quote: "Use the complete wildcard destination list, including *.wisprflow.com"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: docs_network_destinations_change
+  version: 1
+  topic: security
+  claim: "Dictation destinations can change without an app update and can differ between users."
+  source_id: docs_network
+  source_quote: "Destinations can change without an app update and differ between colleagues"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: docs_network_bypass_no_per_user
+  version: 1
+  topic: security
+  claim: "The dictation bypass policy does not need reapplying per user, device, or session."
+  source_id: docs_network
+  source_quote: "The policy does not need reapplying per user, device, or session"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: docs_network_ip_allowlist_enterprise_only
+  version: 1
+  topic: product
+  claim: "The IP allowlist appears only for Enterprise organizations enabled by Wispr."
+  source_id: docs_network
+  source_quote: "IP allowlist appears only for Enterprise organizations enabled by Wispr"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: docs_network_ip_allowlist_admin_requirements
+  version: 1
+  topic: security
+  claim: "Changing the IP allowlist requires an active Enterprise plan and enterprise admin permissions."
+  source_id: docs_network
+  source_quote: "Changing it requires an active Enterprise plan and enterprise admin permissions"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: docs_network_ip_allowlist_not_android_speech
+  version: 1
+  topic: security
+  claim: "The IP allowlist is not enforced on Android or on the speech-processing service."
+  source_id: docs_network
+  source_quote: "is not enforced on Android or on the speech-processing service"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: docs_network_ip_allowlist_max_cidrs
+  version: 1
+  topic: security
+  claim: "Up to 64 IPv4/IPv6 CIDR entries are accepted in the IP allowlist."
+  source_id: docs_network
+  source_quote: "Up to 64 IPv4/IPv6 CIDRs are accepted"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: docs_network_ip_allowlist_invalid_rejected
+  version: 1
+  topic: security
+  claim: "Invalid entries, empty lists, 0.0.0.0/0 and ::/0 are rejected in the IP allowlist."
+  source_id: docs_network
+  source_quote: "invalid entries, empty lists, 0.0.0.0/0, and ::/0 are rejected"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: docs_network_ip_allowlist_save_guard
+  version: 1
+  topic: security
+  claim: "Save is unavailable in the IP allowlist editor until Flow detects the admin's current IP."
+  source_id: docs_network
+  source_quote: "Save is unavailable until Flow detects your current IP"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: docs_network_ip_allowlist_signed_in_only
+  version: 1
+  topic: security
+  claim: "IP allowlist restrictions apply to signed-in access, not anonymous use."
+  source_id: docs_network
+  source_quote: "Restrictions apply to signed-in access, not anonymous use"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: docs_network_ip_allowlist_fail_open
+  version: 1
+  topic: security
+  claim: "IP allowlist restrictions are not applied if Flow cannot validate a saved list."
+  source_id: docs_network
+  source_quote: "or validate a saved list, restrictions are not applied"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: docs_network_ip_allowlist_disable_clears
+  version: 1
+  topic: security
+  claim: "Disabling the IP allowlist clears all saved IP ranges, which must be re-entered to re-enable it."
+  source_id: docs_network
+  source_quote: "Disabling clears saved IP ranges; you must re-enter them"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: docs_network_ip_allowlist_admin_path
+  version: 1
+  topic: security
+  claim: "The IP allowlist is set in the admin portal under Settings, Organization, Universal controls."
+  source_id: docs_network
+  source_quote: "→ Settings → Organization → Universal controls"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: docs_network_block_unapproved_signout
+  version: 1
+  topic: security
+  claim: "Flow signs Mac and Windows users out when their network is unapproved."
+  source_id: docs_network
+  source_quote: "Flow signs Mac and Windows users out when their network is unapproved"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: docs_network_block_scim_accounts
+  version: 1
+  topic: security
+  claim: "The network sign-out block also applies to accounts added through SCIM."
+  source_id: docs_network
+  source_quote: "including accounts added through SCIM"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: docs_network_block_stops_notetaker
+  version: 1
+  topic: product
+  claim: "Blocking a network stops any in-progress Notetaker recording."
+  source_id: docs_network
+  source_quote: "stops any in-progress Notetaker recording"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: docs_network_vulnerability_contact
+  version: 1
+  topic: security
+  claim: "Wispr asks that vulnerabilities be reported to security@wispr.ai."
+  source_id: docs_network
+  source_quote: "Report vulnerabilities to security@wispr.ai"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []

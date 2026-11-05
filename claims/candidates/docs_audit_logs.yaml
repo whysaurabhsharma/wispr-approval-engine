@@ -1,0 +1,230 @@
+- id: audit_logs_admin_roles_only
+  version: 1
+  topic: governance
+  claim: Audit Logs requires an enterprise Admin, SuperAdmin, or IT Admin role.
+  source_id: docs_audit_logs
+  source_quote: "Audit Logs requires an enterprise Admin, SuperAdmin, or IT Admin role"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: audit_logs_own_org_records_only
+  version: 1
+  topic: governance
+  claim: Audit Logs shows only the admin's own organization's records.
+  source_id: docs_audit_logs
+  source_quote: "shows only your organization's records"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: audit_logs_no_desktop_mobile
+  version: 1
+  topic: product
+  claim: There is no Audit Logs page in the desktop or mobile apps.
+  source_id: docs_audit_logs
+  source_quote: "There is no Audit Logs page in the desktop or mobile apps."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: audit_logs_records_membership_changes
+  version: 1
+  topic: governance
+  claim: Audit Logs records who changed membership, roles, invitations, or join requests.
+  source_id: docs_audit_logs
+  source_quote: "Audit Logs shows who changed membership, roles, invitations, or join requests"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: audit_logs_export_cap_10000
+  version: 1
+  topic: governance
+  claim: Audit log exports are limited to about 10,000 events regardless of page size.
+  source_id: docs_audit_logs
+  source_quote: "up to about 10,000 events regardless of page size"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: audit_logs_export_whole_range
+  version: 1
+  topic: governance
+  claim: Audit log exports cover the whole filtered date range, not only loaded rows.
+  source_id: docs_audit_logs
+  source_quote: "Exports cover the whole filtered range, not just loaded rows"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: audit_logs_json_full_records
+  version: 1
+  topic: governance
+  claim: The JSON audit export contains full event records.
+  source_id: docs_audit_logs
+  source_quote: "JSON contains full event records; CSV uses the six columns above"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: audit_logs_csv_six_columns
+  version: 1
+  topic: governance
+  claim: The audit table and CSV export have six columns.
+  source_id: docs_audit_logs
+  source_quote: "The table and CSV have six columns"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: audit_logs_no_email_fields
+  version: 1
+  topic: privacy
+  claim: Audit log records have no separate email-address fields.
+  source_id: docs_audit_logs
+  source_quote: "there are no separate email-address fields"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: audit_logs_names_as_recorded
+  version: 1
+  topic: privacy
+  claim: Names in audit records remain as recorded when the event occurred.
+  source_id: docs_audit_logs
+  source_quote: "Names remain as recorded when the event occurred"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: audit_logs_csv_formula_prefix
+  version: 1
+  topic: security
+  claim: CSV audit values starting with =, +, -, @, tab, or carriage return are quoted and prefixed with an apostrophe.
+  source_id: docs_audit_logs
+  source_quote: "CSV values starting with =, +, -, @, tab, or carriage return are quoted"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: audit_logs_recording_not_switchable
+  version: 1
+  topic: compliance
+  claim: Once audit recording is set up, it cannot be switched off for an enterprise.
+  source_id: docs_audit_logs
+  source_quote: "audit recording cannot be switched off per enterprise"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: audit_logs_events_can_be_lost
+  version: 1
+  topic: compliance
+  claim: Audit events can be lost during recording.
+  source_id: docs_audit_logs
+  source_quote: "events can be lost during recording"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: audit_logs_tied_timestamp_gap
+  version: 1
+  topic: compliance
+  claim: If a full page shares one exact timestamp, older tied events can be unreachable.
+  source_id: docs_audit_logs
+  source_quote: "If a full page shares one exact timestamp, older tied events can be unreachable"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: audit_logs_date_range_under_92_days
+  version: 1
+  topic: product
+  claim: Audit log custom date ranges must be shorter than 92 days.
+  source_id: docs_audit_logs
+  source_quote: "a range shorter than 92 days"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: audit_logs_directory_removal_refused
+  version: 1
+  topic: governance
+  claim: A directory-sync removal that would leave no administrator or no billable user is refused.
+  source_id: docs_audit_logs
+  source_quote: "A removal that would leave no administrator or no billable user is refused"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: audit_logs_system_service_actor
+  version: 1
+  topic: governance
+  claim: System actions are recorded with a service actor rather than a named admin.
+  source_id: docs_audit_logs
+  source_quote: "system actions use a service actor rather than a named admin"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: audit_logs_trial_change_needs_subscription
+  version: 1
+  topic: pricing
+  claim: Changing disable team trial requires an active subscription.
+  source_id: docs_audit_logs
+  source_quote: "Changing disable team trial requires an active subscription"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: audit_logs_trial_enable_ends_trials
+  version: 1
+  topic: pricing
+  claim: Enabling disable team trial immediately ends existing members' active trials.
+  source_id: docs_audit_logs
+  source_quote: "Enabling it immediately ends existing members' active trials"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: audit_logs_membership_policy_recorded
+  version: 1
+  topic: governance
+  claim: Changes to auto-invite or disable team trial are recorded as Membership policy changed.
+  source_id: docs_audit_logs
+  source_quote: "Changes to auto-invite or disable team trial record Membership policy changed"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: audit_logs_bulk_approval_recorded
+  version: 1
+  topic: governance
+  claim: Individual and bulk join request approvals record Join request approved and Member added for each accepted user.
+  source_id: docs_audit_logs
+  source_quote: "Individual and bulk approvals record both Join request approved and Member added"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: audit_logs_support_resend_actor
+  version: 1
+  topic: governance
+  claim: When a Wispr support admin resends an invitation for a customer admin, the Wispr admin is recorded as actor.
+  source_id: docs_audit_logs
+  source_quote: "that Wispr admin is the actor"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: audit_logs_siem_enterprise_plan
+  version: 1
+  topic: product
+  claim: SIEM configuration requires an Enterprise plan and streaming access.
+  source_id: docs_audit_logs
+  source_quote: "SIEM configuration requires an Enterprise plan and streaming access"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []

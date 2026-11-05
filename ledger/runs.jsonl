@@ -1,1 +1,3 @@
 {"t": "2026-11-05T13:47:37", "skill": "it-brief", "input": "sample-01", "result": "pass", "cost_usd": 0.0}
+{"t": "2026-11-05T15:02:11", "skill": "claims-refresh", "input": "docs_hipaa", "result": "pass", "cost_usd": 0.0}
+{"t": "2026-11-05T15:11:28", "skill": "claims-refresh", "input": "all", "result": "pass", "cost_usd": 0.0}

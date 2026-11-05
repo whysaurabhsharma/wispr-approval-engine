@@ -1,0 +1,252 @@
+- id: sso_saml_login
+  version: 1
+  topic: security
+  claim: "Willow lets users sign in with an existing identity provider using SAML-based SSO."
+  source_id: comp_willow_teams
+  source_quote: "Let users sign in securely with your existing identity provider using SAML-based SSO."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: ["enterprise"]
+  conflicts_with: []
+
+- id: sso_enforce_admin
+  version: 1
+  topic: security
+  claim: "Admins can enforce SSO for users."
+  source_id: comp_willow_teams
+  source_quote: "Admins can enforce SSO and provision/deprovision users with SCIM."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: ["enterprise plan"]
+  conflicts_with: []
+
+- id: scim_user_provisioning
+  version: 1
+  topic: security
+  claim: "Willow supports SCIM to automatically add, remove and manage users."
+  source_id: comp_willow_teams
+  source_quote: "Automatically add, remove, and manage users as your team changes."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: ["enterprise"]
+  conflicts_with: []
+
+- id: zdr_enforced_all_subprocessors
+  version: 1
+  topic: privacy
+  claim: "Zero data retention is enforced by Willow and all of its sub-processors."
+  source_id: comp_willow_teams
+  source_quote: "Enforced zero data retention by Willow and all sub-processors."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: ["enterprise"]
+  conflicts_with: []
+
+- id: zdr_model_provider_agreements
+  version: 1
+  topic: privacy
+  claim: "Willow maintains zero data retention agreements with all of its model providers."
+  source_id: comp_willow_teams
+  source_quote: "Willow also maintains zero data retention agreements with all our model providers."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: zdr_enterprise_contractual_controls
+  version: 1
+  topic: privacy
+  claim: "Enterprise teams have contractual controls in place for zero data retention."
+  source_id: comp_willow_teams
+  source_quote: "with contractual controls in place for enterprise teams."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: ["enterprise"]
+  conflicts_with: []
+
+- id: privacy_mode_no_training
+  version: 1
+  topic: privacy
+  claim: "With Privacy Mode enabled org-wide, customer code is never used for training, per the page."
+  source_id: comp_willow_teams
+  source_quote: "With Privacy Mode enabled org-wide, your code is never used for training."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: enterprise_plan_compliance_options
+  version: 1
+  topic: compliance
+  claim: "The page lists SOC 2 Type II, HIPAA, SSO, enforced Privacy Mode and Zero Data Retention as Enterprise Plan options."
+  source_id: comp_willow_teams
+  source_quote: "like SOC 2 Type II, HIPAA, SSO, enforced Privacy Mode, or Zero Data Retention"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: ["enterprise plan"]
+  conflicts_with: []
+
+- id: enterprise_plan_no_seat_minimum
+  version: 1
+  topic: pricing
+  claim: "The Enterprise Plan has no seat count minimums."
+  source_id: comp_willow_teams
+  source_quote: "There are no seat count minimums for the Enterprise Plan."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: ["enterprise plan"]
+  conflicts_with: []
+
+- id: enterprise_plan_custom_pricing
+  version: 1
+  topic: pricing
+  claim: "The page says customers who need scale may need custom pricing on the Enterprise Plan."
+  source_id: comp_willow_teams
+  source_quote: "require dedicated support and custom pricing for scale"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: ["enterprise plan"]
+  conflicts_with: []
+
+- id: team_plan_standard_security
+  version: 1
+  topic: pricing
+  claim: "The page says the team plan suits organizations with standard security needs."
+  source_id: comp_willow_teams
+  source_quote: "your organization has standard security needs"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: ["team plan"]
+  conflicts_with: []
+
+- id: soc2_type2_certified
+  version: 1
+  topic: compliance
+  claim: "Willow is SOC 2 Type II certified, per the page FAQ."
+  source_id: comp_willow_teams
+  source_quote: "Willow is SOC 2 Type II and HIPAA certified"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: regular_penetration_testing
+  version: 1
+  topic: security
+  claim: "Willow performs regular penetration testing."
+  source_id: comp_willow_teams
+  source_quote: "HIPAA certified with regular penetration testing"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: soc2_reports_trust_center
+  version: 1
+  topic: security
+  claim: "Reports are available in the Trust Center, per the page."
+  source_id: comp_willow_teams
+  source_quote: "Reports are available in our Trust Center."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: hipaa_business_associate_agreements
+  version: 1
+  topic: legal
+  claim: "Willow offers Business Associate Agreements for HIPAA-regulated teams."
+  source_id: comp_willow_teams
+  source_quote: "supports HIPAA-regulated teams with enterprise controls, privacy safeguards, and Business Associate Agreements"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: hipaa_status_inconsistent
+  version: 1
+  topic: compliance
+  claim: "The page calls Willow HIPAA certified in one FAQ answer but uses the label HIPAA Ready elsewhere. HIPAA status needs confirmation."
+  source_id: comp_willow_teams
+  source_quote: "Willow is SOC 2 Type II and HIPAA certified"
+  checked: 2026-11-05
+  status: unknown
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: customer_content_encryption
+  version: 1
+  topic: security
+  claim: "Audio, text and customer content are encrypted while transmitted and stored."
+  source_id: comp_willow_teams
+  source_quote: "protected using industry-standard encryption while being transmitted and stored"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: usage_dashboard_by_individual
+  version: 1
+  topic: privacy
+  claim: "The enterprise analytics dashboard shows usage patterns by team and by individual."
+  source_id: comp_willow_teams
+  source_quote: "usage patterns by team and individual"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: ["enterprise"]
+  conflicts_with: []
+
+- id: enterprise_analytics_dashboard
+  version: 1
+  topic: governance
+  claim: "Enterprise administrators have an analytics dashboard for adoption and usage."
+  source_id: comp_willow_teams
+  source_quote: "Enterprise administrators have access to a comprehensive analytics dashboard"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: ["enterprise"]
+  conflicts_with: []
+
+- id: usage_data_export
+  version: 1
+  topic: governance
+  claim: "Usage data can be exported as CSV or through the usage API."
+  source_id: comp_willow_teams
+  source_quote: "Data can be exported through CSV and our usage API"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: ["enterprise"]
+  conflicts_with: []
+
+- id: admin_org_wide_controls
+  version: 1
+  topic: governance
+  claim: "Admins can configure privacy settings, access rules and admin permissions across the whole organization."
+  source_id: comp_willow_teams
+  source_quote: "Configure privacy settings, access rules, and admin permissions across your entire organization"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: ["enterprise"]
+  conflicts_with: []
+
+- id: enterprise_priority_sla
+  version: 1
+  topic: product
+  claim: "Enterprise customers get priority SLAs with guaranteed response times."
+  source_id: comp_willow_teams
+  source_quote: "priority SLAs with guaranteed response times"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: ["enterprise"]
+  conflicts_with: []
+
+- id: enterprise_security_compliance_review
+  version: 1
+  topic: compliance
+  claim: "Enterprise customers get security and compliance review support."
+  source_id: comp_willow_teams
+  source_quote: "security/compliance review support"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: ["enterprise"]
+  conflicts_with: []

@@ -1,0 +1,130 @@
+- id: fluid_dictation_copilot_plus_pc
+  version: 1
+  topic: product
+  claim: "Fluid dictation is a voice access feature on Copilot+ PCs."
+  source_id: ms_fluid_dictation
+  source_quote: "Fluid dictation is a new feature in voice access on Copilot+ PCs"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: fluid_dictation_english_locales
+  version: 1
+  topic: product
+  claim: "Fluid dictation is available in all English locales."
+  source_id: ms_fluid_dictation
+  source_quote: "is available in all English locales"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: fluid_dictation_on_device_slm
+  version: 1
+  topic: privacy
+  claim: "Fluid dictation is powered by on-device small language models (SLMs)."
+  source_id: ms_fluid_dictation
+  source_quote: "This experience is powered by on-device small language models (SLMs)"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: fluid_dictation_model_auto_install
+  version: 1
+  topic: product
+  claim: "The speech models for fluid dictation install automatically in the background when voice access is launched."
+  source_id: ms_fluid_dictation
+  source_quote: "This happens automatically in the background when you launch voice access"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: fluid_dictation_model_progress_windows_update
+  version: 1
+  topic: product
+  claim: "Download progress for the AI Phi Silica model is checked under Settings > Windows update."
+  source_id: ms_fluid_dictation
+  source_quote: "check the progress on the AI Phi Silica model"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: fluid_dictation_enabled_by_default
+  version: 1
+  topic: consent
+  claim: "Fluid dictation is enabled by default."
+  source_id: ms_fluid_dictation
+  source_quote: "Fluid dictation is enabled by default."
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: fluid_dictation_user_can_disable
+  version: 1
+  topic: consent
+  claim: "Users can turn off fluid dictation in Voice access settings under Manage options."
+  source_id: ms_fluid_dictation
+  source_quote: "You can turn it off from"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: fluid_dictation_auto_corrects_text
+  version: 1
+  topic: product
+  claim: "Fluid dictation automatically corrects grammar, punctuation and filler words as the user speaks."
+  source_id: ms_fluid_dictation
+  source_quote: "It automatically corrects grammar, punctuation, and filler words as you speak"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: fluid_dictation_works_all_text_surfaces
+  version: 1
+  topic: product
+  claim: "Once enabled, fluid dictation works across all text editing surfaces."
+  source_id: ms_fluid_dictation
+  source_quote: "it works seamlessly across all text editing surfaces"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: fluid_dictation_revert_original_text
+  version: 1
+  topic: product
+  claim: "Users can say “Revert” or “Undo that” to restore the original text after a correction."
+  source_id: ms_fluid_dictation
+  source_quote: "simply say “Revert” or “Undo that,”"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: fluid_dictation_disabled_secure_fields
+  version: 1
+  topic: privacy
+  claim: "Fluid dictation is automatically disabled on secure fields such as passwords or PINs."
+  source_id: ms_fluid_dictation
+  source_quote: "Fluid dictation will be automatically disabled on secure fields like passwords or PINs"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: ms_help_feedback_used_for_product_improvement
+  version: 1
+  topic: privacy
+  claim: "Feedback submitted on this help page is used to improve Microsoft products and services."
+  source_id: ms_fluid_dictation
+  source_quote: "your feedback will be used to improve Microsoft products and services"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: ms_help_feedback_it_admin_collect
+  version: 1
+  topic: privacy
+  claim: "The customer's IT admin can collect feedback submitted on this help page."
+  source_id: ms_fluid_dictation
+  source_quote: "Your IT admin will be able to collect this data."
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []

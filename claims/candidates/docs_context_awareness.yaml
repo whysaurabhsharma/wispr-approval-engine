@@ -1,0 +1,250 @@
+- id: ca_platform_support
+  version: 1
+  topic: product
+  claim: "Context Awareness is available on Mac, Windows, and iOS, with iOS limited to the focused text field."
+  source_id: docs_context_awareness
+  source_quote: "Mac, Windows, iOS (limited to the focused text field)"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: ca_on_by_default
+  version: 1
+  topic: consent
+  claim: "Context Awareness is on by default."
+  source_id: docs_context_awareness
+  source_quote: "on by default"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: ca_no_screenshots
+  version: 1
+  topic: privacy
+  claim: "Context Awareness works from text and does not take screenshots."
+  source_id: docs_context_awareness
+  source_quote: "Flow works from text and does not take screenshots."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: ca_context_includes_textbox
+  version: 1
+  topic: privacy
+  claim: "When Context Awareness is on, context can include textbox contents and on-screen text."
+  source_id: docs_context_awareness
+  source_quote: "textbox contents (before, selected, and after the cursor), on-screen text"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: ca_context_includes_user_identifier
+  version: 1
+  topic: privacy
+  claim: "When Context Awareness is on, context can include the user's identifier within the app."
+  source_id: docs_context_awareness
+  source_quote: "your user identifier within the app"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: ca_context_cleared_after_dictation
+  version: 1
+  topic: privacy
+  claim: "Captured text, extracted names and counts are cleared when each dictation ends."
+  source_id: docs_context_awareness
+  source_quote: "extracted names, and counts for a dictation are cleared when that dictation ends"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: ca_password_fields_excluded
+  version: 1
+  topic: security
+  claim: "Password field contents are never read or included in context."
+  source_id: docs_context_awareness
+  source_quote: "Password field contents are never read or included in context"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: ca_custom_password_fields_may_read
+  version: 1
+  topic: security
+  claim: "Custom or web-based password fields may be read like normal text fields."
+  source_id: docs_context_awareness
+  source_quote: "custom or web-based password fields may be read like normal text fields"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: ca_sensitive_fields_excluded
+  version: 1
+  topic: security
+  claim: "Flow excludes sensitive and numeric-only fields and browser URL bars from context reading."
+  source_id: docs_context_awareness
+  source_quote: "Flow excludes sensitive and numeric-only fields and browser URL bars"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: ca_banking_apps_and_flow_skipped
+  version: 1
+  topic: security
+  claim: "Context reading is skipped in banking and financial apps and inside Wispr Flow itself."
+  source_id: docs_context_awareness
+  source_quote: "skips context reading entirely in banking and financial apps and inside Wispr Flow"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: ca_mac_accessibility_permission
+  version: 1
+  topic: security
+  claim: "On Mac, Context Awareness needs accessibility permissions granted in System Settings."
+  source_id: docs_context_awareness
+  source_quote: "On Mac, grant accessibility permissions in System Settings"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: ca_matching_on_device
+  version: 1
+  topic: privacy
+  claim: "On Mac and Windows, casing and punctuation matching happens on the user's device."
+  source_id: docs_context_awareness
+  source_quote: "On Mac and Windows this matching happens on your device"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: ca_off_still_sends_app_and_domain
+  version: 1
+  topic: privacy
+  claim: "With Context Awareness off, on Mac and Windows Flow still sends the app name and website domain with each dictation."
+  source_id: docs_context_awareness
+  source_quote: "Flow still sends the app name and website domain with each dictation"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: ca_off_no_other_onscreen_text
+  version: 1
+  topic: privacy
+  claim: "With Context Awareness off, no on-screen text beyond the text near the cursor is read."
+  source_id: docs_context_awareness
+  source_quote: "no other on-screen text is read"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: ca_command_mode_sends_text
+  version: 1
+  topic: privacy
+  claim: "Command Mode and Polish send the text being edited so it can be changed, even when Context Awareness is off."
+  source_id: docs_context_awareness
+  source_quote: "Command Mode and Polish send the text"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: ca_improve_model_default_by_plan
+  version: 1
+  topic: consent
+  claim: "The Improve the model for everyone setting is on by default for Free and Pro and off for Enterprise."
+  source_id: docs_context_awareness
+  source_quote: "on by default for Free and Pro, off for Enterprise"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [free, pro, enterprise]
+  conflicts_with: []
+- id: ca_improve_model_off_keeps_context_awareness
+  version: 1
+  topic: consent
+  claim: "Turning off Improve the model for everyone does not turn off Context Awareness."
+  source_id: docs_context_awareness
+  source_quote: "does not turn off Context Awareness"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: ca_enterprise_disable_for_all_users
+  version: 1
+  topic: governance
+  claim: "On Enterprise, the Disable for all users option turns Context Awareness off for everyone on Mac and Windows and locks the setting."
+  source_id: docs_context_awareness
+  source_quote: "which turns it off for everyone on Mac and Windows and locks the setting"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: ca_enterprise_available_option
+  version: 1
+  topic: governance
+  claim: "On Enterprise, the Available option lets each member control their own Context Awareness toggle but does not force it on."
+  source_id: docs_context_awareness
+  source_quote: "which lets each member control their own toggle but does not force it on"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: ca_growth_admins_cannot_enforce_off
+  version: 1
+  topic: governance
+  claim: "On Growth, each person controls their own Context Awareness setting and administrators cannot enforce it off."
+  source_id: docs_context_awareness
+  source_quote: "each person controls their own setting and administrators cannot enforce it off"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [growth]
+  conflicts_with: []
+- id: ca_hipaa_compatible
+  version: 1
+  topic: compliance
+  claim: "Context Awareness is compatible with HIPAA workflows, according to the page."
+  source_id: docs_context_awareness
+  source_quote: "It is compatible with HIPAA workflows"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: ca_baa_locks_settings
+  version: 1
+  topic: compliance
+  claim: "Signing the applicable Business Associate Agreement (BAA) locks Improve the model for everyone and Dictation Cloud Storage off."
+  source_id: docs_context_awareness
+  source_quote: "sign the applicable Business Associate Agreement (BAA), which locks"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: ca_org_baa_admin_portal
+  version: 1
+  topic: compliance
+  claim: "Organization BAAs are managed by authorized administrators in the Admin Portal."
+  source_id: docs_context_awareness
+  source_quote: "Organization BAAs are managed by authorized administrators in the Admin Portal."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: ca_iphone_keyboard_sends_context
+  version: 1
+  topic: privacy
+  claim: "On iPhone, the keyboard sends the text before and after the cursor, any selected text, and the app name with each dictation."
+  source_id: docs_context_awareness
+  source_quote: "The keyboard sends the text before and after your cursor"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: ca_sensitive_environments_turn_off
+  version: 1
+  topic: compliance
+  claim: "For sensitive environments such as legal, healthcare, or regulated data, the page advises turning Context Awareness off."
+  source_id: docs_context_awareness
+  source_quote: "For sensitive environments (legal, healthcare, or regulated data), turn Context Awareness off"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []

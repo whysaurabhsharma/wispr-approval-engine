@@ -1,0 +1,240 @@
+- id: export_single_archive_download
+  version: 1
+  topic: privacy
+  claim: "A data export is a single archive the user downloads while signed in."
+  source_id: docs_data_requests
+  source_quote: "We build a single archive you download while signed in."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: export_archive_not_emailed
+  version: 1
+  topic: privacy
+  claim: "Wispr does not email the data export archive to the user."
+  source_id: docs_data_requests
+  source_quote: "We do not email the archive,"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: export_request_email_notice
+  version: 1
+  topic: privacy
+  claim: "Wispr emails the account user whenever an export is requested on the account."
+  source_id: docs_data_requests
+  source_quote: "we email you whenever an export is requested on your account."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: export_download_expires_30_days
+  version: 1
+  topic: privacy
+  claim: "An export download stays available for 30 days, then expires."
+  source_id: docs_data_requests
+  source_quote: "the download stays available for 30 days, then expires"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: export_any_signed_in_user
+  version: 1
+  topic: security
+  claim: "Anyone signed in to a user's account can request an export of its data."
+  source_id: docs_data_requests
+  source_quote: "Anyone signed in to your account can request an export."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: delete_account_removes_data
+  version: 1
+  topic: privacy
+  claim: "Deleting an account removes dictation history, audio, meeting content, notes, dictionary, preferences and usage history."
+  source_id: docs_data_requests
+  source_quote: "This removes your account along with your dictation history, audio, meeting content, notes"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: delete_account_revokes_integrations
+  version: 1
+  topic: security
+  claim: "Deleting an account revokes connected integrations."
+  source_id: docs_data_requests
+  source_quote: "revokes connected integrations"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: delete_account_provider_instruction
+  version: 1
+  topic: privacy
+  claim: "On account deletion, Wispr instructs the providers that process data on its behalf to delete it."
+  source_id: docs_data_requests
+  source_quote: "We also instruct the providers that process data on our behalf to delete it."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: delete_account_cancels_billed_subscription
+  version: 1
+  topic: pricing
+  claim: "Deleting an account cancels an active Wispr-billed subscription immediately, with no refund."
+  source_id: docs_data_requests
+  source_quote: "cancels an active Wispr-billed subscription immediately, with no refund"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: delete_account_app_store_subscriptions
+  version: 1
+  topic: pricing
+  claim: "Deleting a Wispr account does not cancel App Store or Google Play subscriptions."
+  source_id: docs_data_requests
+  source_quote: "deleting your Wispr account does not cancel those subscriptions."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: delete_account_other_device_history
+  version: 1
+  topic: privacy
+  claim: "Deleting an account does not remove local history on the user's other devices."
+  source_id: docs_data_requests
+  source_quote: "history on your other devices is not removed"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: delete_account_android_no_in_app
+  version: 1
+  topic: product
+  claim: "Android has no in-app account deletion."
+  source_id: docs_data_requests
+  source_quote: "Android has no in-app deletion."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: delete_account_waiting_period_cancel
+  version: 1
+  topic: privacy
+  claim: "During a deletion waiting period, signing back in with a verified account identity cancels the deletion."
+  source_id: docs_data_requests
+  source_quote: "signing back in with a verified account identity cancels the deletion."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: delete_account_final_not_cancellable
+  version: 1
+  topic: privacy
+  claim: "Once final account deletion starts, it cannot be canceled."
+  source_id: docs_data_requests
+  source_quote: "Once final deletion starts, it cannot be canceled."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: delete_data_keep_account_mac_windows
+  version: 1
+  topic: privacy
+  claim: "On Mac and Windows, a user can delete their data while the account, sign-in, settings and subscription stay active."
+  source_id: docs_data_requests
+  source_quote: "you can delete your data while your account, sign-in, settings and subscription stay active"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: delete_data_keep_account_mobile_support
+  version: 1
+  topic: privacy
+  claim: "On iPhone and Android, deleting data while keeping the account requires contacting support."
+  source_id: docs_data_requests
+  source_quote: "On iPhone and Android, contact support instead."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: delete_data_is_permanent
+  version: 1
+  topic: privacy
+  claim: "Deleting data in Wispr is permanent and cannot be reversed."
+  source_id: docs_data_requests
+  source_quote: "Deletion is permanent and cannot be reversed."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: delete_completion_up_to_thirty_days
+  version: 1
+  topic: privacy
+  claim: "Deletion may take up to thirty days to complete."
+  source_id: docs_data_requests
+  source_quote: "Deletion may take up to thirty days to complete."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: delete_retains_billing_records
+  version: 1
+  topic: compliance
+  claim: "Wispr keeps billing and invoice records after deletion."
+  source_id: docs_data_requests
+  source_quote: "Billing and invoice records."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: delete_retains_signed_agreements
+  version: 1
+  topic: compliance
+  claim: "Wispr keeps signed agreements, such as a HIPAA Business Associate Agreement, after deletion."
+  source_id: docs_data_requests
+  source_quote: "Signed agreements, such as a HIPAA Business Associate Agreement."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: delete_retains_organization_records
+  version: 1
+  topic: governance
+  claim: "Wispr keeps organization records and shared support accounts after deletion when Flow was used through an organization."
+  source_id: docs_data_requests
+  source_quote: "Organization records and shared support accounts, if you used Flow through an organization."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: work_account_organization_controls_data
+  version: 1
+  topic: governance
+  claim: "When an organization provides the Flow account, the organization controls that account's data."
+  source_id: docs_data_requests
+  source_quote: "If your organization provided your Flow account, your organization controls that data."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: work_account_request_via_admin
+  version: 1
+  topic: governance
+  claim: "For work accounts, data requests go to the user's admin or IT team, which instructs Wispr."
+  source_id: docs_data_requests
+  source_quote: "Send your request to your admin or IT team"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: work_account_deletion_removes_seat
+  version: 1
+  topic: pricing
+  claim: "Deleting a work account can remove the user's seat."
+  source_id: docs_data_requests
+  source_quote: "Deleting a work account can remove your seat"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []

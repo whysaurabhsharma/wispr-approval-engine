@@ -1,0 +1,140 @@
+- id: dictation_text_processing_check
+  version: 1
+  topic: privacy
+  claim: "Users can check Keyboard settings to see whether general text Dictation is processed on the device and not sent to Siri servers."
+  source_id: comp_apple_dictation
+  source_quote: "are processed on your device and not sent to Siri servers"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: dictation_audio_sharing_opt_in
+  version: 1
+  topic: consent
+  claim: "Clicking Share Audio Recordings allows Apple to store audio of Siri and Dictation interactions from the Mac."
+  source_id: comp_apple_dictation
+  source_quote: "allow Apple to store audio of your Siri and Dictation interactions"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: dictation_audio_sample_review
+  version: 1
+  topic: privacy
+  claim: "Apple may review a sample of stored Siri and Dictation audio."
+  source_id: comp_apple_dictation
+  source_quote: "Apple may review a sample of stored audio."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: dictation_audio_sharing_toggle
+  version: 1
+  topic: consent
+  claim: "Users can turn Improve Siri & Dictation on or off under Analytics & Improvements in Privacy & Security settings."
+  source_id: comp_apple_dictation
+  source_quote: "turn Improve Siri & Dictation on or off"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: dictation_on_device_model_macos27
+  version: 1
+  topic: privacy
+  claim: "With Apple Intelligence in macOS 27, dictation uses an on-device model to improve spelling, punctuation and capitalization."
+  source_id: comp_apple_dictation
+  source_quote: "dictation uses an on-device model to improve spelling, punctuation, and capitalization"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [macos 27]
+  conflicts_with: []
+- id: dictation_on_device_model_language
+  version: 1
+  topic: product
+  claim: "The on-device dictation enhancement is available in English on Mac models with M3 and later."
+  source_id: comp_apple_dictation
+  source_quote: "Available in English on Mac models with M3 and later"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [macos 27]
+  conflicts_with: []
+- id: dictation_on_device_model_memory
+  version: 1
+  topic: product
+  claim: "The on-device dictation enhancement requires at least 12GB of unified memory."
+  source_id: comp_apple_dictation
+  source_quote: "at least 12GB of unified memory"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [macos 27]
+  conflicts_with: []
+- id: dictation_voice_control_replaces
+  version: 1
+  topic: product
+  claim: "When Voice Control is on, standard macOS Dictation is not available."
+  source_id: comp_apple_dictation
+  source_quote: "standard macOS Dictation isn’t available"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: dictation_silence_timeout
+  version: 1
+  topic: product
+  claim: "Dictation stops automatically when no speech is detected for 30 seconds."
+  source_id: comp_apple_dictation
+  source_quote: "Dictation stops automatically when no speech is detected for 30 seconds"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: dictation_no_length_limit
+  version: 1
+  topic: product
+  claim: "Users can dictate text of any length without a timeout."
+  source_id: comp_apple_dictation
+  source_quote: "You can dictate text of any length without a timeout"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: dictation_language_region_limits
+  version: 1
+  topic: product
+  claim: "Dictation is not available in all languages or regions, and features may vary."
+  source_id: comp_apple_dictation
+  source_quote: "Dictation is not available in all languages or regions"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: dictation_microphone_automatic
+  version: 1
+  topic: product
+  claim: "If the microphone source is set to Automatic, the Mac listens to the device the user is most likely to use for Dictation."
+  source_id: comp_apple_dictation
+  source_quote: "If you choose Automatic, your Mac listens to the device"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: dictation_auto_punctuation_default
+  version: 1
+  topic: product
+  claim: "In supported languages, Dictation automatically inserts commas, periods and question marks."
+  source_id: comp_apple_dictation
+  source_quote: "automatically inserts commas, periods, and question marks"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: dictation_auto_punctuation_toggle
+  version: 1
+  topic: product
+  claim: "Users can turn off Auto-punctuation in Keyboard settings under Dictation."
+  source_id: comp_apple_dictation
+  source_quote: "turn off Auto-punctuation"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []

@@ -1,0 +1,250 @@
+- id: baa_revoke_desktop_only
+  version: 1
+  topic: compliance
+  claim: A personal BAA signed on iOS can only be revoked from the desktop app.
+  source_id: docs_baa_revoke
+  source_quote: "it can only be revoked from the desktop app"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: baa_revoke_platforms
+  version: 1
+  topic: product
+  claim: The personal BAA revoke steps apply to the Mac and Windows desktop apps.
+  source_id: docs_baa_revoke
+  source_quote: "Mac, Windows. For personal agreements:"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: baa_revoke_no_confirmation
+  version: 1
+  topic: compliance
+  claim: Revoking a BAA in the desktop app has no confirmation prompt.
+  source_id: docs_baa_revoke
+  source_quote: "Revoking has no confirmation prompt"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: baa_revoke_immediate_effect
+  version: 1
+  topic: compliance
+  claim: Revoking a BAA in the desktop app takes effect immediately, even if account-status updates are delayed.
+  source_id: docs_baa_revoke
+  source_quote: "takes effect immediately in this desktop app"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: baa_resign_before_workflows
+  version: 1
+  topic: compliance
+  claim: After revoking, a new BAA must be signed before resuming workflows that require one.
+  source_id: docs_baa_revoke
+  source_quote: "Sign a new BAA before resuming workflows that require one."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: baa_revoke_error_not_effective
+  version: 1
+  topic: compliance
+  claim: An "Error revoking HIPAA BAA" message means the revoke did not take effect.
+  source_id: docs_baa_revoke
+  source_quote: "The revoke did not take effect"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: baa_revoke_rapid_attempts_blocked
+  version: 1
+  topic: security
+  claim: Rapid repeated signing or revoking attempts can be temporarily blocked.
+  source_id: docs_baa_revoke
+  source_quote: "rapid repeated signing or revoking attempts can be temporarily blocked"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: baa_revoke_settings_not_restored
+  version: 1
+  topic: privacy
+  claim: Revoking a personal BAA removes BAA enforcement but does not restore the storage and sharing settings.
+  source_id: docs_baa_revoke
+  source_quote: "Revoking removes personal-BAA enforcement but does not restore those settings"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: baa_revoke_marked_not_deleted
+  version: 1
+  topic: privacy
+  claim: Revoking a personal BAA marks the BAA as revoked and does not delete it.
+  source_id: docs_baa_revoke
+  source_quote: "Revoking marks your BAA as revoked rather than deleting it."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: baa_records_excluded_from_export
+  version: 1
+  topic: privacy
+  claim: BAA records are not part of the user data export.
+  source_id: docs_baa_revoke
+  source_quote: "BAA records are not part of your data export"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: baa_records_retained_after_deletion
+  version: 1
+  topic: privacy
+  claim: BAA records remain retained after usage-data deletion or account deletion.
+  source_id: docs_baa_revoke
+  source_quote: "remain retained after usage-data deletion or account deletion"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: baa_signed_copy_individual_only
+  version: 1
+  topic: legal
+  claim: Downloading the signed BAA copy is for individual (non-enterprise) users only.
+  source_id: docs_baa_revoke
+  source_quote: "Signed-copy downloads are for individual (non-enterprise) users."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: baa_signed_pdf_signature_record
+  version: 1
+  topic: legal
+  claim: The signed BAA PDF includes a Signature Record page showing Signed by, Email and Date.
+  source_id: docs_baa_revoke
+  source_quote: "a Signature Record page showing Signed by, Email and Date"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: baa_signature_record_not_certificate
+  version: 1
+  topic: legal
+  claim: The Signature Record page in the signed BAA PDF is for reference, not a legal certificate.
+  source_id: docs_baa_revoke
+  source_quote: "that page is for reference, not a legal certificate"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: baa_no_billing_individual_controls
+  version: 1
+  topic: pricing
+  claim: Without an active Business/Enterprise subscription, the account sees individual HIPAA controls.
+  source_id: docs_baa_revoke
+  source_quote: "without an active Business/Enterprise subscription, you see individual controls"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [business/enterprise]
+  conflicts_with: []
+- id: baa_live_billing_admin_managed
+  version: 1
+  topic: governance
+  claim: Organizations with live billing require admin management of the BAA, and self-serve signing and revoking are blocked.
+  source_id: docs_baa_revoke
+  source_quote: "Organizations with live billing require admin management instead"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: baa_personal_model_training_off
+  version: 1
+  topic: privacy
+  claim: A personal BAA means the HIPAA agreement does not allow data to be used for model training.
+  source_id: docs_baa_revoke
+  source_quote: "Your HIPAA agreement does not allow data to be used for model training."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: baa_signing_turns_storage_off
+  version: 1
+  topic: privacy
+  claim: Signing a personal BAA turns Dictation cloud storage off for the account.
+  source_id: docs_baa_revoke
+  source_quote: "and Dictation cloud storage off for your account"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: baa_enterprise_no_signed_copy_download
+  version: 1
+  topic: legal
+  claim: Neither enterprise row in the HIPAA settings offers a Download signed BAA button.
+  source_id: docs_baa_revoke
+  source_quote: "Neither enterprise row offers Download signed BAA"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: baa_org_admin_portal_only
+  version: 1
+  topic: governance
+  claim: Admins manage the org BAA in the Admin Portal, not the desktop app.
+  source_id: docs_baa_revoke
+  source_quote: "not the desktop app"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: baa_org_signing_requires_enterprise
+  version: 1
+  topic: pricing
+  claim: Signing an org BAA requires an active enterprise subscription.
+  source_id: docs_baa_revoke
+  source_quote: "Signing requires an active enterprise subscription"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: baa_org_members_cannot_revoke
+  version: 1
+  topic: governance
+  claim: Non-admin members cannot revoke the org BAA.
+  source_id: docs_baa_revoke
+  source_quote: "Members cannot revoke the org BAA"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: baa_org_only_eligible_admin_revokes
+  version: 1
+  topic: governance
+  claim: Only an eligible admin can revoke the org BAA.
+  source_id: docs_baa_revoke
+  source_quote: "only an eligible admin can revoke it"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: baa_org_keeps_storage_locked
+  version: 1
+  topic: privacy
+  claim: An org BAA keeps storage locked after a personal BAA is revoked.
+  source_id: docs_baa_revoke
+  source_quote: "An org BAA keeps storage locked after a personal revoke"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: baa_personal_revoke_keeps_org_limits
+  version: 1
+  topic: governance
+  claim: Personal revocation does not remove organization restrictions.
+  source_id: docs_baa_revoke
+  source_quote: "personal revocation does not remove organization restrictions"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []

@@ -1,0 +1,142 @@
+- id: drata_compliance_platform_engaged
+  version: 1
+  topic: compliance
+  claim: "Wispr has formally engaged Drata as its compliance automation platform, replacing Delve."
+  source_id: wf_new_audit
+  source_quote: "as our new compliance automation platform, replacing Delve"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: drata_continuous_control_monitoring
+  version: 1
+  topic: security
+  claim: "Drata provides continuous, automated monitoring of Wispr's security controls, according to the post."
+  source_id: wf_new_audit
+  source_quote: "gives us continuous, automated monitoring of our security controls"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: a_lign_audit_engagement_signed
+  version: 1
+  topic: compliance
+  claim: "Wispr has signed an engagement letter with A-LIGN for its audit, per the post dated Mar 27, 2026."
+  source_id: wf_new_audit
+  source_quote: "we've signed an engagement letter with A-LIGN"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: auditor_us_based_operations_confirmed
+  version: 1
+  topic: compliance
+  claim: "Wispr says it confirmed its audit firm's US-based operations before signing."
+  source_id: wf_new_audit
+  source_quote: "confirmed their US-based operations"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: auditor_independence_from_grc_assessed
+  version: 1
+  topic: compliance
+  claim: "Wispr says it assessed the audit firm's independence from its GRC platform before signing."
+  source_id: wf_new_audit
+  source_quote: "assessed their independence from our GRC platform"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: soc2_reverification_planned
+  version: 1
+  topic: compliance
+  claim: "A-LIGN will re-verify Wispr's SOC 2 compliance; the post describes this as future work."
+  source_id: wf_new_audit
+  source_quote: "A-LIGN will be reverifying our SOC 2 compliance"
+  checked: "2026-11-05"
+  status: in-progress
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: hipaa_status_verification_planned
+  version: 1
+  topic: compliance
+  claim: "A-LIGN will verify Wispr's HIPAA status; the post describes this as future work."
+  source_id: wf_new_audit
+  source_quote: "verifying our HIPAA status"
+  checked: "2026-11-05"
+  status: in-progress
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: iso_27001_certification_in_progress
+  version: 1
+  topic: compliance
+  claim: "ISO 27001 certification is in progress with A-LIGN. It is not yet certified."
+  source_id: wf_new_audit
+  source_quote: "ISO 27001 certification is in progress with A-LIGN"
+  checked: "2026-11-05"
+  status: in-progress
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: soc2_audit_expected_eight_weeks
+  version: 1
+  topic: compliance
+  claim: "As of the post dated Mar 27, 2026, Wispr expected the SOC 2 audit to finish in roughly eight weeks."
+  source_id: wf_new_audit
+  source_quote: "We expect to have the SOC 2 audit completed in roughly eight weeks"
+  checked: "2026-11-05"
+  status: in-progress
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: security_controls_self_reported_reverified
+  version: 1
+  topic: security
+  claim: "Wispr states its security controls have been independently reverified and remain fully operational."
+  source_id: wf_new_audit
+  source_quote: "have been independently reverified and remain fully operational"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: security_controls_list_stated
+  version: 1
+  topic: security
+  claim: "Wispr states its security controls include MFA, SSO, MDM, endpoint detection, encryption, role-based access and audit logging."
+  source_id: wf_new_audit
+  source_quote: "MFA, SSO, MDM, endpoint detection, encryption, role-based access, audit logging, and more"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: security_questions_contact_email
+  version: 1
+  topic: security
+  claim: "Wispr directs questions about this compliance update to security@wispr.ai."
+  source_id: wf_new_audit
+  source_quote: "reach out to security@wispr.ai"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: notetaker_windows_available
+  version: 1
+  topic: product
+  claim: "Wispr Flow Notetaker is now available on Windows, per an article headline dated Sep 15, 2026."
+  source_id: wf_new_audit
+  source_quote: "Wispr Flow Notetaker isnow on Windows"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []

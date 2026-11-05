@@ -1,0 +1,274 @@
+- id: free_plan_includes_notetaker
+  version: 1
+  topic: product
+  claim: "The Flow free plan includes the Notetaker."
+  source_id: wf_pricing
+  source_quote: "Flow free plan includes the Notetaker"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [free]
+  conflicts_with: []
+
+- id: free_notetaker_weekly_meeting_limit
+  version: 1
+  topic: pricing
+  claim: "Free accounts have a weekly meeting limit."
+  source_id: wf_pricing
+  source_quote: "Free accounts have a weekly meeting limit"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [free]
+  conflicts_with: []
+
+- id: free_mcp_ai_tools_access
+  version: 1
+  topic: privacy
+  claim: "The free plan gives MCP access so meeting notes work in Claude, ChatGPT and other AI tools."
+  source_id: wf_pricing
+  source_quote: "MCP access so your notes work in Claude, ChatGPT, and other AI tools"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [free]
+  conflicts_with: []
+
+- id: pro_monthly_cost_12
+  version: 1
+  topic: pricing
+  claim: "The Flow Pro monthly cost is shown as $12 in the page ROI calculator."
+  source_id: wf_pricing
+  source_quote: "Flow Pro monthly cost:"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [pro]
+  conflicts_with: []
+
+- id: pro_no_commitment_cancel
+  version: 1
+  topic: pricing
+  claim: "Flow Pro has no commitments and can be cancelled at any time."
+  source_id: wf_pricing
+  source_quote: "There are no commitments, and you can cancel anytime."
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [pro]
+  conflicts_with: []
+
+- id: pro_notetaker_included
+  version: 1
+  topic: pricing
+  claim: "The Notetaker is included in Pro at no extra cost."
+  source_id: wf_pricing
+  source_quote: "The Notetaker is included in your Pro subscription at no extra cost"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [pro]
+  conflicts_with: []
+
+- id: enterprise_pricing_custom
+  version: 1
+  topic: pricing
+  claim: "Enterprise pricing is custom and the page directs buyers to talk to sales."
+  source_id: wf_pricing
+  source_quote: "Talk to sales"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+
+- id: notetaker_mac_windows_only
+  version: 1
+  topic: product
+  claim: "The Notetaker runs on Mac and Windows."
+  source_id: wf_pricing
+  source_quote: "Notetaker runs on Mac and Windows."
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: notetaker_more_platforms_in_progress
+  version: 1
+  topic: product
+  claim: "Notetaker support for more platforms is coming soon."
+  source_id: wf_pricing
+  source_quote: "More platforms coming soon."
+  checked: "2026-11-05"
+  status: in-progress
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: notetaker_no_meeting_bot
+  version: 1
+  topic: privacy
+  claim: "The Notetaker works on the device and does not use a bot to join meetings."
+  source_id: wf_pricing
+  source_quote: "so there's no bot joining your calls"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: notetaker_full_access_nov30
+  version: 1
+  topic: pricing
+  claim: "Full Notetaker access for the whole team is offered through November 30."
+  source_id: wf_pricing
+  source_quote: "Full access through November 30"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: notetaker_limited_after_offer
+  version: 1
+  topic: pricing
+  claim: "After the Notetaker offer ends, members move to a limited plan."
+  source_id: wf_pricing
+  source_quote: "Members move to a limited plan afterwards"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: growth_sso_saml
+  version: 1
+  topic: security
+  claim: "The Growth plan includes single sign-on with SAML."
+  source_id: wf_pricing
+  source_quote: "Single sign-on (SSO) with SAML"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [growth]
+  conflicts_with: []
+
+- id: growth_hipaa_enforcement_baa
+  version: 1
+  topic: compliance
+  claim: "The Growth plan includes org-wide HIPAA enforcement with a signed BAA."
+  source_id: wf_pricing
+  source_quote: "Org-wide HIPAA enforcement with a signed BAA"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [growth]
+  conflicts_with: []
+
+- id: enterprise_scim_provisioning
+  version: 1
+  topic: security
+  claim: "The Enterprise plan includes user provisioning with SCIM."
+  source_id: wf_pricing
+  source_quote: "User provisioning (SCIM)"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+
+- id: enterprise_audit_logs_mdm
+  version: 1
+  topic: security
+  claim: "The Enterprise plan includes audit logs and managed deployment (MDM)."
+  source_id: wf_pricing
+  source_quote: "Audit logs and managed deployment (MDM)"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+
+- id: enterprise_model_training_locked
+  version: 1
+  topic: privacy
+  claim: "Model training is locked off on the Enterprise plan."
+  source_id: wf_pricing
+  source_quote: "Model training locked off"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+
+- id: enterprise_org_wide_enforcement
+  version: 1
+  topic: governance
+  claim: "Enterprise adds organization-wide enforcement of these policies, set once by admins."
+  source_id: wf_pricing
+  source_quote: "Enterprise adds organization-wide enforcement,"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+
+- id: enterprise_custom_contract_terms
+  version: 1
+  topic: legal
+  claim: "The Enterprise plan offers custom contract terms."
+  source_id: wf_pricing
+  source_quote: "Custom contract terms"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+
+- id: security_soc2_iso_certified
+  version: 1
+  topic: compliance
+  claim: "Flow is SOC 2 Type II and ISO 27001 certified."
+  source_id: wf_pricing
+  source_quote: "SOC 2 Type II and ISO 27001 certified."
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [all]
+  conflicts_with: []
+
+- id: security_hipaa_baa_signed
+  version: 1
+  topic: compliance
+  claim: "HIPAA-ready dictation is available with a signed BAA."
+  source_id: wf_pricing
+  source_quote: "HIPAA-ready dictation with a signed BAA."
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [all]
+  conflicts_with: []
+
+- id: security_notetaker_disabled_baa
+  version: 1
+  topic: compliance
+  claim: "Notetaker and Scratchpad are disabled on accounts under a BAA."
+  source_id: wf_pricing
+  source_quote: "Notetaker and Scratchpad are disabled on BAA accounts."
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [all]
+  conflicts_with: []
+
+- id: security_model_training_optout
+  version: 1
+  topic: consent
+  claim: "Users can opt out of model training at any time."
+  source_id: wf_pricing
+  source_quote: "Opt out of model training at any time."
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [all]
+  conflicts_with: []
+
+- id: security_delete_on_device_data
+  version: 1
+  topic: privacy
+  claim: "Users can delete data that stays on their device whenever they want."
+  source_id: wf_pricing
+  source_quote: "delete it whenever you want."
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [all]
+  conflicts_with: []
+
+- id: data_sharing_retention_controls
+  version: 1
+  topic: privacy
+  claim: "Data-sharing preferences and data storage and retention controls are listed as security features."
+  source_id: wf_pricing
+  source_quote: "Data-sharing preferences; data storage and retention controls"
+  checked: "2026-11-05"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []

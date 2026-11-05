@@ -1,0 +1,274 @@
+- id: model_improvement_default_on
+  version: 1
+  topic: consent
+  claim: "Model improvement is on by default for Free and Pro."
+  source_id: docs_security_faq
+  source_quote: "is on by default for Free and Pro, with the choice shown during onboarding"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [free, pro]
+  conflicts_with: []
+
+- id: model_improvement_off_enterprise
+  version: 1
+  topic: consent
+  claim: "For Enterprise, model improvement is off and administrators cannot re-enable it."
+  source_id: docs_security_faq
+  source_quote: "it is off for Enterprise and administrators cannot re-enable it"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+
+- id: model_improvement_off_stops_training
+  version: 1
+  topic: consent
+  claim: "Turning off model improvement stops your content being used to improve Wispr's models."
+  source_id: docs_security_faq
+  source_quote: "Turning it off stops your content from being used to improve Wispr's models"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: dictation_cloud_storage_scope
+  version: 1
+  topic: privacy
+  claim: "Dictation Cloud Storage controls whether dictation data is stored on Wispr's servers, not Notetaker or Scratchpad."
+  source_id: docs_security_faq
+  source_quote: "Whether dictation data is stored on Wispr's servers; dictation only, not Notetaker or Scratchpad"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: delete_data_permanent
+  version: 1
+  topic: privacy
+  claim: "Delete your data permanently deletes content and keeps the account."
+  source_id: docs_security_faq
+  source_quote: "Permanently deletes your content, keeping your account"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: org_meetings_not_deletable
+  version: 1
+  topic: privacy
+  claim: "Where an organization keeps meetings, meeting content cannot be deleted through the Delete your data control."
+  source_id: docs_security_faq
+  source_quote: "If your organization keeps meetings, meeting content cannot be deleted this way"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: export_available_30_days
+  version: 1
+  topic: privacy
+  claim: "A data export stays available for 30 days."
+  source_id: docs_security_faq
+  source_quote: "An export stays available for 30 days"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: export_single_zip_2gb
+  version: 1
+  topic: privacy
+  claim: "A data export is delivered as a single ZIP file of up to 2 GB."
+  source_id: docs_security_faq
+  source_quote: "choose where to save the single ZIP file, up to 2 GB"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: export_excludes_unretained_history
+  version: 1
+  topic: privacy
+  claim: "A data export cannot include dictation history that Wispr did not retain on its servers."
+  source_id: docs_security_faq
+  source_quote: "cannot include dictation history that was never retained on Wispr's servers"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: meeting_audio_kept_7_days
+  version: 1
+  topic: privacy
+  claim: "Meeting audio uploaded to Wispr is kept for 7 days from upload."
+  source_id: docs_security_faq
+  source_quote: "Meeting audio uploaded to Wispr is kept for 7 days from upload"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: meeting_transcripts_remain_after_audio
+  version: 1
+  topic: privacy
+  claim: "Meeting transcripts and summaries remain after the audio is deleted."
+  source_id: docs_security_faq
+  source_quote: "transcripts and summaries remain"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: reported_transcripts_retained_for_training
+  version: 1
+  topic: privacy
+  claim: "Reported transcripts are retained by Wispr, which can use them to train and evaluate its models."
+  source_id: docs_security_faq
+  source_quote: "which retains it and can use it to train and evaluate its models"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: encryption_in_transit_and_rest
+  version: 1
+  topic: security
+  claim: "Wispr encrypts service data in transit and at rest."
+  source_id: docs_security_faq
+  source_quote: "Wispr encrypts service data in transit and at rest"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: not_end_to_end_encrypted
+  version: 1
+  topic: security
+  claim: "Service data is not end-to-end encrypted in the strict sense."
+  source_id: docs_security_faq
+  source_quote: "It is not end-to-end encrypted in the strict sense"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: customer_managed_keys_not_supported
+  version: 1
+  topic: security
+  claim: "Wispr manages service encryption keys, and customer-managed keys are not supported."
+  source_id: docs_security_faq
+  source_quote: "customer-managed keys are not supported"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: saml_sso_growth_enterprise
+  version: 1
+  topic: security
+  claim: "SAML single sign-on is available to organizations on Growth and Enterprise."
+  source_id: docs_security_faq
+  source_quote: "Organizations can use SAML single sign-on on Growth and Enterprise"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [growth, enterprise]
+  conflicts_with: []
+
+- id: enterprise_scim_audit_logs
+  version: 1
+  topic: security
+  claim: "Enterprise adds controls such as SCIM user management, audit logs, and managed deployment."
+  source_id: docs_security_faq
+  source_quote: "Enterprise adds controls such as SCIM user management, audit logs, and managed deployment"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+
+- id: soc2_type_ii_report
+  version: 1
+  topic: compliance
+  claim: "Wispr's Trust Center provides a SOC 2 Type II report."
+  source_id: docs_security_faq
+  source_quote: "The Trust Center provides Wispr's SOC 2 Type II report"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: iso_27001_certificate
+  version: 1
+  topic: compliance
+  claim: "Wispr's Trust Center provides an ISO/IEC 27001:2022 certificate."
+  source_id: docs_security_faq
+  source_quote: "The Trust Center provides Wispr's SOC 2 Type II report, the ISO/IEC 27001:2022 certificate"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: notetaker_not_in_audits
+  version: 1
+  topic: compliance
+  claim: "Meeting Notetaker was not assessed in the SOC 2 Type I, SOC 2 Type II, or ISO 27001 certification audits."
+  source_id: docs_security_faq
+  source_quote: "Meeting Notetaker launched after those audit periods and was not assessed"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: hipaa_requires_baa
+  version: 1
+  topic: compliance
+  claim: "HIPAA-ready dictation requires a signed Business Associate Agreement (BAA)."
+  source_id: docs_security_faq
+  source_quote: "HIPAA-ready dictation requires a signed"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: baa_ai_providers_covered
+  version: 1
+  topic: compliance
+  claim: "Under a BAA, text from covered accounts is only sent to AI providers covered by the agreement."
+  source_id: docs_security_faq
+  source_quote: "text from covered accounts is only sent to AI providers covered by the agreement"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: us_data_location
+  version: 1
+  topic: privacy
+  claim: "Wispr Flow processes and stores customer data in the United States."
+  source_id: docs_security_faq
+  source_quote: "processes and stores customer data in the United States"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: dpa_requests_handled
+  version: 1
+  topic: legal
+  claim: "The Trust Center handles data processing addendum (DPA) requests."
+  source_id: docs_security_faq
+  source_quote: "data processing addendum requests"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: member_cannot_relax_admin_setting
+  version: 1
+  topic: governance
+  claim: "A member cannot relax a setting that an admin manages."
+  source_id: docs_security_faq
+  source_quote: "a member cannot relax an admin-managed setting"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []

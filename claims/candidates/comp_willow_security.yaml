@@ -1,0 +1,240 @@
+- id: willow_no_audio_stored
+  version: 1
+  topic: privacy
+  claim: "Willow states that no audio is stored after transcription."
+  source_id: comp_willow_security
+  source_quote: "No audio is stored after transcription."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: willow_transcripts_not_retained
+  version: 1
+  topic: privacy
+  claim: "Willow states transcripts are not logged server-side or retained by default after dictation."
+  source_id: comp_willow_security
+  source_quote: "not logged server-side or retained by default"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: willow_no_ai_training_without_consent
+  version: 1
+  topic: consent
+  claim: "Willow states voice and text are not used to improve AI models without user consent."
+  source_id: comp_willow_security
+  source_quote: "not used to improve AI models without your consent"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: willow_privacy_mode_default_on
+  version: 1
+  topic: privacy
+  claim: "Willow states Privacy Mode is enabled by default."
+  source_id: comp_willow_security
+  source_quote: "Privacy Mode is enabled by default."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: willow_privacy_mode_keeps_nothing
+  version: 1
+  topic: privacy
+  claim: "With Privacy Mode on, Willow states it keeps no audio, transcripts or edits from dictation sessions."
+  source_id: comp_willow_security
+  source_quote: "Willow keeps nothing from your dictation sessions"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: willow_privacy_off_product_improvement
+  version: 1
+  topic: privacy
+  claim: "When Privacy Mode is off, Willow states limited dictation data may be used to improve product quality."
+  source_id: comp_willow_security
+  source_quote: "When Privacy Mode is off, limited dictation data may be used"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: willow_dictation_data_never_sold
+  version: 1
+  topic: privacy
+  claim: "Willow states dictation data is never sold."
+  source_id: comp_willow_security
+  source_quote: "it is never sold"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: willow_enterprise_enforce_privacy_mode
+  version: 1
+  topic: governance
+  claim: "Enterprise admins can enforce Privacy Mode across their entire organization."
+  source_id: comp_willow_security
+  source_quote: "Enterprise admins can enforce Privacy Mode across their entire organization."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: willow_enforced_users_cannot_disable
+  version: 1
+  topic: governance
+  claim: "When Privacy Mode is enforced, individual users cannot turn it off."
+  source_id: comp_willow_security
+  source_quote: "When enforced, individual users cannot turn it off"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: willow_team_changes_privacy_settings
+  version: 1
+  topic: governance
+  claim: "Willow states privacy mode and data permissions can be changed at any time by the customer's team."
+  source_id: comp_willow_security
+  source_quote: "Privacy mode and data permissions can be changed anytime by your team."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: willow_no_third_party_sharing
+  version: 1
+  topic: privacy
+  claim: "Willow states it never sells or shares customer data with third parties for advertising or resale."
+  source_id: comp_willow_security
+  source_quote: "Willow never sells or shares your data with third parties for advertising or resale."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: willow_sso_identity_provider
+  version: 1
+  topic: security
+  claim: "Willow states it supports SSO by connecting to the organization's identity provider."
+  source_id: comp_willow_security
+  source_quote: "Securely connect Willow to your organizationâs identity provider"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: willow_account_deletion_per_settings
+  version: 1
+  topic: privacy
+  claim: "When an account is deleted, Willow states retained account data is deleted according to the user's privacy settings."
+  source_id: comp_willow_security
+  source_quote: "retained account data is deleted according to your privacy settings"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: willow_soc2_type_ii_reported
+  version: 1
+  topic: compliance
+  claim: "Willow reports a SOC 2 Type II certification."
+  source_id: comp_willow_security
+  source_quote: "SOC 2 Type II"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: willow_security_controls_independently_audited
+  version: 1
+  topic: compliance
+  claim: "Willow states its security controls are independently audited."
+  source_id: comp_willow_security
+  source_quote: "Willowâs security controls are independently audited"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: willow_audit_report_on_request
+  version: 1
+  topic: compliance
+  claim: "Willow states a customer's security team can request the full third-party audit report at any time."
+  source_id: comp_willow_security
+  source_quote: "Your security team can request the full report at any time."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: willow_hipaa_ready_baa_where_applicable
+  version: 1
+  topic: compliance
+  claim: "Willow states it supports HIPAA-ready workflows through a Business Associate Agreement where applicable."
+  source_id: comp_willow_security
+  source_quote: "support HIPAA-ready workflows through a Business Associate Agreement where applicable"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: willow_zero_retention_ai_subprocessors
+  version: 1
+  topic: privacy
+  claim: "Willow states customer content is processed without retention by Willow or its applicable AI subprocessors."
+  source_id: comp_willow_security
+  source_quote: "processed without retention by Willow or our applicable AI subprocessors"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: willow_enterprise_contractual_retention_controls
+  version: 1
+  topic: legal
+  claim: "Willow states it has contractual controls in place for enterprise teams on customer content retention."
+  source_id: comp_willow_security
+  source_quote: "with contractual controls in place for enterprise teams"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: willow_encrypt_transit_and_rest
+  version: 1
+  topic: security
+  claim: "Willow states all data is encrypted in transit and at rest."
+  source_id: comp_willow_security
+  source_quote: "All data is encrypted in transit and at rest."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: willow_access_limited_personnel
+  version: 1
+  topic: security
+  claim: "Willow states access is limited to authorized personnel and systems only."
+  source_id: comp_willow_security
+  source_quote: "Access is limited to authorized personnel and systems only."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: willow_us_cloud_infrastructure
+  version: 1
+  topic: security
+  claim: "Willow states it runs on secure cloud infrastructure in the United States."
+  source_id: comp_willow_security
+  source_quote: "runs on secure cloud infrastructure in the United States"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: willow_audit_logging_control
+  version: 1
+  topic: security
+  claim: "Willow states it includes audit logging among its security controls."
+  source_id: comp_willow_security
+  source_quote: "including encryption, access controls, audit logging, and privacy-by-design"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: willow_subprocessor_details_on_request
+  version: 1
+  topic: compliance
+  claim: "Willow states enterprise customers can request subprocessor details during review."
+  source_id: comp_willow_security
+  source_quote: "Enterprise customers can request our security documentation, compliance report, and subprocessor details"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
