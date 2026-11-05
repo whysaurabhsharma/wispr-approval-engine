@@ -22,4 +22,5 @@
 - {id: comp_willow_security, url: https://willowvoice.com/security, type: marketing, trust: competitor, recheck_days: 30}
 - {id: comp_willow_teams, url: https://willowvoice.com/teams, type: marketing, trust: competitor, recheck_days: 30}
 - {id: comp_apple_dictation, url: https://support.apple.com/guide/mac-help/use-dictation-mh40584/mac, type: docs, trust: competitor, recheck_days: 90}
-- {id: legal_otter_uctoday, url: "https://www.uctoday.com/?p=748128", type: article, trust: legal-context, recheck_days: 90}
+- {id: legal_otter_uctoday, url: https://uctoday.com/productivity-automation/otter-ai-fails-to-dismiss-core-privacy-claims-in-u-s-court/, type: article, trust: legal-context, recheck_days: 90}
+

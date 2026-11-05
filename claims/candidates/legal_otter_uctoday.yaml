@@ -1,1 +1,210 @@
-[]
+- id: otter_privacy_claims_survive
+  version: 1
+  topic: legal
+  claim: "A federal judge allowed core privacy claims against Otter.ai to proceed."
+  source_id: legal_otter_uctoday
+  source_quote: "allowed the central claims under federal wiretap"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: otter_motion_partly_granted_aug13
+  version: 1
+  topic: legal
+  claim: "The court granted Otter's motion to dismiss in part on August 13."
+  source_id: legal_otter_uctoday
+  source_quote: "granted Otter’s motion to dismiss in part on August 13"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: otter_consolidated_suits_filed_2025
+  version: 1
+  topic: legal
+  claim: "The consolidated Otter.ai action combines four proposed class suits filed between August and September 2025."
+  source_id: legal_otter_uctoday
+  source_quote: "brings together four proposed class suits filed between August and September 2025"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: otter_bot_joins_calls_alleged
+  version: 1
+  topic: consent
+  claim: "Plaintiffs allege Otter's meeting assistant joined Zoom, Microsoft Teams and Google Meet calls, then recorded communications."
+  source_id: legal_otter_uctoday
+  source_quote: "joined Zoom, Microsoft Teams and Google Meet calls, then recorded"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: otter_recording_without_consent_alleged
+  version: 1
+  topic: consent
+  claim: "Plaintiffs allege Otter transcribed and retained communications without the consent required by applicable laws."
+  source_id: legal_otter_uctoday
+  source_quote: "recorded, transcribed and retained communications without the consent required by applicable laws"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: otter_voiceprints_alleged
+  version: 1
+  topic: privacy
+  claim: "Plaintiffs allege Otter captured voiceprints through its speaker-identification capabilities."
+  source_id: legal_otter_uctoday
+  source_quote: "captured voiceprints through speaker-identification capabilities"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: otter_meeting_data_training_alleged
+  version: 1
+  topic: privacy
+  claim: "Plaintiffs allege Otter used meeting information to improve its products and machine-learning models."
+  source_id: legal_otter_uctoday
+  source_quote: "used meeting information to improve its products and machine-learning models"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: otter_commercial_use_plausibly_alleged
+  version: 1
+  topic: privacy
+  claim: "The court found the complaint plausibly alleges Otter retained and used conversation data for its own commercial purposes."
+  source_id: legal_otter_uctoday
+  source_quote: "plausibly alleges Otter retained and used conversational data for its own commercial purposes"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: otter_ruling_not_liability_finding
+  version: 1
+  topic: legal
+  claim: "The ruling does not determine whether Otter broke the law."
+  source_id: legal_otter_uctoday
+  source_quote: "does not determine whether Otter broke the law"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: otter_ruling_no_universal_consent_standard
+  version: 1
+  topic: legal
+  claim: "The ruling does not establish a universal consent standard for every meeting in every jurisdiction."
+  source_id: legal_otter_uctoday
+  source_quote: "nor does it establish a universal consent standard for every meeting"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: otter_bipa_claims_proceed
+  version: 1
+  topic: legal
+  claim: "The court allowed claims under Illinois' Biometric Information Privacy Act (BIPA) against Otter to proceed."
+  source_id: legal_otter_uctoday
+  source_quote: "allowed claims under Illinois’ Biometric Information Privacy Act (BIPA) to proceed"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: otter_bipa_statutory_damages
+  version: 1
+  topic: legal
+  claim: "The article says BIPA permits statutory damages of $1,000 per negligent violation and up to $5,000 per intentional or reckless violation. Check with counsel."
+  source_id: legal_otter_uctoday
+  source_quote: "statutory damages of $1,000 per negligent violation and up to $5,000 per intentional"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: otter_cfaa_claims_dismissed
+  version: 1
+  topic: legal
+  claim: "The court dismissed claims under the federal Computer Fraud and Abuse Act against Otter."
+  source_id: legal_otter_uctoday
+  source_quote: "dismissed claims under the federal Computer Fraud and Abuse Act"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: otter_cdafa_claims_dismissed
+  version: 1
+  topic: legal
+  claim: "The court dismissed claims under California's Comprehensive Computer Data Access and Fraud Act against Otter."
+  source_id: legal_otter_uctoday
+  source_quote: "dismissed claims under the federal Computer Fraud and Abuse Act and California’s Comprehensive"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: otter_intrusion_claims_partly_dismissed
+  version: 1
+  topic: legal
+  claim: "The court dismissed certain intrusion and California constitutional privacy claims for some plaintiffs."
+  source_id: legal_otter_uctoday
+  source_quote: "dismissed certain intrusion and California constitutional privacy claims for some plaintiffs"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: otter_washington_privacy_claim_dismissed
+  version: 1
+  topic: legal
+  claim: "A claim under the Washington Privacy Act was dismissed."
+  source_id: legal_otter_uctoday
+  source_quote: "A claim under the Washington Privacy Act was dismissed on similar grounds"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: otter_dismissals_leave_to_amend
+  version: 1
+  topic: legal
+  claim: "Many of the dismissals were with leave to amend."
+  source_id: legal_otter_uctoday
+  source_quote: "Many of the dismissals were with leave to amend"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: otter_case_still_ongoing
+  version: 1
+  topic: legal
+  claim: "The Otter.ai privacy case is still ongoing and its outcome is not yet decided."
+  source_id: legal_otter_uctoday
+  source_quote: "While still ongoing, the outcome of the case"
+  checked: 2026-11-05
+  status: in-progress
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: otter_medical_financial_injury_possible
+  version: 1
+  topic: privacy
+  claim: "The court said alleged capture of private medical, financial and professional conversations could constitute a concrete privacy injury."
+  source_id: legal_otter_uctoday
+  source_quote: "could constitute a concrete privacy injury"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: teams_unverified_external_bots
+  version: 1
+  topic: security
+  claim: "Microsoft Teams has moved to flag some external meeting bots as 'Unverified' and require organiser approval, per the article."
+  source_id: legal_otter_uctoday
+  source_quote: "flag some external meeting bots as “Unverified” and require organiser approval"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: zoom_meet_ai_notes_host_controls
+  version: 1
+  topic: security
+  claim: "Zoom and Google Meet have linked native AI note-taking more closely to host controls and participant prompts, per the article."
+  source_id: legal_otter_uctoday
+  source_quote: "linked native AI note-taking more closely to host controls"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
