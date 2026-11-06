@@ -4,3 +4,5 @@
 {"t": "2026-11-06T16:06:05", "file": "outputs\\review\\approval-pack\\approver-core.md", "state": "draft", "by": "claude", "hash": "aa6d77918888"}
 {"t": "2026-11-06T16:21:10", "file": "outputs\\review\\approval-pack\\approver-core.md", "state": "reviewed", "by": "saurabh", "hash": "9998d89deaba"}
 {"t": "2026-11-06T16:25:09", "file": "outputs\\review\\approval-pack\\approver-core.md", "state": "reviewed", "by": "saurabh", "hash": "70c75fa08cb1"}
+{"t": "2026-11-06T16:38:12", "file": "outputs\\review\\consent-memo\\consent-memo.md", "state": "draft", "by": "claude", "hash": "558298891aef"}
+{"t": "2026-11-06T16:52:34", "file": "outputs\\review\\consent-memo\\consent-memo.md", "state": "reviewed", "by": "saurabh", "hash": "bcd0a5c3916d"}
