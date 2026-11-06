@@ -1,4 +1,4 @@
-# CONTROLLED. Written by scripts/promote_claims.py from claims/review/review.csv. Do not edit by prompt.
+# CONTROLLED. Written by scripts/promote_claims.py and scripts/claims_delta.py. Do not edit by prompt.
 - id: dictation_audio_sharing_opt_in
   version: 1
   topic: consent
@@ -1761,10 +1761,11 @@
   source_id: docs_network
   source_quote: DLP tools that need decrypted traffic cannot inspect these endpoints
   checked: '2026-11-05'
-  status: confirmed
+  status: retired
   plan_scope:
   - unknown
   conflicts_with: []
+  retired_on: '2026-11-06'
 - id: docs_network_wildcard_list_required
   version: 1
   topic: security
@@ -1783,10 +1784,11 @@
   source_id: docs_network
   source_quote: Destinations can change without an app update and differ between colleagues
   checked: '2026-11-05'
-  status: confirmed
+  status: retired
   plan_scope:
   - unknown
   conflicts_with: []
+  retired_on: '2026-11-06'
 - id: docs_network_ip_allowlist_enterprise_only
   version: 1
   topic: product
@@ -1805,10 +1807,11 @@
   source_id: docs_network
   source_quote: is not enforced on Android or on the speech-processing service
   checked: '2026-11-05'
-  status: confirmed
+  status: retired
   plan_scope:
   - enterprise
   conflicts_with: []
+  retired_on: '2026-11-06'
 - id: docs_network_ip_allowlist_signed_in_only
   version: 1
   topic: security
@@ -1827,11 +1830,12 @@
   source_id: docs_network
   source_quote: or validate a saved list, restrictions are not applied
   checked: '2026-11-05'
-  status: confirmed
+  status: retired
   plan_scope:
   - enterprise
   conflicts_with: []
   approver_note: IP allowlist fails open
+  retired_on: '2026-11-06'
 - id: docs_network_block_unapproved_signout
   version: 1
   topic: security
@@ -2785,10 +2789,11 @@
   source_id: wf_business
   source_quote: Available on any plan with a signed Business Associate Agreement.
   checked: '2026-11-05'
-  status: conflicting
+  status: retired
   plan_scope:
   - all
   conflicts_with: []
+  retired_on: '2026-11-06'
 - id: hipaa_baa_dictation_only
   version: 1
   topic: compliance
@@ -2796,10 +2801,11 @@
   source_id: wf_business
   source_quote: Covers dictation only.
   checked: '2026-11-05'
-  status: confirmed
+  status: retired
   plan_scope:
   - all
   conflicts_with: []
+  retired_on: '2026-11-06'
 - id: soc2_type_ii_audited
   version: 1
   topic: compliance
@@ -3251,7 +3257,7 @@
   source_id: wf_compliance_note
   source_quote: the report is expected in September
   checked: '2026-11-05'
-  status: conflicting
+  status: retired
   plan_scope:
   - unknown
   conflicts_with:
@@ -3259,6 +3265,7 @@
   - iso27001_certificate_held
   - iso_27001_pending
   - iso_27001_certification_in_progress
+  retired_on: '2026-11-06'
 - id: iso_27001_pending
   version: 1
   topic: compliance
@@ -3616,10 +3623,11 @@
   source_id: wf_pricing
   source_quote: HIPAA-ready dictation with a signed BAA.
   checked: '2026-11-05'
-  status: confirmed
+  status: retired
   plan_scope:
   - all
   conflicts_with: []
+  retired_on: '2026-11-06'
 - id: security_notetaker_disabled_baa
   version: 1
   topic: compliance
@@ -3627,11 +3635,12 @@
   source_id: wf_pricing
   source_quote: Notetaker and Scratchpad are disabled on BAA accounts.
   checked: '2026-11-05'
-  status: conflicting
+  status: retired
   plan_scope:
   - all
   conflicts_with:
   - notetaker_works_alongside_baa
+  retired_on: '2026-11-06'
 - id: security_model_training_optout
   version: 1
   topic: consent
@@ -3650,6 +3659,229 @@
   source_id: wf_pricing
   source_quote: delete it whenever you want.
   checked: '2026-11-05'
+  status: confirmed
+  plan_scope:
+  - all
+  conflicts_with: []
+- id: network_outbound_domains_listed
+  version: 1
+  topic: security
+  claim: If outbound traffic is restricted, the page says to allow wisprflow.ai, admin.wisprflow.ai, dl.wisprflow.ai, dl.wisprflow.com and docs.wisprflow.ai.
+  source_id: docs_network
+  source_quote: 'If your organization restricts outbound traffic, allow these domains:'
+  checked: '2026-11-06'
+  status: confirmed
+  plan_scope:
+  - unknown
+  conflicts_with: []
+- id: network_tls_bypass_port_443
+  version: 1
+  topic: security
+  claim: The page advises an SSL/TLS inspection bypass on outbound port 443 for the complete destination list.
+  source_id: docs_network
+  source_quote: an SSL/TLS-inspection bypass on outbound port
+  checked: '2026-11-06'
+  status: confirmed
+  plan_scope:
+  - unknown
+  conflicts_with: []
+- id: network_bypass_blocks_decrypting_dlp
+  version: 1
+  topic: security
+  claim: DLP tools that need decrypted traffic cannot inspect the bypassed Flow destinations.
+  source_id: docs_network
+  source_quote: DLP tools that need decrypted traffic cannot inspect these destinations
+  checked: '2026-11-06'
+  status: confirmed
+  plan_scope:
+  - unknown
+  conflicts_with: []
+- id: network_proxy_and_root_certs_respected
+  version: 1
+  topic: security
+  claim: Flow respects system proxy settings and organizational root certificates, including TLS inspection, for dictation, uploads and SSO session management.
+  source_id: docs_network
+  source_quote: Flow respects system proxy settings and organizational root certificates,
+  checked: '2026-11-06'
+  status: confirmed
+  plan_scope:
+  - unknown
+  conflicts_with: []
+- id: network_dictation_root_cert_requirement
+  version: 1
+  topic: security
+  claim: Dictation requires valid, self-signed root certificates in macOS System Roots or the Windows root store.
+  source_id: docs_network
+  source_quote: Dictation requires valid, self-signed root certificates in macOS System Roots
+  checked: '2026-11-06'
+  status: confirmed
+  plan_scope:
+  - unknown
+  conflicts_with: []
+- id: ip_allowlist_change_requires_enterprise_admin
+  version: 1
+  topic: security
+  claim: Changing the IP allowlist requires an active Enterprise plan and enterprise admin permissions.
+  source_id: docs_network
+  source_quote: changing it requires an active Enterprise plan and enterprise admin permissions
+  checked: '2026-11-06'
+  status: confirmed
+  plan_scope:
+  - enterprise
+  conflicts_with: []
+- id: ip_allowlist_not_enforced_android
+  version: 1
+  topic: security
+  claim: The IP allowlist is not enforced on Android.
+  source_id: docs_network
+  source_quote: It is not enforced on Android.
+  checked: '2026-11-06'
+  status: confirmed
+  plan_scope:
+  - enterprise
+  conflicts_with: []
+- id: hipaa_baa_growth_enterprise
+  version: 1
+  topic: compliance
+  claim: HIPAA compliance is available on the Growth and Enterprise plans with a signed Business Associate Agreement.
+  source_id: wf_business
+  source_quote: Available on Growth and Enterprise with a signed Business Associate Agreement.
+  checked: '2026-11-06'
+  status: confirmed
+  plan_scope:
+  - growth
+  - enterprise
+  conflicts_with: []
+- id: hipaa_covers_dictation_notetaker
+  version: 1
+  topic: compliance
+  claim: The HIPAA compliance offer covers dictation and Wispr Notetaker.
+  source_id: wf_business
+  source_quote: Covers dictation and Wispr Notetaker.
+  checked: '2026-11-06'
+  status: confirmed
+  plan_scope:
+  - growth
+  - enterprise
+  conflicts_with: []
+- id: growth_individual_usage_reporting
+  version: 1
+  topic: product
+  claim: The Growth plan includes individual usage reporting.
+  source_id: wf_business
+  source_quote: Individual usage reporting
+  checked: '2026-11-06'
+  status: confirmed
+  plan_scope:
+  - growth
+  conflicts_with: []
+- id: enterprise_free_it_admin_seats
+  version: 1
+  topic: pricing
+  claim: The Enterprise plan includes free IT admin seats.
+  source_id: wf_business
+  source_quote: Free IT admin seats
+  checked: '2026-11-06'
+  status: confirmed
+  plan_scope:
+  - enterprise
+  conflicts_with: []
+- id: mobile_dictation_history_coming_soon
+  version: 1
+  topic: product
+  claim: Local dictation history controls on mobile are coming soon, not available today.
+  source_id: wf_compliance_note
+  source_quote: Desktop today, with mobile coming soon
+  checked: '2026-11-06'
+  status: in-progress
+  plan_scope:
+  - unknown
+  conflicts_with: []
+- id: admin_dictation_history_org_policy
+  version: 1
+  topic: governance
+  claim: Admins can set how dictation history is handled across the organization, including auto-delete every 24 hours.
+  source_id: wf_compliance_note
+  source_quote: Set how dictation history is handled across the org
+  checked: '2026-11-06'
+  status: confirmed
+  plan_scope:
+  - enterprise
+  conflicts_with: []
+- id: admin_accepts_baa_portal
+  version: 1
+  topic: compliance
+  claim: An admin accepts the Business Associate Agreement from the admin portal to enable HIPAA support.
+  source_id: wf_compliance_note
+  source_quote: an admin accepts the Business Associate Agreement from the admin portal
+  checked: '2026-11-06'
+  status: confirmed
+  plan_scope:
+  - growth
+  - enterprise
+  conflicts_with: []
+- id: api_siem_connectors_in_progress
+  version: 1
+  topic: product
+  claim: API and SIEM connectors for audit logs are in progress, not yet available.
+  source_id: wf_compliance_note
+  source_quote: API and SIEM connectors are in progress
+  checked: '2026-11-06'
+  status: in-progress
+  plan_scope:
+  - unknown
+  conflicts_with: []
+- id: keystroke_monitoring_not_recorded
+  version: 1
+  topic: security
+  claim: Wispr Flow does not record, log, or transmit typed text outside an active dictation session.
+  source_id: wf_compliance_note
+  source_quote: doesn't record, log, or transmit anything you type outside an active dictation session
+  checked: '2026-11-06'
+  status: confirmed
+  plan_scope:
+  - unknown
+  conflicts_with: []
+- id: free_word_limit_weekly
+  version: 1
+  topic: pricing
+  claim: The free plan dictation is limited to a set number of words per week.
+  source_id: wf_pricing
+  source_quote: Limited words per week
+  checked: '2026-11-06'
+  status: confirmed
+  plan_scope:
+  - free
+  conflicts_with: []
+- id: pro_no_minimum_seats
+  version: 1
+  topic: pricing
+  claim: A Pro team can be created with no minimum seat requirement.
+  source_id: wf_pricing
+  source_quote: Create a team with no minimum seat requirement.
+  checked: '2026-11-06'
+  status: confirmed
+  plan_scope:
+  - pro
+  conflicts_with: []
+- id: pro_basic_usage_dashboards_admin_only
+  version: 1
+  topic: governance
+  claim: Pro includes basic usage dashboards that only admins can see.
+  source_id: wf_pricing
+  source_quote: See basic usage dashboards (accessible by admin only).
+  checked: '2026-11-06'
+  status: confirmed
+  plan_scope:
+  - pro
+  conflicts_with: []
+- id: hipaa_ready_all_plans
+  version: 1
+  topic: compliance
+  claim: Dictation and Notetaker are HIPAA-ready with a signed BAA on every plan.
+  source_id: wf_pricing
+  source_quote: HIPAA-ready dictation and Notetaker with a signed BAA.
+  checked: '2026-11-06'
   status: confirmed
   plan_scope:
   - all
