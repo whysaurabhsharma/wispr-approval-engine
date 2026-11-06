@@ -18,3 +18,7 @@ def test_both_sides_of_notetaker_baa_conflict():
     assert {"notetaker_works_alongside_baa", "security_notetaker_disabled_baa"} <= set(R["q29"])
 def test_no_competitor_claims():
     assert not [c for ids in R.values() for c in ids if LIB[c]["source_id"].startswith(("comp_", "ms_"))]
+def test_metadata_still_sent_found():  # q21 escalated in the first pack run
+    assert {"model_improvement_off_metadata_still_uploaded", "ca_off_still_sends_app_and_domain"} <= set(R["q21"])
+def test_network_destinations_found():  # q06 gave no destination list in the first pack run
+    assert "docs_network_wildcard_list_required" in R["q06"]

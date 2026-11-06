@@ -21,12 +21,14 @@ SYN = {"sso": ["saml", "single", "sign"], "saml": ["sso"], "scim": ["provisionin
        "cost": ["price", "pricing", "$"], "invoice": ["invoicing", "po", "billing"], "seat": ["seats", "minimum"], "plan": ["plans"],
        "delete": ["deletion", "deleting", "deleted"], "export": ["download", "archive"], "audit": ["soc", "iso", "audited", "assessed"],
        "soc": ["soc2", "audit"], "iso": ["27001", "certificate"], "network": ["domains", "destinations", "allowlist", "tls"],
-       "ip": ["allowlist", "cidr"], "context": ["awareness"], "platforms": ["mac", "windows", "ios", "android"], "device": ["local", "history"]}
+       "ip": ["allowlist", "cidr"], "sent": ["send", "upload", "uploaded", "metadata"], "collected": ["upload", "send", "metadata", "collect"],
+       "sharing": ["improvement", "share"], "allow": ["wildcard", "allowlist", "bypas"], "context": ["awareness"], "platforms": ["mac", "windows", "ios", "android"], "device": ["local", "history"]}
+def stem(w): return w[:-1] if len(w) > 4 and w.endswith("s") and not w.endswith("ss") else w
 def words(t):
-    return [w for w in re.findall(r"[a-z0-9$]+", t.lower()) if w not in STOP and len(w) > 1]
+    return [stem(w) for w in re.findall(r"[a-z0-9$]+", t.lower()) if w not in STOP and len(w) > 1]
 def expand(ws):
     out = set(ws)
-    for w in ws: out.update(SYN.get(w, []))
+    for w in ws: out.update(stem(s) for s in SYN.get(w, []))
     return out
 def questions(path):
     rows = []
