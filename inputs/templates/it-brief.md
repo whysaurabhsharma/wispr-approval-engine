@@ -31,5 +31,8 @@ Subject: ...
 
 ## First email to champion (under 90 words)
 
+## Open questions for Wispr
+- {open mismatch id}: {what to confirm}
+
 ## Sources
 {source ids and URLs for every claim used}
