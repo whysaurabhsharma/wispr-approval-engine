@@ -10,11 +10,11 @@ def check(path: pathlib.Path) -> list:
     if not m:
         return ["no header"]
     header, body = yaml.safe_load(m.group(1)) or {}, m.group(2)
-    claims = {c["id"]: c for c in yaml.safe_load(LIB.read_text())}
+    claims = {c["id"]: c for c in yaml.safe_load(LIB.read_text(encoding="utf-8"))}
     problems = []
     if header.get("library_hash") != library_hash():
         problems.append(f"library_hash {header.get('library_hash')} != current {library_hash()} (stale)")
-    cited = set(re.findall(r"\[([a-z0-9_]+)\]", body))
+    cited = set(re.findall(r"\[([a-z0-9]+(?:_[a-z0-9]+)+)\]", body))  # ids always contain an underscore; [unknown] is a placeholder
     for cid in cited:
         if cid not in claims:
             problems.append(f"unknown claim id [{cid}]")
