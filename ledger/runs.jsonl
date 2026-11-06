@@ -4,3 +4,4 @@
 {"t": "2026-11-05T15:21:23", "skill": "claims-refresh", "input": "legal_otter_uctoday", "result": "pass", "cost_usd": 0.0}
 {"t": "2026-11-05T17:49:00", "skill": "claims-refresh", "input": "legal_granola_btlaw legal_otter_uctoday", "result": "pass", "cost_usd": 0.0}
 {"t": "2026-11-06T15:10:33", "skill": "mismatch-report", "input": "all", "result": "pass", "cost_usd": 0.0}
+{"t": "2026-11-06T15:39:41", "skill": "it-brief", "input": "sample-01", "result": "pass", "cost_usd": 0.0}
