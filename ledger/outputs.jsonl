@@ -17,3 +17,7 @@
 {"t": "2026-11-06T18:48:34", "file": "outputs\\review\\ps-01\\it-brief.md", "state": "draft", "by": "claude", "hash": "4fa565d506b8"}
 {"t": "2026-11-06T18:48:34", "file": "outputs\\review\\ps-02\\it-brief.md", "state": "draft", "by": "claude", "hash": "9e0598ab9e28"}
 {"t": "2026-11-06T18:48:35", "file": "outputs\\review\\ps-10\\it-brief.md", "state": "draft", "by": "claude", "hash": "f2595fa54bde"}
+{"t": "2026-11-06T18:51:28", "file": "outputs\\review\\ps-01\\it-brief.md", "state": "reviewed", "by": "saurabh", "hash": "15e9ceeb337b"}
+{"t": "2026-11-06T18:51:28", "file": "outputs\\review\\ps-10\\it-brief.md", "state": "reviewed", "by": "saurabh", "hash": "b7c95f041cb9"}
+{"t": "2026-11-06T18:53:43", "file": "outputs\\review\\ps-10\\it-brief.md", "state": "reviewed", "by": "saurabh", "hash": "51edc555d2c5"}
+{"t": "2026-11-06T18:53:48", "file": "outputs\\review\\ps-01\\it-brief.md", "state": "reviewed", "by": "saurabh", "hash": "6c2b10c8b62d"}
