@@ -34,7 +34,7 @@ def questions(path):
     rows = []
     for line in path.read_text(encoding="utf-8").splitlines():
         cells = [c.strip() for c in line.strip().strip("|").split("|")]
-        if len(cells) >= 6 and re.fullmatch(r"q\d+", cells[0]):
+        if len(cells) >= 6 and re.fullmatch(r"[a-z]+\d+", cells[0]):
             rows.append({"id": cells[0], "reviewer": cells[1], "question": cells[2],
                          "topics": [t.strip() for t in cells[3].split(",")], "caiq": cells[4], "drata_covers": cells[5]})
     return rows
