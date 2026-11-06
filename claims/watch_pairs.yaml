@@ -7,3 +7,4 @@
 - {a: android_no_baa_signing, b: hipaa_ready_all_plans, why: HIPAA-ready on every plan vs no BAA flow on Android}
 - {a: flow_hipaa_ready_with_baa, b: hipaa_covers_dictation_notetaker, why: HIPAA-ready for dictation vs BAA covers Notetaker}
 - {a: api_siem_connectors_in_progress, b: audit_logs_siem_enterprise_plan, why: SIEM connectors in progress vs SIEM on Enterprise}
+- {a: hipaa_baa_growth_enterprise, b: hipaa_ready_all_plans, why: HIPAA on Growth and Enterprise vs HIPAA-ready on every plan, same day}

@@ -592,6 +592,34 @@
     status: confirmed
     plan_scope:
     - enterprise
+- id: M067
+  pair: hipaa_baa_growth_enterprise|hipaa_ready_all_plans
+  type: hipaa_plan_availability
+  verdict: contradiction
+  severity: high
+  status: open
+  note: 'HIPAA plan availability: business page says Growth and Enterprise; pricing page section headed On every plan says HIPAA-ready with a signed BAA (context verified 2026-11-06)'
+  reason: One limits HIPAA with a BAA to "Growth and Enterprise plans", the other says "with a signed BAA on every plan", so both cannot be true for lower plans.
+  first_seen: '2026-11-06'
+  claim_a:
+    id: hipaa_baa_growth_enterprise
+    claim: HIPAA compliance is available on the Growth and Enterprise plans with a signed Business Associate Agreement.
+    source_id: wf_business
+    source_quote: Available on Growth and Enterprise with a signed Business Associate Agreement.
+    checked: '2026-11-06'
+    status: confirmed
+    plan_scope:
+    - growth
+    - enterprise
+  claim_b:
+    id: hipaa_ready_all_plans
+    claim: Dictation and Notetaker are HIPAA-ready with a signed BAA on every plan.
+    source_id: wf_pricing
+    source_quote: HIPAA-ready dictation and Notetaker with a signed BAA.
+    checked: '2026-11-06'
+    status: confirmed
+    plan_scope:
+    - all
 - id: M004
   pair: iso27001_certificate_held|iso_27001_pending
   type: iso27001_status
