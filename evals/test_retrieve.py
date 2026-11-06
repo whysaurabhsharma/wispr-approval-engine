@@ -14,8 +14,10 @@ def test_soc2_report_found():
     assert "soc2_type_ii_report" in R["q12"]
 def test_residency_found():
     assert "no_data_residency_outside_us" in R["q16"]
-def test_both_sides_of_notetaker_baa_conflict():
-    assert {"notetaker_works_alongside_baa", "security_notetaker_disabled_baa"} <= set(R["q29"])
+def test_notetaker_under_baa_found():  # M002 was fixed on 2026-11-06: the "disabled under a BAA" side was retired
+    assert "notetaker_works_alongside_baa" in R["q29"]
+def test_retired_claims_never_retrieved():
+    assert not [c for ids in R.values() for c in ids if LIB[c].get("status") == "retired"]
 def test_no_competitor_claims():
     assert not [c for ids in R.values() for c in ids if LIB[c]["source_id"].startswith(("comp_", "ms_"))]
 def test_metadata_still_sent_found():  # q21 escalated in the first pack run
