@@ -8,3 +8,4 @@
 - {a: flow_hipaa_ready_with_baa, b: hipaa_covers_dictation_notetaker, why: HIPAA-ready for dictation vs BAA covers Notetaker}
 - {a: api_siem_connectors_in_progress, b: audit_logs_siem_enterprise_plan, why: SIEM connectors in progress vs SIEM on Enterprise}
 - {a: hipaa_baa_growth_enterprise, b: hipaa_ready_all_plans, why: HIPAA on Growth and Enterprise vs HIPAA-ready on every plan, same day}
+- {a: pro_price_listed_15, b: roi_calculator_pro_monthly_12, why: Pro listed at 15 per month vs ROI calculator calls 12 the monthly cost}
