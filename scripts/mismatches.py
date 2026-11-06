@@ -43,7 +43,7 @@ def build():
         if "id" not in prev: next_n += 1
         status = prev.get("status", "open"); status = status if status in STATUSES else "open"
         reg.append({"id": mid, "pair": key, "type": v.get("type", "unlabelled"), "verdict": v["verdict"],
-                    "severity": v.get("severity", "medium"), "status": status, "reason": v.get("reason", ""),
+                    "severity": v.get("severity", "medium"), "status": status, "note": prev.get("note", ""), "reason": v.get("reason", ""),
                     "first_seen": prev.get("first_seen", today), "claim_a": pairs[key]["a"], "claim_b": pairs[key]["b"]})
     gone = [m["id"] for k, m in old.items() if k not in {r["pair"] for r in reg}]
     reg.sort(key=lambda m: ({"high": 0, "medium": 1, "low": 2}.get(m["severity"], 3), m["type"], m["id"]))
@@ -53,6 +53,17 @@ def build():
           f"({dict(Counter(m['verdict'] for m in reg))}; {dict(Counter(m['severity'] for m in reg))}) -> {reg_p}")
     print("types:", ", ".join(f"{t} {c}" for t, c in Counter(m["type"] for m in reg).most_common()))
     if gone: print("no longer flagged (check before deleting):", gone)
+def triage():
+    reg_p, tri_p = ROOT / "claims/mismatches.yaml", ROOT / "claims/review/mismatch_triage.yaml"
+    reg, tri = load(reg_p), {x["id"]: x for x in load(tri_p)}
+    bad = [x["id"] for x in tri.values() if x["status"] not in STATUSES]
+    if bad: sys.exit(f"invalid status on {bad}")
+    for m in reg:
+        if m["id"] in tri: m["status"], m["note"] = tri[m["id"]]["status"], tri[m["id"]].get("note", "")
+    dump(reg_p, reg, "# CONTROLLED. Written by scripts/mismatches.py build. Edit only the status field: open | accepted | fixed | false-positive\n")
+    from collections import Counter
+    untriaged = [m["id"] for m in reg if m["id"] not in tri]
+    print("triage applied:", dict(Counter(m["status"] for m in reg)), "| not in triage file:", untriaged or "none")
 def score(verdicts_p, expected_p):
     got = {v["pair"]: v["verdict"] for v in load(verdicts_p)}
     exp = load(expected_p); ok = True
@@ -63,4 +74,4 @@ def score(verdicts_p, expected_p):
     print("PLANTED EVAL", "PASS" if ok else "FAIL"); sys.exit(0 if ok else 1)
 if __name__ == "__main__":
     cmd, args = sys.argv[1], sys.argv[2:]
-    {"batch": batch, "build": build, "score": score}[cmd](*args)
+    {"batch": batch, "build": build, "triage": triage, "score": score}[cmd](*args)

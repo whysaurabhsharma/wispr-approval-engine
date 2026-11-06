@@ -1,0 +1,57 @@
+# Human triage of claims/mismatches.yaml. Applied by: python scripts/mismatches.py triage
+# status: open (goes in the report) | accepted (true, not raised separately) | false-positive (not a real problem)
+- {id: M001, status: open, note: "Pricing says Flow is SOC 2 and ISO certified; Notetaker was outside audit scope"}
+- {id: M002, status: open, note: "Notetaker under a BAA: works alongside (docs) vs disabled (pricing)"}
+- {id: M003, status: open, note: "SOC 2: blog posts still say report expected in September; docs say it exists"}
+- {id: M004, status: open, note: "ISO 27001: compliance note says pending issue; docs say certificate held"}
+- {id: M005, status: accepted, note: "dup of M004"}
+- {id: M006, status: open, note: "Which plan gets the BAA: Growth includes one vs org BAA needs Enterprise"}
+- {id: M007, status: accepted, note: "dup of M006"}
+- {id: M008, status: open, note: "BAA process: in-product signing needs Enterprise, so how does Growth sign?"}
+- {id: M009, status: accepted, note: "dup of M008"}
+- {id: M010, status: open, note: "Growth model training: admins control it vs locked off org-wide"}
+- {id: M011, status: accepted, note: "legal context: use the newer UC Today source; not about Wispr"}
+- {id: M012, status: open, note: "'HIPAA compliance on any plan' omits that the BAA covers dictation only"}
+- {id: M013, status: accepted, note: "dup of M001"}
+- {id: M014, status: false-positive, note: "individual BAA on any plan and org-wide enforcement on Growth are compatible"}
+- {id: M015, status: open, note: "Enterprise 'disable org-wide' covers Mac and Windows only, not iOS"}
+- {id: M016, status: false-positive, note: "BAA lock overrides the admin setting; compatible"}
+- {id: M017, status: accepted, note: "dup of M003"}
+- {id: M018, status: accepted, note: "dup of M004"}
+- {id: M019, status: accepted, note: "dup of M003"}
+- {id: M020, status: accepted, note: "dup of M003"}
+- {id: M021, status: accepted, note: "dup of M004 (dated March post)"}
+- {id: M022, status: accepted, note: "user-initiated report; mention in IT brief, not the mismatch report"}
+- {id: M023, status: accepted, note: "dup of M033"}
+- {id: M024, status: accepted, note: "dup of M001"}
+- {id: M025, status: accepted, note: "dup of M001"}
+- {id: M026, status: accepted, note: "dup of M003"}
+- {id: M027, status: accepted, note: "dup of M003"}
+- {id: M028, status: accepted, note: "dated March post; superseded, not misleading on its own"}
+- {id: M029, status: accepted, note: "promo wording; low impact"}
+- {id: M030, status: false-positive, note: "same page explains both; not misleading"}
+- {id: M031, status: accepted, note: "competitor wording; not part of the Wispr report"}
+- {id: M032, status: open, note: "Enterprise model improvement off, but usage metadata (app, URL) still uploaded"}
+- {id: M033, status: open, note: "Cloud storage off covers dictation only; Notetaker content has no opt-out"}
+- {id: M034, status: false-positive, note: "'not assessed in audits' does not claim the ISO certificate was issued"}
+- {id: M035, status: accepted, note: "dup of M037"}
+- {id: M036, status: accepted, note: "dup of M015"}
+- {id: M037, status: accepted, note: "true nuance; cover in IT brief"}
+- {id: M038, status: open, note: "'Admins control context awareness' but on Growth they cannot enforce it off"}
+- {id: M039, status: false-positive, note: "'private' means not shared with the team, not 'not stored'"}
+- {id: M040, status: false-positive, note: "individual opt-out and org-wide enforcement are compatible"}
+- {id: M041, status: accepted, note: "dup of M002"}
+- {id: M042, status: false-positive, note: "separate fact, not a mismatch; keep as an IT brief note"}
+- {id: M043, status: accepted, note: "dup of M003"}
+- {id: M044, status: accepted, note: "dup of M004"}
+- {id: M045, status: false-positive, note: "BAA lock overrides the admin setting; compatible"}
+- {id: M046, status: false-positive, note: "BAA lock and Enterprise enforcement are separate mechanisms; no conflict"}
+- {id: M047, status: false-positive, note: "BAA lock overrides the admin setting; compatible"}
+- {id: M048, status: accepted, note: "compliance card is a UI feature; low impact"}
+- {id: M049, status: false-positive, note: "BAA lock overrides the admin setting; compatible"}
+- {id: M050, status: accepted, note: "dup of M033"}
+- {id: M051, status: accepted, note: "dup of M033"}
+- {id: M052, status: false-positive, note: "same page states the exception; not misleading"}
+- {id: M053, status: open, note: "Ask Wispr: does sign-out reset cloud storage to on for a BAA account?"}
+- {id: M054, status: open, note: "Android: 'HIPAA on any plan' omits that Android has no BAA signing flow"}
+- {id: M055, status: accepted, note: "dup of M054"}
