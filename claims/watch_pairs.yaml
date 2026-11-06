@@ -1,0 +1,4 @@
+# Pairs always sent to mismatch-judge. Add a pair when you suspect a gap the differ cannot see from wording.
+- {a: android_no_baa_signing, b: hipaa_baa_any_plan, why: HIPAA on any plan vs no BAA flow on Android}
+- {a: android_no_baa_signing, b: flow_hipaa_ready_with_baa, why: HIPAA-ready with BAA vs no BAA flow on Android}
+- {a: android_no_baa_signing, b: dictation_controls_platforms, why: controls on Android vs no BAA flow on Android}

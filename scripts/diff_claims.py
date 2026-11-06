@@ -34,6 +34,12 @@ for a, b in itertools.combinations(info, 2):
         key = tuple(sorted((a, b)))
         pairs[key] = {"a": key[0], "b": key[1], "linked": linked, "subjects": sorted(shared_subj), "overlap": round(overlap, 2),
                       "same_source": ra["source_id"] == rb["source_id"]}
+watch_p = ROOT / "claims/watch_pairs.yaml"  # human-chosen pairs that are always judged, whatever their wording
+for w in (yaml.safe_load(watch_p.read_text(encoding="utf-8")) or []) if watch_p.exists() else []:
+    if w["a"] in info and w["b"] in info:
+        key = tuple(sorted((w["a"], w["b"])))
+        pairs[key] = {"a": key[0], "b": key[1], "linked": True, "subjects": ["watch"], "overlap": 0, "same_source": False}
+    else: print("watch pair skipped, id not in library:", w)
 ordered = sorted(pairs.values(), key=lambda p: (not p["linked"], -len(p["subjects"]), -p["overlap"]))
 out_path.write_text(yaml.safe_dump(ordered, sort_keys=False), encoding="utf-8", newline="\n")
 print(f"{len(lib)} claims -> {len(ordered)} pairs to judge ({sum(p['linked'] for p in ordered)} already linked) -> {out_path}")

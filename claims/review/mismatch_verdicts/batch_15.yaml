@@ -1,0 +1,13 @@
+- pair: android_no_baa_signing|hipaa_baa_any_plan
+  verdict: scope-gap
+  severity: high
+  type: baa_platform_android
+  reason: 'HIPAA is described as available on any plan with a signed BAA, but this does not mention that Android has no BAA signing or revocation flow.'
+- pair: android_no_baa_signing|flow_hipaa_ready_with_baa
+  verdict: scope-gap
+  severity: high
+  type: baa_platform_android
+  reason: 'Flow is HIPAA-ready for dictation with a signed BAA, with no platform exception, while Android has no BAA signing or revocation flow.'
+- pair: android_no_baa_signing|dictation_controls_platforms
+  verdict: compatible
+  reason: 'Data sharing and cloud storage controls on Android are a different fact from the missing BAA signing flow on Android.'
