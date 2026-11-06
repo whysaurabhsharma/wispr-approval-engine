@@ -1,0 +1,98 @@
+- pair: ca_baa_locks_settings|model_improvement_off_no_stop_cloud_processing
+  verdict: compatible
+  reason: One describes what a BAA locks off, the other says turning off model improvement "does not stop cloud processing"; different facts.
+- pair: ca_baa_locks_settings|enforce_off_for_everyone_requires_enterprise
+  verdict: compatible
+  reason: The BAA lock and the Teams/Pro admin enforcement path are separate mechanisms on different stated scopes, and neither denies the other.
+- pair: ca_baa_locks_settings|pdf_may_not_match_agreement
+  verdict: compatible
+  reason: One covers settings locked by a BAA, the other a caveat about the signed BAA PDF; different facts.
+- pair: admin_cloud_storage_org_wide|ca_baa_locks_settings
+  verdict: scope-gap
+  severity: high
+  type: cloud_storage_baa_lock
+  reason: Admins can "leave it to individual users", but the broad claim omits that a BAA locks cloud storage off.
+- pair: admin_accepts_baa_portal|ca_baa_locks_settings
+  verdict: compatible
+  reason: One describes how an admin accepts the BAA, the other what signing it locks; they fit together.
+- pair: model_improvement_off_no_stop_cloud_processing|model_improvement_off_withholds_content
+  verdict: compatible
+  reason: Content is withheld from model improvement while cloud processing continues; both can hold together.
+- pair: model_improvement_off_metadata_still_uploaded|model_improvement_off_no_stop_cloud_processing
+  verdict: compatible
+  reason: Both describe what continues with model improvement off (metadata upload, cloud processing) and do not conflict.
+- pair: admin_cloud_storage_org_wide|dictation_cloud_storage_stores_history_on_servers
+  verdict: compatible
+  reason: One says who controls the setting, the other what the setting stores; different facts.
+- pair: personal_or_org_baa_locks_cloud_storage_off|unconfirmed_org_settings_forced_off
+  verdict: compatible
+  reason: A BAA lock and a forced-off state while settings are unconfirmed are separate conditions that do not conflict.
+- pair: dictation_cloud_off_discard|revoking_baa_does_not_restore_sharing
+  verdict: compatible
+  reason: One covers audio discard with storage off, the other that revoking a BAA does not re-enable storage; different facts.
+- pair: admin_cloud_storage_org_wide|revoking_baa_does_not_restore_sharing
+  verdict: compatible
+  reason: Admin control of storage and BAA revocation not auto-restoring storage are different facts that do not conflict.
+- pair: dpa_eu_scc_included|eu_uk_customers_dpa_scc
+  verdict: same-fact
+  reason: Both say EU transfers are covered by a DPA with Standard Contractual Clauses.
+- pair: dpa_annex_iii_subprocessors|dpa_tia_wispr_support
+  verdict: compatible
+  reason: One says what Annex III lists, the other that the DPA and Annex III support a TIA; consistent.
+- pair: hipaa_baa_growth_enterprise|soc2_card_enterprise_only
+  verdict: scope-gap
+  severity: high
+  type: hipaa_plan_availability
+  reason: HIPAA is "Available on Growth and Enterprise", yet the SOC 2 and HIPAA card "requires an Enterprise plan".
+- pair: admin_cloud_storage_org_wide|signed_baa_locks_both_controls_off
+  verdict: scope-gap
+  severity: high
+  type: cloud_storage_baa_lock
+  reason: The admin org-wide storage choice does not mention that "A signed BAA locks both controls off".
+- pair: hipaa_requires_baa|pdf_may_not_match_agreement
+  verdict: compatible
+  reason: One states the BAA requirement, the other a caveat about the signed PDF; different facts.
+- pair: docs_network_bypass_tls_stays_enabled|docs_network_root_certificates_respected
+  verdict: compatible
+  reason: Flow supports TLS inspection, and an optional bypass stops interception while TLS stays enabled; both can be true.
+- pair: dictation_cloud_off_discard|dictation_cloud_storage_scope
+  verdict: compatible
+  reason: Both concern dictation cloud storage only; one covers discard behaviour, the other the setting's scope.
+- pair: admin_cloud_storage_org_wide|dictation_cloud_storage_scope
+  verdict: compatible
+  reason: One says who controls the setting, the other that it covers dictation only; consistent.
+- pair: admin_cloud_storage_org_wide|dictation_cloud_off_discard
+  verdict: compatible
+  reason: Admin control of the setting and audio discard when it is off are complementary facts.
+- pair: baa_revoke_settings_not_restored|personal_or_org_baa_locks_cloud_storage_off
+  verdict: compatible
+  reason: A BAA locks storage off and revoking it does not restore settings; consistent facts.
+- pair: ca_enterprise_disable_for_all_users|ca_growth_admins_cannot_enforce_off
+  verdict: compatible
+  reason: The claims apply to different plans (Enterprise vs Growth), so they do not conflict.
+- pair: admin_cloud_storage_dictation|dictation_cloud_storage_scope
+  verdict: same-fact
+  reason: Both say the setting controls "whether dictation is stored in the cloud"; one is more specific.
+- pair: teams_external_bot_organiser_approval|teams_flags_external_meeting_bots
+  verdict: compatible
+  reason: Organiser approval and Unverified flagging are two separate Teams measures from the same report.
+- pair: hipaa_status_verification_planned|soc2_reverification_planned
+  verdict: compatible
+  reason: Both describe planned A-LIGN audit work on different frameworks; no conflict.
+- pair: otter_bipa_claims_proceed|otter_wiretap_ca_claims_proceed
+  verdict: compatible
+  reason: Each describes a different set of claims against Otter allowed to proceed.
+- pair: baa_personal_model_training_off|wispr_does_not_sell_user_data
+  verdict: compatible
+  reason: No model training under a BAA and not selling data are different facts.
+- pair: baa_signing_platforms|ca_platform_support
+  verdict: compatible
+  reason: The claims list platforms for different features and do not conflict.
+- pair: no_data_residency_outside_us|wispr_does_not_sell_user_data
+  verdict: compatible
+  reason: Data residency and data sale are unrelated facts.
+- pair: baa_signing_platforms|dictation_controls_platforms
+  verdict: scope-gap
+  severity: high
+  type: platform_android
+  reason: The controls run on "Mac, Windows, iOS and Android", but BAA signing excludes Android, which neither claim flags.

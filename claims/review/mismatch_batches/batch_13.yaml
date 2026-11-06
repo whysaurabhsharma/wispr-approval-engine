@@ -1,47 +1,47 @@
-- pair: baa_revoke_settings_not_restored|typed_feedback_not_stripped_by_baa
+- pair: ca_baa_locks_settings|model_improvement_off_no_stop_cloud_processing
   a:
-    id: baa_revoke_settings_not_restored
-    claim: Revoking a personal BAA removes BAA enforcement but does not restore the storage and sharing settings.
-    source_id: docs_baa_revoke
-    source_quote: Revoking removes personal-BAA enforcement but does not restore those settings
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope: &id011
-    - unknown
-  b:
-    id: typed_feedback_not_stripped_by_baa
-    claim: Typed in-app feedback is not stripped by the data-sharing settings or a BAA.
-    source_id: docs_hipaa
-    source_quote: is not stripped by these settings or a BAA
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope:
-    - unknown
-- pair: baa_signature_record_not_certificate|notetaker_works_alongside_baa
-  a:
-    id: baa_signature_record_not_certificate
-    claim: The Signature Record page in the signed BAA PDF is for reference, not a legal certificate.
-    source_id: docs_baa_revoke
-    source_quote: that page is for reference, not a legal certificate
+    id: ca_baa_locks_settings
+    claim: Signing the applicable Business Associate Agreement (BAA) locks Improve the model for everyone and Dictation Cloud Storage off.
+    source_id: docs_context_awareness
+    source_quote: sign the applicable Business Associate Agreement (BAA), which locks
     checked: '2026-11-05'
     status: confirmed
     plan_scope: &id001
     - unknown
   b:
-    id: notetaker_works_alongside_baa
-    claim: Notetaker works alongside a signed BAA, so the user does not need to revoke the BAA to record meetings.
+    id: model_improvement_off_no_stop_cloud_processing
+    claim: Turning off model improvement does not stop cloud processing.
     source_id: docs_data_sharing
-    source_quote: Notetaker works alongside a signed personal or organization BAA
+    source_quote: Turning it off does not stop cloud processing
     checked: '2026-11-05'
-    status: conflicting
-    plan_scope:
+    status: confirmed
+    plan_scope: &id002
     - unknown
-- pair: baa_signature_record_not_certificate|pdf_may_not_match_agreement
+- pair: ca_baa_locks_settings|enforce_off_for_everyone_requires_enterprise
   a:
-    id: baa_signature_record_not_certificate
-    claim: The Signature Record page in the signed BAA PDF is for reference, not a legal certificate.
-    source_id: docs_baa_revoke
-    source_quote: that page is for reference, not a legal certificate
+    id: ca_baa_locks_settings
+    claim: Signing the applicable Business Associate Agreement (BAA) locks Improve the model for everyone and Dictation Cloud Storage off.
+    source_id: docs_context_awareness
+    source_quote: sign the applicable Business Associate Agreement (BAA), which locks
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id001
+  b:
+    id: enforce_off_for_everyone_requires_enterprise
+    claim: Enforcing model training off for everyone requires upgrading to Enterprise.
+    source_id: docs_data_sharing
+    source_quote: so each member decides, and enforcing off for everyone requires upgrading to Enterprise
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - teams
+    - pro
+- pair: ca_baa_locks_settings|pdf_may_not_match_agreement
+  a:
+    id: ca_baa_locks_settings
+    claim: Signing the applicable Business Associate Agreement (BAA) locks Improve the model for everyone and Dictation Cloud Storage off.
+    source_id: docs_context_awareness
+    source_quote: sign the applicable Business Associate Agreement (BAA), which locks
     checked: '2026-11-05'
     status: confirmed
     plan_scope: *id001
@@ -52,136 +52,8 @@
     source_quote: the PDF may not match the agreement text at signing
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: &id004
-    - unknown
-- pair: admin_cloud_storage_org_wide|baa_signing_turns_storage_off
-  a:
-    id: admin_cloud_storage_org_wide
-    claim: Admins can set dictation cloud storage for the whole organization, or leave it to individual users.
-    source_id: wf_enterprise_privacy_post
-    source_quote: Set dictation cloud storage for the whole organization, or leave it to individual users.
-    checked: '2026-11-05'
-    status: confirmed
     plan_scope: &id005
     - unknown
-  b:
-    id: baa_signing_turns_storage_off
-    claim: Signing a personal BAA turns Dictation cloud storage off for the account.
-    source_id: docs_baa_revoke
-    source_quote: and Dictation cloud storage off for your account
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope:
-    - unknown
-- pair: ca_improve_model_off_keeps_context_awareness|enforce_off_for_everyone_requires_enterprise
-  a:
-    id: ca_improve_model_off_keeps_context_awareness
-    claim: Turning off Improve the model for everyone does not turn off Context Awareness.
-    source_id: docs_context_awareness
-    source_quote: does not turn off Context Awareness
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope:
-    - unknown
-  b:
-    id: enforce_off_for_everyone_requires_enterprise
-    claim: Enforcing model training off for everyone requires upgrading to Enterprise.
-    source_id: docs_data_sharing
-    source_quote: so each member decides, and enforcing off for everyone requires upgrading to Enterprise
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope: &id003
-    - teams
-    - pro
-- pair: ca_baa_locks_settings|delete_retains_signed_agreements
-  a:
-    id: ca_baa_locks_settings
-    claim: Signing the applicable Business Associate Agreement (BAA) locks Improve the model for everyone and Dictation Cloud Storage off.
-    source_id: docs_context_awareness
-    source_quote: sign the applicable Business Associate Agreement (BAA), which locks
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope: &id002
-    - unknown
-  b:
-    id: delete_retains_signed_agreements
-    claim: Wispr keeps signed agreements, such as a HIPAA Business Associate Agreement, after deletion.
-    source_id: docs_data_requests
-    source_quote: Signed agreements, such as a HIPAA Business Associate Agreement.
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope:
-    - unknown
-- pair: ca_baa_locks_settings|model_improvement_off_no_stop_cloud_processing
-  a:
-    id: ca_baa_locks_settings
-    claim: Signing the applicable Business Associate Agreement (BAA) locks Improve the model for everyone and Dictation Cloud Storage off.
-    source_id: docs_context_awareness
-    source_quote: sign the applicable Business Associate Agreement (BAA), which locks
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope: *id002
-  b:
-    id: model_improvement_off_no_stop_cloud_processing
-    claim: Turning off model improvement does not stop cloud processing.
-    source_id: docs_data_sharing
-    source_quote: Turning it off does not stop cloud processing
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope: &id006
-    - unknown
-- pair: ca_baa_locks_settings|enforce_off_for_everyone_requires_enterprise
-  a:
-    id: ca_baa_locks_settings
-    claim: Signing the applicable Business Associate Agreement (BAA) locks Improve the model for everyone and Dictation Cloud Storage off.
-    source_id: docs_context_awareness
-    source_quote: sign the applicable Business Associate Agreement (BAA), which locks
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope: *id002
-  b:
-    id: enforce_off_for_everyone_requires_enterprise
-    claim: Enforcing model training off for everyone requires upgrading to Enterprise.
-    source_id: docs_data_sharing
-    source_quote: so each member decides, and enforcing off for everyone requires upgrading to Enterprise
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope: *id003
-- pair: ca_baa_locks_settings|pdf_may_not_match_agreement
-  a:
-    id: ca_baa_locks_settings
-    claim: Signing the applicable Business Associate Agreement (BAA) locks Improve the model for everyone and Dictation Cloud Storage off.
-    source_id: docs_context_awareness
-    source_quote: sign the applicable Business Associate Agreement (BAA), which locks
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope: *id002
-  b:
-    id: pdf_may_not_match_agreement
-    claim: The signed BAA PDF may not match the agreement text at signing.
-    source_id: docs_hipaa
-    source_quote: the PDF may not match the agreement text at signing
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope: *id004
-- pair: ca_baa_locks_settings|hipaa_baa_any_plan
-  a:
-    id: ca_baa_locks_settings
-    claim: Signing the applicable Business Associate Agreement (BAA) locks Improve the model for everyone and Dictation Cloud Storage off.
-    source_id: docs_context_awareness
-    source_quote: sign the applicable Business Associate Agreement (BAA), which locks
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope: *id002
-  b:
-    id: hipaa_baa_any_plan
-    claim: HIPAA compliance is available on any plan with a signed Business Associate Agreement.
-    source_id: wf_business
-    source_quote: Available on any plan with a signed Business Associate Agreement.
-    checked: '2026-11-05'
-    status: conflicting
-    plan_scope: &id008
-    - all
 - pair: admin_cloud_storage_org_wide|ca_baa_locks_settings
   a:
     id: admin_cloud_storage_org_wide
@@ -190,7 +62,8 @@
     source_quote: Set dictation cloud storage for the whole organization, or leave it to individual users.
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id005
+    plan_scope: &id003
+    - unknown
   b:
     id: ca_baa_locks_settings
     claim: Signing the applicable Business Associate Agreement (BAA) locks Improve the model for everyone and Dictation Cloud Storage off.
@@ -198,7 +71,26 @@
     source_quote: sign the applicable Business Associate Agreement (BAA), which locks
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id002
+    plan_scope: *id001
+- pair: admin_accepts_baa_portal|ca_baa_locks_settings
+  a:
+    id: admin_accepts_baa_portal
+    claim: An admin accepts the Business Associate Agreement from the admin portal to enable HIPAA support.
+    source_id: wf_compliance_note
+    source_quote: an admin accepts the Business Associate Agreement from the admin portal
+    checked: '2026-11-06'
+    status: confirmed
+    plan_scope:
+    - growth
+    - enterprise
+  b:
+    id: ca_baa_locks_settings
+    claim: Signing the applicable Business Associate Agreement (BAA) locks Improve the model for everyone and Dictation Cloud Storage off.
+    source_id: docs_context_awareness
+    source_quote: sign the applicable Business Associate Agreement (BAA), which locks
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id001
 - pair: model_improvement_off_no_stop_cloud_processing|model_improvement_off_withholds_content
   a:
     id: model_improvement_off_no_stop_cloud_processing
@@ -207,7 +99,7 @@
     source_quote: Turning it off does not stop cloud processing
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id006
+    plan_scope: *id002
   b:
     id: model_improvement_off_withholds_content
     claim: With model improvement off, audio, transcripts, edits and other personal content are withheld from model improvement and evaluation.
@@ -234,7 +126,7 @@
     source_quote: Turning it off does not stop cloud processing
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id006
+    plan_scope: *id002
 - pair: admin_cloud_storage_org_wide|dictation_cloud_storage_stores_history_on_servers
   a:
     id: admin_cloud_storage_org_wide
@@ -243,7 +135,7 @@
     source_quote: Set dictation cloud storage for the whole organization, or leave it to individual users.
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id005
+    plan_scope: *id003
   b:
     id: dictation_cloud_storage_stores_history_on_servers
     claim: Dictation cloud storage stores dictation transcripts, audio and history on Wispr's servers for cross-device access.
@@ -261,7 +153,7 @@
     source_quote: A personal or organization BAA locks
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: &id012
+    plan_scope: &id008
     - unknown
   b:
     id: unconfirmed_org_settings_forced_off
@@ -280,7 +172,7 @@
     source_quote: Turn it off and audio is discarded once it's transcribed.
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: &id009
+    plan_scope: &id006
     - unknown
   b:
     id: revoking_baa_does_not_restore_sharing
@@ -289,7 +181,7 @@
     source_quote: it does not turn sharing or dictation cloud storage back on
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: &id007
+    plan_scope: &id004
     - unknown
 - pair: admin_cloud_storage_org_wide|revoking_baa_does_not_restore_sharing
   a:
@@ -299,7 +191,7 @@
     source_quote: Set dictation cloud storage for the whole organization, or leave it to individual users.
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id005
+    plan_scope: *id003
   b:
     id: revoking_baa_does_not_restore_sharing
     claim: Revoking a BAA does not turn sharing or dictation cloud storage back on.
@@ -307,7 +199,7 @@
     source_quote: it does not turn sharing or dictation cloud storage back on
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id007
+    plan_scope: *id004
 - pair: dpa_eu_scc_included|eu_uk_customers_dpa_scc
   a:
     id: dpa_eu_scc_included
@@ -346,15 +238,17 @@
     status: confirmed
     plan_scope:
     - unknown
-- pair: hipaa_baa_any_plan|soc2_card_enterprise_only
+- pair: hipaa_baa_growth_enterprise|soc2_card_enterprise_only
   a:
-    id: hipaa_baa_any_plan
-    claim: HIPAA compliance is available on any plan with a signed Business Associate Agreement.
+    id: hipaa_baa_growth_enterprise
+    claim: HIPAA compliance is available on the Growth and Enterprise plans with a signed Business Associate Agreement.
     source_id: wf_business
-    source_quote: Available on any plan with a signed Business Associate Agreement.
-    checked: '2026-11-05'
-    status: conflicting
-    plan_scope: *id008
+    source_quote: Available on Growth and Enterprise with a signed Business Associate Agreement.
+    checked: '2026-11-06'
+    status: confirmed
+    plan_scope:
+    - growth
+    - enterprise
   b:
     id: soc2_card_enterprise_only
     claim: The SOC 2 and HIPAA compliance card on Privacy requires an Enterprise plan.
@@ -372,7 +266,7 @@
     source_quote: Set dictation cloud storage for the whole organization, or leave it to individual users.
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id005
+    plan_scope: *id003
   b:
     id: signed_baa_locks_both_controls_off
     claim: A signed BAA locks both the model-improvement and dictation cloud storage controls off.
@@ -399,7 +293,7 @@
     source_quote: the PDF may not match the agreement text at signing
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id004
+    plan_scope: *id005
 - pair: docs_network_bypass_tls_stays_enabled|docs_network_root_certificates_respected
   a:
     id: docs_network_bypass_tls_stays_enabled
@@ -427,7 +321,7 @@
     source_quote: Turn it off and audio is discarded once it's transcribed.
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id009
+    plan_scope: *id006
   b:
     id: dictation_cloud_storage_scope
     claim: Dictation Cloud Storage controls whether dictation data is stored on Wispr's servers, not Notetaker or Scratchpad.
@@ -435,7 +329,7 @@
     source_quote: Whether dictation data is stored on Wispr's servers; dictation only, not Notetaker or Scratchpad
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: &id010
+    plan_scope: &id007
     - unknown
 - pair: admin_cloud_storage_org_wide|dictation_cloud_storage_scope
   a:
@@ -445,7 +339,7 @@
     source_quote: Set dictation cloud storage for the whole organization, or leave it to individual users.
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id005
+    plan_scope: *id003
   b:
     id: dictation_cloud_storage_scope
     claim: Dictation Cloud Storage controls whether dictation data is stored on Wispr's servers, not Notetaker or Scratchpad.
@@ -453,7 +347,7 @@
     source_quote: Whether dictation data is stored on Wispr's servers; dictation only, not Notetaker or Scratchpad
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id010
+    plan_scope: *id007
 - pair: admin_cloud_storage_org_wide|dictation_cloud_off_discard
   a:
     id: admin_cloud_storage_org_wide
@@ -462,7 +356,7 @@
     source_quote: Set dictation cloud storage for the whole organization, or leave it to individual users.
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id005
+    plan_scope: *id003
   b:
     id: dictation_cloud_off_discard
     claim: With Dictation cloud storage off, audio is discarded once it is transcribed.
@@ -470,7 +364,7 @@
     source_quote: Turn it off and audio is discarded once it's transcribed.
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id009
+    plan_scope: *id006
 - pair: baa_revoke_settings_not_restored|personal_or_org_baa_locks_cloud_storage_off
   a:
     id: baa_revoke_settings_not_restored
@@ -479,7 +373,8 @@
     source_quote: Revoking removes personal-BAA enforcement but does not restore those settings
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id011
+    plan_scope:
+    - unknown
   b:
     id: personal_or_org_baa_locks_cloud_storage_off
     claim: A personal or organization BAA locks dictation cloud storage off, even if another organization setting permits sharing.
@@ -487,7 +382,7 @@
     source_quote: A personal or organization BAA locks
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id012
+    plan_scope: *id008
 - pair: ca_enterprise_disable_for_all_users|ca_growth_admins_cannot_enforce_off
   a:
     id: ca_enterprise_disable_for_all_users
@@ -524,7 +419,7 @@
     source_quote: Whether dictation data is stored on Wispr's servers; dictation only, not Notetaker or Scratchpad
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id010
+    plan_scope: *id007
 - pair: teams_external_bot_organiser_approval|teams_flags_external_meeting_bots
   a:
     id: teams_external_bot_organiser_approval
@@ -540,6 +435,118 @@
     claim: UC Today reports Microsoft Teams flags some external meeting bots as Unverified.
     source_id: legal_otter_uctoday
     source_quote: Microsoft Teams has moved to flag some external meeting bots as “Unverified”
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: hipaa_status_verification_planned|soc2_reverification_planned
+  a:
+    id: hipaa_status_verification_planned
+    claim: A-LIGN will verify Wispr's HIPAA status; the post describes this as future work.
+    source_id: wf_new_audit
+    source_quote: verifying our HIPAA status
+    checked: '2026-11-05'
+    status: in-progress
+    plan_scope:
+    - unknown
+  b:
+    id: soc2_reverification_planned
+    claim: A-LIGN will re-verify Wispr's SOC 2 compliance; the post describes this as future work.
+    source_id: wf_new_audit
+    source_quote: A-LIGN will be reverifying our SOC 2 compliance
+    checked: '2026-11-05'
+    status: in-progress
+    plan_scope:
+    - unknown
+- pair: otter_bipa_claims_proceed|otter_wiretap_ca_claims_proceed
+  a:
+    id: otter_bipa_claims_proceed
+    claim: The court allowed Illinois BIPA biometric privacy claims against Otter to proceed.
+    source_id: legal_otter_uctoday
+    source_quote: Judge Lee allowed claims under Illinois’ Biometric Information Privacy Act (BIPA) to proceed.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: otter_wiretap_ca_claims_proceed
+    claim: The court allowed the central federal wiretap and California privacy claims against Otter to proceed.
+    source_id: legal_otter_uctoday
+    source_quote: allowed the central claims under federal wiretap, California privacy
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope:
+    - unknown
+- pair: baa_personal_model_training_off|wispr_does_not_sell_user_data
+  a:
+    id: baa_personal_model_training_off
+    claim: A personal BAA means the HIPAA agreement does not allow data to be used for model training.
+    source_id: docs_baa_revoke
+    source_quote: Your HIPAA agreement does not allow data to be used for model training.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: wispr_does_not_sell_user_data
+    claim: Wispr does not sell user data.
+    source_id: docs_data_sharing
+    source_quote: Wispr does not sell your data
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id009
+    - unknown
+- pair: baa_signing_platforms|ca_platform_support
+  a:
+    id: baa_signing_platforms
+    claim: BAA signing is available on Mac, Windows and iOS.
+    source_id: docs_hipaa
+    source_quote: BAA signing is available on Mac, Windows and iOS
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id010
+    - unknown
+  b:
+    id: ca_platform_support
+    claim: Context Awareness is available on Mac, Windows, and iOS, with iOS limited to the focused text field.
+    source_id: docs_context_awareness
+    source_quote: Mac, Windows, iOS (limited to the focused text field)
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: no_data_residency_outside_us|wispr_does_not_sell_user_data
+  a:
+    id: no_data_residency_outside_us
+    claim: Wispr does not currently offer data residency outside the US.
+    source_id: wf_compliance_note
+    source_quote: we don't currently offer data residency outside the US
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: wispr_does_not_sell_user_data
+    claim: Wispr does not sell user data.
+    source_id: docs_data_sharing
+    source_quote: Wispr does not sell your data
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id009
+- pair: baa_signing_platforms|dictation_controls_platforms
+  a:
+    id: baa_signing_platforms
+    claim: BAA signing is available on Mac, Windows and iOS.
+    source_id: docs_hipaa
+    source_quote: BAA signing is available on Mac, Windows and iOS
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id010
+  b:
+    id: dictation_controls_platforms
+    claim: The data sharing and cloud storage controls are available on Mac, Windows, iOS and Android.
+    source_id: docs_data_sharing
+    source_quote: Mac, Windows, iOS and Android
     checked: '2026-11-05'
     status: confirmed
     plan_scope:

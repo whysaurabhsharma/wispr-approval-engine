@@ -508,24 +508,6 @@
     checked: '2026-11-05'
     status: confirmed
     plan_scope: *id010
-- pair: dictation_cloud_storage_scope|security_notetaker_disabled_baa
-  a:
-    id: dictation_cloud_storage_scope
-    claim: Dictation Cloud Storage controls whether dictation data is stored on Wispr's servers, not Notetaker or Scratchpad.
-    source_id: docs_security_faq
-    source_quote: Whether dictation data is stored on Wispr's servers; dictation only, not Notetaker or Scratchpad
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope: *id007
-  b:
-    id: security_notetaker_disabled_baa
-    claim: Notetaker and Scratchpad are disabled on accounts under a BAA.
-    source_id: wf_pricing
-    source_quote: Notetaker and Scratchpad are disabled on BAA accounts.
-    checked: '2026-11-05'
-    status: conflicting
-    plan_scope:
-    - all
 - pair: security_soc2_iso_certified|soc2_type_ii_report
   a:
     id: security_soc2_iso_certified
@@ -534,7 +516,7 @@
     source_quote: SOC 2 Type II and ISO 27001 certified.
     checked: '2026-11-05'
     status: conflicting
-    plan_scope:
+    plan_scope: &id011
     - all
   b:
     id: soc2_type_ii_report
@@ -545,3 +527,21 @@
     status: confirmed
     plan_scope:
     - unknown
+- pair: iso_27001_certificate|security_soc2_iso_certified
+  a:
+    id: iso_27001_certificate
+    claim: Wispr's Trust Center provides an ISO/IEC 27001:2022 certificate.
+    source_id: docs_security_faq
+    source_quote: The Trust Center provides Wispr's SOC 2 Type II report, the ISO/IEC 27001:2022 certificate
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: security_soc2_iso_certified
+    claim: Flow is SOC 2 Type II and ISO 27001 certified.
+    source_id: wf_pricing
+    source_quote: SOC 2 Type II and ISO 27001 certified.
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: *id011

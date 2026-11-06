@@ -45,13 +45,17 @@ def build():
         reg.append({"id": mid, "pair": key, "type": v.get("type", "unlabelled"), "verdict": v["verdict"],
                     "severity": v.get("severity", "medium"), "status": status, "note": prev.get("note", ""), "reason": v.get("reason", ""),
                     "first_seen": prev.get("first_seen", today), "claim_a": pairs[key]["a"], "claim_b": pairs[key]["b"]})
+    RETIRED = {r["id"] for r in load(ROOT / "claims/library.yaml") if r.get("status") == "retired"}
     flagged = {r["pair"] for r in reg}
     gone = [m["id"] for k, m in old.items() if k not in flagged]
     for k, m in old.items():  # keep history: items no longer flagged stay in the register, closed
         if k in flagged: continue
-        if m.get("status") in ("open", "accepted"):
+        retired = [c for c in m["pair"].split("|") if c in RETIRED]
+        if retired and m.get("status") in ("open", "accepted"):
             m["status"], m["closed_on"] = "fixed", m.get("closed_on", today)
-            m["note"] = (m.get("note", "") + f" | no longer flagged on {today}: source wording changed").strip(" |")
+            m["note"] = (m.get("note", "") + f" | fixed on {today}: Wispr removed the wording ({', '.join(retired)})").strip(" |")
+        elif not retired and "not re-flagged" not in m.get("note", ""):
+            m["note"] = (m.get("note", "") + f" | not re-flagged on {today} (judge variance); status kept").strip(" |")
         reg.append(m)
     reg.sort(key=lambda m: ({"high": 0, "medium": 1, "low": 2}.get(m["severity"], 3), m["type"], m["id"]))
     dump(reg_p, reg, "# CONTROLLED. Written by scripts/mismatches.py build. Edit only the status field: open | accepted | fixed | false-positive\n")

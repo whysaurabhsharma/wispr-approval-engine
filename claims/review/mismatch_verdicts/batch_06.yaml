@@ -1,0 +1,94 @@
+- pair: model_improvement_off_no_stop_cloud_processing|model_improvement_off_stops_training
+  verdict: compatible
+  reason: One says what turning the setting off stops (model training), the other what it does not stop (cloud processing); both can hold.
+- pair: model_improvement_controls_dictation_use|reported_dictation_used_for_training
+  verdict: scope-gap
+  severity: high
+  type: reported_dictation_training
+  reason: The setting is presented as controlling training use, but a reported dictation "can be used to train and evaluate" without the setting being mentioned.
+- pair: dictation_cloud_storage_stores_history_on_servers|enterprise_admin_enforce_cloud_storage
+  verdict: compatible
+  reason: One describes what cloud storage stores, the other who can enforce the setting.
+- pair: admin_cloud_storage_off_everyone|dictation_cloud_storage_stores_history_on_servers
+  verdict: compatible
+  reason: One describes what cloud storage stores, the other that admins can turn it off.
+- pair: dictation_cloud_off_discard|dictation_cloud_storage_stores_history_on_servers
+  verdict: compatible
+  reason: The claims describe the on and off states of the same setting and do not conflict.
+- pair: enterprise_admin_enforce_cloud_storage|notetaker_cloud_storage_no_opt_out
+  verdict: compatible
+  reason: The enforcement claim is explicitly about dictation cloud storage, while the other covers Notetaker, a different feature.
+- pair: dictation_cloud_off_discard|personal_or_org_baa_locks_cloud_storage_off
+  verdict: compatible
+  reason: One says what happens when storage is off, the other that a BAA locks it off; both fit together.
+- pair: admin_cloud_storage_org_wide|personal_or_org_baa_locks_cloud_storage_off
+  verdict: scope-gap
+  severity: high
+  type: baa_cloud_storage_lock
+  reason: Admins "set dictation cloud storage for the whole organization", but a BAA locks it off "even if another organization setting permits", which the admin claim does not mention.
+- pair: enforce_off_for_everyone_requires_enterprise|enterprise_model_training_enforced
+  verdict: compatible
+  reason: Teams/Pro need to upgrade to enforce training off, and Enterprise has it enforced; the two are consistent.
+- pair: notetaker_no_meeting_bot|notetaker_works_alongside_baa
+  verdict: compatible
+  reason: One covers how Notetaker joins meetings, the other how it works with a BAA; these are different facts.
+- pair: enterprise_admin_enforce_cloud_storage|revoking_baa_does_not_restore_sharing
+  verdict: compatible
+  reason: Admin enforcement and the effect of revoking a BAA are different facts that do not conflict.
+- pair: dictation_controls_platforms|free_plan_platform_support
+  verdict: compatible
+  reason: One lists platforms for the data controls, the other platforms for free-plan dictation; both list the same four platforms.
+- pair: dpa_eu_scc_included|dpa_uk_addendum_included
+  verdict: compatible
+  reason: The DPA includes both EU SCCs and a UK Addendum, which are separate transfer mechanisms.
+- pair: data_stored_us_aws|dpa_customer_data_processed_us
+  verdict: compatible
+  reason: Storage in the US on AWS and processing in the US are consistent, related facts.
+- pair: model_improvement_controls_dictation_use|model_improvement_off_stops_training
+  verdict: same-fact
+  reason: Both say the model improvement setting controls whether content is used to improve Wispr's models.
+- pair: enterprise_admin_enforce_cloud_storage|signed_baa_locks_both_controls_off
+  verdict: compatible
+  reason: Admin enforcement of the setting and a BAA locking it off do not directly conflict as stated.
+- pair: dictation_cloud_off_discard|signed_baa_locks_both_controls_off
+  verdict: compatible
+  reason: A BAA locks storage off, and with storage off audio is discarded; the claims fit together.
+- pair: enterprise_admin_enforce_cloud_storage|org_model_restriction_not_cloud_storage
+  verdict: compatible
+  reason: Enforcing cloud storage and the separation of the model-improvement restriction from cloud storage are consistent.
+- pair: dictation_cloud_off_discard|org_model_restriction_not_cloud_storage
+  verdict: compatible
+  reason: The claims describe different settings and do not conflict.
+- pair: admin_cloud_storage_org_wide|org_model_restriction_not_cloud_storage
+  verdict: compatible
+  reason: Cloud storage is set separately from the model restriction, which matches the org-wide cloud storage control.
+- pair: enterprise_admin_enforce_cloud_storage|unconfirmed_org_settings_forced_off
+  verdict: compatible
+  reason: Admin enforcement and the fallback when settings cannot be confirmed are different facts.
+- pair: dictation_cloud_storage_scope|enterprise_admin_enforce_cloud_storage
+  verdict: compatible
+  reason: One defines what the setting covers, the other who can enforce it.
+- pair: dictation_storage_only_if_cloud_on|enterprise_admin_enforce_cloud_storage
+  verdict: compatible
+  reason: Storage depending on the setting and admins enforcing the setting are consistent.
+- pair: admin_cloud_storage_off_everyone|enterprise_admin_enforce_cloud_storage
+  verdict: same-fact
+  reason: Both describe admins controlling dictation cloud storage for the organization, and the second is a more specific Enterprise version.
+- pair: dictation_cloud_off_discard|enterprise_admin_enforce_cloud_storage
+  verdict: compatible
+  reason: The effect of storage being off and admin enforcement are different facts.
+- pair: admin_cloud_storage_org_wide|enterprise_admin_enforce_cloud_storage
+  verdict: same-fact
+  reason: Both describe admins setting dictation cloud storage at organization level, and the second names Enterprise.
+- pair: dictation_cloud_off_discard|unconfirmed_org_settings_forced_off
+  verdict: compatible
+  reason: The claims describe different conditions and do not conflict.
+- pair: admin_cloud_storage_org_wide|unconfirmed_org_settings_forced_off
+  verdict: compatible
+  reason: The admin org-wide setting and a temporary forced-off fallback are different facts.
+- pair: admin_notetaker_disable_toggle|dictation_cloud_storage_scope
+  verdict: compatible
+  reason: The Notetaker on/off control and the scope of dictation cloud storage are separate controls.
+- pair: admin_cloud_storage_off_everyone|dictation_cloud_storage_scope
+  verdict: compatible
+  reason: Both are about dictation cloud storage only, and turning it off for everyone fits the stated scope.

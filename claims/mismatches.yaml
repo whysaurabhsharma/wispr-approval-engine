@@ -53,14 +53,41 @@
     status: confirmed
     plan_scope:
     - unknown
+- id: M061
+  pair: admin_cloud_storage_org_wide|personal_or_org_baa_locks_cloud_storage_off
+  type: baa_cloud_storage_lock
+  verdict: scope-gap
+  severity: high
+  status: false-positive
+  note: BAA lock overrides the admin setting; compatible
+  reason: Admins "set dictation cloud storage for the whole organization", but a BAA locks it off "even if another organization setting permits", which the admin claim does not mention.
+  first_seen: '2026-11-06'
+  claim_a:
+    id: admin_cloud_storage_org_wide
+    claim: Admins can set dictation cloud storage for the whole organization, or leave it to individual users.
+    source_id: wf_enterprise_privacy_post
+    source_quote: Set dictation cloud storage for the whole organization, or leave it to individual users.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  claim_b:
+    id: personal_or_org_baa_locks_cloud_storage_off
+    claim: A personal or organization BAA locks dictation cloud storage off, even if another organization setting permits sharing.
+    source_id: docs_data_sharing
+    source_quote: A personal or organization BAA locks
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
 - id: M053
   pair: baa_signing_turns_storage_off|sign_out_resets_cloud_storage_to_on
-  type: baa_cloud_storage_signout
+  type: baa_cloud_storage_reset
   verdict: scope-gap
   severity: high
   status: open
   note: 'Ask Wispr: does sign-out reset cloud storage to on for a BAA account?'
-  reason: A BAA turns storage off, but "Signing out resets the cloud-storage preference to on" is not addressed for BAA accounts.
+  reason: Signing a BAA turns storage off, but "signing out resets the cloud-storage preference to on".
   first_seen: '2026-11-06'
   claim_a:
     id: baa_signing_turns_storage_off
@@ -85,8 +112,8 @@
   type: baa_coverage_scope
   verdict: scope-gap
   severity: high
-  status: open
-  note: '''HIPAA compliance on any plan'' omits that the BAA covers dictation only'
+  status: fixed
+  note: '''HIPAA compliance on any plan'' omits that the BAA covers dictation only | fixed on 2026-11-06: Wispr removed the wording (hipaa_baa_any_plan, hipaa_baa_dictation_only)'
   reason: The broad "HIPAA compliance is available on any plan" does not mention that the BAA "covers dictation only".
   first_seen: '2026-11-06'
   claim_a:
@@ -96,7 +123,7 @@
     source_quote: Available on any plan with a signed Business Associate Agreement.
     checked: '2026-11-05'
     status: conflicting
-    plan_scope: &id007
+    plan_scope: &id006
     - all
   claim_b:
     id: hipaa_baa_dictation_only
@@ -107,6 +134,34 @@
     status: confirmed
     plan_scope:
     - all
+  closed_on: '2026-11-06'
+- id: M063
+  pair: hipaa_ready_all_plans|msa_redlines_enterprise_only
+  type: baa_custom_docs_plan
+  verdict: scope-gap
+  severity: high
+  status: false-positive
+  note: standard BAA on every plan and custom BAA documentation on Enterprise are different things
+  reason: HIPAA readiness is claimed "on every plan", but custom signed BAA documentation needs Enterprise, and the broad claim does not say so.
+  first_seen: '2026-11-06'
+  claim_a:
+    id: hipaa_ready_all_plans
+    claim: Dictation and Notetaker are HIPAA-ready with a signed BAA on every plan.
+    source_id: wf_pricing
+    source_quote: HIPAA-ready dictation and Notetaker with a signed BAA.
+    checked: '2026-11-06'
+    status: confirmed
+    plan_scope:
+    - all
+  claim_b:
+    id: msa_redlines_enterprise_only
+    claim: MSA redlines or custom signed BAA documentation require the Enterprise plan and go through the sales representative.
+    source_id: docs_hipaa
+    source_quote: MSA redlines or custom signed documentation require our highest-tier Enterprise plan
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - enterprise
 - id: M042
   pair: flow_hipaa_ready_with_baa|pdf_may_not_match_agreement
   type: baa_document_integrity
@@ -114,7 +169,7 @@
   severity: high
   status: false-positive
   note: separate fact, not a mismatch; keep as an IT brief note
-  reason: '"HIPAA-ready with a signed BAA" omits that the signed PDF "may not match the agreement text".'
+  reason: HIPAA readiness depends on a signed BAA, yet the BAA PDF "may not match the agreement text".
   first_seen: '2026-11-06'
   claim_a:
     id: flow_hipaa_ready_with_baa
@@ -123,7 +178,7 @@
     source_quote: Flow is HIPAA-ready for dictation with a signed BAA
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: &id010
+    plan_scope: &id009
     - unknown
   claim_b:
     id: pdf_may_not_match_agreement
@@ -141,7 +196,7 @@
   severity: high
   status: open
   note: 'Which plan gets the BAA: Growth includes one vs org BAA needs Enterprise'
-  reason: One says signing an org BAA 'requires an active enterprise subscription' while the other says Growth includes a BAA.
+  reason: Org BAA signing "requires an active enterprise subscription", yet Growth is said to "include a standard HIPAA BAA".
   first_seen: '2026-11-06'
   claim_a:
     id: baa_org_signing_requires_enterprise
@@ -159,7 +214,7 @@
     source_quote: Growth and Enterprise both include a standard HIPAA BAA
     checked: '2026-11-05'
     status: conflicting
-    plan_scope: &id003
+    plan_scope: &id002
     - growth
     - enterprise
 - id: M007
@@ -169,7 +224,7 @@
   severity: high
   status: accepted
   note: dup of M006
-  reason: Growth is said to offer 'org-wide HIPAA enforcement with a signed BAA' but signing an org BAA requires Enterprise.
+  reason: The Growth plan is said to include "org-wide HIPAA enforcement with a signed BAA", but org BAA signing requires Enterprise.
   first_seen: '2026-11-06'
   claim_a:
     id: baa_org_signing_requires_enterprise
@@ -186,15 +241,15 @@
     source_quote: Org-wide HIPAA enforcement with a signed BAA
     checked: '2026-11-05'
     status: conflicting
-    plan_scope: &id005
+    plan_scope: &id004
     - growth
 - id: M054
   pair: android_no_baa_signing|hipaa_baa_any_plan
   type: baa_platform_android
   verdict: scope-gap
   severity: high
-  status: open
-  note: 'Android: ''HIPAA on any plan'' omits that Android has no BAA signing flow'
+  status: fixed
+  note: 'Android: ''HIPAA on any plan'' omits that Android has no BAA signing flow | fixed on 2026-11-06: Wispr removed the wording (hipaa_baa_any_plan)'
   reason: HIPAA is described as available on any plan with a signed BAA, but this does not mention that Android has no BAA signing or revocation flow.
   first_seen: '2026-11-06'
   claim_a:
@@ -204,7 +259,7 @@
     source_quote: Android has no BAA signing or revocation flow
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: &id002
+    plan_scope:
     - unknown
   claim_b:
     id: hipaa_baa_any_plan
@@ -215,32 +270,7 @@
     status: conflicting
     plan_scope:
     - all
-- id: M055
-  pair: android_no_baa_signing|flow_hipaa_ready_with_baa
-  type: baa_platform_android
-  verdict: scope-gap
-  severity: high
-  status: accepted
-  note: dup of M054
-  reason: Flow is HIPAA-ready for dictation with a signed BAA, with no platform exception, while Android has no BAA signing or revocation flow.
-  first_seen: '2026-11-06'
-  claim_a:
-    id: android_no_baa_signing
-    claim: Android has no BAA signing or revocation flow.
-    source_id: docs_hipaa
-    source_quote: Android has no BAA signing or revocation flow
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope: *id002
-  claim_b:
-    id: flow_hipaa_ready_with_baa
-    claim: Flow is HIPAA-ready for dictation with a signed BAA.
-    source_id: docs_vendor_assessments
-    source_quote: Flow is HIPAA-ready for dictation with a signed BAA
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope:
-    - unknown
+  closed_on: '2026-11-06'
 - id: M008
   pair: baa_inproduct_signing_enterprise_admin|growth_enterprise_include_baa
   type: baa_process
@@ -248,7 +278,7 @@
   severity: high
   status: open
   note: 'BAA process: in-product signing needs Enterprise, so how does Growth sign?'
-  reason: Growth is said to include a BAA, but in-product signing 'requires an Enterprise plan', so Growth signing must happen another way that is not stated.
+  reason: Growth includes a BAA, but "in-product signing requires an Enterprise plan", so how Growth customers sign is unclear.
   first_seen: '2026-11-06'
   claim_a:
     id: baa_inproduct_signing_enterprise_admin
@@ -257,7 +287,7 @@
     source_quote: In-product signing requires an Enterprise plan and an organization admin
     checked: '2026-11-05'
     status: conflicting
-    plan_scope: &id004
+    plan_scope: &id003
     - enterprise
   claim_b:
     id: growth_enterprise_include_baa
@@ -266,7 +296,7 @@
     source_quote: Growth and Enterprise both include a standard HIPAA BAA
     checked: '2026-11-05'
     status: conflicting
-    plan_scope: *id003
+    plan_scope: *id002
 - id: M009
   pair: baa_inproduct_signing_enterprise_admin|growth_org_wide_hipaa_enforcement
   type: baa_process
@@ -274,7 +304,7 @@
   severity: high
   status: accepted
   note: dup of M008
-  reason: Growth offers a signed BAA, but in-product signing 'requires an Enterprise plan', and the Growth claim does not say how it is signed.
+  reason: Growth claims a signed BAA, but in-product signing is Enterprise-only and the Growth signing route is not stated.
   first_seen: '2026-11-06'
   claim_a:
     id: baa_inproduct_signing_enterprise_admin
@@ -283,7 +313,7 @@
     source_quote: In-product signing requires an Enterprise plan and an organization admin
     checked: '2026-11-05'
     status: conflicting
-    plan_scope: *id004
+    plan_scope: *id003
   claim_b:
     id: growth_org_wide_hipaa_enforcement
     claim: The growth plan includes org-wide HIPAA enforcement with a signed BAA.
@@ -291,15 +321,42 @@
     source_quote: Org-wide HIPAA enforcement with a signed BAA
     checked: '2026-11-05'
     status: conflicting
-    plan_scope: *id005
-- id: M045
-  pair: admin_cloud_storage_org_wide|baa_signing_turns_storage_off
+    plan_scope: *id004
+- id: M001
+  pair: notetaker_not_in_audits|security_soc2_iso_certified
+  type: certification_scope_notetaker
+  verdict: scope-gap
+  severity: high
+  status: open
+  note: Pricing says Flow is SOC 2 and ISO certified; Notetaker was outside audit scope
+  reason: The broad claim "SOC 2 Type II and ISO 27001 certified" does not mention that Meeting Notetaker "was not assessed" in those audits.
+  first_seen: '2026-11-06'
+  claim_a:
+    id: notetaker_not_in_audits
+    claim: Meeting Notetaker was not assessed in the SOC 2 Type I, SOC 2 Type II, or ISO 27001 certification audits.
+    source_id: docs_security_faq
+    source_quote: Meeting Notetaker launched after those audit periods and was not assessed
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope:
+    - unknown
+  claim_b:
+    id: security_soc2_iso_certified
+    claim: Flow is SOC 2 Type II and ISO 27001 certified.
+    source_id: wf_pricing
+    source_quote: SOC 2 Type II and ISO 27001 certified.
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope:
+    - all
+- id: M047
+  pair: admin_cloud_storage_org_wide|ca_baa_locks_settings
   type: cloud_storage_baa_lock
   verdict: scope-gap
   severity: high
   status: false-positive
   note: BAA lock overrides the admin setting; compatible
-  reason: The admin claim says storage can be left "to individual users" but does not mention that a personal BAA turns it off.
+  reason: Admins can "leave it to individual users", but the broad claim omits that a BAA locks cloud storage off.
   first_seen: '2026-11-06'
   claim_a:
     id: admin_cloud_storage_org_wide
@@ -308,7 +365,60 @@
     source_quote: Set dictation cloud storage for the whole organization, or leave it to individual users.
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: &id006
+    plan_scope: &id005
+    - unknown
+  claim_b:
+    id: ca_baa_locks_settings
+    claim: Signing the applicable Business Associate Agreement (BAA) locks Improve the model for everyone and Dictation Cloud Storage off.
+    source_id: docs_context_awareness
+    source_quote: sign the applicable Business Associate Agreement (BAA), which locks
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- id: M049
+  pair: admin_cloud_storage_org_wide|signed_baa_locks_both_controls_off
+  type: cloud_storage_baa_lock
+  verdict: scope-gap
+  severity: high
+  status: false-positive
+  note: BAA lock overrides the admin setting; compatible
+  reason: The admin org-wide storage choice does not mention that "A signed BAA locks both controls off".
+  first_seen: '2026-11-06'
+  claim_a:
+    id: admin_cloud_storage_org_wide
+    claim: Admins can set dictation cloud storage for the whole organization, or leave it to individual users.
+    source_id: wf_enterprise_privacy_post
+    source_quote: Set dictation cloud storage for the whole organization, or leave it to individual users.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id005
+  claim_b:
+    id: signed_baa_locks_both_controls_off
+    claim: A signed BAA locks both the model-improvement and dictation cloud storage controls off.
+    source_id: docs_hipaa
+    source_quote: A signed BAA locks both controls off
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- id: M045
+  pair: admin_cloud_storage_org_wide|baa_signing_turns_storage_off
+  type: cloud_storage_baa_override
+  verdict: scope-gap
+  severity: high
+  status: false-positive
+  note: BAA lock overrides the admin setting; compatible
+  reason: Admin org-wide storage setting omits that a personal BAA turns "Dictation cloud storage off".
+  first_seen: '2026-11-06'
+  claim_a:
+    id: admin_cloud_storage_org_wide
+    claim: Admins can set dictation cloud storage for the whole organization, or leave it to individual users.
+    source_id: wf_enterprise_privacy_post
+    source_quote: Set dictation cloud storage for the whole organization, or leave it to individual users.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
     - unknown
   claim_b:
     id: baa_signing_turns_storage_off
@@ -319,66 +429,41 @@
     status: confirmed
     plan_scope:
     - unknown
-- id: M047
-  pair: admin_cloud_storage_org_wide|ca_baa_locks_settings
-  type: cloud_storage_baa_lock
+- id: M060
+  pair: confidential_content_turn_off_before_recording|model_improvement_off_no_stop_cloud_processing
+  type: confidential_content_cloud_processing
   verdict: scope-gap
   severity: high
-  status: false-positive
-  note: BAA lock overrides the admin setting; compatible
-  reason: The admin claim says storage can be left to users but does not mention that a BAA "locks ... Dictation Cloud Storage off".
+  status: accepted
+  note: 'true nuance: model improvement off does not stop cloud processing; cover in IT brief'
+  reason: Advice for confidential content to turn model improvement off omits that it "does not stop cloud processing".
   first_seen: '2026-11-06'
   claim_a:
-    id: admin_cloud_storage_org_wide
-    claim: Admins can set dictation cloud storage for the whole organization, or leave it to individual users.
-    source_id: wf_enterprise_privacy_post
-    source_quote: Set dictation cloud storage for the whole organization, or leave it to individual users.
+    id: confidential_content_turn_off_before_recording
+    claim: For confidential or privileged content, the page advises turning model improvement off before recording.
+    source_id: docs_data_sharing
+    source_quote: For confidential or privileged content, turn
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id006
-  claim_b:
-    id: ca_baa_locks_settings
-    claim: Signing the applicable Business Associate Agreement (BAA) locks Improve the model for everyone and Dictation Cloud Storage off.
-    source_id: docs_context_awareness
-    source_quote: sign the applicable Business Associate Agreement (BAA), which locks
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope: &id009
+    plan_scope:
     - unknown
-- id: M049
-  pair: admin_cloud_storage_org_wide|signed_baa_locks_both_controls_off
-  type: cloud_storage_baa_lock
-  verdict: scope-gap
-  severity: high
-  status: false-positive
-  note: BAA lock overrides the admin setting; compatible
-  reason: The admin claim says storage can be left to users but does not mention that a signed BAA "locks both controls off".
-  first_seen: '2026-11-06'
-  claim_a:
-    id: admin_cloud_storage_org_wide
-    claim: Admins can set dictation cloud storage for the whole organization, or leave it to individual users.
-    source_id: wf_enterprise_privacy_post
-    source_quote: Set dictation cloud storage for the whole organization, or leave it to individual users.
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope: *id006
   claim_b:
-    id: signed_baa_locks_both_controls_off
-    claim: A signed BAA locks both the model-improvement and dictation cloud storage controls off.
-    source_id: docs_hipaa
-    source_quote: A signed BAA locks both controls off
+    id: model_improvement_off_no_stop_cloud_processing
+    claim: Turning off model improvement does not stop cloud processing.
+    source_id: docs_data_sharing
+    source_quote: Turning it off does not stop cloud processing
     checked: '2026-11-05'
     status: confirmed
     plan_scope:
     - unknown
 - id: M052
   pair: delete_data_permanent|org_meetings_not_deletable
-  type: delete_data_org_meetings
+  type: data_deletion_org_meetings
   verdict: scope-gap
   severity: high
   status: false-positive
   note: same page states the exception; not misleading
-  reason: The "permanently deletes your content" claim omits that org-kept meeting content cannot be deleted.
+  reason: Delete your data "permanently deletes content", but org-kept meeting content cannot be deleted this way.
   first_seen: '2026-11-06'
   claim_a:
     id: delete_data_permanent
@@ -450,14 +535,14 @@
     source_quote: Available on any plan with a signed Business Associate Agreement.
     checked: '2026-11-05'
     status: conflicting
-    plan_scope: *id007
+    plan_scope: *id006
 - id: M048
   pair: hipaa_baa_any_plan|soc2_card_enterprise_only
   type: hipaa_plan_availability
   verdict: scope-gap
   severity: high
-  status: accepted
-  note: compliance card is a UI feature; low impact
+  status: fixed
+  note: 'compliance card is a UI feature; low impact | fixed on 2026-11-06: Wispr removed the wording (hipaa_baa_any_plan)'
   reason: HIPAA is "available on any plan", yet the SOC 2 and HIPAA card requires Enterprise, which could mislead an approver.
   first_seen: '2026-11-06'
   claim_a:
@@ -478,6 +563,35 @@
     status: confirmed
     plan_scope:
     - enterprise
+  closed_on: '2026-11-06'
+- id: M064
+  pair: hipaa_baa_growth_enterprise|soc2_card_enterprise_only
+  type: hipaa_plan_availability
+  verdict: scope-gap
+  severity: high
+  status: accepted
+  note: compliance card is a UI feature; low impact (successor of M048)
+  reason: HIPAA is "Available on Growth and Enterprise", yet the SOC 2 and HIPAA card "requires an Enterprise plan".
+  first_seen: '2026-11-06'
+  claim_a:
+    id: hipaa_baa_growth_enterprise
+    claim: HIPAA compliance is available on the Growth and Enterprise plans with a signed Business Associate Agreement.
+    source_id: wf_business
+    source_quote: Available on Growth and Enterprise with a signed Business Associate Agreement.
+    checked: '2026-11-06'
+    status: confirmed
+    plan_scope:
+    - growth
+    - enterprise
+  claim_b:
+    id: soc2_card_enterprise_only
+    claim: The SOC 2 and HIPAA compliance card on Privacy requires an Enterprise plan.
+    source_id: docs_dpa
+    source_quote: is the only card requiring an Enterprise plan
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - enterprise
 - id: M004
   pair: iso27001_certificate_held|iso_27001_pending
   type: iso27001_status
@@ -485,7 +599,7 @@
   severity: high
   status: open
   note: 'ISO 27001: compliance note says pending issue; docs say certificate held'
-  reason: One says the certificate is 'pending issue' while the other says Wispr already holds it.
+  reason: One says the certificate "is pending issue" while the other says Wispr "holds an ISO/IEC 27001:2022 certificate".
   first_seen: '2026-11-06'
   claim_a:
     id: iso27001_certificate_held
@@ -494,7 +608,7 @@
     source_quote: ISO/IEC 27001:2022 certificate
     checked: '2026-11-05'
     status: conflicting
-    plan_scope: &id008
+    plan_scope: &id007
     - unknown
   claim_b:
     id: iso_27001_pending
@@ -512,7 +626,7 @@
   severity: high
   status: accepted
   note: dup of M004
-  reason: One says 'It is not yet certified' while the other says Wispr holds an ISO/IEC 27001:2022 certificate.
+  reason: One says "not yet certified" while the other says Wispr holds the certificate.
   first_seen: '2026-11-06'
   claim_a:
     id: iso27001_certificate_held
@@ -521,7 +635,7 @@
     source_quote: ISO/IEC 27001:2022 certificate
     checked: '2026-11-05'
     status: conflicting
-    plan_scope: *id008
+    plan_scope: *id007
   claim_b:
     id: iso_27001_certification_in_progress
     claim: ISO 27001 certification is in progress with A-LIGN. It is not yet certified.
@@ -538,7 +652,7 @@
   severity: high
   status: accepted
   note: dup of M004
-  reason: One says the certificate is pending issue while the Trust Center already provides it.
+  reason: One says the Trust Center provides the certificate, the other says it is "pending issue".
   first_seen: '2026-11-06'
   claim_a:
     id: iso_27001_certificate
@@ -561,11 +675,11 @@
 - id: M021
   pair: iso_27001_certification_in_progress|security_soc2_iso_certified
   type: iso27001_status
-  verdict: contradiction
+  verdict: stale
   severity: high
   status: accepted
   note: dup of M004 (dated March post)
-  reason: One says it is not yet certified while the pricing page says ISO 27001 certified.
+  reason: One says ISO 27001 is "in progress" and "not yet certified", the other says certified.
   first_seen: '2026-11-06'
   claim_a:
     id: iso_27001_certification_in_progress
@@ -588,11 +702,11 @@
 - id: M034
   pair: iso_27001_certification_in_progress|notetaker_not_in_audits
   type: iso27001_status
-  verdict: stale
+  verdict: contradiction
   severity: high
   status: false-positive
   note: '''not assessed in audits'' does not claim the ISO certificate was issued'
-  reason: Claim a says "in progress", "not yet certified", while b cites completed "ISO 27001 certification audits".
+  reason: One says ISO 27001 is "not yet certified", while the other refers to finished "ISO 27001 certification audits".
   first_seen: '2026-11-06'
   claim_a:
     id: iso_27001_certification_in_progress
@@ -619,7 +733,7 @@
   severity: high
   status: accepted
   note: dup of M004
-  reason: One says the certificate is "pending issue", while the other says Flow is already ISO 27001 certified.
+  reason: One says the certificate is "pending issue", the other says "ISO 27001 certified".
   first_seen: '2026-11-06'
   claim_a:
     id: iso_27001_pending
@@ -637,7 +751,7 @@
     source_quote: SOC 2 Type II and ISO 27001 certified.
     checked: '2026-11-05'
     status: conflicting
-    plan_scope: &id016
+    plan_scope:
     - all
 - id: M032
   pair: model_improvement_off_enterprise|model_improvement_off_metadata_still_uploaded
@@ -669,11 +783,11 @@
 - id: M010
   pair: growth_admin_model_training_control|growth_enterprise_model_improvement_locked
   type: model_training_control
-  verdict: scope-gap
+  verdict: contradiction
   severity: high
   status: open
   note: 'Growth model training: admins control it vs locked off org-wide'
-  reason: Admins are said to 'control model training' on Growth, yet the HIPAA page says the setting 'is locked off organization-wide'.
+  reason: Growth admins are said to control model training, but the setting is also "locked off organization-wide" on Growth.
   first_seen: '2026-11-06'
   claim_a:
     id: growth_admin_model_training_control
@@ -710,7 +824,8 @@
     source_quote: sign the applicable Business Associate Agreement (BAA), which locks
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id009
+    plan_scope:
+    - unknown
   claim_b:
     id: enforce_off_for_everyone_requires_enterprise
     claim: Enforcing model training off for everyone requires upgrading to Enterprise.
@@ -728,7 +843,7 @@
   severity: high
   status: false-positive
   note: individual opt-out and org-wide enforcement are compatible
-  reason: '"Opt out of model training at any time" omits that org-wide enforcement "requires upgrading to Enterprise".'
+  reason: The broad "opt out of model training at any time" claim does not say that enforcing it org-wide requires Enterprise.
   first_seen: '2026-11-06'
   claim_a:
     id: enforce_off_for_everyone_requires_enterprise
@@ -749,41 +864,14 @@
     status: confirmed
     plan_scope:
     - all
-- id: M022
-  pair: model_improvement_controls_dictation_use|reported_dictation_used_for_training
-  type: model_training_reported_dictation
+- id: M024
+  pair: notetaker_not_in_audits|soc2_type_ii_audited
+  type: notetaker_audit_scope
   verdict: scope-gap
   severity: high
   status: accepted
-  note: user-initiated report; mention in IT brief, not the mismatch report
-  reason: The setting is presented as controlling training use, but a reported dictation "can be used to train and evaluate", an exception the setting claim does not mention.
-  first_seen: '2026-11-06'
-  claim_a:
-    id: model_improvement_controls_dictation_use
-    claim: The Improve the model for everyone setting controls whether Notetaker and dictation content may be used to improve Wispr's models.
-    source_id: docs_hipaa
-    source_quote: may be used to improve Wispr's models
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope:
-    - unknown
-  claim_b:
-    id: reported_dictation_used_for_training
-    claim: A reported dictation can be used by Wispr to train and evaluate its models.
-    source_id: docs_data_sharing
-    source_quote: can be used to train and evaluate its models
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope:
-    - unknown
-- id: M001
-  pair: notetaker_not_in_audits|security_soc2_iso_certified
-  type: notetaker_audit_coverage
-  verdict: scope-gap
-  severity: high
-  status: open
-  note: Pricing says Flow is SOC 2 and ISO certified; Notetaker was outside audit scope
-  reason: The broad 'SOC 2 Type II and ISO 27001 certified' claim does not mention that Meeting Notetaker 'was not assessed' in those audits.
+  note: dup of M001
+  reason: The broad SOC 2 Type II audit claim does not mention that Meeting Notetaker "was not assessed".
   first_seen: '2026-11-06'
   claim_a:
     id: notetaker_not_in_audits
@@ -792,44 +880,43 @@
     source_quote: Meeting Notetaker launched after those audit periods and was not assessed
     checked: '2026-11-05'
     status: conflicting
-    plan_scope:
+    plan_scope: &id008
     - unknown
   claim_b:
-    id: security_soc2_iso_certified
-    claim: Flow is SOC 2 Type II and ISO 27001 certified.
-    source_id: wf_pricing
-    source_quote: SOC 2 Type II and ISO 27001 certified.
+    id: soc2_type_ii_audited
+    claim: Wispr states it is independently audited for SOC 2 Type II.
+    source_id: wf_business
+    source_quote: Independently audited to verify we safeguard your data across key trust principles.
     checked: '2026-11-05'
-    status: conflicting
+    status: confirmed
     plan_scope:
-    - all
-- id: M013
-  pair: meeting_notetaker_not_assessed|security_soc2_iso_certified
+    - unknown
+- id: M025
+  pair: notetaker_not_in_audits|soc2_type2_audit_complete
   type: notetaker_audit_scope
   verdict: scope-gap
   severity: high
   status: accepted
   note: dup of M001
-  reason: The claim "SOC 2 Type II and ISO 27001 certified" omits that Meeting Notetaker "was not assessed".
+  reason: The "SOC 2 Type II audit is complete" claim omits that Meeting Notetaker was not assessed.
   first_seen: '2026-11-06'
   claim_a:
-    id: meeting_notetaker_not_assessed
-    claim: Meeting Notetaker was not assessed in the SOC 2 or ISO 27001 audits.
-    source_id: docs_vendor_assessments
+    id: notetaker_not_in_audits
+    claim: Meeting Notetaker was not assessed in the SOC 2 Type I, SOC 2 Type II, or ISO 27001 certification audits.
+    source_id: docs_security_faq
     source_quote: Meeting Notetaker launched after those audit periods and was not assessed
     checked: '2026-11-05'
-    status: confirmed
-    plan_scope:
-    - unknown
-  claim_b:
-    id: security_soc2_iso_certified
-    claim: Flow is SOC 2 Type II and ISO 27001 certified.
-    source_id: wf_pricing
-    source_quote: SOC 2 Type II and ISO 27001 certified.
-    checked: '2026-11-05'
     status: conflicting
-    plan_scope:
-    - all
+    plan_scope: *id008
+  claim_b:
+    id: soc2_type2_audit_complete
+    claim: The SOC 2 Type II audit is complete.
+    source_id: wf_enterprise_privacy_post
+    source_quote: Our SOC 2 Type II audit is complete
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id013
+    - unknown
 - id: M033
   pair: dictation_storage_only_if_cloud_on|notetaker_cloud_storage_no_opt_out
   type: notetaker_cloud_storage
@@ -837,7 +924,7 @@
   severity: high
   status: open
   note: Cloud storage off covers dictation only; Notetaker content has no opt-out
-  reason: Storage "only if Dictation cloud storage is on" does not mention Notetaker content has "no setting to opt out".
+  reason: Dictation storage is optional, but Notetaker transcripts are stored "with no setting to opt out", which the dictation claim does not mention.
   first_seen: '2026-11-06'
   claim_a:
     id: dictation_storage_only_if_cloud_on
@@ -853,6 +940,33 @@
     claim: Notetaker transcripts and summaries have no setting to opt out of cloud storage.
     source_id: docs_data_sharing
     source_quote: with no setting to opt out
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- id: M039
+  pair: notetaker_recordings_private|notetaker_transcripts_stored_in_cloud
+  type: notetaker_cloud_storage
+  verdict: scope-gap
+  severity: high
+  status: false-positive
+  note: '''private'' means not shared with the team, not ''not stored'''
+  reason: The claim "recordings and transcripts stay private. Always." does not say that Notetaker transcripts are stored in Wispr's cloud.
+  first_seen: '2026-11-06'
+  claim_a:
+    id: notetaker_recordings_private
+    claim: Individual Notetaker recordings and transcripts are kept private.
+    source_id: wf_business
+    source_quote: Individual recordings and transcripts stay private. Always.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  claim_b:
+    id: notetaker_transcripts_stored_in_cloud
+    claim: Notetaker transcripts and summaries are stored in Wispr's cloud.
+    source_id: docs_data_sharing
+    source_quote: Notetaker transcripts and summaries are stored in Wispr's cloud
     checked: '2026-11-05'
     status: confirmed
     plan_scope:
@@ -884,40 +998,13 @@
     status: confirmed
     plan_scope:
     - unknown
-- id: M039
-  pair: notetaker_recordings_private|notetaker_transcripts_stored_in_cloud
-  type: notetaker_data_retention
-  verdict: scope-gap
-  severity: high
-  status: false-positive
-  note: '''private'' means not shared with the team, not ''not stored'''
-  reason: '"Recordings and transcripts are kept private" omits that transcripts are "stored in Wispr''s cloud".'
-  first_seen: '2026-11-06'
-  claim_a:
-    id: notetaker_recordings_private
-    claim: Individual Notetaker recordings and transcripts are kept private.
-    source_id: wf_business
-    source_quote: Individual recordings and transcripts stay private. Always.
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope:
-    - unknown
-  claim_b:
-    id: notetaker_transcripts_stored_in_cloud
-    claim: Notetaker transcripts and summaries are stored in Wispr's cloud.
-    source_id: docs_data_sharing
-    source_quote: Notetaker transcripts and summaries are stored in Wispr's cloud
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope:
-    - unknown
 - id: M002
   pair: notetaker_works_alongside_baa|security_notetaker_disabled_baa
   type: notetaker_under_baa
   verdict: contradiction
   severity: high
-  status: open
-  note: 'Notetaker under a BAA: works alongside (docs) vs disabled (pricing)'
+  status: fixed
+  note: 'Notetaker under a BAA: works alongside (docs) vs disabled (pricing) | fixed on 2026-11-06: Wispr removed the wording (security_notetaker_disabled_baa)'
   reason: One says Notetaker 'works alongside a signed' BAA while the other says it is 'disabled on BAA accounts'.
   first_seen: '2026-11-06'
   claim_a:
@@ -938,6 +1025,7 @@
     status: conflicting
     plan_scope:
     - all
+  closed_on: '2026-11-06'
 - id: M041
   pair: flow_hipaa_ready_with_baa|notetaker_works_alongside_baa
   type: notetaker_under_baa
@@ -945,7 +1033,7 @@
   severity: high
   status: accepted
   note: dup of M002
-  reason: HIPAA readiness is "for dictation" only, yet Notetaker "works alongside a signed BAA", which could imply cover.
+  reason: HIPAA readiness is stated "for dictation" only, but Notetaker "works alongside a signed BAA" without saying whether it is covered.
   first_seen: '2026-11-06'
   claim_a:
     id: flow_hipaa_ready_with_baa
@@ -954,7 +1042,7 @@
     source_quote: Flow is HIPAA-ready for dictation with a signed BAA
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id010
+    plan_scope: *id009
   claim_b:
     id: notetaker_works_alongside_baa
     claim: Notetaker works alongside a signed BAA, so the user does not need to revoke the BAA to record meetings.
@@ -964,93 +1052,201 @@
     status: conflicting
     plan_scope:
     - unknown
-- id: M011
-  pair: otter_motion_to_dismiss_pending|otter_wiretap_ca_claims_proceed
-  type: otter_litigation_status
-  verdict: stale
-  severity: high
-  status: accepted
-  note: 'legal context: use the newer UC Today source; not about Wispr'
-  reason: One says the motion to dismiss 'remains pending' while the other says the court allowed the claims to proceed.
-  first_seen: '2026-11-06'
-  claim_a:
-    id: otter_motion_to_dismiss_pending
-    claim: The page says the Otter.ai motion to dismiss has been argued and remains pending.
-    source_id: legal_granola_btlaw
-    source_quote: motion to dismiss has been argued and remains pending
-    checked: '2026-11-05'
-    status: conflicting
-    plan_scope:
-    - unknown
-  claim_b:
-    id: otter_wiretap_ca_claims_proceed
-    claim: The court allowed the central federal wiretap and California privacy claims against Otter to proceed.
-    source_id: legal_otter_uctoday
-    source_quote: allowed the central claims under federal wiretap, California privacy
-    checked: '2026-11-05'
-    status: conflicting
-    plan_scope:
-    - unknown
-- id: M024
-  pair: notetaker_not_in_audits|soc2_type_ii_audited
-  type: soc2_scope_notetaker
+- id: M065
+  pair: baa_signing_platforms|dictation_controls_platforms
+  type: platform_android
   verdict: scope-gap
   severity: high
   status: accepted
-  note: dup of M001
-  reason: The broad audit claim does not mention that Meeting Notetaker was not assessed in those audits.
+  note: dup of M057
+  reason: The controls run on "Mac, Windows, iOS and Android", but BAA signing excludes Android, which neither claim flags.
   first_seen: '2026-11-06'
   claim_a:
-    id: notetaker_not_in_audits
-    claim: Meeting Notetaker was not assessed in the SOC 2 Type I, SOC 2 Type II, or ISO 27001 certification audits.
-    source_id: docs_security_faq
-    source_quote: Meeting Notetaker launched after those audit periods and was not assessed
+    id: baa_signing_platforms
+    claim: BAA signing is available on Mac, Windows and iOS.
+    source_id: docs_hipaa
+    source_quote: BAA signing is available on Mac, Windows and iOS
     checked: '2026-11-05'
-    status: conflicting
-    plan_scope: &id011
+    status: confirmed
+    plan_scope:
     - unknown
   claim_b:
-    id: soc2_type_ii_audited
-    claim: Wispr states it is independently audited for SOC 2 Type II.
+    id: dictation_controls_platforms
+    claim: The data sharing and cloud storage controls are available on Mac, Windows, iOS and Android.
+    source_id: docs_data_sharing
+    source_quote: Mac, Windows, iOS and Android
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- id: M055
+  pair: android_no_baa_signing|flow_hipaa_ready_with_baa
+  type: platform_android_baa
+  verdict: scope-gap
+  severity: high
+  status: accepted
+  note: dup of M054
+  reason: The broad "HIPAA-ready for dictation" claim does not mention that "Android has no BAA signing" flow.
+  first_seen: '2026-11-06'
+  claim_a:
+    id: android_no_baa_signing
+    claim: Android has no BAA signing or revocation flow.
+    source_id: docs_hipaa
+    source_quote: Android has no BAA signing or revocation flow
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id010
+    - unknown
+  claim_b:
+    id: flow_hipaa_ready_with_baa
+    claim: Flow is HIPAA-ready for dictation with a signed BAA.
+    source_id: docs_vendor_assessments
+    source_quote: Flow is HIPAA-ready for dictation with a signed BAA
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- id: M057
+  pair: android_no_baa_signing|hipaa_baa_growth_enterprise
+  type: platform_android_baa
+  verdict: scope-gap
+  severity: high
+  status: open
+  note: 'Android: HIPAA on Growth and Enterprise with a BAA, but Android has no BAA signing flow (replaces M054)'
+  reason: HIPAA with a signed BAA on Growth and Enterprise does not mention that Android has no BAA signing flow.
+  first_seen: '2026-11-06'
+  claim_a:
+    id: android_no_baa_signing
+    claim: Android has no BAA signing or revocation flow.
+    source_id: docs_hipaa
+    source_quote: Android has no BAA signing or revocation flow
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id010
+  claim_b:
+    id: hipaa_baa_growth_enterprise
+    claim: HIPAA compliance is available on the Growth and Enterprise plans with a signed Business Associate Agreement.
     source_id: wf_business
-    source_quote: Independently audited to verify we safeguard your data across key trust principles.
+    source_quote: Available on Growth and Enterprise with a signed Business Associate Agreement.
+    checked: '2026-11-06'
+    status: confirmed
+    plan_scope:
+    - growth
+    - enterprise
+- id: M058
+  pair: android_no_baa_signing|hipaa_ready_all_plans
+  type: platform_android_baa
+  verdict: scope-gap
+  severity: high
+  status: accepted
+  note: dup of M057
+  reason: The claim "HIPAA-ready with a signed BAA on every plan" does not mention the Android signing gap.
+  first_seen: '2026-11-06'
+  claim_a:
+    id: android_no_baa_signing
+    claim: Android has no BAA signing or revocation flow.
+    source_id: docs_hipaa
+    source_quote: Android has no BAA signing or revocation flow
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: &id013
+    plan_scope: *id010
+  claim_b:
+    id: hipaa_ready_all_plans
+    claim: Dictation and Notetaker are HIPAA-ready with a signed BAA on every plan.
+    source_id: wf_pricing
+    source_quote: HIPAA-ready dictation and Notetaker with a signed BAA.
+    checked: '2026-11-06'
+    status: confirmed
+    plan_scope:
+    - all
+- id: M022
+  pair: model_improvement_controls_dictation_use|reported_dictation_used_for_training
+  type: reported_dictation_training
+  verdict: scope-gap
+  severity: high
+  status: accepted
+  note: user-initiated report; mention in IT brief, not the mismatch report
+  reason: The setting is presented as controlling training use, but a reported dictation "can be used to train and evaluate" without the setting being mentioned.
+  first_seen: '2026-11-06'
+  claim_a:
+    id: model_improvement_controls_dictation_use
+    claim: The Improve the model for everyone setting controls whether Notetaker and dictation content may be used to improve Wispr's models.
+    source_id: docs_hipaa
+    source_quote: may be used to improve Wispr's models
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
     - unknown
-- id: M025
-  pair: notetaker_not_in_audits|soc2_type2_audit_complete
-  type: soc2_scope_notetaker
+  claim_b:
+    id: reported_dictation_used_for_training
+    claim: A reported dictation can be used by Wispr to train and evaluate its models.
+    source_id: docs_data_sharing
+    source_quote: can be used to train and evaluate its models
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- id: M062
+  pair: willow_enterprise_contractual_retention_controls|willow_zero_retention_ai_subprocessors
+  type: retention_contractual_scope
+  verdict: scope-gap
+  severity: high
+  status: accepted
+  note: competitor wording; not part of the Wispr report
+  reason: The broad "processed without retention" claim does not say contractual controls cover enterprise teams only.
+  first_seen: '2026-11-06'
+  claim_a:
+    id: willow_enterprise_contractual_retention_controls
+    claim: Willow states it has contractual controls in place for enterprise teams on customer content retention.
+    source_id: comp_willow_security
+    source_quote: with contractual controls in place for enterprise teams
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - enterprise
+  claim_b:
+    id: willow_zero_retention_ai_subprocessors
+    claim: Willow states customer content is processed without retention by Willow or its applicable AI subprocessors.
+    source_id: comp_willow_security
+    source_quote: processed without retention by Willow or our applicable AI subprocessors
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- id: M013
+  pair: meeting_notetaker_not_assessed|security_soc2_iso_certified
+  type: soc2_iso27001_scope_notetaker
   verdict: scope-gap
   severity: high
   status: accepted
   note: dup of M001
-  reason: The claim that the audit is complete does not mention that Meeting Notetaker was outside the audit scope.
+  reason: The broad "SOC 2 Type II and ISO 27001 certified" omits that Notetaker "was not assessed" in those audits.
   first_seen: '2026-11-06'
   claim_a:
-    id: notetaker_not_in_audits
-    claim: Meeting Notetaker was not assessed in the SOC 2 Type I, SOC 2 Type II, or ISO 27001 certification audits.
-    source_id: docs_security_faq
+    id: meeting_notetaker_not_assessed
+    claim: Meeting Notetaker was not assessed in the SOC 2 or ISO 27001 audits.
+    source_id: docs_vendor_assessments
     source_quote: Meeting Notetaker launched after those audit periods and was not assessed
     checked: '2026-11-05'
-    status: conflicting
-    plan_scope: *id011
-  claim_b:
-    id: soc2_type2_audit_complete
-    claim: The SOC 2 Type II audit is complete.
-    source_id: wf_enterprise_privacy_post
-    source_quote: Our SOC 2 Type II audit is complete
-    checked: '2026-11-05'
     status: confirmed
-    plan_scope: &id014
+    plan_scope:
     - unknown
+  claim_b:
+    id: security_soc2_iso_certified
+    claim: Flow is SOC 2 Type II and ISO 27001 certified.
+    source_id: wf_pricing
+    source_quote: SOC 2 Type II and ISO 27001 certified.
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope:
+    - all
 - id: M003
   pair: soc2_type2_report_pending|soc2_type2_report_trust_criteria
   type: soc2_status
   verdict: stale
   severity: high
-  status: open
-  note: 'SOC 2: blog posts still say report expected in September; docs say it exists'
+  status: fixed
+  note: 'SOC 2: blog posts still say report expected in September; docs say it exists | fixed on 2026-11-06: Wispr removed the wording (soc2_type2_report_pending)'
   reason: One says the report is 'expected in September' while the other says Wispr already has the A-LIGN report.
   first_seen: '2026-11-06'
   claim_a:
@@ -1071,13 +1267,14 @@
     status: conflicting
     plan_scope:
     - unknown
+  closed_on: '2026-11-06'
 - id: M017
   pair: soc2_type2_report_pending|soc2_type_ii_report
   type: soc2_status
   verdict: stale
   severity: high
-  status: accepted
-  note: dup of M003
+  status: fixed
+  note: 'dup of M003 | fixed on 2026-11-06: Wispr removed the wording (soc2_type2_report_pending)'
   reason: One says the report is expected in September while the Trust Center already provides it.
   first_seen: '2026-11-06'
   claim_a:
@@ -1087,7 +1284,7 @@
     source_quote: the report is expected in September
     checked: '2026-11-05'
     status: conflicting
-    plan_scope: &id012
+    plan_scope: &id011
     - unknown
   claim_b:
     id: soc2_type_ii_report
@@ -1098,13 +1295,14 @@
     status: confirmed
     plan_scope:
     - unknown
+  closed_on: '2026-11-06'
 - id: M019
   pair: soc2_type2_hipaa_hitech_requirements|soc2_type2_report_pending
   type: soc2_status
   verdict: stale
   severity: high
-  status: accepted
-  note: dup of M003
+  status: fixed
+  note: 'dup of M003 | fixed on 2026-11-06: Wispr removed the wording (soc2_type2_report_pending)'
   reason: One describes the issued report scope while the other says the report is expected in September.
   first_seen: '2026-11-06'
   claim_a:
@@ -1123,14 +1321,15 @@
     source_quote: the report is expected in September
     checked: '2026-11-05'
     status: conflicting
-    plan_scope: *id012
+    plan_scope: *id011
+  closed_on: '2026-11-06'
 - id: M020
   pair: soc2_type2_report_pending|soc2_type2_unqualified_opinion
   type: soc2_status
   verdict: stale
   severity: high
-  status: accepted
-  note: dup of M003
+  status: fixed
+  note: 'dup of M003 | fixed on 2026-11-06: Wispr removed the wording (soc2_type2_report_pending)'
   reason: One says the report is expected in September while the other describes its unqualified opinion.
   first_seen: '2026-11-06'
   claim_a:
@@ -1140,7 +1339,7 @@
     source_quote: the report is expected in September
     checked: '2026-11-05'
     status: conflicting
-    plan_scope: *id012
+    plan_scope: *id011
   claim_b:
     id: soc2_type2_unqualified_opinion
     claim: The SOC 2 Type II report has an unqualified opinion with no exceptions noted in tests of controls.
@@ -1150,13 +1349,14 @@
     status: confirmed
     plan_scope:
     - unknown
+  closed_on: '2026-11-06'
 - id: M026
   pair: soc2_type2_report_pending|soc2_type_ii_audited
   type: soc2_status
   verdict: stale
   severity: high
-  status: accepted
-  note: dup of M003
+  status: fixed
+  note: 'dup of M003 | fixed on 2026-11-06: Wispr removed the wording (soc2_type2_report_pending)'
   reason: The report is expected in September is a pending status the other shows as done.
   first_seen: '2026-11-06'
   claim_a:
@@ -1166,7 +1366,7 @@
     source_quote: the report is expected in September
     checked: '2026-11-05'
     status: conflicting
-    plan_scope: &id015
+    plan_scope: &id012
     - unknown
   claim_b:
     id: soc2_type_ii_audited
@@ -1175,14 +1375,16 @@
     source_quote: Independently audited to verify we safeguard your data across key trust principles.
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id013
+    plan_scope:
+    - unknown
+  closed_on: '2026-11-06'
 - id: M027
   pair: soc2_type2_audit_complete|soc2_type2_report_pending
   type: soc2_status
   verdict: stale
   severity: high
-  status: accepted
-  note: dup of M003
+  status: fixed
+  note: 'dup of M003 | fixed on 2026-11-06: Wispr removed the wording (soc2_type2_report_pending)'
   reason: A report still expected in September sits beside a claim that the audit is complete.
   first_seen: '2026-11-06'
   claim_a:
@@ -1192,7 +1394,8 @@
     source_quote: Our SOC 2 Type II audit is complete
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id014
+    plan_scope:
+    - unknown
   claim_b:
     id: soc2_type2_report_pending
     claim: The SOC 2 Type II report is expected in September.
@@ -1200,7 +1403,8 @@
     source_quote: the report is expected in September
     checked: '2026-11-05'
     status: conflicting
-    plan_scope: *id015
+    plan_scope: *id012
+  closed_on: '2026-11-06'
 - id: M028
   pair: soc2_audit_expected_eight_weeks|soc2_type2_audit_complete
   type: soc2_status
@@ -1208,7 +1412,7 @@
   severity: high
   status: accepted
   note: dated March post; superseded, not misleading on its own
-  reason: A March 2026 expectation of completion in roughly eight weeks is superseded by the audit being complete.
+  reason: The March 2026 claim "expected" completion in eight weeks, but the other says it is complete.
   first_seen: '2026-11-06'
   claim_a:
     id: soc2_audit_expected_eight_weeks
@@ -1226,14 +1430,14 @@
     source_quote: Our SOC 2 Type II audit is complete
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id014
+    plan_scope: *id013
 - id: M043
   pair: security_soc2_iso_certified|soc2_type2_report_pending
   type: soc2_status
   verdict: stale
   severity: high
-  status: accepted
-  note: dup of M003
+  status: fixed
+  note: 'dup of M003 | fixed on 2026-11-06: Wispr removed the wording (soc2_type2_report_pending)'
   reason: One says the Type II report is "expected in September", while the other says Flow is already certified.
   first_seen: '2026-11-06'
   claim_a:
@@ -1243,7 +1447,8 @@
     source_quote: SOC 2 Type II and ISO 27001 certified.
     checked: '2026-11-05'
     status: conflicting
-    plan_scope: *id016
+    plan_scope:
+    - all
   claim_b:
     id: soc2_type2_report_pending
     claim: The SOC 2 Type II report is expected in September.
@@ -1253,6 +1458,7 @@
     status: conflicting
     plan_scope:
     - unknown
+  closed_on: '2026-11-06'
 - id: M031
   pair: enterprise_plan_compliance_options|zdr_model_provider_agreements
   type: zdr_plan_scope
@@ -1260,7 +1466,7 @@
   severity: high
   status: accepted
   note: competitor wording; not part of the Wispr report
-  reason: Zero Data Retention is listed as an Enterprise Plan option, yet another claim says Willow has "zero data retention agreements with all" model providers without naming a plan, so an approver could misread which plans get it.
+  reason: ZDR agreements "with all our model providers" sit beside ZDR being listed only as an Enterprise option.
   first_seen: '2026-11-06'
   claim_a:
     id: enterprise_plan_compliance_options
@@ -1282,12 +1488,12 @@
     - unknown
 - id: M038
   pair: admin_context_awareness_toggle|ca_growth_admins_cannot_enforce_off
-  type: context_awareness_admin_control_growth
+  type: ca_admin_control_growth
   verdict: scope-gap
   severity: medium
   status: open
   note: '''Admins control context awareness'' but on Growth they cannot enforce it off'
-  reason: The broad admin control claim leaves out that on Growth "administrators cannot enforce it off".
+  reason: The broad "Admins control whether context awareness is available" omits that on Growth "administrators cannot enforce it off".
   first_seen: '2026-11-06'
   claim_a:
     id: admin_context_awareness_toggle
@@ -1296,7 +1502,7 @@
     source_quote: whether context awareness is available
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: &id018
+    plan_scope: &id015
     - unknown
   claim_b:
     id: ca_growth_admins_cannot_enforce_off
@@ -1309,12 +1515,12 @@
     - growth
 - id: M036
   pair: ca_enterprise_disable_for_all_users|ca_platform_support
-  type: context_awareness_disable_ios
+  type: ca_disable_platform_coverage
   verdict: scope-gap
   severity: medium
   status: accepted
   note: dup of M015
-  reason: The feature runs on iOS, but "Disable for all users" only covers "Mac and Windows".
+  reason: The Enterprise disable covers only "Mac and Windows", but Context Awareness is also on iOS.
   first_seen: '2026-11-06'
   claim_a:
     id: ca_enterprise_disable_for_all_users
@@ -1323,7 +1529,7 @@
     source_quote: which turns it off for everyone on Mac and Windows and locks the setting
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: &id017
+    plan_scope: &id014
     - enterprise
   claim_b:
     id: ca_platform_support
@@ -1390,12 +1596,12 @@
     - unknown
 - id: M035
   pair: ca_enterprise_disable_for_all_users|ca_off_still_sends_app_and_domain
-  type: context_awareness_off_metadata
+  type: context_awareness_off_residual_data
   verdict: scope-gap
   severity: medium
   status: accepted
   note: dup of M037
-  reason: Disabling Context Awareness for everyone still leaves Flow sending "the app name and website domain".
+  reason: The Enterprise disable "turns it off for everyone", yet Flow "still sends the app name and website domain".
   first_seen: '2026-11-06'
   claim_a:
     id: ca_enterprise_disable_for_all_users
@@ -1404,7 +1610,7 @@
     source_quote: which turns it off for everyone on Mac and Windows and locks the setting
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id017
+    plan_scope: *id014
   claim_b:
     id: ca_off_still_sends_app_and_domain
     claim: With Context Awareness off, on Mac and Windows Flow still sends the app name and website domain with each dictation.
@@ -1412,16 +1618,16 @@
     source_quote: Flow still sends the app name and website domain with each dictation
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: &id019
+    plan_scope: &id016
     - unknown
 - id: M037
   pair: admin_context_awareness_toggle|ca_off_still_sends_app_and_domain
-  type: context_awareness_off_metadata
+  type: context_awareness_off_residual_data
   verdict: scope-gap
   severity: medium
   status: accepted
   note: true nuance; cover in IT brief
-  reason: Admins can turn Context Awareness off, but Flow still sends "the app name and website domain".
+  reason: Admins can turn the feature off, but Flow "still sends the app name and website domain".
   first_seen: '2026-11-06'
   claim_a:
     id: admin_context_awareness_toggle
@@ -1430,7 +1636,7 @@
     source_quote: whether context awareness is available
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id018
+    plan_scope: *id015
   claim_b:
     id: ca_off_still_sends_app_and_domain
     claim: With Context Awareness off, on Mac and Windows Flow still sends the app name and website domain with each dictation.
@@ -1438,15 +1644,42 @@
     source_quote: Flow still sends the app name and website domain with each dictation
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id019
+    plan_scope: *id016
+- id: M066
+  pair: docs_network_domain_list_incomplete|network_tls_bypass_port_443
+  type: network_allowlist
+  verdict: scope-gap
+  severity: medium
+  status: false-positive
+  note: same page explains both; not misleading
+  reason: Bypass is advised "for the complete destination list", yet the listed domains are "not the complete outbound host list".
+  first_seen: '2026-11-06'
+  claim_a:
+    id: docs_network_domain_list_incomplete
+    claim: The page says the listed outbound domains are not the complete outbound host list.
+    source_id: docs_network
+    source_quote: This is not the complete outbound host list
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  claim_b:
+    id: network_tls_bypass_port_443
+    claim: The page advises an SSL/TLS inspection bypass on outbound port 443 for the complete destination list.
+    source_id: docs_network
+    source_quote: an SSL/TLS-inspection bypass on outbound port
+    checked: '2026-11-06'
+    status: confirmed
+    plan_scope:
+    - unknown
 - id: M029
   pair: free_plan_includes_notetaker|notetaker_limited_after_offer
-  type: notetaker_free_plan
+  type: notetaker_free_plan_availability
   verdict: scope-gap
   severity: medium
   status: accepted
   note: promo wording; low impact
-  reason: The free plan claim omits that members move to a limited plan after the offer ends.
+  reason: The "free plan includes the Notetaker" claim omits that members later "move to a limited plan".
   first_seen: '2026-11-06'
   claim_a:
     id: free_plan_includes_notetaker
@@ -1466,6 +1699,60 @@
     status: confirmed
     plan_scope:
     - unknown
+- id: M011
+  pair: otter_motion_to_dismiss_pending|otter_wiretap_ca_claims_proceed
+  type: otter_litigation_status
+  verdict: stale
+  severity: medium
+  status: accepted
+  note: 'legal context: use the newer UC Today source; not about Wispr'
+  reason: One says the motion to dismiss "remains pending" while the other says the court allowed central claims to proceed.
+  first_seen: '2026-11-06'
+  claim_a:
+    id: otter_motion_to_dismiss_pending
+    claim: The page says the Otter.ai motion to dismiss has been argued and remains pending.
+    source_id: legal_granola_btlaw
+    source_quote: motion to dismiss has been argued and remains pending
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope:
+    - unknown
+  claim_b:
+    id: otter_wiretap_ca_claims_proceed
+    claim: The court allowed the central federal wiretap and California privacy claims against Otter to proceed.
+    source_id: legal_otter_uctoday
+    source_quote: allowed the central claims under federal wiretap, California privacy
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope:
+    - unknown
+- id: M059
+  pair: api_siem_connectors_in_progress|audit_logs_siem_enterprise_plan
+  type: siem_connectors_status
+  verdict: stale
+  severity: medium
+  status: open
+  note: 'SIEM: connectors ''in progress, not yet available'' vs SIEM configuration on Enterprise'
+  reason: One says SIEM connectors are "in progress, not yet available" while the other documents SIEM configuration on Enterprise.
+  first_seen: '2026-11-06'
+  claim_a:
+    id: api_siem_connectors_in_progress
+    claim: API and SIEM connectors for audit logs are in progress, not yet available.
+    source_id: wf_compliance_note
+    source_quote: API and SIEM connectors are in progress
+    checked: '2026-11-06'
+    status: in-progress
+    plan_scope:
+    - unknown
+  claim_b:
+    id: audit_logs_siem_enterprise_plan
+    claim: SIEM configuration requires an Enterprise plan and streaming access.
+    source_id: docs_audit_logs
+    source_quote: SIEM configuration requires an Enterprise plan and streaming access
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - enterprise
 - id: M056
   pair: docs_network_vulnerability_contact|vulnerability_reports_not_by_email
   type: vulnerability_reporting_channel
@@ -1473,7 +1760,7 @@
   severity: medium
   status: open
   note: 'Vulnerability reporting: one page says email security@wispr.ai, the bug bounty page says no direct email; ask which channel'
-  reason: One source says "Report vulnerabilities to security@wispr.ai" while the other says the program "does not accept submissions by direct email", so a reporter cannot follow both.
+  reason: One says "Report vulnerabilities to security@wispr.ai" while the other says direct email to security@ is not accepted.
   first_seen: '2026-11-06'
   claim_a:
     id: docs_network_vulnerability_contact

@@ -1,22 +1,3 @@
-- pair: dictation_cloud_off_discard|dictation_storage_only_if_cloud_on
-  a:
-    id: dictation_cloud_off_discard
-    claim: With Dictation cloud storage off, audio is discarded once it is transcribed.
-    source_id: wf_enterprise_privacy_post
-    source_quote: Turn it off and audio is discarded once it's transcribed.
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope: &id010
-    - unknown
-  b:
-    id: dictation_storage_only_if_cloud_on
-    claim: Dictation transcripts and audio are stored on Wispr servers only if dictation cloud storage is on.
-    source_id: wf_compliance_note
-    source_quote: stored on Wispr servers only if Dictation cloud storage is on
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope:
-    - unknown
 - pair: baa_revoke_settings_not_restored|revoking_baa_does_not_restore_sharing
   a:
     id: baa_revoke_settings_not_restored
@@ -380,7 +361,7 @@
     source_quote: Enterprise admins can also enforce
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: &id012
+    plan_scope: &id011
     - enterprise
 - pair: baa_signing_turns_storage_off|dictation_cloud_off_discard
   a:
@@ -398,7 +379,8 @@
     source_quote: Turn it off and audio is discarded once it's transcribed.
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id010
+    plan_scope: &id012
+    - unknown
 - pair: ca_context_includes_textbox|ca_context_includes_user_identifier
   a:
     id: ca_context_includes_textbox
@@ -416,7 +398,7 @@
     source_quote: your user identifier within the app
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: &id011
+    plan_scope: &id010
     - unknown
 - pair: ca_context_includes_user_identifier|ca_off_still_sends_app_and_domain
   a:
@@ -426,7 +408,7 @@
     source_quote: your user identifier within the app
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id011
+    plan_scope: *id010
   b:
     id: ca_off_still_sends_app_and_domain
     claim: With Context Awareness off, on Mac and Windows Flow still sends the app name and website domain with each dictation.
@@ -493,7 +475,7 @@
     source_quote: Enterprise admins can also enforce
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id012
+    plan_scope: *id011
 - pair: ca_baa_locks_settings|revocation_removes_settings_locks
   a:
     id: ca_baa_locks_settings
@@ -528,7 +510,7 @@
     source_quote: Turn it off and audio is discarded once it's transcribed.
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id010
+    plan_scope: *id012
 - pair: confidential_content_turn_off_before_recording|model_improvement_off_no_stop_cloud_processing
   a:
     id: confidential_content_turn_off_before_recording
@@ -546,3 +528,20 @@
     checked: '2026-11-05'
     status: confirmed
     plan_scope: *id014
+- pair: model_improvement_off_no_stop_cloud_processing|unconfirmed_org_settings_forced_off
+  a:
+    id: model_improvement_off_no_stop_cloud_processing
+    claim: Turning off model improvement does not stop cloud processing.
+    source_id: docs_data_sharing
+    source_quote: Turning it off does not stop cloud processing
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id014
+  b:
+    id: unconfirmed_org_settings_forced_off
+    claim: When an organization account's settings cannot be confirmed, model improvement and dictation cloud storage are forced off until the settings resolve.
+    source_id: docs_hipaa
+    source_quote: are forced off until the settings resolve
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id003

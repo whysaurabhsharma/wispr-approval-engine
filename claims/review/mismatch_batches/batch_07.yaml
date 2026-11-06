@@ -1,59 +1,3 @@
-- pair: admin_cloud_storage_org_wide|unconfirmed_org_settings_forced_off
-  a:
-    id: admin_cloud_storage_org_wide
-    claim: Admins can set dictation cloud storage for the whole organization, or leave it to individual users.
-    source_id: wf_enterprise_privacy_post
-    source_quote: Set dictation cloud storage for the whole organization, or leave it to individual users.
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope: &id010
-    - unknown
-  b:
-    id: unconfirmed_org_settings_forced_off
-    claim: When an organization account's settings cannot be confirmed, model improvement and dictation cloud storage are forced off until the settings resolve.
-    source_id: docs_hipaa
-    source_quote: are forced off until the settings resolve
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope:
-    - unknown
-- pair: admin_notetaker_disable_toggle|dictation_cloud_storage_scope
-  a:
-    id: admin_notetaker_disable_toggle
-    claim: Admins control whether Notetaker can be used at all.
-    source_id: wf_business
-    source_quote: whether Notetaker can be used at all
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope:
-    - unknown
-  b:
-    id: dictation_cloud_storage_scope
-    claim: Dictation Cloud Storage controls whether dictation data is stored on Wispr's servers, not Notetaker or Scratchpad.
-    source_id: docs_security_faq
-    source_quote: Whether dictation data is stored on Wispr's servers; dictation only, not Notetaker or Scratchpad
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope: &id001
-    - unknown
-- pair: admin_cloud_storage_off_everyone|dictation_cloud_storage_scope
-  a:
-    id: admin_cloud_storage_off_everyone
-    claim: Admins can turn off dictation cloud storage for everyone.
-    source_id: wf_compliance_note
-    source_quote: Dictation cloud storage can be turned off for everyone
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope: &id009
-    - unknown
-  b:
-    id: dictation_cloud_storage_scope
-    claim: Dictation Cloud Storage controls whether dictation data is stored on Wispr's servers, not Notetaker or Scratchpad.
-    source_id: docs_security_faq
-    source_quote: Whether dictation data is stored on Wispr's servers; dictation only, not Notetaker or Scratchpad
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope: *id001
 - pair: soc2_type2_report_trust_criteria|soc2_type_ii_report
   a:
     id: soc2_type2_report_trust_criteria
@@ -62,6 +6,25 @@
     source_quote: covering the Security, Availability, and Confidentiality Trust Services Criteria together
     checked: '2026-11-05'
     status: conflicting
+    plan_scope: &id005
+    - unknown
+  b:
+    id: soc2_type_ii_report
+    claim: Wispr's Trust Center provides a SOC 2 Type II report.
+    source_id: docs_security_faq
+    source_quote: The Trust Center provides Wispr's SOC 2 Type II report
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id001
+    - unknown
+- pair: soc2_type2_hipaa_hitech_requirements|soc2_type_ii_report
+  a:
+    id: soc2_type2_hipaa_hitech_requirements
+    claim: The SOC 2 Type II report also covers HIPAA and HITECH requirements.
+    source_id: docs_vendor_assessments
+    source_quote: together with HIPAA and HITECH requirements
+    checked: '2026-11-05'
+    status: confirmed
     plan_scope: &id006
     - unknown
   b:
@@ -71,14 +34,13 @@
     source_quote: The Trust Center provides Wispr's SOC 2 Type II report
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: &id002
-    - unknown
-- pair: soc2_type2_hipaa_hitech_requirements|soc2_type_ii_report
+    plan_scope: *id001
+- pair: soc2_type2_unqualified_opinion|soc2_type_ii_report
   a:
-    id: soc2_type2_hipaa_hitech_requirements
-    claim: The SOC 2 Type II report also covers HIPAA and HITECH requirements.
+    id: soc2_type2_unqualified_opinion
+    claim: The SOC 2 Type II report has an unqualified opinion with no exceptions noted in tests of controls.
     source_id: docs_vendor_assessments
-    source_quote: together with HIPAA and HITECH requirements
+    source_quote: with an unqualified opinion and no exceptions noted in the tests of controls
     checked: '2026-11-05'
     status: confirmed
     plan_scope: &id007
@@ -90,25 +52,7 @@
     source_quote: The Trust Center provides Wispr's SOC 2 Type II report
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id002
-- pair: soc2_type2_unqualified_opinion|soc2_type_ii_report
-  a:
-    id: soc2_type2_unqualified_opinion
-    claim: The SOC 2 Type II report has an unqualified opinion with no exceptions noted in tests of controls.
-    source_id: docs_vendor_assessments
-    source_quote: with an unqualified opinion and no exceptions noted in the tests of controls
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope: &id008
-    - unknown
-  b:
-    id: soc2_type_ii_report
-    claim: Wispr's Trust Center provides a SOC 2 Type II report.
-    source_id: docs_security_faq
-    source_quote: The Trust Center provides Wispr's SOC 2 Type II report
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope: *id002
+    plan_scope: *id001
 - pair: soc2_type_ii_audited|soc2_type_ii_report
   a:
     id: soc2_type_ii_audited
@@ -117,7 +61,7 @@
     source_quote: Independently audited to verify we safeguard your data across key trust principles.
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: &id003
+    plan_scope: &id002
     - unknown
   b:
     id: soc2_type_ii_report
@@ -126,7 +70,7 @@
     source_quote: The Trust Center provides Wispr's SOC 2 Type II report
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id002
+    plan_scope: *id001
 - pair: soc2_type2_audit_complete|soc2_type_ii_report
   a:
     id: soc2_type2_audit_complete
@@ -135,7 +79,7 @@
     source_quote: Our SOC 2 Type II audit is complete
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: &id005
+    plan_scope: &id004
     - unknown
   b:
     id: soc2_type_ii_report
@@ -144,7 +88,7 @@
     source_quote: The Trust Center provides Wispr's SOC 2 Type II report
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id002
+    plan_scope: *id001
 - pair: notetaker_not_in_audits|soc2_type_ii_audited
   a:
     id: notetaker_not_in_audits
@@ -153,7 +97,7 @@
     source_quote: Meeting Notetaker launched after those audit periods and was not assessed
     checked: '2026-11-05'
     status: conflicting
-    plan_scope: &id004
+    plan_scope: &id003
     - unknown
   b:
     id: soc2_type_ii_audited
@@ -162,7 +106,7 @@
     source_quote: Independently audited to verify we safeguard your data across key trust principles.
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id003
+    plan_scope: *id002
 - pair: notetaker_not_in_audits|soc2_type2_audit_complete
   a:
     id: notetaker_not_in_audits
@@ -171,7 +115,7 @@
     source_quote: Meeting Notetaker launched after those audit periods and was not assessed
     checked: '2026-11-05'
     status: conflicting
-    plan_scope: *id004
+    plan_scope: *id003
   b:
     id: soc2_type2_audit_complete
     claim: The SOC 2 Type II audit is complete.
@@ -179,7 +123,7 @@
     source_quote: Our SOC 2 Type II audit is complete
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id005
+    plan_scope: *id004
 - pair: data_stored_us_aws|us_data_location
   a:
     id: data_stored_us_aws
@@ -207,7 +151,7 @@
     source_quote: covering the Security, Availability, and Confidentiality Trust Services Criteria together
     checked: '2026-11-05'
     status: conflicting
-    plan_scope: *id006
+    plan_scope: *id005
   b:
     id: soc2_type_ii_audited
     claim: Wispr states it is independently audited for SOC 2 Type II.
@@ -215,7 +159,7 @@
     source_quote: Independently audited to verify we safeguard your data across key trust principles.
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id003
+    plan_scope: *id002
 - pair: soc2_type2_audit_complete|soc2_type2_report_trust_criteria
   a:
     id: soc2_type2_audit_complete
@@ -224,7 +168,7 @@
     source_quote: Our SOC 2 Type II audit is complete
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id005
+    plan_scope: *id004
   b:
     id: soc2_type2_report_trust_criteria
     claim: Wispr has a SOC 2 Type II report by A-LIGN covering Security, Availability, and Confidentiality.
@@ -232,7 +176,7 @@
     source_quote: covering the Security, Availability, and Confidentiality Trust Services Criteria together
     checked: '2026-11-05'
     status: conflicting
-    plan_scope: *id006
+    plan_scope: *id005
 - pair: soc2_type2_hipaa_hitech_requirements|soc2_type_ii_audited
   a:
     id: soc2_type2_hipaa_hitech_requirements
@@ -241,7 +185,7 @@
     source_quote: together with HIPAA and HITECH requirements
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id007
+    plan_scope: *id006
   b:
     id: soc2_type_ii_audited
     claim: Wispr states it is independently audited for SOC 2 Type II.
@@ -249,7 +193,7 @@
     source_quote: Independently audited to verify we safeguard your data across key trust principles.
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id003
+    plan_scope: *id002
 - pair: soc2_type2_audit_complete|soc2_type2_hipaa_hitech_requirements
   a:
     id: soc2_type2_audit_complete
@@ -258,7 +202,7 @@
     source_quote: Our SOC 2 Type II audit is complete
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id005
+    plan_scope: *id004
   b:
     id: soc2_type2_hipaa_hitech_requirements
     claim: The SOC 2 Type II report also covers HIPAA and HITECH requirements.
@@ -266,7 +210,7 @@
     source_quote: together with HIPAA and HITECH requirements
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id007
+    plan_scope: *id006
 - pair: soc2_type2_unqualified_opinion|soc2_type_ii_audited
   a:
     id: soc2_type2_unqualified_opinion
@@ -275,7 +219,7 @@
     source_quote: with an unqualified opinion and no exceptions noted in the tests of controls
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id008
+    plan_scope: *id007
   b:
     id: soc2_type_ii_audited
     claim: Wispr states it is independently audited for SOC 2 Type II.
@@ -283,7 +227,7 @@
     source_quote: Independently audited to verify we safeguard your data across key trust principles.
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id003
+    plan_scope: *id002
 - pair: soc2_type2_audit_complete|soc2_type2_unqualified_opinion
   a:
     id: soc2_type2_audit_complete
@@ -292,7 +236,7 @@
     source_quote: Our SOC 2 Type II audit is complete
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id005
+    plan_scope: *id004
   b:
     id: soc2_type2_unqualified_opinion
     claim: The SOC 2 Type II report has an unqualified opinion with no exceptions noted in tests of controls.
@@ -300,7 +244,7 @@
     source_quote: with an unqualified opinion and no exceptions noted in the tests of controls
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id008
+    plan_scope: *id007
 - pair: subprocessor_list_published|subprocessor_list_published_no_request
   a:
     id: subprocessor_list_published
@@ -337,25 +281,7 @@
     source_quote: Independently audited to verify we safeguard your data across key trust principles.
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id003
-- pair: soc2_type2_report_pending|soc2_type_ii_audited
-  a:
-    id: soc2_type2_report_pending
-    claim: The SOC 2 Type II report is expected in September.
-    source_id: wf_compliance_note
-    source_quote: the report is expected in September
-    checked: '2026-11-05'
-    status: conflicting
-    plan_scope: &id011
-    - unknown
-  b:
-    id: soc2_type_ii_audited
-    claim: Wispr states it is independently audited for SOC 2 Type II.
-    source_id: wf_business
-    source_quote: Independently audited to verify we safeguard your data across key trust principles.
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope: *id003
+    plan_scope: *id002
 - pair: soc2_type2_audit_complete|soc2_type_ii_audited
   a:
     id: soc2_type2_audit_complete
@@ -364,7 +290,7 @@
     source_quote: Our SOC 2 Type II audit is complete
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id005
+    plan_scope: *id004
   b:
     id: soc2_type_ii_audited
     claim: Wispr states it is independently audited for SOC 2 Type II.
@@ -372,7 +298,7 @@
     source_quote: Independently audited to verify we safeguard your data across key trust principles.
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id003
+    plan_scope: *id002
 - pair: security_soc2_iso_certified|soc2_type_ii_audited
   a:
     id: security_soc2_iso_certified
@@ -381,7 +307,7 @@
     source_quote: SOC 2 Type II and ISO 27001 certified.
     checked: '2026-11-05'
     status: conflicting
-    plan_scope: &id012
+    plan_scope: &id009
     - all
   b:
     id: soc2_type_ii_audited
@@ -390,7 +316,27 @@
     source_quote: Independently audited to verify we safeguard your data across key trust principles.
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id003
+    plan_scope: *id002
+- pair: hipaa_covers_dictation_notetaker|training_setting_covers_all_data
+  a:
+    id: hipaa_covers_dictation_notetaker
+    claim: The HIPAA compliance offer covers dictation and Wispr Notetaker.
+    source_id: wf_business
+    source_quote: Covers dictation and Wispr Notetaker.
+    checked: '2026-11-06'
+    status: confirmed
+    plan_scope:
+    - growth
+    - enterprise
+  b:
+    id: training_setting_covers_all_data
+    claim: The 'Improve the model for everyone' setting covers all Wispr Flow data across Dictation and Notetaker.
+    source_id: wf_compliance_note
+    source_quote: covers all of your Wispr Flow data, across Dictation and Notetaker
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
 - pair: admin_cloud_storage_off_everyone|dictation_storage_only_if_cloud_on
   a:
     id: admin_cloud_storage_off_everyone
@@ -399,7 +345,8 @@
     source_quote: Dictation cloud storage can be turned off for everyone
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id009
+    plan_scope: &id008
+    - unknown
   b:
     id: dictation_storage_only_if_cloud_on
     claim: Dictation transcripts and audio are stored on Wispr servers only if dictation cloud storage is on.
@@ -417,7 +364,7 @@
     source_quote: Dictation cloud storage can be turned off for everyone
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id009
+    plan_scope: *id008
   b:
     id: admin_cloud_storage_org_wide
     claim: Admins can set dictation cloud storage for the whole organization, or leave it to individual users.
@@ -425,24 +372,8 @@
     source_quote: Set dictation cloud storage for the whole organization, or leave it to individual users.
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id010
-- pair: soc2_type2_audit_complete|soc2_type2_report_pending
-  a:
-    id: soc2_type2_audit_complete
-    claim: The SOC 2 Type II audit is complete.
-    source_id: wf_enterprise_privacy_post
-    source_quote: Our SOC 2 Type II audit is complete
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope: *id005
-  b:
-    id: soc2_type2_report_pending
-    claim: The SOC 2 Type II report is expected in September.
-    source_id: wf_compliance_note
-    source_quote: the report is expected in September
-    checked: '2026-11-05'
-    status: conflicting
-    plan_scope: *id011
+    plan_scope:
+    - unknown
 - pair: soc2_audit_expected_eight_weeks|soc2_type2_audit_complete
   a:
     id: soc2_audit_expected_eight_weeks
@@ -460,7 +391,7 @@
     source_quote: Our SOC 2 Type II audit is complete
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id005
+    plan_scope: *id004
 - pair: security_soc2_iso_certified|soc2_type2_audit_complete
   a:
     id: security_soc2_iso_certified
@@ -469,7 +400,7 @@
     source_quote: SOC 2 Type II and ISO 27001 certified.
     checked: '2026-11-05'
     status: conflicting
-    plan_scope: *id012
+    plan_scope: *id009
   b:
     id: soc2_type2_audit_complete
     claim: The SOC 2 Type II audit is complete.
@@ -477,7 +408,7 @@
     source_quote: Our SOC 2 Type II audit is complete
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id005
+    plan_scope: *id004
 - pair: notetaker_mac_windows_only|notetaker_windows_available
   a:
     id: notetaker_mac_windows_only
@@ -505,7 +436,7 @@
     source_quote: Flow free plan includes the Notetaker
     checked: '2026-11-05'
     status: confirmed
-    plan_scope:
+    plan_scope: &id010
     - free
   b:
     id: notetaker_limited_after_offer
@@ -516,6 +447,24 @@
     status: confirmed
     plan_scope:
     - unknown
+- pair: free_plan_includes_notetaker|hipaa_ready_all_plans
+  a:
+    id: free_plan_includes_notetaker
+    claim: The Flow free plan includes the Notetaker.
+    source_id: wf_pricing
+    source_quote: Flow free plan includes the Notetaker
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id010
+  b:
+    id: hipaa_ready_all_plans
+    claim: Dictation and Notetaker are HIPAA-ready with a signed BAA on every plan.
+    source_id: wf_pricing
+    source_quote: HIPAA-ready dictation and Notetaker with a signed BAA.
+    checked: '2026-11-06'
+    status: confirmed
+    plan_scope:
+    - all
 - pair: ca_baa_locks_settings|org_model_restriction_not_cloud_storage
   a:
     id: ca_baa_locks_settings
@@ -531,6 +480,61 @@
     claim: An organization model-improvement restriction alone does not mean dictation cloud storage is off.
     source_id: docs_hipaa
     source_quote: An organization model-improvement restriction alone does not mean cloud storage is off
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id011
+    - unknown
+- pair: org_model_restriction_not_cloud_storage|personal_or_org_baa_locks_cloud_storage_off
+  a:
+    id: org_model_restriction_not_cloud_storage
+    claim: An organization model-improvement restriction alone does not mean dictation cloud storage is off.
+    source_id: docs_hipaa
+    source_quote: An organization model-improvement restriction alone does not mean cloud storage is off
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id011
+  b:
+    id: personal_or_org_baa_locks_cloud_storage_off
+    claim: A personal or organization BAA locks dictation cloud storage off, even if another organization setting permits sharing.
+    source_id: docs_data_sharing
+    source_quote: A personal or organization BAA locks
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: baa_signing_turns_storage_off|org_model_restriction_not_cloud_storage
+  a:
+    id: baa_signing_turns_storage_off
+    claim: Signing a personal BAA turns Dictation cloud storage off for the account.
+    source_id: docs_baa_revoke
+    source_quote: and Dictation cloud storage off for your account
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: org_model_restriction_not_cloud_storage
+    claim: An organization model-improvement restriction alone does not mean dictation cloud storage is off.
+    source_id: docs_hipaa
+    source_quote: An organization model-improvement restriction alone does not mean cloud storage is off
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id011
+- pair: ca_command_mode_sends_text|ca_off_no_other_onscreen_text
+  a:
+    id: ca_command_mode_sends_text
+    claim: Command Mode and Polish send the text being edited so it can be changed, even when Context Awareness is off.
+    source_id: docs_context_awareness
+    source_quote: Command Mode and Polish send the text
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: ca_off_no_other_onscreen_text
+    claim: With Context Awareness off, no on-screen text beyond the text near the cursor is read.
+    source_id: docs_context_awareness
+    source_quote: no other on-screen text is read
     checked: '2026-11-05'
     status: confirmed
     plan_scope:

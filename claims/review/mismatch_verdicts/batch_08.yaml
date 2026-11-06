@@ -1,0 +1,94 @@
+- pair: ca_improve_model_default_by_plan|ca_improve_model_off_keeps_context_awareness
+  verdict: compatible
+  reason: One gives plan defaults for the setting, the other says turning it off leaves Context Awareness on.
+- pair: ca_baa_locks_settings|ca_improve_model_default_by_plan
+  verdict: compatible
+  reason: A default "on by default for Free and Pro" is not contradicted by a BAA locking the setting off.
+- pair: ca_improve_model_default_by_plan|model_improvement_controls_dictation_use
+  verdict: compatible
+  reason: One states plan defaults, the other states what content the setting controls.
+- pair: ca_improve_model_default_by_plan|training_setting_covers_all_data
+  verdict: compatible
+  reason: Plan defaults and the setting covering "all Wispr Flow data" are different facts that fit together.
+- pair: ca_enterprise_disable_for_all_users|ca_improve_model_off_keeps_context_awareness
+  verdict: compatible
+  reason: Context Awareness has its own Enterprise disable control, separate from the model improvement setting.
+- pair: ca_baa_locks_settings|ca_improve_model_off_keeps_context_awareness
+  verdict: compatible
+  reason: The BAA locks model improvement and storage off, and neither claim says it affects Context Awareness.
+- pair: ca_improve_model_off_keeps_context_awareness|ca_sensitive_environments_turn_off
+  verdict: compatible
+  reason: The advice to turn Context Awareness off for sensitive environments fits with it staying on separately.
+- pair: ca_improve_model_off_keeps_context_awareness|model_improvement_off_stops_training
+  verdict: compatible
+  reason: Turning the setting off stops training use but leaves Context Awareness on; both can be true.
+- pair: ca_baa_locks_settings|training_setting_covers_all_data
+  verdict: compatible
+  reason: The BAA locks the setting off, and the setting covers "across Dictation and Notetaker"; they agree.
+- pair: confidential_content_turn_off_before_recording|model_improvement_off_withholds_content
+  verdict: compatible
+  reason: One is advice for confidential content, the other describes what is withheld when the setting is off.
+- pair: org_model_restriction_not_cloud_storage|revoking_baa_does_not_restore_sharing
+  verdict: compatible
+  reason: These cover different situations, an org restriction and a BAA revocation, with no conflict.
+- pair: soc2_type2_report_trust_criteria|soc2_type2_unqualified_opinion
+  verdict: compatible
+  reason: The report's scope and its "unqualified opinion" are different facts that agree in the text.
+- pair: willow_enforced_users_cannot_disable|willow_privacy_off_product_improvement
+  verdict: compatible
+  reason: One covers enforcement, the other covers data use when Privacy Mode is off.
+- pair: enterprise_plan_compliance_options|willow_enterprise_enforce_privacy_mode
+  verdict: same-fact
+  reason: Both say enforced Privacy Mode is available to Enterprise admins.
+- pair: enterprise_plan_compliance_options|willow_enforced_users_cannot_disable
+  verdict: compatible
+  reason: One lists enforced Privacy Mode as an Enterprise option, the other describes its effect on users.
+- pair: willow_enterprise_contractual_retention_controls|willow_zero_retention_ai_subprocessors
+  verdict: scope-gap
+  severity: high
+  type: retention_contractual_scope
+  reason: The broad "processed without retention" claim does not say contractual controls cover enterprise teams only.
+- pair: enterprise_plan_compliance_options|zdr_model_provider_agreements
+  verdict: scope-gap
+  severity: high
+  type: zdr_plan_scope
+  reason: ZDR agreements "with all our model providers" sit beside ZDR being listed only as an Enterprise option.
+- pair: baa_org_keeps_storage_locked|baa_revoke_settings_not_restored
+  verdict: compatible
+  reason: Both describe what happens after revoking a personal BAA, and they agree.
+- pair: baa_personal_model_training_off|baa_revoke_marked_not_deleted
+  verdict: compatible
+  reason: The training restriction and the revocation record-keeping are different facts.
+- pair: baa_org_keeps_storage_locked|baa_revoke_marked_not_deleted
+  verdict: compatible
+  reason: Org BAA lock behaviour and the BAA being "marked as revoked" are different facts.
+- pair: baa_revoke_marked_not_deleted|revoking_baa_does_not_restore_sharing
+  verdict: compatible
+  reason: One covers the BAA record, the other covers settings not being restored; no conflict.
+- pair: baa_org_keeps_storage_locked|baa_signing_turns_storage_off
+  verdict: compatible
+  reason: Signing a personal BAA turns storage off, and an org BAA keeps it locked after a revoke.
+- pair: baa_signing_turns_storage_off|dictation_storage_only_if_cloud_on
+  verdict: compatible
+  reason: Storage happens "only if Dictation cloud storage is on", which a BAA turns off; they agree.
+- pair: baa_org_keeps_storage_locked|personal_or_org_baa_locks_cloud_storage_off
+  verdict: same-fact
+  reason: The org BAA keeping storage locked is a narrower case of "personal or organization BAA locks".
+- pair: ca_no_screenshots|ca_platform_support
+  verdict: compatible
+  reason: The capture method and platform availability are different facts.
+- pair: ca_context_includes_textbox|ca_platform_support
+  verdict: compatible
+  reason: The platform claim itself notes iOS is "limited to the focused text field".
+- pair: ca_context_includes_textbox|ca_no_screenshots
+  verdict: compatible
+  reason: Reading textbox and on-screen text fits with working "from text" without screenshots.
+- pair: ca_no_screenshots|ca_off_no_other_onscreen_text
+  verdict: compatible
+  reason: One covers capture method, the other covers what is read when the feature is off.
+- pair: ca_command_mode_sends_text|ca_no_screenshots
+  verdict: compatible
+  reason: Command Mode sending edited text does not conflict with Context Awareness taking no screenshots.
+- pair: ca_improve_model_off_keeps_context_awareness|ca_no_screenshots
+  verdict: compatible
+  reason: Different facts about Context Awareness with no overlap.

@@ -1,0 +1,87 @@
+- pair: enterprise_audit_logs_mdm|enterprise_scim_provisioning
+  verdict: compatible
+  reason: Two different Enterprise features, audit logs/MDM and SCIM provisioning, with no conflict.
+- pair: third_party_ai_processing|third_party_no_training
+  verdict: compatible
+  reason: One says third parties process content, the other says they "don't train their models on it".
+- pair: dictation_storage_only_if_cloud_on|notetaker_transcripts_stored_in_cloud
+  verdict: compatible
+  reason: The storage toggle claim covers dictation only; Notetaker storage is a separate product fact.
+- pair: admin_cloud_storage_dictation|dictation_storage_only_if_cloud_on
+  verdict: compatible
+  reason: Admins control the cloud storage setting, and dictation is stored only when it is on.
+- pair: enterprise_free_it_admin_seats|enterprise_sla_support
+  verdict: compatible
+  reason: Two different Enterprise inclusions, free admin seats and SLA support, with no conflict.
+- pair: third_party_ai_processing|third_party_data_deleted_30_days
+  verdict: compatible
+  reason: Third-party processing and deletion within 30 days are separate, consistent facts.
+- pair: delete_data_permanent|org_meetings_not_deletable
+  verdict: scope-gap
+  severity: high
+  type: data_deletion_org_meetings
+  reason: Delete your data "permanently deletes content", but org-kept meeting content cannot be deleted this way.
+- pair: enterprise_audit_logs_mdm|enterprise_scim_audit_logs
+  verdict: same-fact
+  reason: Both say Enterprise includes audit logs and managed deployment, from different pages.
+- pair: granola_complaint_cipa_claim|granola_complaint_ecpa_claim
+  verdict: compatible
+  reason: The complaint alleges both a CIPA claim and an ECPA claim; these are separate counts.
+- pair: willow_dictation_data_never_sold|willow_privacy_off_product_improvement
+  verdict: compatible
+  reason: Never selling data is consistent with limited use for product improvement when Privacy Mode is off.
+- pair: willow_dictation_data_never_sold|willow_no_third_party_sharing
+  verdict: same-fact
+  reason: Both state Willow "never sells" customer data; one adds third-party sharing detail.
+- pair: baa_signing_turns_storage_off|sign_out_resets_cloud_storage_to_on
+  verdict: scope-gap
+  severity: high
+  type: baa_cloud_storage_reset
+  reason: Signing a BAA turns storage off, but "signing out resets the cloud-storage preference to on".
+- pair: ca_platform_support|notetaker_mac_windows_only
+  verdict: compatible
+  reason: Platform lists apply to different features, Context Awareness and Notetaker.
+- pair: dictation_controls_platforms|notetaker_mac_windows_only
+  verdict: compatible
+  reason: Dictation data controls and Notetaker are different features with their own platform lists.
+- pair: dpa_customer_data_processed_us|third_party_ai_processing
+  verdict: compatible
+  reason: Neither text places third-party processing outside the United States, so no conflict is shown.
+- pair: dpa_customer_data_processed_us|third_party_no_training
+  verdict: compatible
+  reason: Processing location and third-party no-training are different facts.
+- pair: dpa_customer_data_processed_us|third_party_data_deleted_30_days
+  verdict: compatible
+  reason: Processing location and third-party deletion timing are different facts.
+- pair: enterprise_custom_contract_terms|msa_redlines_enterprise_only
+  verdict: same-fact
+  reason: Both tie custom contract terms, including MSA redlines, to the Enterprise plan.
+- pair: baa_signing_platforms|free_plan_platform_support
+  verdict: compatible
+  reason: Free plan dictation platforms and BAA signing platforms are different scopes, not stated to overlap.
+- pair: baa_signing_platforms|notetaker_mac_windows_only
+  verdict: compatible
+  reason: BAA signing platforms and Notetaker platforms are different features with no conflict.
+- pair: docs_network_domain_list_incomplete|network_tls_bypass_port_443
+  verdict: scope-gap
+  severity: medium
+  type: network_allowlist
+  reason: Bypass is advised "for the complete destination list", yet the listed domains are "not the complete outbound host list".
+- pair: data_stored_us_aws|dictation_cloud_storage_scope
+  verdict: compatible
+  reason: Storage location and the dictation-only scope of the storage toggle are different facts.
+- pair: iso_27001_certificate|soc2_type_ii_report
+  verdict: compatible
+  reason: The Trust Center provides two different documents, an ISO 27001 certificate and a SOC 2 report.
+- pair: free_plan_includes_notetaker|free_plan_platform_support
+  verdict: compatible
+  reason: Free plan includes Notetaker, and separately supports dictation on four platforms.
+- pair: free_plan_platform_support|notetaker_mac_windows_only
+  verdict: compatible
+  reason: Dictation platforms and Notetaker platforms are different features with no conflict.
+- pair: a_lign_audit_engagement_signed|soc2_audit_expected_eight_weeks
+  verdict: compatible
+  reason: Both come from the same Mar 27, 2026 post; neither shows the other as changed.
+- pair: free_plan_includes_notetaker|growth_individual_usage_reporting
+  verdict: compatible
+  reason: Different plans and different features, with no conflict.

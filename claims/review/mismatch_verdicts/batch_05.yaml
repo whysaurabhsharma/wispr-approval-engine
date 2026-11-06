@@ -1,0 +1,92 @@
+- pair: baa_revoke_settings_not_restored|revoking_baa_does_not_restore_sharing
+  verdict: same-fact
+  reason: Both say revoking a BAA does not restore the storage and sharing settings.
+- pair: baa_signing_turns_storage_off|unconfirmed_org_settings_forced_off
+  verdict: compatible
+  reason: Different triggers turn storage off, a signed personal BAA versus unconfirmed organization settings.
+- pair: ca_baa_locks_settings|hipaa_baa_locks_sharing_off
+  verdict: same-fact
+  reason: Both say a signed BAA locks data sharing off; claim a names the specific settings.
+- pair: ca_baa_locks_settings|hipaa_requires_baa
+  verdict: compatible
+  reason: One says what a BAA locks, the other says HIPAA-ready dictation needs one.
+- pair: confidential_content_turn_off_before_recording|model_improvement_off_stops_training
+  verdict: compatible
+  reason: Advice to turn model improvement off fits the statement that this "stops your content being used".
+- pair: org_model_restriction_not_cloud_storage|signed_baa_locks_both_controls_off
+  verdict: compatible
+  reason: An organization restriction and a signed BAA are different mechanisms with different effects.
+- pair: signed_baa_locks_both_controls_off|unconfirmed_org_settings_forced_off
+  verdict: compatible
+  reason: Both describe controls held off, under different conditions.
+- pair: willow_privacy_mode_default_on|willow_privacy_mode_keeps_nothing
+  verdict: compatible
+  reason: One gives the default state, the other what Privacy Mode keeps.
+- pair: willow_privacy_mode_default_on|willow_privacy_off_product_improvement
+  verdict: compatible
+  reason: The default is on, and the second claim covers only the case "When Privacy Mode is off".
+- pair: willow_enterprise_enforce_privacy_mode|willow_privacy_mode_default_on
+  verdict: compatible
+  reason: A default setting and Enterprise admin enforcement are separate facts that fit together.
+- pair: willow_enforced_users_cannot_disable|willow_privacy_mode_default_on
+  verdict: compatible
+  reason: The default state and the effect of enforcement are separate facts that fit together.
+- pair: willow_privacy_mode_default_on|willow_team_changes_privacy_settings
+  verdict: compatible
+  reason: A default setting can still be changed by the team, so both hold.
+- pair: enterprise_plan_compliance_options|willow_privacy_mode_default_on
+  verdict: compatible
+  reason: Enforced Privacy Mode as an Enterprise option is consistent with it being on by default.
+- pair: sso_saml_login|willow_sso_identity_provider
+  verdict: same-fact
+  reason: Both say users sign in through the organization's identity provider; one adds SAML.
+- pair: sso_enforce_admin|willow_sso_identity_provider
+  verdict: compatible
+  reason: SSO support and admin enforcement of SSO are related but different facts.
+- pair: enterprise_plan_compliance_options|willow_soc2_type_ii_reported
+  verdict: same-fact
+  reason: Both state Willow offers or reports "SOC 2 Type II", with nothing contradicting.
+- pair: sso_enforce_admin|sso_saml_login
+  verdict: compatible
+  reason: SAML sign-in and admin enforcement of SSO are different facts from the same page.
+- pair: enterprise_plan_compliance_options|sso_enforce_admin
+  verdict: compatible
+  reason: SSO as an Enterprise option fits admins being able to enforce SSO.
+- pair: zdr_enforced_all_subprocessors|zdr_model_provider_agreements
+  verdict: same-fact
+  reason: Both describe zero data retention across Willow's providers; one names "all of its model providers".
+- pair: baa_signing_turns_storage_off|enterprise_admin_enforce_cloud_storage
+  verdict: compatible
+  reason: A personal BAA and Enterprise admin enforcement are separate ways to control storage.
+- pair: baa_signing_turns_storage_off|dictation_cloud_off_discard
+  verdict: compatible
+  reason: One says a BAA turns storage off, the other what happens when storage is off.
+- pair: ca_context_includes_textbox|ca_context_includes_user_identifier
+  verdict: compatible
+  reason: The two claims list different items included in context.
+- pair: ca_context_includes_user_identifier|ca_off_still_sends_app_and_domain
+  verdict: compatible
+  reason: One describes what is sent with Context Awareness on, the other with it off.
+- pair: ca_improve_model_default_by_plan|enforce_off_for_everyone_requires_enterprise
+  verdict: compatible
+  reason: Defaults by plan fit with org-wide enforcement needing Enterprise.
+- pair: ca_improve_model_off_keeps_context_awareness|model_improvement_off_no_stop_cloud_processing
+  verdict: compatible
+  reason: Both list things model improvement off does not stop, and the two are different.
+- pair: ca_baa_locks_settings|enterprise_admin_enforce_cloud_storage
+  verdict: compatible
+  reason: BAA locks and Enterprise admin enforcement are separate controls over the same setting.
+- pair: ca_baa_locks_settings|revocation_removes_settings_locks
+  verdict: compatible
+  reason: Signing adds the locks and revoking removes them, which is consistent.
+- pair: ca_baa_locks_settings|dictation_cloud_off_discard
+  verdict: compatible
+  reason: One says the BAA locks storage off, the other what happens when storage is off.
+- pair: confidential_content_turn_off_before_recording|model_improvement_off_no_stop_cloud_processing
+  verdict: scope-gap
+  severity: high
+  type: confidential_content_cloud_processing
+  reason: Advice for confidential content to turn model improvement off omits that it "does not stop cloud processing".
+- pair: model_improvement_off_no_stop_cloud_processing|unconfirmed_org_settings_forced_off
+  verdict: compatible
+  reason: One covers what model improvement off does, the other a forced-off condition.

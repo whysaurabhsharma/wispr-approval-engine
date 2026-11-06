@@ -1,3 +1,41 @@
+- pair: ca_enterprise_disable_for_all_users|context_awareness_enterprise_disable
+  a:
+    id: ca_enterprise_disable_for_all_users
+    claim: On Enterprise, the Disable for all users option turns Context Awareness off for everyone on Mac and Windows and locks the setting.
+    source_id: docs_context_awareness
+    source_quote: which turns it off for everyone on Mac and Windows and locks the setting
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - enterprise
+  b:
+    id: context_awareness_enterprise_disable
+    claim: Admins can disable context awareness org-wide on Enterprise.
+    source_id: wf_compliance_note
+    source_quote: Admins can disable it org-wide on Enterprise
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - enterprise
+- pair: enterprise_admin_enforce_cloud_storage|personal_or_org_baa_locks_cloud_storage_off
+  a:
+    id: enterprise_admin_enforce_cloud_storage
+    claim: Enterprise admins can also enforce the dictation cloud storage setting.
+    source_id: docs_hipaa
+    source_quote: Enterprise admins can also enforce
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - enterprise
+  b:
+    id: personal_or_org_baa_locks_cloud_storage_off
+    claim: A personal or organization BAA locks dictation cloud storage off, even if another organization setting permits sharing.
+    source_id: docs_data_sharing
+    source_quote: A personal or organization BAA locks
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id001
+    - unknown
 - pair: admin_cloud_storage_off_everyone|personal_or_org_baa_locks_cloud_storage_off
   a:
     id: admin_cloud_storage_off_everyone
@@ -6,7 +44,7 @@
     source_quote: Dictation cloud storage can be turned off for everyone
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: &id001
+    plan_scope: &id002
     - unknown
   b:
     id: personal_or_org_baa_locks_cloud_storage_off
@@ -15,8 +53,7 @@
     source_quote: A personal or organization BAA locks
     checked: '2026-11-05'
     status: confirmed
-    plan_scope:
-    - unknown
+    plan_scope: *id001
 - pair: admin_cloud_storage_off_everyone|revoking_baa_does_not_restore_sharing
   a:
     id: admin_cloud_storage_off_everyone
@@ -25,7 +62,7 @@
     source_quote: Dictation cloud storage can be turned off for everyone
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id001
+    plan_scope: *id002
   b:
     id: revoking_baa_does_not_restore_sharing
     claim: Revoking a BAA does not turn sharing or dictation cloud storage back on.
@@ -43,7 +80,7 @@
     source_quote: Dictation cloud storage can be turned off for everyone
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id001
+    plan_scope: *id002
   b:
     id: signed_baa_locks_both_controls_off
     claim: A signed BAA locks both the model-improvement and dictation cloud storage controls off.
@@ -51,7 +88,7 @@
     source_quote: A signed BAA locks both controls off
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: &id004
+    plan_scope: &id005
     - unknown
 - pair: admin_cloud_storage_off_everyone|org_model_restriction_not_cloud_storage
   a:
@@ -61,7 +98,7 @@
     source_quote: Dictation cloud storage can be turned off for everyone
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id001
+    plan_scope: *id002
   b:
     id: org_model_restriction_not_cloud_storage
     claim: An organization model-improvement restriction alone does not mean dictation cloud storage is off.
@@ -69,7 +106,7 @@
     source_quote: An organization model-improvement restriction alone does not mean cloud storage is off
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: &id002
+    plan_scope: &id003
     - unknown
 - pair: admin_cloud_storage_off_everyone|unconfirmed_org_settings_forced_off
   a:
@@ -79,7 +116,7 @@
     source_quote: Dictation cloud storage can be turned off for everyone
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id001
+    plan_scope: *id002
   b:
     id: unconfirmed_org_settings_forced_off
     claim: When an organization account's settings cannot be confirmed, model improvement and dictation cloud storage are forced off until the settings resolve.
@@ -87,7 +124,7 @@
     source_quote: are forced off until the settings resolve
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: &id003
+    plan_scope: &id004
     - unknown
 - pair: baa_ai_providers_covered|baa_ai_text_providers_covered
   a:
@@ -155,7 +192,7 @@
     source_quote: Dictation cloud storage can be turned off for everyone
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id001
+    plan_scope: *id002
   b:
     id: dictation_cloud_off_discard
     claim: With Dictation cloud storage off, audio is discarded once it is transcribed.
@@ -163,7 +200,7 @@
     source_quote: Turn it off and audio is discarded once it's transcribed.
     checked: '2026-11-05'
     status: confirmed
-    plan_scope:
+    plan_scope: &id010
     - unknown
 - pair: org_model_restriction_not_cloud_storage|unconfirmed_org_settings_forced_off
   a:
@@ -173,7 +210,7 @@
     source_quote: An organization model-improvement restriction alone does not mean cloud storage is off
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id002
+    plan_scope: *id003
   b:
     id: unconfirmed_org_settings_forced_off
     claim: When an organization account's settings cannot be confirmed, model improvement and dictation cloud storage are forced off until the settings resolve.
@@ -181,7 +218,7 @@
     source_quote: are forced off until the settings resolve
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id003
+    plan_scope: *id004
 - pair: baa_records_excluded_from_export|baa_records_retained_after_deletion
   a:
     id: baa_records_excluded_from_export
@@ -275,26 +312,7 @@
     source_quote: A signed BAA locks both controls off
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id004
-- pair: soc2_type2_report_pending|soc2_type_ii_report
-  a:
-    id: soc2_type2_report_pending
-    claim: The SOC 2 Type II report is expected in September.
-    source_id: wf_compliance_note
-    source_quote: the report is expected in September
-    checked: '2026-11-05'
-    status: conflicting
-    plan_scope: &id005
-    - unknown
-  b:
-    id: soc2_type_ii_report
-    claim: Wispr's Trust Center provides a SOC 2 Type II report.
-    source_id: docs_security_faq
-    source_quote: The Trust Center provides Wispr's SOC 2 Type II report
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope:
-    - unknown
+    plan_scope: *id005
 - pair: iso_27001_certificate|iso_27001_pending
   a:
     id: iso_27001_certificate
@@ -312,42 +330,6 @@
     source_quote: the certificate is pending issue
     checked: '2026-11-05'
     status: conflicting
-    plan_scope:
-    - unknown
-- pair: soc2_type2_hipaa_hitech_requirements|soc2_type2_report_pending
-  a:
-    id: soc2_type2_hipaa_hitech_requirements
-    claim: The SOC 2 Type II report also covers HIPAA and HITECH requirements.
-    source_id: docs_vendor_assessments
-    source_quote: together with HIPAA and HITECH requirements
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope:
-    - unknown
-  b:
-    id: soc2_type2_report_pending
-    claim: The SOC 2 Type II report is expected in September.
-    source_id: wf_compliance_note
-    source_quote: the report is expected in September
-    checked: '2026-11-05'
-    status: conflicting
-    plan_scope: *id005
-- pair: soc2_type2_report_pending|soc2_type2_unqualified_opinion
-  a:
-    id: soc2_type2_report_pending
-    claim: The SOC 2 Type II report is expected in September.
-    source_id: wf_compliance_note
-    source_quote: the report is expected in September
-    checked: '2026-11-05'
-    status: conflicting
-    plan_scope: *id005
-  b:
-    id: soc2_type2_unqualified_opinion
-    claim: The SOC 2 Type II report has an unqualified opinion with no exceptions noted in tests of controls.
-    source_id: docs_vendor_assessments
-    source_quote: with an unqualified opinion and no exceptions noted in the tests of controls
-    checked: '2026-11-05'
-    status: confirmed
     plan_scope:
     - unknown
 - pair: iso_27001_certification_in_progress|security_soc2_iso_certified
@@ -535,7 +517,7 @@
     source_quote: are forced off until the settings resolve
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: *id003
+    plan_scope: *id004
 - pair: enterprise_model_training_enforced|enterprise_model_training_locked
   a:
     id: enterprise_model_training_enforced
@@ -553,3 +535,21 @@
     checked: '2026-11-05'
     status: confirmed
     plan_scope: *id008
+- pair: dictation_cloud_off_discard|dictation_storage_only_if_cloud_on
+  a:
+    id: dictation_cloud_off_discard
+    claim: With Dictation cloud storage off, audio is discarded once it is transcribed.
+    source_id: wf_enterprise_privacy_post
+    source_quote: Turn it off and audio is discarded once it's transcribed.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id010
+  b:
+    id: dictation_storage_only_if_cloud_on
+    claim: Dictation transcripts and audio are stored on Wispr servers only if dictation cloud storage is on.
+    source_id: wf_compliance_note
+    source_quote: stored on Wispr servers only if Dictation cloud storage is on
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown

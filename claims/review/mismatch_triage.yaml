@@ -56,3 +56,13 @@
 - {id: M054, status: open, note: "Android: 'HIPAA on any plan' omits that Android has no BAA signing flow"}
 - {id: M055, status: accepted, note: "dup of M054"}
 - {id: M056, status: open, note: "Vulnerability reporting: one page says email security@wispr.ai, the bug bounty page says no direct email; ask which channel"}
+- {id: M057, status: open, note: "Android: HIPAA on Growth and Enterprise with a BAA, but Android has no BAA signing flow (replaces M054)"}
+- {id: M058, status: accepted, note: "dup of M057"}
+- {id: M065, status: accepted, note: "dup of M057"}
+- {id: M059, status: open, note: "SIEM: connectors 'in progress, not yet available' vs SIEM configuration on Enterprise"}
+- {id: M063, status: false-positive, note: "standard BAA on every plan and custom BAA documentation on Enterprise are different things"}
+- {id: M061, status: false-positive, note: "BAA lock overrides the admin setting; compatible"}
+- {id: M066, status: false-positive, note: "same page explains both; not misleading"}
+- {id: M064, status: accepted, note: "compliance card is a UI feature; low impact (successor of M048)"}
+- {id: M060, status: accepted, note: "true nuance: model improvement off does not stop cloud processing; cover in IT brief"}
+- {id: M062, status: accepted, note: "competitor wording; not part of the Wispr report"}

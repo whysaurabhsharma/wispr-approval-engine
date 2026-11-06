@@ -10,3 +10,4 @@
 {"t": "2026-11-06T16:38:12", "skill": "consent-memo", "input": "consent-memo.md", "result": "pass", "cost_usd": 0.0}
 {"t": "2026-11-06T16:58:23", "skill": "approval-pack", "input": "inputs/questions/planted-unanswerable.md", "result": "pass", "cost_usd": 0.0}
 {"t": "2026-11-06T17:08:15", "skill": "claims-refresh", "input": "docs_network wf_business wf_compliance_note wf_pricing", "result": "pass", "cost_usd": 0.0}
+{"t": "2026-11-06T17:52:32", "skill": "mismatch-report", "input": "all", "result": "pass", "cost_usd": 0.0}

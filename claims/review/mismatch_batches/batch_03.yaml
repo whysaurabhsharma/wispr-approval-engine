@@ -1,3 +1,60 @@
+- pair: docs_network_root_certificates_respected|network_proxy_and_root_certs_respected
+  a:
+    id: docs_network_root_certificates_respected
+    claim: Flow respects organizational root certificates, including TLS inspection, for dictation.
+    source_id: docs_network
+    source_quote: Flow respects system proxy settings and organizational root certificates, including TLS inspection
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: network_proxy_and_root_certs_respected
+    claim: Flow respects system proxy settings and organizational root certificates, including TLS inspection, for dictation, uploads and SSO session management.
+    source_id: docs_network
+    source_quote: Flow respects system proxy settings and organizational root certificates,
+    checked: '2026-11-06'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: soc2_type1_complete|soc2_type2_audit_complete
+  a:
+    id: soc2_type1_complete
+    claim: The SOC 2 Type I audit is complete and was performed by A-LIGN in April 2026.
+    source_id: wf_compliance_note
+    source_quote: SOC 2 Type I is complete, audited by A-LIGN in April 2026
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: soc2_type2_audit_complete
+    claim: The SOC 2 Type II audit is complete.
+    source_id: wf_enterprise_privacy_post
+    source_quote: Our SOC 2 Type II audit is complete
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: otter_bipa_intentional_damages|otter_bipa_negligent_damages
+  a:
+    id: otter_bipa_intentional_damages
+    claim: UC Today reports BIPA permits statutory damages of up to $5,000 per intentional or reckless violation. Check with counsel.
+    source_id: legal_otter_uctoday
+    source_quote: up to $5,000 per intentional or reckless violation
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: otter_bipa_negligent_damages
+    claim: UC Today reports BIPA permits statutory damages of $1,000 per negligent violation. Check with counsel.
+    source_id: legal_otter_uctoday
+    source_quote: It permits statutory damages of $1,000 per negligent violation
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
 - pair: dictation_cloud_storage_stores_history_on_servers|dictation_storage_only_if_cloud_on
   a:
     id: dictation_cloud_storage_stores_history_on_servers
@@ -34,7 +91,7 @@
     source_quote: sign the applicable Business Associate Agreement (BAA), which locks
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: &id006
+    plan_scope:
     - unknown
 - pair: iso27001_certificate_held|iso_27001_certificate
   a:
@@ -400,7 +457,7 @@
     source_quote: which turns it off for everyone on Mac and Windows and locks the setting
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: &id004
+    plan_scope:
     - enterprise
   b:
     id: ca_on_by_default
@@ -498,59 +555,5 @@
     source_quote: Admins can disable it org-wide on Enterprise
     checked: '2026-11-05'
     status: confirmed
-    plan_scope: &id005
-    - enterprise
-- pair: ca_enterprise_disable_for_all_users|context_awareness_enterprise_disable
-  a:
-    id: ca_enterprise_disable_for_all_users
-    claim: On Enterprise, the Disable for all users option turns Context Awareness off for everyone on Mac and Windows and locks the setting.
-    source_id: docs_context_awareness
-    source_quote: which turns it off for everyone on Mac and Windows and locks the setting
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope: *id004
-  b:
-    id: context_awareness_enterprise_disable
-    claim: Admins can disable context awareness org-wide on Enterprise.
-    source_id: wf_compliance_note
-    source_quote: Admins can disable it org-wide on Enterprise
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope: *id005
-- pair: ca_baa_locks_settings|hipaa_baa_dictation_only
-  a:
-    id: ca_baa_locks_settings
-    claim: Signing the applicable Business Associate Agreement (BAA) locks Improve the model for everyone and Dictation Cloud Storage off.
-    source_id: docs_context_awareness
-    source_quote: sign the applicable Business Associate Agreement (BAA), which locks
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope: *id006
-  b:
-    id: hipaa_baa_dictation_only
-    claim: The HIPAA Business Associate Agreement covers dictation only.
-    source_id: wf_business
-    source_quote: Covers dictation only.
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope:
-    - all
-- pair: enterprise_admin_enforce_cloud_storage|personal_or_org_baa_locks_cloud_storage_off
-  a:
-    id: enterprise_admin_enforce_cloud_storage
-    claim: Enterprise admins can also enforce the dictation cloud storage setting.
-    source_id: docs_hipaa
-    source_quote: Enterprise admins can also enforce
-    checked: '2026-11-05'
-    status: confirmed
     plan_scope:
     - enterprise
-  b:
-    id: personal_or_org_baa_locks_cloud_storage_off
-    claim: A personal or organization BAA locks dictation cloud storage off, even if another organization setting permits sharing.
-    source_id: docs_data_sharing
-    source_quote: A personal or organization BAA locks
-    checked: '2026-11-05'
-    status: confirmed
-    plan_scope:
-    - unknown
