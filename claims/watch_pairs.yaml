@@ -3,3 +3,7 @@
 - {a: android_no_baa_signing, b: flow_hipaa_ready_with_baa, why: HIPAA-ready with BAA vs no BAA flow on Android}
 - {a: android_no_baa_signing, b: dictation_controls_platforms, why: controls on Android vs no BAA flow on Android}
 - {a: docs_network_vulnerability_contact, b: vulnerability_reports_not_by_email, why: report vulnerabilities by email vs programme does not accept email}
+- {a: android_no_baa_signing, b: hipaa_baa_growth_enterprise, why: HIPAA on Growth and Enterprise vs no BAA flow on Android}
+- {a: android_no_baa_signing, b: hipaa_ready_all_plans, why: HIPAA-ready on every plan vs no BAA flow on Android}
+- {a: flow_hipaa_ready_with_baa, b: hipaa_covers_dictation_notetaker, why: HIPAA-ready for dictation vs BAA covers Notetaker}
+- {a: api_siem_connectors_in_progress, b: audit_logs_siem_enterprise_plan, why: SIEM connectors in progress vs SIEM on Enterprise}

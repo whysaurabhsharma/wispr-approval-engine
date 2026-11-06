@@ -14,21 +14,6 @@
   - hipaa
   overlap: 0.43
   same_source: false
-- a: notetaker_works_alongside_baa
-  b: security_notetaker_disabled_baa
-  linked: true
-  subjects:
-  - baa
-  - notetaker
-  overlap: 0.4
-  same_source: false
-- a: soc2_type2_report_pending
-  b: soc2_type2_report_trust_criteria
-  linked: true
-  subjects:
-  - soc2
-  overlap: 0.6
-  same_source: false
 - a: iso27001_certificate_held
   b: iso_27001_pending
   linked: true
@@ -85,6 +70,55 @@
   - baa
   overlap: 0.29
   same_source: false
+- a: flow_hipaa_ready_with_baa
+  b: hipaa_covers_dictation_notetaker
+  linked: true
+  subjects:
+  - watch
+  overlap: 0
+  same_source: false
+- a: android_no_baa_signing
+  b: flow_hipaa_ready_with_baa
+  linked: true
+  subjects:
+  - watch
+  overlap: 0
+  same_source: false
+- a: android_no_baa_signing
+  b: dictation_controls_platforms
+  linked: true
+  subjects:
+  - watch
+  overlap: 0
+  same_source: false
+- a: docs_network_vulnerability_contact
+  b: vulnerability_reports_not_by_email
+  linked: true
+  subjects:
+  - watch
+  overlap: 0
+  same_source: false
+- a: android_no_baa_signing
+  b: hipaa_baa_growth_enterprise
+  linked: true
+  subjects:
+  - watch
+  overlap: 0
+  same_source: false
+- a: android_no_baa_signing
+  b: hipaa_ready_all_plans
+  linked: true
+  subjects:
+  - watch
+  overlap: 0
+  same_source: false
+- a: api_siem_connectors_in_progress
+  b: audit_logs_siem_enterprise_plan
+  linked: true
+  subjects:
+  - watch
+  overlap: 0
+  same_source: false
 - a: growth_admin_model_training_control
   b: growth_enterprise_model_improvement_locked
   linked: true
@@ -115,24 +149,6 @@
   subjects: []
   overlap: 0.0
   same_source: false
-- a: iso27001_certificate_held
-  b: soc2_type2_report_pending
-  linked: true
-  subjects: []
-  overlap: 0.0
-  same_source: false
-- a: iso_27001_pending
-  b: soc2_type2_report_pending
-  linked: true
-  subjects: []
-  overlap: 0.0
-  same_source: true
-- a: iso_27001_certification_in_progress
-  b: soc2_type2_report_pending
-  linked: true
-  subjects: []
-  overlap: 0.0
-  same_source: false
 - a: meeting_notetaker_not_assessed
   b: notetaker_not_in_audits
   linked: false
@@ -151,28 +167,20 @@
   overlap: 1.0
   same_source: false
 - a: flow_hipaa_ready_with_baa
-  b: security_hipaa_baa_signed
+  b: hipaa_ready_all_plans
   linked: false
   subjects:
   - baa
   - hipaa
   overlap: 1.0
   same_source: false
-- a: hipaa_baa_dictation_only
+- a: hipaa_ready_all_plans
   b: hipaa_requires_baa
   linked: false
   subjects:
   - baa
   - hipaa
-  overlap: 0.83
-  same_source: false
-- a: hipaa_requires_baa
-  b: security_hipaa_baa_signed
-  linked: false
-  subjects:
-  - baa
-  - hipaa
-  overlap: 0.83
+  overlap: 0.71
   same_source: false
 - a: baa_signing_turns_storage_off
   b: ca_baa_locks_settings
@@ -190,22 +198,6 @@
   - cloud_storage
   overlap: 0.67
   same_source: false
-- a: delete_retains_signed_agreements
-  b: hipaa_baa_dictation_only
-  linked: false
-  subjects:
-  - baa
-  - hipaa
-  overlap: 0.67
-  same_source: false
-- a: hipaa_baa_dictation_only
-  b: hipaa_baa_locks_sharing_off
-  linked: false
-  subjects:
-  - baa
-  - hipaa
-  overlap: 0.67
-  same_source: false
 - a: model_improvement_controls_dictation_use
   b: training_setting_covers_all_data
   linked: false
@@ -214,14 +206,6 @@
   - training
   overlap: 0.67
   same_source: false
-- a: hipaa_baa_any_plan
-  b: hipaa_baa_dictation_only
-  linked: false
-  subjects:
-  - baa
-  - hipaa
-  overlap: 0.67
-  same_source: true
 - a: ca_baa_locks_settings
   b: signed_baa_locks_both_controls_off
   linked: false
@@ -247,23 +231,7 @@
   overlap: 0.62
   same_source: false
 - a: delete_retains_signed_agreements
-  b: hipaa_baa_any_plan
-  linked: false
-  subjects:
-  - baa
-  - hipaa
-  overlap: 0.62
-  same_source: false
-- a: hipaa_baa_any_plan
-  b: hipaa_baa_locks_sharing_off
-  linked: false
-  subjects:
-  - baa
-  - hipaa
-  overlap: 0.62
-  same_source: false
-- a: hipaa_baa_any_plan
-  b: hipaa_requires_baa
+  b: hipaa_baa_growth_enterprise
   linked: false
   subjects:
   - baa
@@ -286,6 +254,14 @@
   - hipaa
   overlap: 0.6
   same_source: false
+- a: growth_org_wide_hipaa_enforcement
+  b: hipaa_ready_all_plans
+  linked: false
+  subjects:
+  - baa
+  - hipaa
+  overlap: 0.57
+  same_source: false
 - a: baa_signing_turns_storage_off
   b: signed_baa_locks_both_controls_off
   linked: false
@@ -302,6 +278,14 @@
   - hipaa
   overlap: 0.56
   same_source: false
+- a: hipaa_baa_growth_enterprise
+  b: hipaa_baa_locks_sharing_off
+  linked: false
+  subjects:
+  - baa
+  - hipaa
+  overlap: 0.56
+  same_source: false
 - a: personal_or_org_baa_locks_cloud_storage_off
   b: revoking_baa_does_not_restore_sharing
   linked: false
@@ -310,6 +294,14 @@
   - cloud_storage
   overlap: 0.56
   same_source: true
+- a: hipaa_baa_growth_enterprise
+  b: hipaa_requires_baa
+  linked: false
+  subjects:
+  - baa
+  - hipaa
+  overlap: 0.56
+  same_source: false
 - a: personal_or_org_baa_locks_cloud_storage_off
   b: signed_baa_locks_both_controls_off
   linked: false
@@ -318,20 +310,44 @@
   - cloud_storage
   overlap: 0.55
   same_source: false
-- a: hipaa_baa_any_plan
-  b: security_hipaa_baa_signed
+- a: admin_accepts_baa_portal
+  b: delete_retains_signed_agreements
   linked: false
   subjects:
   - baa
   - hipaa
   overlap: 0.5
   same_source: false
-- a: growth_org_wide_hipaa_enforcement
-  b: security_hipaa_baa_signed
+- a: admin_accepts_baa_portal
+  b: hipaa_baa_locks_sharing_off
   linked: false
   subjects:
   - baa
   - hipaa
+  overlap: 0.5
+  same_source: false
+- a: admin_accepts_baa_portal
+  b: hipaa_requires_baa
+  linked: false
+  subjects:
+  - baa
+  - hipaa
+  overlap: 0.5
+  same_source: false
+- a: admin_accepts_baa_portal
+  b: hipaa_baa_growth_enterprise
+  linked: false
+  subjects:
+  - baa
+  - hipaa
+  overlap: 0.5
+  same_source: false
+- a: hipaa_covers_dictation_notetaker
+  b: hipaa_ready_all_plans
+  linked: false
+  subjects:
+  - hipaa
+  - notetaker
   overlap: 0.5
   same_source: false
 - a: ca_baa_locks_settings
@@ -374,6 +390,22 @@
   - hipaa
   overlap: 0.43
   same_source: false
+- a: hipaa_ready_all_plans
+  b: notetaker_works_alongside_baa
+  linked: false
+  subjects:
+  - baa
+  - notetaker
+  overlap: 0.43
+  same_source: false
+- a: growth_enterprise_include_baa
+  b: hipaa_baa_growth_enterprise
+  linked: false
+  subjects:
+  - baa
+  - hipaa
+  overlap: 0.43
+  same_source: false
 - a: baa_personal_model_training_off
   b: flow_hipaa_ready_with_baa
   linked: false
@@ -407,29 +439,13 @@
   overlap: 0.4
   same_source: false
 - a: flow_hipaa_ready_with_baa
-  b: hipaa_baa_any_plan
+  b: hipaa_baa_growth_enterprise
   linked: false
   subjects:
   - baa
   - hipaa
   overlap: 0.4
   same_source: false
-- a: flow_hipaa_ready_with_baa
-  b: hipaa_baa_dictation_only
-  linked: false
-  subjects:
-  - baa
-  - hipaa
-  overlap: 0.4
-  same_source: false
-- a: growth_org_wide_hipaa_enforcement
-  b: hipaa_baa_any_plan
-  linked: false
-  subjects:
-  - baa
-  - hipaa
-  overlap: 0.38
-  same_source: true
 - a: ca_baa_locks_settings
   b: unconfirmed_org_settings_forced_off
   linked: false
@@ -438,6 +454,13 @@
   - training
   overlap: 0.36
   same_source: false
+- a: docs_network_root_certificates_respected
+  b: network_proxy_and_root_certs_respected
+  linked: false
+  subjects:
+  - encryption
+  overlap: 1.0
+  same_source: true
 - a: soc2_type1_complete
   b: soc2_type2_audit_complete
   linked: false
@@ -648,13 +671,6 @@
   - context
   overlap: 0.67
   same_source: false
-- a: ca_baa_locks_settings
-  b: hipaa_baa_dictation_only
-  linked: false
-  subjects:
-  - baa
-  overlap: 0.67
-  same_source: false
 - a: enterprise_admin_enforce_cloud_storage
   b: personal_or_org_baa_locks_cloud_storage_off
   linked: false
@@ -767,32 +783,11 @@
   - baa
   overlap: 0.6
   same_source: false
-- a: soc2_type2_report_pending
-  b: soc2_type_ii_report
-  linked: false
-  subjects:
-  - soc2
-  overlap: 0.6
-  same_source: false
 - a: iso_27001_certificate
   b: iso_27001_pending
   linked: false
   subjects:
   - iso27001
-  overlap: 0.6
-  same_source: false
-- a: soc2_type2_hipaa_hitech_requirements
-  b: soc2_type2_report_pending
-  linked: false
-  subjects:
-  - soc2
-  overlap: 0.6
-  same_source: false
-- a: soc2_type2_report_pending
-  b: soc2_type2_unqualified_opinion
-  linked: false
-  subjects:
-  - soc2
   overlap: 0.6
   same_source: false
 - a: iso_27001_certification_in_progress
@@ -1187,13 +1182,6 @@
   - residency
   overlap: 0.5
   same_source: false
-- a: hipaa_baa_dictation_only
-  b: phi_requires_signed_baa
-  linked: false
-  subjects:
-  - baa
-  overlap: 0.5
-  same_source: false
 - a: model_improvement_controls_dictation_use
   b: model_improvement_off_stops_training
   linked: false
@@ -1213,13 +1201,6 @@
   linked: false
   subjects:
   - cloud_storage
-  overlap: 0.5
-  same_source: false
-- a: security_hipaa_baa_signed
-  b: signed_baa_locks_both_controls_off
-  linked: false
-  subjects:
-  - baa
   overlap: 0.5
   same_source: false
 - a: enterprise_admin_enforce_cloud_storage
@@ -1425,13 +1406,6 @@
   - soc2
   overlap: 0.5
   same_source: false
-- a: soc2_type2_report_pending
-  b: soc2_type_ii_audited
-  linked: false
-  subjects:
-  - soc2
-  overlap: 0.5
-  same_source: false
 - a: soc2_type2_audit_complete
   b: soc2_type_ii_audited
   linked: false
@@ -1446,6 +1420,13 @@
   - soc2
   overlap: 0.5
   same_source: false
+- a: hipaa_covers_dictation_notetaker
+  b: training_setting_covers_all_data
+  linked: false
+  subjects:
+  - notetaker
+  overlap: 0.5
+  same_source: false
 - a: admin_cloud_storage_off_everyone
   b: dictation_storage_only_if_cloud_on
   linked: false
@@ -1458,13 +1439,6 @@
   linked: false
   subjects:
   - cloud_storage
-  overlap: 0.5
-  same_source: false
-- a: soc2_type2_audit_complete
-  b: soc2_type2_report_pending
-  linked: false
-  subjects:
-  - soc2
   overlap: 0.5
   same_source: false
 - a: soc2_audit_expected_eight_weeks
@@ -1490,6 +1464,13 @@
   same_source: false
 - a: free_plan_includes_notetaker
   b: notetaker_limited_after_offer
+  linked: false
+  subjects:
+  - notetaker
+  overlap: 0.5
+  same_source: true
+- a: free_plan_includes_notetaker
+  b: hipaa_ready_all_plans
   linked: false
   subjects:
   - notetaker
@@ -1852,7 +1833,14 @@
   - baa
   overlap: 0.43
   same_source: false
-- a: hipaa_baa_any_plan
+- a: hipaa_baa_growth_enterprise
+  b: phi_requires_signed_baa
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.43
+  same_source: false
+- a: admin_accepts_baa_portal
   b: phi_requires_signed_baa
   linked: false
   subjects:
@@ -1864,6 +1852,13 @@
   linked: false
   subjects:
   - cloud_storage
+  overlap: 0.43
+  same_source: false
+- a: hipaa_ready_all_plans
+  b: signed_baa_locks_both_controls_off
+  linked: false
+  subjects:
+  - baa
   overlap: 0.43
   same_source: false
 - a: dictation_storage_only_if_cloud_on
@@ -1881,6 +1876,13 @@
   overlap: 0.43
   same_source: false
 - a: baa_inproduct_signing_enterprise_admin
+  b: msa_redlines_enterprise_only
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.43
+  same_source: false
+- a: hipaa_ready_all_plans
   b: msa_redlines_enterprise_only
   linked: false
   subjects:
@@ -2328,13 +2330,6 @@
   - training
   overlap: 0.4
   same_source: true
-- a: dictation_cloud_storage_scope
-  b: security_notetaker_disabled_baa
-  linked: false
-  subjects:
-  - notetaker
-  overlap: 0.4
-  same_source: false
 - a: security_soc2_iso_certified
   b: soc2_type_ii_report
   linked: false
@@ -2356,25 +2351,11 @@
   - notetaker
   overlap: 0.4
   same_source: false
-- a: notetaker_not_in_audits
-  b: soc2_type2_report_pending
-  linked: false
-  subjects:
-  - soc2
-  overlap: 0.4
-  same_source: false
 - a: iso_27001_pending
   b: notetaker_not_in_audits
   linked: false
   subjects:
   - iso27001
-  overlap: 0.4
-  same_source: false
-- a: baa_ai_providers_covered
-  b: security_notetaker_disabled_baa
-  linked: false
-  subjects:
-  - baa
   overlap: 0.4
   same_source: false
 - a: security_soc2_iso_certified
@@ -2489,29 +2470,8 @@
   - notetaker
   overlap: 0.4
   same_source: true
-- a: soc2_type1_complete
-  b: soc2_type2_report_pending
-  linked: false
-  subjects:
-  - soc2
-  overlap: 0.4
-  same_source: true
 - a: security_soc2_iso_certified
   b: soc2_type1_complete
-  linked: false
-  subjects:
-  - soc2
-  overlap: 0.4
-  same_source: false
-- a: soc2_audit_expected_eight_weeks
-  b: soc2_type2_report_pending
-  linked: false
-  subjects:
-  - soc2
-  overlap: 0.4
-  same_source: false
-- a: security_soc2_iso_certified
-  b: soc2_type2_report_pending
   linked: false
   subjects:
   - soc2
@@ -2615,18 +2575,18 @@
   - baa
   overlap: 0.38
   same_source: false
-- a: ca_baa_locks_settings
-  b: hipaa_baa_any_plan
-  linked: false
-  subjects:
-  - baa
-  overlap: 0.38
-  same_source: false
 - a: admin_cloud_storage_org_wide
   b: ca_baa_locks_settings
   linked: false
   subjects:
   - cloud_storage
+  overlap: 0.38
+  same_source: false
+- a: admin_accepts_baa_portal
+  b: ca_baa_locks_settings
+  linked: false
+  subjects:
+  - baa
   overlap: 0.38
   same_source: false
 - a: model_improvement_off_no_stop_cloud_processing
@@ -2685,7 +2645,7 @@
   - dpa
   overlap: 0.38
   same_source: true
-- a: hipaa_baa_any_plan
+- a: hipaa_baa_growth_enterprise
   b: soc2_card_enterprise_only
   linked: false
   subjects:
@@ -2820,6 +2780,12 @@
   subjects: []
   overlap: 0.6
   same_source: false
+- a: enterprise_free_it_admin_seats
+  b: enterprise_sla_support
+  linked: false
+  subjects: []
+  overlap: 0.6
+  same_source: true
 - a: third_party_ai_processing
   b: third_party_data_deleted_30_days
   linked: false
@@ -2910,6 +2876,12 @@
   subjects: []
   overlap: 0.5
   same_source: false
+- a: docs_network_domain_list_incomplete
+  b: network_tls_bypass_port_443
+  linked: false
+  subjects: []
+  overlap: 0.5
+  same_source: true
 - a: data_stored_us_aws
   b: dictation_cloud_storage_scope
   linked: false
@@ -2940,3 +2912,9 @@
   subjects: []
   overlap: 0.5
   same_source: true
+- a: free_plan_includes_notetaker
+  b: growth_individual_usage_reporting
+  linked: false
+  subjects: []
+  overlap: 0.5
+  same_source: false
