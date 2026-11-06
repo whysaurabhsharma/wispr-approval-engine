@@ -13,7 +13,7 @@ for f in sorted((ROOT / "claims/candidates").glob("*.yaml")):
     for r in yaml.safe_load(f.read_text(encoding="utf-8")) or []:
         rows.append(r)
 counts = collections.Counter(r["id"] for r in rows)
-gold = {id(r) for r in random.Random(42).sample(rows, min(30, len(rows)))}
+gold = set() if (ROOT / "evals/claims/gold.yaml").exists() else {id(r) for r in random.Random(42).sample(rows, min(30, len(rows)))}  # gold is frozen once
 def context(r, words=12):
     text, q = snapshot_text(r["source_id"]) or "", norm(str(r.get("source_quote") or ""))
     i = text.find(q) if q else -1

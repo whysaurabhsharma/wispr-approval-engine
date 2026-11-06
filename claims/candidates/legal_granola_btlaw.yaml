@@ -1,209 +1,229 @@
-- id: granola_training_default_optout
-  version: 1
-  topic: privacy
-  claim: "On free and business plans, Granola uses anonymized data for model improvements unless each user disables the feature."
-  source_id: legal_granola_btlaw
-  source_quote: "anonymized data is used for model improvements unless each user individually disables the feature"
-  checked: 2026-11-05
-  status: confirmed
-  plan_scope: [free, business]
-  conflicts_with: []
-- id: granola_optout_not_guaranteed
-  version: 1
-  topic: privacy
-  claim: "Granola states it cannot guarantee that anonymized data was not used for training before a user changed the setting."
-  source_id: legal_granola_btlaw
-  source_quote: "cannot guarantee that anonymized data wasn’t used before you changed the setting"
-  checked: 2026-11-05
-  status: confirmed
-  plan_scope: [free, business]
-  conflicts_with: []
-- id: granola_trained_data_not_extractable
-  version: 1
-  topic: privacy
-  claim: "Granola's privacy policy acknowledges that data incorporated into models cannot be extracted once training is complete."
-  source_id: legal_granola_btlaw
-  source_quote: "data incorporated into models cannot be extracted once training is complete"
-  checked: 2026-11-05
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: granola_no_meeting_notice
-  version: 1
-  topic: consent
-  claim: "Granola does not join meetings as a bot and does not notify meeting participants when it is used."
-  source_id: legal_granola_btlaw
-  source_quote: "no bot joins the meeting and no notification appears for meeting participants"
-  checked: 2026-11-05
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: granola_system_audio_capture
-  version: 1
-  topic: privacy
-  claim: "Granola uses system audio and microphone input to capture and transcribe all participants' communications."
-  source_id: legal_granola_btlaw
-  source_quote: "Granola uses system audio and microphone input to capture and transcribe all participants’ communications"
-  checked: 2026-11-05
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: granola_meeting_platform_support
-  version: 1
-  topic: product
-  claim: "Granola captures meetings on Google Meet, Zoom, Microsoft Teams, and other virtual meeting platforms."
-  source_id: legal_granola_btlaw
-  source_quote: "Google Meet, Zoom, Microsoft Teams, and other virtual meeting platforms"
-  checked: 2026-11-05
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: granola_no_audio_storage_stated
-  version: 1
-  topic: privacy
-  claim: "Granola states that it does not record or save audio."
-  source_id: legal_granola_btlaw
-  source_quote: "Granola states that it does not record or save audio"
-  checked: 2026-11-05
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: granola_transparency_features_off
-  version: 1
-  topic: consent
-  claim: "Granola's chat-message notification and video watermark options are not enabled by default."
-  source_id: legal_granola_btlaw
-  source_quote: "neither is enabled by default"
-  checked: 2026-11-05
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: granola_no_settings_on_customer_behalf
-  version: 1
-  topic: consent
-  claim: "Granola states it does not configure its transparency settings on behalf of customers."
-  source_id: legal_granola_btlaw
-  source_quote: "does not configure these settings on behalf of customers"
-  checked: 2026-11-05
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: granola_customer_notice_responsibility
+- id: granola_case_filed_ndca
   version: 1
   topic: legal
-  claim: "Granola states that customers remain responsible for determining what notice or consent is required. Check with counsel."
-  source_id: legal_granola_btlaw
-  source_quote: "remain responsible for determining what notice or consent is required"
-  checked: 2026-11-05
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: granola_ecpa_one_party_consent
-  version: 1
-  topic: legal
-  claim: "The page's analysis says that under ECPA one-party consent, an interception is lawful if the Granola user consents. Check with counsel."
-  source_id: legal_granola_btlaw
-  source_quote: "one party to the communication, here, the Granola user, consents"
-  checked: 2026-11-05
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: granola_calendar_sync
-  version: 1
-  topic: product
-  claim: "Granola is an AI notepad that syncs into the user's calendar and takes notes during meetings."
-  source_id: legal_granola_btlaw
-  source_quote: "syncs into your calendar and takes notes during meetings"
-  checked: 2026-11-05
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: chamberlain_granola_filed_nd_cal
-  version: 1
-  topic: legal
-  claim: "Chamberlain v. Granola, Inc. was filed in the U.S. District Court for the Northern District of California."
+  claim: "The Chamberlain v. Granola, Inc. case was filed in the U.S. District Court for the Northern District of California."
   source_id: legal_granola_btlaw
   source_quote: "filed in the U.S. District Court for the Northern District of California"
   checked: 2026-11-05
   status: confirmed
   plan_scope: [unknown]
   conflicts_with: []
-- id: chamberlain_granola_no_merits_response
+- id: granola_complaint_alleges_training_default
   version: 1
   topic: legal
-  claim: "Granola has not yet responded on the merits in Chamberlain v. Granola, Inc. The claims are allegations only."
+  claim: "The Chamberlain complaint alleges that Granola uses captured communications for AI model training by default."
+  source_id: legal_granola_btlaw
+  source_quote: "The complaint alleges that Granola uses captured communications for AI model training by default"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: granola_policy_training_data_not_extractable
+  version: 1
+  topic: privacy
+  claim: "The page says Granola's privacy policy acknowledges that data incorporated into models cannot be extracted once training is complete."
+  source_id: legal_granola_btlaw
+  source_quote: "data incorporated into models cannot be extracted once training is complete"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: granola_training_default_free_business
+  version: 1
+  topic: privacy
+  claim: "The page says anonymized data is used for model improvements on free and business plans unless each user disables the feature."
+  source_id: legal_granola_btlaw
+  source_quote: "On free and business plans, anonymized data is used for model improvements"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [free, business]
+  conflicts_with: []
+- id: granola_optout_no_guarantee_prior_use
+  version: 1
+  topic: privacy
+  claim: "The page says Granola states it cannot guarantee that anonymized data was not used before a user changed the setting."
+  source_id: legal_granola_btlaw
+  source_quote: "cannot guarantee that anonymized data wasn’t used before you changed the setting"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: granola_chat_watermark_off_by_default
+  version: 1
+  topic: consent
+  claim: "The complaint says Granola's chat-message notification and video watermark are not enabled by default."
+  source_id: legal_granola_btlaw
+  source_quote: "neither is enabled by default"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: granola_does_not_configure_customer_settings
+  version: 1
+  topic: consent
+  claim: "The page says Granola states it does not configure these transparency settings on behalf of customers."
+  source_id: legal_granola_btlaw
+  source_quote: "does not configure these settings on behalf of customers"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: granola_states_no_audio_recording
+  version: 1
+  topic: privacy
+  claim: "The page says Granola states that it does not record or save audio."
+  source_id: legal_granola_btlaw
+  source_quote: "does not record or save audio"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: granola_no_bot_no_participant_notice
+  version: 1
+  topic: consent
+  claim: "The page says Granola's tool joins no bot and shows no notification to meeting participants."
+  source_id: legal_granola_btlaw
+  source_quote: "no bot joins the meeting and no notification appears for meeting participants"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: granola_capture_meeting_platforms
+  version: 1
+  topic: product
+  claim: "The page says Granola captures and transcribes meeting audio on Google Meet, Zoom, Microsoft Teams and other virtual meeting platforms."
+  source_id: legal_granola_btlaw
+  source_quote: "on Google Meet, Zoom, Microsoft Teams, and other virtual meeting platforms"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: granola_complaint_ecpa_claim
+  version: 1
+  topic: legal
+  claim: "The Chamberlain complaint alleges a claim under the federal Electronic Communications Privacy Act (ECPA)."
+  source_id: legal_granola_btlaw
+  source_quote: "Violation of the ECPA, 18 U.S.C. §§ 2510 et seq."
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: granola_complaint_cipa_claim
+  version: 1
+  topic: legal
+  claim: "The Chamberlain complaint alleges wiretapping under the California Invasion of Privacy Act (CIPA)."
+  source_id: legal_granola_btlaw
+  source_quote: "Wiretapping under the California Invasion of Privacy Act (CIPA)"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: granola_customers_responsible_for_notice
+  version: 1
+  topic: compliance
+  claim: "The page says Granola states that customers remain responsible for determining what notice or consent is required."
+  source_id: legal_granola_btlaw
+  source_quote: "remain responsible for determining what notice or consent is required"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: granola_lawsuit_proposed_classes
+  version: 1
+  topic: legal
+  claim: "The lawsuit proposes a nationwide class of U.S. persons and a California subclass."
+  source_id: legal_granola_btlaw
+  source_quote: "The lawsuit proposes two classes: a nationwide class of all U.S. persons"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: granola_no_merits_response_yet
+  version: 1
+  topic: legal
+  claim: "The page says Granola has not yet responded on the merits of the Chamberlain lawsuit."
   source_id: legal_granola_btlaw
   source_quote: "Granola has not yet responded on the merits"
   checked: 2026-11-05
   status: confirmed
   plan_scope: [unknown]
   conflicts_with: []
-- id: ai_notetaker_cases_no_merits_ruling
+- id: otter_privacy_litigation_consolidated
   version: 1
-  topic: legal
-  claim: "No court has ruled on the merits in the AI note-taking class actions discussed on the page."
+  topic: competitor
+  claim: "The In re Otter.AI Privacy Litigation consolidates four suits filed between August and September 2025."
   source_id: legal_granola_btlaw
-  source_quote: "No court has ruled on the merits in any of them"
+  source_quote: "consolidates four suits filed between August and September 2025"
   checked: 2026-11-05
   status: confirmed
   plan_scope: [unknown]
   conflicts_with: []
 - id: otter_motion_to_dismiss_pending
   version: 1
-  topic: legal
-  claim: "Otter.ai's motion to dismiss has been argued and is still pending."
+  topic: competitor
+  claim: "The page says the Otter.ai motion to dismiss has been argued and remains pending."
   source_id: legal_granola_btlaw
-  source_quote: "Otter.ai’s motion to dismiss has been argued and remains pending"
-  checked: 2026-11-05
-  status: in-progress
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: otter_sso_access_grant
-  version: 1
-  topic: security
-  claim: "Otter.ai access can be granted through an SSO click unless the system administrator has blocked the application."
-  source_id: legal_granola_btlaw
-  source_quote: "Single Sign-On (SSO) click if the system administrator has not blocked the application"
+  source_quote: "motion to dismiss has been argued and remains pending"
   checked: 2026-11-05
   status: confirmed
   plan_scope: [unknown]
   conflicts_with: []
-- id: otter_embeds_in_user_accounts
-  version: 1
-  topic: security
-  claim: "Once a user grants access, Otter.ai embeds in that user's calendar, mail, Teams, and chat."
-  source_id: legal_granola_btlaw
-  source_quote: "Otter.ai embeds in that user’s calendar, mail, Teams, and chat"
-  checked: 2026-11-05
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: otter_data_kept_after_revocation
-  version: 1
-  topic: privacy
-  claim: "Otter.ai does not delete data already captured from its systems after a system administrator revokes access."
-  source_id: legal_granola_btlaw
-  source_quote: "data already captured is not deleted from Otter.ai’s systems"
-  checked: 2026-11-05
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: fireflies_illinois_biometric_suits
+- id: privacy_ai_notetaker_no_merits_ruling
   version: 1
   topic: legal
-  claim: "Fireflies.ai faces biometric privacy suits in Illinois."
+  claim: "The page says no court has ruled on the merits in the Granola, Otter.ai or Fireflies.ai cases."
   source_id: legal_granola_btlaw
-  source_quote: "Fireflies.ai faces biometric privacy suits in Illinois"
+  source_quote: "No court has ruled on the merits in any of them"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: fireflies_illinois_bipa_suits
+  version: 1
+  topic: competitor
+  claim: "The Fireflies.ai Illinois suits proceed under the Illinois Biometric Information Privacy Act (BIPA)."
+  source_id: legal_granola_btlaw
+  source_quote: "proceed on a different theory, under the Illinois Biometric Information Privacy Act (BIPA)"
   checked: 2026-11-05
   status: confirmed
   plan_scope: [unknown]
   conflicts_with: []
 - id: fireflies_voiceprint_allegation
   version: 1
-  topic: privacy
-  claim: "Illinois complaints allege that Fireflies.ai's speaker-recognition feature generates voiceprints of participants who never consented."
+  topic: competitor
+  claim: "The Illinois complaints allege that Fireflies.ai's speaker-recognition feature generates voiceprints of participants."
   source_id: legal_granola_btlaw
-  source_quote: "speaker-recognition feature generates voiceprints of participants who never consented"
+  source_quote: "the Illinois complaints allege that its speaker-recognition feature generates voiceprints"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: otter_auto_joins_all_meetings
+  version: 1
+  topic: competitor
+  claim: "The page states that Otter.ai auto-joins all meetings and invitations, including declined ones."
+  source_id: legal_granola_btlaw
+  source_quote: "auto-joins all meetings and invitations (including declined ones)"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: otter_revocation_does_not_delete_data
+  version: 1
+  topic: privacy
+  claim: "The page states that after an administrator revokes Otter.ai access, data already captured is not deleted."
+  source_id: legal_granola_btlaw
+  source_quote: "even after a system administrator revokes access, data already captured is not deleted"
+  checked: 2026-11-05
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: otter_sso_access_unless_admin_blocks
+  version: 1
+  topic: security
+  claim: "The page states Otter.ai access can be granted through SSO if the system administrator has not blocked the application."
+  source_id: legal_granola_btlaw
+  source_quote: "if the system administrator has not blocked the application"
   checked: 2026-11-05
   status: confirmed
   plan_scope: [unknown]
