@@ -55,3 +55,4 @@
 - {id: M053, status: open, note: "Ask Wispr: does sign-out reset cloud storage to on for a BAA account?"}
 - {id: M054, status: open, note: "Android: 'HIPAA on any plan' omits that Android has no BAA signing flow"}
 - {id: M055, status: accepted, note: "dup of M054"}
+- {id: M056, status: open, note: "Vulnerability reporting: one page says email security@wispr.ai, the bug bounty page says no direct email; ask which channel"}

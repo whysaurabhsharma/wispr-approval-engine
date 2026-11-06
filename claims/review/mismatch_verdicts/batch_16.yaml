@@ -1,0 +1,5 @@
+- pair: docs_network_vulnerability_contact|vulnerability_reports_not_by_email
+  verdict: contradiction
+  severity: medium
+  type: vulnerability_reporting_channel
+  reason: One source says "Report vulnerabilities to security@wispr.ai" while the other says the program "does not accept submissions by direct email", so a reporter cannot follow both.

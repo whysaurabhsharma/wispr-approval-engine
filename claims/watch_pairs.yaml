@@ -2,3 +2,4 @@
 - {a: android_no_baa_signing, b: hipaa_baa_any_plan, why: HIPAA on any plan vs no BAA flow on Android}
 - {a: android_no_baa_signing, b: flow_hipaa_ready_with_baa, why: HIPAA-ready with BAA vs no BAA flow on Android}
 - {a: android_no_baa_signing, b: dictation_controls_platforms, why: controls on Android vs no BAA flow on Android}
+- {a: docs_network_vulnerability_contact, b: vulnerability_reports_not_by_email, why: report vulnerabilities by email vs programme does not accept email}
