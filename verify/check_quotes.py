@@ -27,6 +27,7 @@ def check_rows(rows) -> list:
         sid, quote = r.get("source_id"), str(r.get("source_quote") or "")
         if sid not in SOURCES: problems.append(f"{tag}: source_id {sid} not in sources.yaml"); continue
         if r.get("status") == "unknown" and not quote: continue  # unknowns may have no quote
+        if r.get("status") == "retired": continue  # retired rows keep their old quote as history
         if not quote: problems.append(f"{tag}: empty source_quote"); continue
         if len(quote.split()) >= 15: problems.append(f"{tag}: quote is {len(quote.split())} words (limit 14)")
         text = snapshot_text(sid)

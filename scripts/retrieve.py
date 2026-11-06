@@ -39,6 +39,7 @@ def questions(path):
                          "topics": [t.strip() for t in cells[3].split(",")], "caiq": cells[4], "drata_covers": cells[5]})
     return rows
 lib = yaml.safe_load((ROOT / "claims/library.yaml").read_text(encoding="utf-8"))
+lib = [r for r in lib if r.get("status") != "retired"]
 docs = {r["id"]: set(words(r["claim"] + " " + r["id"].replace("_", " "))) for r in lib}
 N = len(lib); df = {}
 for ws in docs.values():

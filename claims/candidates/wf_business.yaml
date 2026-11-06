@@ -1,250 +1,240 @@
-- id: hipaa_baa_any_plan
+- id: hipaa_baa_growth_enterprise
   version: 1
   topic: compliance
-  claim: "HIPAA compliance is available on any plan with a signed Business Associate Agreement."
+  claim: "HIPAA compliance is available on the Growth and Enterprise plans with a signed Business Associate Agreement."
   source_id: wf_business
-  source_quote: "Available on any plan with a signed Business Associate Agreement."
-  checked: "2026-11-05"
+  source_quote: "Available on Growth and Enterprise with a signed Business Associate Agreement."
+  checked: "2026-11-06"
   status: confirmed
-  plan_scope: [all]
+  plan_scope: [growth, enterprise]
   conflicts_with: []
-- id: hipaa_baa_dictation_only
+- id: hipaa_covers_dictation_notetaker
   version: 1
   topic: compliance
-  claim: "The HIPAA Business Associate Agreement covers dictation only."
+  claim: "The HIPAA compliance offer covers dictation and Wispr Notetaker."
   source_id: wf_business
-  source_quote: "Covers dictation only."
-  checked: "2026-11-05"
+  source_quote: "Covers dictation and Wispr Notetaker."
+  checked: "2026-11-06"
   status: confirmed
-  plan_scope: [all]
+  plan_scope: [growth, enterprise]
   conflicts_with: []
-- id: soc2_type_ii_audited
+- id: soc2_type_ii_independent_audit
   version: 1
   topic: compliance
-  claim: "Wispr states it is independently audited for SOC 2 Type II."
+  claim: "Wispr states it has an independent SOC 2 Type II audit covering key trust principles."
   source_id: wf_business
   source_quote: "Independently audited to verify we safeguard your data across key trust principles."
-  checked: "2026-11-05"
+  checked: "2026-11-06"
   status: confirmed
   plan_scope: [unknown]
   conflicts_with: []
 - id: iso_27001_audited
   version: 1
   topic: compliance
-  claim: "Wispr states it is audited against the ISO 27001 information security standard."
+  claim: "Wispr states it is audited against the ISO 27001 information security management standard."
   source_id: wf_business
   source_quote: "Audited by the international standard for information security management systems."
-  checked: "2026-11-05"
+  checked: "2026-11-06"
   status: confirmed
   plan_scope: [unknown]
   conflicts_with: []
-- id: admin_sets_data_policy_portal
+- id: admin_portal_sets_data_policy
   version: 1
   topic: governance
-  claim: "Admins set data policy once in the admin portal."
+  claim: "Admins set the data policy once in the admin portal."
   source_id: wf_business
-  source_quote: "Admins set data policy once in the admin portal:"
-  checked: "2026-11-05"
+  source_quote: "Admins set data policy once in the admin portal"
+  checked: "2026-11-06"
   status: confirmed
   plan_scope: [unknown]
   conflicts_with: []
-- id: admin_cloud_storage_dictation
+- id: admin_controls_cloud_storage_dictation
   version: 1
   topic: privacy
   claim: "Admins control whether dictation is stored in the cloud."
   source_id: wf_business
   source_quote: "whether dictation is stored in the cloud"
-  checked: "2026-11-05"
+  checked: "2026-11-06"
   status: confirmed
   plan_scope: [unknown]
   conflicts_with: []
-- id: admin_device_retention_period
+- id: admin_controls_device_retention
   version: 1
   topic: privacy
   claim: "Admins control how long dictation is kept on devices."
   source_id: wf_business
   source_quote: "how long it's kept on devices"
-  checked: "2026-11-05"
+  checked: "2026-11-06"
   status: confirmed
   plan_scope: [unknown]
   conflicts_with: []
-- id: admin_context_awareness_toggle
+- id: admin_controls_context_awareness
   version: 1
-  topic: privacy
+  topic: governance
   claim: "Admins control whether context awareness is available."
   source_id: wf_business
   source_quote: "whether context awareness is available"
-  checked: "2026-11-05"
+  checked: "2026-11-06"
   status: confirmed
   plan_scope: [unknown]
   conflicts_with: []
-- id: admin_notetaker_disable_toggle
+- id: admin_controls_notetaker_disable
   version: 1
   topic: governance
-  claim: "Admins control whether Notetaker can be used at all."
+  claim: "Admins can decide whether Notetaker can be used at all."
   source_id: wf_business
   source_quote: "whether Notetaker can be used at all"
-  checked: "2026-11-05"
+  checked: "2026-11-06"
   status: confirmed
   plan_scope: [unknown]
   conflicts_with: []
-- id: notetaker_recordings_private
+- id: notetaker_individual_recordings_private
   version: 1
   topic: privacy
-  claim: "Individual Notetaker recordings and transcripts are kept private."
+  claim: "The page says individual Notetaker recordings and transcripts stay private."
   source_id: wf_business
-  source_quote: "Individual recordings and transcripts stay private. Always."
-  checked: "2026-11-05"
+  source_quote: "Individual recordings and transcripts stay private."
+  checked: "2026-11-06"
   status: confirmed
   plan_scope: [unknown]
   conflicts_with: []
-- id: notetaker_searches_meetings_slack_email
+- id: notetaker_search_covers_meetings_slack_email
   version: 1
   topic: privacy
-  claim: "Notetaker searches across team meetings, Slack channels, and inboxes."
+  claim: "Notetaker search covers team meetings, Slack channels and email inboxes."
   source_id: wf_business
   source_quote: "Notetaker searches across your team's meetings, Slack channels, and inboxes"
-  checked: "2026-11-05"
+  checked: "2026-11-06"
   status: confirmed
   plan_scope: [unknown]
-  conflicts_with: []
-- id: notetaker_feeds_ai_tools
-  version: 1
-  topic: privacy
-  claim: "Notetaker feeds meeting content into the AI tools a team already uses."
-  source_id: wf_business
-  source_quote: "feeds it all straight into the AI tools your team already uses"
-  checked: "2026-11-05"
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: free_plan_platform_support
-  version: 1
-  topic: product
-  claim: "The free plan supports dictation on Mac, Windows, iOS, and Android."
-  source_id: wf_business
-  source_quote: "Dictation on Mac, Windows, iOS, and Android"
-  checked: "2026-11-05"
-  status: confirmed
-  plan_scope: [free]
-  conflicts_with: []
-- id: pro_unlimited_dictations
-  version: 1
-  topic: pricing
-  claim: "The pro plan includes unlimited dictations."
-  source_id: wf_business
-  source_quote: "Unlimited dictations"
-  checked: "2026-11-05"
-  status: confirmed
-  plan_scope: [pro]
-  conflicts_with: []
-- id: pro_centralized_billing
-  version: 1
-  topic: pricing
-  claim: "The pro plan includes centralized billing and user management."
-  source_id: wf_business
-  source_quote: "Centralized billing and user management"
-  checked: "2026-11-05"
-  status: confirmed
-  plan_scope: [pro]
   conflicts_with: []
 - id: growth_sso_saml
   version: 1
-  topic: security
-  claim: "The growth plan includes single sign-on with SAML."
+  topic: product
+  claim: "The Growth plan includes single sign-on (SSO) with SAML."
   source_id: wf_business
   source_quote: "Single sign-on (SSO) with SAML"
-  checked: "2026-11-05"
+  checked: "2026-11-06"
   status: confirmed
   plan_scope: [growth]
   conflicts_with: []
 - id: growth_org_wide_hipaa_enforcement
   version: 1
   topic: compliance
-  claim: "The growth plan includes org-wide HIPAA enforcement with a signed BAA."
+  claim: "The Growth plan includes org-wide HIPAA enforcement with a signed BAA."
   source_id: wf_business
   source_quote: "Org-wide HIPAA enforcement with a signed BAA"
-  checked: "2026-11-05"
+  checked: "2026-11-06"
   status: confirmed
   plan_scope: [growth]
   conflicts_with: []
-- id: growth_multiple_domains
+- id: growth_multiple_domains_one_org
   version: 1
-  topic: governance
-  claim: "The growth plan supports multiple domains for one organization."
+  topic: product
+  claim: "The Growth plan supports multiple domains for one organization."
   source_id: wf_business
   source_quote: "Multiple domains for one organization"
-  checked: "2026-11-05"
+  checked: "2026-11-06"
   status: confirmed
   plan_scope: [growth]
   conflicts_with: []
-- id: growth_admin_model_training_control
+- id: growth_admin_control_model_training
   version: 1
   topic: privacy
-  claim: "The growth plan lets admins control model training for the whole team."
+  claim: "The Growth plan gives admins control over model training for the whole team."
   source_id: wf_business
   source_quote: "Admin control over model training for your whole team"
-  checked: "2026-11-05"
+  checked: "2026-11-06"
   status: confirmed
   plan_scope: [growth]
   conflicts_with: []
-- id: enterprise_model_training_locked
+- id: growth_individual_usage_reporting
   version: 1
-  topic: privacy
-  claim: "The enterprise plan has model training locked off."
+  topic: product
+  claim: "The Growth plan includes individual usage reporting."
   source_id: wf_business
-  source_quote: "Model training locked off"
-  checked: "2026-11-05"
+  source_quote: "Individual usage reporting"
+  checked: "2026-11-06"
   status: confirmed
-  plan_scope: [enterprise]
+  plan_scope: [growth]
   conflicts_with: []
-- id: enterprise_scim_provisioning
+- id: enterprise_scim_user_provisioning
   version: 1
-  topic: security
-  claim: "The enterprise plan includes user provisioning through SCIM."
+  topic: product
+  claim: "The Enterprise plan includes user provisioning through SCIM."
   source_id: wf_business
   source_quote: "User provisioning (SCIM)"
-  checked: "2026-11-05"
+  checked: "2026-11-06"
   status: confirmed
   plan_scope: [enterprise]
   conflicts_with: []
-- id: enterprise_audit_logs_mdm
+- id: enterprise_audit_logs
   version: 1
   topic: security
-  claim: "The enterprise plan includes audit logs and managed deployment through MDM."
+  claim: "The Enterprise plan includes audit logs."
   source_id: wf_business
   source_quote: "Audit logs and managed deployment (MDM)"
-  checked: "2026-11-05"
+  checked: "2026-11-06"
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: enterprise_mdm_managed_deployment
+  version: 1
+  topic: product
+  claim: "The Enterprise plan includes managed deployment through MDM."
+  source_id: wf_business
+  source_quote: "Audit logs and managed deployment (MDM)"
+  checked: "2026-11-06"
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: enterprise_model_training_locked_off
+  version: 1
+  topic: privacy
+  claim: "The Enterprise plan has model training locked off."
+  source_id: wf_business
+  source_quote: "Model training locked off"
+  checked: "2026-11-06"
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: enterprise_custom_contract_terms
+  version: 1
+  topic: legal
+  claim: "The Enterprise plan includes custom contract terms."
+  source_id: wf_business
+  source_quote: "Custom contract terms"
+  checked: "2026-11-06"
   status: confirmed
   plan_scope: [enterprise]
   conflicts_with: []
 - id: enterprise_invoicing_po_billing
   version: 1
   topic: pricing
-  claim: "The enterprise plan offers invoicing and PO billing."
+  claim: "The Enterprise plan includes invoicing and PO billing."
   source_id: wf_business
   source_quote: "Invoicing and PO billing"
-  checked: "2026-11-05"
+  checked: "2026-11-06"
   status: confirmed
   plan_scope: [enterprise]
   conflicts_with: []
-- id: enterprise_sla_support
+- id: enterprise_pricing_via_sales
   version: 1
   topic: pricing
-  claim: "The enterprise plan includes dedicated support with SLAs."
+  claim: "Enterprise plan pricing is custom and is handled through sales."
   source_id: wf_business
-  source_quote: "Dedicated support with SLAs"
-  checked: "2026-11-05"
+  source_quote: "Talk to sales"
+  checked: "2026-11-06"
   status: confirmed
   plan_scope: [enterprise]
   conflicts_with: []
-- id: notetaker_full_access_offer_nov30
+- id: enterprise_free_it_admin_seats
   version: 1
   topic: pricing
-  claim: "Notetaker full access is offered through November 30 on the dictation-only setup screen."
+  claim: "The Enterprise plan includes free IT admin seats."
   source_id: wf_business
-  source_quote: "Full access through November 30"
-  checked: "2026-11-05"
+  source_quote: "Free IT admin seats"
+  checked: "2026-11-06"
   status: confirmed
-  plan_scope: [unknown]
+  plan_scope: [enterprise]
   conflicts_with: []

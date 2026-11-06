@@ -1,250 +1,274 @@
-- id: enterprise_model_training_enforced
-  version: 1
-  topic: privacy
-  claim: "On Enterprise, model training is off across the organization and enforced in the MSA and DPA."
-  source_id: wf_compliance_note
-  source_quote: "model training is off across the organization and enforced in your MSA and DPA"
-  checked: "2026-11-05"
-  status: confirmed
-  plan_scope: [enterprise]
-  conflicts_with: []
-- id: training_setting_covers_all_data
-  version: 1
-  topic: privacy
-  claim: "The 'Improve the model for everyone' setting covers all Wispr Flow data across Dictation and Notetaker."
-  source_id: wf_compliance_note
-  source_quote: "covers all of your Wispr Flow data, across Dictation and Notetaker"
-  checked: "2026-11-05"
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: third_party_ai_processing
-  version: 1
-  topic: privacy
-  claim: "Customer content is processed by third-party AI and language model providers to deliver the service."
-  source_id: wf_compliance_note
-  source_quote: "Customer content is processed by third-party AI and language model providers"
-  checked: "2026-11-05"
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: third_party_no_training
-  version: 1
-  topic: privacy
-  claim: "Third-party AI and language model providers do not train their models on customer data."
-  source_id: wf_compliance_note
-  source_quote: "don't train their models on it"
-  checked: "2026-11-05"
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: third_party_data_deleted_30_days
-  version: 1
-  topic: privacy
-  claim: "Customer content processed by third-party providers is generally deleted within 30 days."
-  source_id: wf_compliance_note
-  source_quote: "it's generally deleted within 30 days"
-  checked: "2026-11-05"
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: subprocessor_list_published
-  version: 1
-  topic: compliance
-  claim: "Wispr publishes its current subprocessor list in the Trust Center."
-  source_id: wf_compliance_note
-  source_quote: "Our current subprocessor list is published in the Trust Center"
-  checked: "2026-11-05"
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: dictation_storage_only_if_cloud_on
-  version: 1
-  topic: privacy
-  claim: "Dictation transcripts and audio are stored on Wispr servers only if dictation cloud storage is on."
-  source_id: wf_compliance_note
-  source_quote: "stored on Wispr servers only if Dictation cloud storage is on"
-  checked: "2026-11-05"
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: admin_cloud_storage_off_everyone
-  version: 1
-  topic: governance
-  claim: "Admins can turn off dictation cloud storage for everyone."
-  source_id: wf_compliance_note
-  source_quote: "Dictation cloud storage can be turned off for everyone"
-  checked: "2026-11-05"
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: local_history_desktop_options
-  version: 1
-  topic: privacy
-  claim: "On desktop, dictation history can be kept, auto-deleted every 24 hours, or never stored locally."
-  source_id: wf_compliance_note
-  source_quote: "store it, auto-delete every 24 hours, or never store it"
-  checked: "2026-11-05"
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: notetaker_audio_retained_encrypted
-  version: 1
-  topic: privacy
-  claim: "Notetaker meeting audio is retained encrypted for a short period."
-  source_id: wf_compliance_note
-  source_quote: "meeting audio is retained encrypted for a short period"
-  checked: "2026-11-05"
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: context_awareness_enterprise_disable
-  version: 1
-  topic: privacy
-  claim: "Admins can disable context awareness org-wide on Enterprise."
-  source_id: wf_compliance_note
-  source_quote: "Admins can disable it org-wide on Enterprise"
-  checked: "2026-11-05"
-  status: confirmed
-  plan_scope: [enterprise]
-  conflicts_with: []
-- id: notetaker_consent_confirmation
+- id: enterprise_model_training_off_enforced
   version: 1
   topic: consent
-  claim: "Admins can require a consent confirmation before every Notetaker meeting."
+  claim: On Enterprise, model training is off across the organization and enforced in the MSA and DPA.
   source_id: wf_compliance_note
-  source_quote: "require a consent confirmation before every meeting"
-  checked: "2026-11-05"
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: sso_saml_enforcement
-  version: 1
-  topic: security
-  claim: "Wispr Flow supports SSO with SAML, with enforcement."
-  source_id: wf_compliance_note
-  source_quote: "SSO/SAML with enforcement"
-  checked: "2026-11-05"
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: scim_provisioning_supported
-  version: 1
-  topic: security
-  claim: "Wispr Flow supports SCIM provisioning."
-  source_id: wf_compliance_note
-  source_quote: "Single sign-on with SAML, SCIM provisioning, and MDM deployment"
-  checked: "2026-11-05"
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: rbac_roles
-  version: 1
-  topic: security
-  claim: "Admins can assign roles with different levels of access to org settings, user management, and data controls."
-  source_id: wf_compliance_note
-  source_quote: "Admins can assign roles with different levels of access"
-  checked: "2026-11-05"
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: audit_logs_export
-  version: 1
-  topic: security
-  claim: "Audit logs can be exported from the admin portal today."
-  source_id: wf_compliance_note
-  source_quote: "Audit logs are available for export from the admin portal today"
-  checked: "2026-11-05"
+  source_quote: "model training is off across the organization and enforced in your MSA and DPA"
+  checked: "2026-11-06"
   status: confirmed
   plan_scope: [enterprise]
   conflicts_with: []
-- id: encryption_tls_aes256
+
+- id: cloud_storage_off_audio_discarded
   version: 1
-  topic: security
-  claim: "Data is encrypted in transit with TLS 1.2+ and at rest with AES-256."
+  topic: privacy
+  claim: With dictation cloud storage turned off, audio is discarded once it is transcribed.
   source_id: wf_compliance_note
-  source_quote: "encrypted in transit with TLS 1.2+ and at rest with AES-256"
-  checked: "2026-11-05"
+  source_quote: "Turn it off and audio is discarded once it's transcribed."
+  checked: "2026-11-06"
   status: confirmed
   plan_scope: [unknown]
   conflicts_with: []
+
+- id: admin_disable_cloud_storage_org
+  version: 1
+  topic: governance
+  claim: Admins can turn off dictation cloud storage for everyone.
+  source_id: wf_compliance_note
+  source_quote: "Dictation cloud storage can be turned off for everyone"
+  checked: "2026-11-06"
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+
+- id: desktop_dictation_history_controls
+  version: 1
+  topic: privacy
+  claim: Users choose whether dictation history is kept on their computer, auto-deleted every 24 hours, or never stored.
+  source_id: wf_compliance_note
+  source_quote: "Local data storage controls whether dictation history is kept on your computer"
+  checked: "2026-11-06"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: mobile_dictation_history_coming_soon
+  version: 1
+  topic: product
+  claim: Local dictation history controls on mobile are coming soon, not available today.
+  source_id: wf_compliance_note
+  source_quote: "Desktop today, with mobile coming soon"
+  checked: "2026-11-06"
+  status: in-progress
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: admin_dictation_history_org_policy
+  version: 1
+  topic: governance
+  claim: Admins can set how dictation history is handled across the organization, including auto-delete every 24 hours.
+  source_id: wf_compliance_note
+  source_quote: "Set how dictation history is handled across the org"
+  checked: "2026-11-06"
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+
+- id: admin_context_awareness_disable_enterprise
+  version: 1
+  topic: governance
+  claim: Admins can disable context awareness org-wide on Enterprise.
+  source_id: wf_compliance_note
+  source_quote: "Admins can disable it org-wide on Enterprise."
+  checked: "2026-11-06"
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+
+- id: third_party_content_deleted_30_days
+  version: 1
+  topic: privacy
+  claim: Third-party AI and language model providers generally delete customer content within 30 days.
+  source_id: wf_compliance_note
+  source_quote: "it's generally deleted within 30 days"
+  checked: "2026-11-06"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: subprocessor_list_trust_center
+  version: 1
+  topic: compliance
+  claim: The current subprocessor list is published in the Trust Center.
+  source_id: wf_compliance_note
+  source_quote: "Our current subprocessor list is published in the Trust Center."
+  checked: "2026-11-06"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
 - id: data_stored_us_aws
   version: 1
   topic: privacy
-  claim: "Data is stored in the United States on AWS."
+  claim: Wispr Flow customer data is stored in the United States, on AWS.
   source_id: wf_compliance_note
-  source_quote: "In the United States, on AWS"
-  checked: "2026-11-05"
+  source_quote: "In the United States, on AWS."
+  checked: "2026-11-06"
   status: confirmed
   plan_scope: [unknown]
   conflicts_with: []
+
 - id: no_data_residency_outside_us
   version: 1
   topic: privacy
-  claim: "Wispr does not currently offer data residency outside the US."
+  claim: Wispr does not currently offer data residency outside the US.
   source_id: wf_compliance_note
   source_quote: "we don't currently offer data residency outside the US"
-  checked: "2026-11-05"
+  checked: "2026-11-06"
   status: confirmed
   plan_scope: [unknown]
   conflicts_with: []
-- id: eu_uk_customers_dpa_scc
+
+- id: eu_uk_customers_dpa
   version: 1
   topic: legal
-  claim: "EU and UK customers are served under a Data Processing Agreement with Standard Contractual Clauses."
+  claim: Wispr works with EU and UK customers under a Data Processing Agreement.
   source_id: wf_compliance_note
-  source_quote: "under a Data Processing Agreement with Standard Contractual Clauses"
-  checked: "2026-11-05"
+  source_quote: "We work with EU and UK customers under a Data Processing Agreement"
+  checked: "2026-11-06"
   status: confirmed
   plan_scope: [unknown]
   conflicts_with: []
-- id: soc2_type1_complete
+
+- id: transit_encryption_tls_1_2
+  version: 1
+  topic: security
+  claim: Data is encrypted in transit with TLS 1.2 or higher.
+  source_id: wf_compliance_note
+  source_quote: "Everything is encrypted in transit with TLS 1.2+"
+  checked: "2026-11-06"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: rest_encryption_aes_256
+  version: 1
+  topic: security
+  claim: Data is encrypted at rest with AES-256.
+  source_id: wf_compliance_note
+  source_quote: "and at rest with AES-256"
+  checked: "2026-11-06"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: internal_access_limited_logged
+  version: 1
+  topic: security
+  claim: Internal access to data is limited to authorized personnel, and every access is logged.
+  source_id: wf_compliance_note
+  source_quote: "Internal access is limited to authorized personnel and every access is logged."
+  checked: "2026-11-06"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: soc2_type1_a_lign_april_2026
   version: 1
   topic: compliance
-  claim: "The SOC 2 Type I audit is complete and was performed by A-LIGN in April 2026."
+  claim: A SOC 2 Type I audit was completed by A-LIGN in April 2026.
   source_id: wf_compliance_note
   source_quote: "SOC 2 Type I is complete, audited by A-LIGN in April 2026"
-  checked: "2026-11-05"
+  checked: "2026-11-06"
   status: confirmed
   plan_scope: [unknown]
   conflicts_with: []
-- id: soc2_type2_report_pending
+
+- id: soc2_type2_audit_complete
   version: 1
   topic: compliance
-  claim: "The SOC 2 Type II report is expected in September."
+  claim: The SOC 2 Type II audit is complete.
   source_id: wf_compliance_note
-  source_quote: "the report is expected in September"
-  checked: "2026-11-05"
-  status: in-progress
+  source_quote: "Our SOC 2 Type II audit is complete"
+  checked: "2026-11-06"
+  status: confirmed
   plan_scope: [unknown]
   conflicts_with: []
-- id: iso_27001_pending
+
+- id: iso_27001_certificate_pending
   version: 1
   topic: compliance
-  claim: "The ISO 27001 certificate is pending issue."
+  claim: The ISO 27001 certificate is pending issue.
   source_id: wf_compliance_note
   source_quote: "the certificate is pending issue"
-  checked: "2026-11-05"
+  checked: "2026-11-06"
   status: in-progress
   plan_scope: [unknown]
   conflicts_with: []
-- id: hipaa_baa_any_plan
+
+- id: hipaa_baa_growth_enterprise
   version: 1
   topic: compliance
-  claim: "HIPAA support is available on any plan with a signed BAA."
+  claim: HIPAA support is available with a signed BAA on the Growth and Enterprise plans.
   source_id: wf_compliance_note
-  source_quote: "HIPAA support is available on any plan with a signed BAA"
-  checked: "2026-11-05"
+  source_quote: "HIPAA support is available on Growth and Enterprise with a signed BAA"
+  checked: "2026-11-06"
   status: confirmed
-  plan_scope: [all]
+  plan_scope: [growth, enterprise]
   conflicts_with: []
-- id: ios_background_flow_records_mic
+
+- id: admin_accepts_baa_portal
   version: 1
-  topic: privacy
-  claim: "On iOS, background Flow keeps recording from the microphone to avoid app switching."
+  topic: compliance
+  claim: An admin accepts the Business Associate Agreement from the admin portal to enable HIPAA support.
+  source_id: wf_compliance_note
+  source_quote: "an admin accepts the Business Associate Agreement from the admin portal"
+  checked: "2026-11-06"
+  status: confirmed
+  plan_scope: [growth, enterprise]
+  conflicts_with: []
+
+- id: sso_saml_supported
+  version: 1
+  topic: security
+  claim: Wispr Flow supports single sign-on with SAML.
+  source_id: wf_compliance_note
+  source_quote: "Single sign-on with SAML"
+  checked: "2026-11-06"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: audit_logs_export_enterprise
+  version: 1
+  topic: security
+  claim: Audit logs are available for export from the admin portal.
+  source_id: wf_compliance_note
+  source_quote: "Audit logs are available for export from the admin portal today"
+  checked: "2026-11-06"
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+
+- id: api_siem_connectors_in_progress
+  version: 1
+  topic: product
+  claim: API and SIEM connectors for audit logs are in progress, not yet available.
+  source_id: wf_compliance_note
+  source_quote: "API and SIEM connectors are in progress"
+  checked: "2026-11-06"
+  status: in-progress
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: keystroke_monitoring_not_recorded
+  version: 1
+  topic: security
+  claim: Wispr Flow does not record, log, or transmit typed text outside an active dictation session.
+  source_id: wf_compliance_note
+  source_quote: "doesn't record, log, or transmit anything you type outside an active dictation session"
+  checked: "2026-11-06"
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+
+- id: ios_background_flow_recording
+  version: 1
+  topic: security
+  claim: On iOS, background Flow keeps recording from the mic to avoid app switching.
   source_id: wf_compliance_note
   source_quote: "persists recording from the mic to avoid app switching"
-  checked: "2026-11-05"
+  checked: "2026-11-06"
   status: confirmed
   plan_scope: [unknown]
   conflicts_with: []

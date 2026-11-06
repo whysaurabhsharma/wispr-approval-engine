@@ -7,6 +7,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 lib_path = pathlib.Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "claims/library.yaml"
 out_path = pathlib.Path(sys.argv[2]) if len(sys.argv) > 2 else ROOT / "claims/diff_pairs.yaml"
 lib = yaml.safe_load(lib_path.read_text(encoding="utf-8"))
+lib = [r for r in lib if r.get("status") != "retired"]  # retired claims are history, not live statements
 STOP = set("""a an the and or of to for in on with by at from is are be can its it this that as not no any all
 user users users' admin admins page says states wispr flow willow apple microsoft per when if only also their
 your into after before under each every such than more other""".split())
