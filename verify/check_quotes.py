@@ -6,6 +6,7 @@ SOURCES = {s["id"]: s for s in yaml.safe_load((ROOT / "claims/sources.yaml").rea
 STATUSES = {"confirmed", "conflicting", "unknown", "in-progress", "retired"}
 TOPICS = {"privacy", "governance", "consent", "compliance", "security", "pricing", "product", "legal", "competitor"}
 ID_RE = re.compile(r"^[a-z0-9]+(_[a-z0-9]+)+$")  # must contain an underscore, so [unknown] is never a claim id
+DANGLING = {"is", "are", "was", "be", "the", "a", "an", "and", "or", "to", "of", "with", "for", "by", "that", "not"}
 REQUIRED = ["id", "version", "topic", "claim", "source_id", "source_quote", "checked", "status", "plan_scope"]
 def norm(s: str) -> str:
     s = s.replace("\u2019", "'").replace("\u2018", "'").replace("\u201c", '"').replace("\u201d", '"')
@@ -30,6 +31,8 @@ def check_rows(rows) -> list:
         if r.get("status") == "retired": continue  # retired rows keep their old quote as history
         if not quote: problems.append(f"{tag}: empty source_quote"); continue
         if len(quote.split()) >= 15: problems.append(f"{tag}: quote is {len(quote.split())} words (limit 14)")
+        if quote.split() and quote.split()[-1].strip(".,;:").lower() in DANGLING:
+            problems.append(f"{tag}: quote ends mid-sentence on '{quote.split()[-1]}' and may not prove the claim")
         text = snapshot_text(sid)
         if text is None: problems.append(f"{tag}: no snapshot for {sid}")
         elif norm(quote) not in text: problems.append(f"{tag}: quote not found verbatim in {sid} snapshot")

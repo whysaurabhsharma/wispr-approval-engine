@@ -1238,11 +1238,11 @@
   - enterprise
   conflicts_with: []
 - id: enterprise_model_training_off_for_everyone
-  version: 1
+  version: 2
   topic: governance
   claim: Enterprise model training is off for everyone, with no enable switch.
   source_id: docs_data_sharing
-  source_quote: Enterprise model training is
+  source_quote: Enterprise model training is Off for everyone , with no enable switch;
   checked: '2026-11-05'
   status: confirmed
   plan_scope:
