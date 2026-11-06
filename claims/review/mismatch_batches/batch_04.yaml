@@ -1,0 +1,555 @@
+- pair: admin_cloud_storage_off_everyone|personal_or_org_baa_locks_cloud_storage_off
+  a:
+    id: admin_cloud_storage_off_everyone
+    claim: Admins can turn off dictation cloud storage for everyone.
+    source_id: wf_compliance_note
+    source_quote: Dictation cloud storage can be turned off for everyone
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id001
+    - unknown
+  b:
+    id: personal_or_org_baa_locks_cloud_storage_off
+    claim: A personal or organization BAA locks dictation cloud storage off, even if another organization setting permits sharing.
+    source_id: docs_data_sharing
+    source_quote: A personal or organization BAA locks
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: admin_cloud_storage_off_everyone|revoking_baa_does_not_restore_sharing
+  a:
+    id: admin_cloud_storage_off_everyone
+    claim: Admins can turn off dictation cloud storage for everyone.
+    source_id: wf_compliance_note
+    source_quote: Dictation cloud storage can be turned off for everyone
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id001
+  b:
+    id: revoking_baa_does_not_restore_sharing
+    claim: Revoking a BAA does not turn sharing or dictation cloud storage back on.
+    source_id: docs_data_sharing
+    source_quote: it does not turn sharing or dictation cloud storage back on
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: admin_cloud_storage_off_everyone|signed_baa_locks_both_controls_off
+  a:
+    id: admin_cloud_storage_off_everyone
+    claim: Admins can turn off dictation cloud storage for everyone.
+    source_id: wf_compliance_note
+    source_quote: Dictation cloud storage can be turned off for everyone
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id001
+  b:
+    id: signed_baa_locks_both_controls_off
+    claim: A signed BAA locks both the model-improvement and dictation cloud storage controls off.
+    source_id: docs_hipaa
+    source_quote: A signed BAA locks both controls off
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id004
+    - unknown
+- pair: admin_cloud_storage_off_everyone|org_model_restriction_not_cloud_storage
+  a:
+    id: admin_cloud_storage_off_everyone
+    claim: Admins can turn off dictation cloud storage for everyone.
+    source_id: wf_compliance_note
+    source_quote: Dictation cloud storage can be turned off for everyone
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id001
+  b:
+    id: org_model_restriction_not_cloud_storage
+    claim: An organization model-improvement restriction alone does not mean dictation cloud storage is off.
+    source_id: docs_hipaa
+    source_quote: An organization model-improvement restriction alone does not mean cloud storage is off
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id002
+    - unknown
+- pair: admin_cloud_storage_off_everyone|unconfirmed_org_settings_forced_off
+  a:
+    id: admin_cloud_storage_off_everyone
+    claim: Admins can turn off dictation cloud storage for everyone.
+    source_id: wf_compliance_note
+    source_quote: Dictation cloud storage can be turned off for everyone
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id001
+  b:
+    id: unconfirmed_org_settings_forced_off
+    claim: When an organization account's settings cannot be confirmed, model improvement and dictation cloud storage are forced off until the settings resolve.
+    source_id: docs_hipaa
+    source_quote: are forced off until the settings resolve
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id003
+    - unknown
+- pair: baa_ai_providers_covered|baa_ai_text_providers_covered
+  a:
+    id: baa_ai_providers_covered
+    claim: Under a BAA, text from covered accounts is only sent to AI providers covered by the agreement.
+    source_id: docs_security_faq
+    source_quote: text from covered accounts is only sent to AI providers covered by the agreement
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: baa_ai_text_providers_covered
+    claim: Under a BAA, text from AI text features is only processed by AI providers covered by Wispr's BAA.
+    source_id: docs_hipaa
+    source_quote: their text is only ever processed by AI providers covered by Wispr's BAA
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: growth_sso_saml|saml_sso_growth_enterprise
+  a:
+    id: growth_sso_saml
+    claim: The growth plan includes single sign-on with SAML.
+    source_id: wf_business
+    source_quote: Single sign-on (SSO) with SAML
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - growth
+  b:
+    id: saml_sso_growth_enterprise
+    claim: SAML single sign-on is available to organizations on Growth and Enterprise.
+    source_id: docs_security_faq
+    source_quote: Organizations can use SAML single sign-on on Growth and Enterprise
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - growth
+    - enterprise
+- pair: enterprise_scim_provisioning|scim_provisioning_supported
+  a:
+    id: enterprise_scim_provisioning
+    claim: The enterprise plan includes user provisioning through SCIM.
+    source_id: wf_business
+    source_quote: User provisioning (SCIM)
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - enterprise
+  b:
+    id: scim_provisioning_supported
+    claim: Wispr Flow supports SCIM provisioning.
+    source_id: wf_compliance_note
+    source_quote: Single sign-on with SAML, SCIM provisioning, and MDM deployment
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: admin_cloud_storage_off_everyone|dictation_cloud_off_discard
+  a:
+    id: admin_cloud_storage_off_everyone
+    claim: Admins can turn off dictation cloud storage for everyone.
+    source_id: wf_compliance_note
+    source_quote: Dictation cloud storage can be turned off for everyone
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id001
+  b:
+    id: dictation_cloud_off_discard
+    claim: With Dictation cloud storage off, audio is discarded once it is transcribed.
+    source_id: wf_enterprise_privacy_post
+    source_quote: Turn it off and audio is discarded once it's transcribed.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: org_model_restriction_not_cloud_storage|unconfirmed_org_settings_forced_off
+  a:
+    id: org_model_restriction_not_cloud_storage
+    claim: An organization model-improvement restriction alone does not mean dictation cloud storage is off.
+    source_id: docs_hipaa
+    source_quote: An organization model-improvement restriction alone does not mean cloud storage is off
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id002
+  b:
+    id: unconfirmed_org_settings_forced_off
+    claim: When an organization account's settings cannot be confirmed, model improvement and dictation cloud storage are forced off until the settings resolve.
+    source_id: docs_hipaa
+    source_quote: are forced off until the settings resolve
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id003
+- pair: baa_records_excluded_from_export|baa_records_retained_after_deletion
+  a:
+    id: baa_records_excluded_from_export
+    claim: BAA records are not part of the user data export.
+    source_id: docs_baa_revoke
+    source_quote: BAA records are not part of your data export
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: baa_records_retained_after_deletion
+    claim: BAA records remain retained after usage-data deletion or account deletion.
+    source_id: docs_baa_revoke
+    source_quote: remain retained after usage-data deletion or account deletion
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: admin_context_awareness_toggle|ca_platform_support
+  a:
+    id: admin_context_awareness_toggle
+    claim: Admins control whether context awareness is available.
+    source_id: wf_business
+    source_quote: whether context awareness is available
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: ca_platform_support
+    claim: Context Awareness is available on Mac, Windows, and iOS, with iOS limited to the focused text field.
+    source_id: docs_context_awareness
+    source_quote: Mac, Windows, iOS (limited to the focused text field)
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: dictation_cloud_storage_scope|notetaker_transcripts_stored_in_cloud
+  a:
+    id: dictation_cloud_storage_scope
+    claim: Dictation Cloud Storage controls whether dictation data is stored on Wispr's servers, not Notetaker or Scratchpad.
+    source_id: docs_security_faq
+    source_quote: Whether dictation data is stored on Wispr's servers; dictation only, not Notetaker or Scratchpad
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: notetaker_transcripts_stored_in_cloud
+    claim: Notetaker transcripts and summaries are stored in Wispr's cloud.
+    source_id: docs_data_sharing
+    source_quote: Notetaker transcripts and summaries are stored in Wispr's cloud
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: dpa_org_legal_contact_email|enterprise_model_training_enforced
+  a:
+    id: dpa_org_legal_contact_email
+    claim: Organization or legal DPA requests go to enterprise@wispr.ai.
+    source_id: docs_dpa
+    source_quote: For organization or legal requests, contact
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: enterprise_model_training_enforced
+    claim: On Enterprise, model training is off across the organization and enforced in the MSA and DPA.
+    source_id: wf_compliance_note
+    source_quote: model training is off across the organization and enforced in your MSA and DPA
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id007
+    - enterprise
+- pair: flow_hipaa_ready_with_baa|signed_baa_locks_both_controls_off
+  a:
+    id: flow_hipaa_ready_with_baa
+    claim: Flow is HIPAA-ready for dictation with a signed BAA.
+    source_id: docs_vendor_assessments
+    source_quote: Flow is HIPAA-ready for dictation with a signed BAA
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: signed_baa_locks_both_controls_off
+    claim: A signed BAA locks both the model-improvement and dictation cloud storage controls off.
+    source_id: docs_hipaa
+    source_quote: A signed BAA locks both controls off
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id004
+- pair: soc2_type2_report_pending|soc2_type_ii_report
+  a:
+    id: soc2_type2_report_pending
+    claim: The SOC 2 Type II report is expected in September.
+    source_id: wf_compliance_note
+    source_quote: the report is expected in September
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: &id005
+    - unknown
+  b:
+    id: soc2_type_ii_report
+    claim: Wispr's Trust Center provides a SOC 2 Type II report.
+    source_id: docs_security_faq
+    source_quote: The Trust Center provides Wispr's SOC 2 Type II report
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: iso_27001_certificate|iso_27001_pending
+  a:
+    id: iso_27001_certificate
+    claim: Wispr's Trust Center provides an ISO/IEC 27001:2022 certificate.
+    source_id: docs_security_faq
+    source_quote: The Trust Center provides Wispr's SOC 2 Type II report, the ISO/IEC 27001:2022 certificate
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: iso_27001_pending
+    claim: The ISO 27001 certificate is pending issue.
+    source_id: wf_compliance_note
+    source_quote: the certificate is pending issue
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope:
+    - unknown
+- pair: soc2_type2_hipaa_hitech_requirements|soc2_type2_report_pending
+  a:
+    id: soc2_type2_hipaa_hitech_requirements
+    claim: The SOC 2 Type II report also covers HIPAA and HITECH requirements.
+    source_id: docs_vendor_assessments
+    source_quote: together with HIPAA and HITECH requirements
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: soc2_type2_report_pending
+    claim: The SOC 2 Type II report is expected in September.
+    source_id: wf_compliance_note
+    source_quote: the report is expected in September
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: *id005
+- pair: soc2_type2_report_pending|soc2_type2_unqualified_opinion
+  a:
+    id: soc2_type2_report_pending
+    claim: The SOC 2 Type II report is expected in September.
+    source_id: wf_compliance_note
+    source_quote: the report is expected in September
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: *id005
+  b:
+    id: soc2_type2_unqualified_opinion
+    claim: The SOC 2 Type II report has an unqualified opinion with no exceptions noted in tests of controls.
+    source_id: docs_vendor_assessments
+    source_quote: with an unqualified opinion and no exceptions noted in the tests of controls
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: iso_27001_certification_in_progress|security_soc2_iso_certified
+  a:
+    id: iso_27001_certification_in_progress
+    claim: ISO 27001 certification is in progress with A-LIGN. It is not yet certified.
+    source_id: wf_new_audit
+    source_quote: ISO 27001 certification is in progress with A-LIGN
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope:
+    - unknown
+  b:
+    id: security_soc2_iso_certified
+    claim: Flow is SOC 2 Type II and ISO 27001 certified.
+    source_id: wf_pricing
+    source_quote: SOC 2 Type II and ISO 27001 certified.
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope:
+    - all
+- pair: baa_revoke_marked_not_deleted|baa_revoke_settings_not_restored
+  a:
+    id: baa_revoke_marked_not_deleted
+    claim: Revoking a personal BAA marks the BAA as revoked and does not delete it.
+    source_id: docs_baa_revoke
+    source_quote: Revoking marks your BAA as revoked rather than deleting it.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: baa_revoke_settings_not_restored
+    claim: Revoking a personal BAA removes BAA enforcement but does not restore the storage and sharing settings.
+    source_id: docs_baa_revoke
+    source_quote: Revoking removes personal-BAA enforcement but does not restore those settings
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: ca_context_includes_textbox|ca_off_no_other_onscreen_text
+  a:
+    id: ca_context_includes_textbox
+    claim: When Context Awareness is on, context can include textbox contents and on-screen text.
+    source_id: docs_context_awareness
+    source_quote: textbox contents (before, selected, and after the cursor), on-screen text
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: ca_off_no_other_onscreen_text
+    claim: With Context Awareness off, no on-screen text beyond the text near the cursor is read.
+    source_id: docs_context_awareness
+    source_quote: no other on-screen text is read
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: ca_improve_model_default_by_plan|enterprise_model_training_off_for_everyone
+  a:
+    id: ca_improve_model_default_by_plan
+    claim: The Improve the model for everyone setting is on by default for Free and Pro and off for Enterprise.
+    source_id: docs_context_awareness
+    source_quote: on by default for Free and Pro, off for Enterprise
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - free
+    - pro
+    - enterprise
+  b:
+    id: enterprise_model_training_off_for_everyone
+    claim: Enterprise model training is off for everyone, with no enable switch.
+    source_id: docs_data_sharing
+    source_quote: Enterprise model training is
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id006
+    - enterprise
+- pair: ca_baa_locks_settings|phi_requires_signed_baa
+  a:
+    id: ca_baa_locks_settings
+    claim: Signing the applicable Business Associate Agreement (BAA) locks Improve the model for everyone and Dictation Cloud Storage off.
+    source_id: docs_context_awareness
+    source_quote: sign the applicable Business Associate Agreement (BAA), which locks
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: phi_requires_signed_baa
+    claim: To dictate PHI, sign the applicable Business Associate Agreement.
+    source_id: docs_hipaa
+    source_quote: sign the applicable Business Associate Agreement (BAA)
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: enterprise_model_training_off_for_everyone|model_improvement_off_enterprise
+  a:
+    id: enterprise_model_training_off_for_everyone
+    claim: Enterprise model training is off for everyone, with no enable switch.
+    source_id: docs_data_sharing
+    source_quote: Enterprise model training is
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id006
+  b:
+    id: model_improvement_off_enterprise
+    claim: For Enterprise, model improvement is off and administrators cannot re-enable it.
+    source_id: docs_security_faq
+    source_quote: it is off for Enterprise and administrators cannot re-enable it
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id009
+    - enterprise
+- pair: enterprise_model_training_locked|enterprise_model_training_off_for_everyone
+  a:
+    id: enterprise_model_training_locked
+    claim: The enterprise plan has model training locked off.
+    source_id: wf_business
+    source_quote: Model training locked off
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id008
+    - enterprise
+  b:
+    id: enterprise_model_training_off_for_everyone
+    claim: Enterprise model training is off for everyone, with no enable switch.
+    source_id: docs_data_sharing
+    source_quote: Enterprise model training is
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id006
+- pair: enterprise_model_training_enforced|enterprise_model_training_off_for_everyone
+  a:
+    id: enterprise_model_training_enforced
+    claim: On Enterprise, model training is off across the organization and enforced in the MSA and DPA.
+    source_id: wf_compliance_note
+    source_quote: model training is off across the organization and enforced in your MSA and DPA
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id007
+  b:
+    id: enterprise_model_training_off_for_everyone
+    claim: Enterprise model training is off for everyone, with no enable switch.
+    source_id: docs_data_sharing
+    source_quote: Enterprise model training is
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id006
+- pair: enforce_off_for_everyone_requires_enterprise|enterprise_model_training_locked
+  a:
+    id: enforce_off_for_everyone_requires_enterprise
+    claim: Enforcing model training off for everyone requires upgrading to Enterprise.
+    source_id: docs_data_sharing
+    source_quote: so each member decides, and enforcing off for everyone requires upgrading to Enterprise
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - teams
+    - pro
+  b:
+    id: enterprise_model_training_locked
+    claim: The enterprise plan has model training locked off.
+    source_id: wf_business
+    source_quote: Model training locked off
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id008
+- pair: model_improvement_off_enterprise|unconfirmed_org_settings_forced_off
+  a:
+    id: model_improvement_off_enterprise
+    claim: For Enterprise, model improvement is off and administrators cannot re-enable it.
+    source_id: docs_security_faq
+    source_quote: it is off for Enterprise and administrators cannot re-enable it
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id009
+  b:
+    id: unconfirmed_org_settings_forced_off
+    claim: When an organization account's settings cannot be confirmed, model improvement and dictation cloud storage are forced off until the settings resolve.
+    source_id: docs_hipaa
+    source_quote: are forced off until the settings resolve
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id003
+- pair: enterprise_model_training_enforced|enterprise_model_training_locked
+  a:
+    id: enterprise_model_training_enforced
+    claim: On Enterprise, model training is off across the organization and enforced in the MSA and DPA.
+    source_id: wf_compliance_note
+    source_quote: model training is off across the organization and enforced in your MSA and DPA
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id007
+  b:
+    id: enterprise_model_training_locked
+    claim: The enterprise plan has model training locked off.
+    source_id: wf_business
+    source_quote: Model training locked off
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id008

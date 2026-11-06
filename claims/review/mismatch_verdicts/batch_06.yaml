@@ -1,0 +1,92 @@
+- pair: model_improvement_off_no_stop_cloud_processing|unconfirmed_org_settings_forced_off
+  verdict: compatible
+  reason: One covers what turning off model improvement does not stop, the other a fallback when org settings are unconfirmed.
+- pair: model_improvement_off_no_stop_cloud_processing|model_improvement_off_stops_training
+  verdict: compatible
+  reason: Turning the setting off stops training use but "does not stop cloud processing"; these are two consistent effects.
+- pair: model_improvement_controls_dictation_use|reported_dictation_used_for_training
+  verdict: scope-gap
+  severity: high
+  type: model_training_reported_dictation
+  reason: The setting is presented as controlling training use, but a reported dictation "can be used to train and evaluate", an exception the setting claim does not mention.
+- pair: dictation_cloud_storage_stores_history_on_servers|enterprise_admin_enforce_cloud_storage
+  verdict: compatible
+  reason: One describes what cloud storage stores, the other who can enforce the setting.
+- pair: admin_cloud_storage_off_everyone|dictation_cloud_storage_stores_history_on_servers
+  verdict: compatible
+  reason: One describes what cloud storage stores, the other that admins can turn it off for everyone.
+- pair: dictation_cloud_off_discard|dictation_cloud_storage_stores_history_on_servers
+  verdict: compatible
+  reason: The claims describe the on and off states of the same setting and are consistent.
+- pair: enterprise_admin_enforce_cloud_storage|notetaker_cloud_storage_no_opt_out
+  verdict: compatible
+  reason: The enforcement claim is limited to dictation cloud storage, so it does not conflict with Notetaker having no opt-out.
+- pair: dictation_cloud_off_discard|personal_or_org_baa_locks_cloud_storage_off
+  verdict: compatible
+  reason: One says what happens when storage is off, the other that a BAA locks it off.
+- pair: admin_cloud_storage_org_wide|personal_or_org_baa_locks_cloud_storage_off
+  verdict: compatible
+  reason: The BAA lock overrides admin choice only in the more restrictive direction, and the BAA claim states this override explicitly.
+- pair: enforce_off_for_everyone_requires_enterprise|enterprise_model_training_enforced
+  verdict: compatible
+  reason: Teams and Pro need an upgrade to enforce training off, and Enterprise has training "off across the organization"; the two are consistent.
+- pair: notetaker_no_meeting_bot|notetaker_works_alongside_baa
+  verdict: compatible
+  reason: One covers how Notetaker captures meetings, the other how it relates to a BAA.
+- pair: enterprise_admin_enforce_cloud_storage|revoking_baa_does_not_restore_sharing
+  verdict: compatible
+  reason: Admin enforcement and the effect of revoking a BAA are separate facts with no conflict.
+- pair: dictation_controls_platforms|free_plan_platform_support
+  verdict: compatible
+  reason: Both list the same four platforms but for different things, controls and free-plan dictation.
+- pair: dpa_eu_scc_included|dpa_uk_addendum_included
+  verdict: compatible
+  reason: The DPA includes both EU SCCs and a UK Addendum, which are separate transfer mechanisms.
+- pair: data_stored_us_aws|dpa_customer_data_processed_us
+  verdict: compatible
+  reason: US storage on AWS and US processing are consistent, related facts.
+- pair: hipaa_baa_dictation_only|phi_requires_signed_baa
+  verdict: compatible
+  reason: The BAA "covers dictation only" and the PHI claim is also about dictating, so they are consistent.
+- pair: model_improvement_controls_dictation_use|model_improvement_off_stops_training
+  verdict: same-fact
+  reason: Both say the model improvement setting decides whether content is used to improve Wispr's models.
+- pair: enterprise_admin_enforce_cloud_storage|signed_baa_locks_both_controls_off
+  verdict: compatible
+  reason: Admin enforcement and a BAA lock are separate mechanisms, and the lock only makes things more restrictive.
+- pair: dictation_cloud_off_discard|signed_baa_locks_both_controls_off
+  verdict: compatible
+  reason: A BAA locks storage off, and with storage off audio is discarded; the two are consistent.
+- pair: security_hipaa_baa_signed|signed_baa_locks_both_controls_off
+  verdict: compatible
+  reason: One says HIPAA-ready dictation needs a signed BAA, the other what the BAA locks; they are consistent.
+- pair: enterprise_admin_enforce_cloud_storage|org_model_restriction_not_cloud_storage
+  verdict: compatible
+  reason: Cloud storage enforcement is separate from the model-improvement restriction, and both claims say so.
+- pair: dictation_cloud_off_discard|org_model_restriction_not_cloud_storage
+  verdict: compatible
+  reason: One covers the effect of storage off, the other that a model restriction does not turn storage off.
+- pair: admin_cloud_storage_org_wide|org_model_restriction_not_cloud_storage
+  verdict: compatible
+  reason: The cloud storage setting and the model-improvement restriction are separate controls, and both claims agree on this.
+- pair: enterprise_admin_enforce_cloud_storage|unconfirmed_org_settings_forced_off
+  verdict: compatible
+  reason: Admin enforcement and the forced-off fallback for unconfirmed settings are separate, consistent facts.
+- pair: dictation_cloud_storage_scope|enterprise_admin_enforce_cloud_storage
+  verdict: compatible
+  reason: One defines what the setting covers, the other who can enforce it.
+- pair: dictation_storage_only_if_cloud_on|enterprise_admin_enforce_cloud_storage
+  verdict: compatible
+  reason: Storage depends on the setting, and Enterprise admins can enforce it; these are consistent facts.
+- pair: admin_cloud_storage_off_everyone|enterprise_admin_enforce_cloud_storage
+  verdict: same-fact
+  reason: Both say admins can set dictation cloud storage org-wide, and the Enterprise claim is a more specific version.
+- pair: dictation_cloud_off_discard|enterprise_admin_enforce_cloud_storage
+  verdict: compatible
+  reason: The effect of storage being off and admin enforcement are separate, consistent facts.
+- pair: admin_cloud_storage_org_wide|enterprise_admin_enforce_cloud_storage
+  verdict: same-fact
+  reason: Both describe admins setting dictation cloud storage for the organization, and the Enterprise claim is more specific.
+- pair: dictation_cloud_off_discard|unconfirmed_org_settings_forced_off
+  verdict: compatible
+  reason: The forced-off fallback and the discard-when-off behaviour are consistent.

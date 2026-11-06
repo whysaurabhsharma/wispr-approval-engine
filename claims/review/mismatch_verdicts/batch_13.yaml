@@ -1,0 +1,102 @@
+- pair: baa_revoke_settings_not_restored|typed_feedback_not_stripped_by_baa
+  verdict: compatible
+  reason: "One covers what revoking a BAA leaves in place, the other covers typed feedback; they are different facts."
+- pair: baa_signature_record_not_certificate|notetaker_works_alongside_baa
+  verdict: compatible
+  reason: "The Signature Record page status and Notetaker use under a BAA are unrelated facts."
+- pair: baa_signature_record_not_certificate|pdf_may_not_match_agreement
+  verdict: compatible
+  reason: "Both are caveats about the signed BAA PDF but describe different limits, and they do not conflict."
+- pair: admin_cloud_storage_org_wide|baa_signing_turns_storage_off
+  verdict: scope-gap
+  severity: high
+  type: cloud_storage_baa_lock
+  reason: "The admin claim says storage can be left \"to individual users\" but does not mention that a personal BAA turns it off."
+- pair: ca_improve_model_off_keeps_context_awareness|enforce_off_for_everyone_requires_enterprise
+  verdict: compatible
+  reason: "One separates model training from Context Awareness, the other covers which plan can enforce training off."
+- pair: ca_baa_locks_settings|delete_retains_signed_agreements
+  verdict: compatible
+  reason: "What a BAA locks and keeping signed agreements after deletion are different facts."
+- pair: ca_baa_locks_settings|model_improvement_off_no_stop_cloud_processing
+  verdict: compatible
+  reason: "A BAA locking model improvement off fits with the fact that turning it off does not stop cloud processing."
+- pair: ca_baa_locks_settings|enforce_off_for_everyone_requires_enterprise
+  verdict: scope-gap
+  severity: high
+  type: model_training_enforcement
+  reason: "The Teams/Pro claim says enforcing training off \"requires upgrading to Enterprise\" but does not mention the BAA lock, which also turns it off."
+- pair: ca_baa_locks_settings|pdf_may_not_match_agreement
+  verdict: compatible
+  reason: "What a BAA locks and whether the PDF matches the agreement text are different facts."
+- pair: ca_baa_locks_settings|hipaa_baa_any_plan
+  verdict: compatible
+  reason: "BAA availability on any plan and what a signed BAA locks do not conflict."
+- pair: admin_cloud_storage_org_wide|ca_baa_locks_settings
+  verdict: scope-gap
+  severity: high
+  type: cloud_storage_baa_lock
+  reason: "The admin claim says storage can be left to users but does not mention that a BAA \"locks ... Dictation Cloud Storage off\"."
+- pair: model_improvement_off_no_stop_cloud_processing|model_improvement_off_withholds_content
+  verdict: compatible
+  reason: "Content is held back from training while cloud processing continues; the two fit together."
+- pair: model_improvement_off_metadata_still_uploaded|model_improvement_off_no_stop_cloud_processing
+  verdict: compatible
+  reason: "Metadata upload and continued cloud processing are related but separate facts, and neither conflicts."
+- pair: admin_cloud_storage_org_wide|dictation_cloud_storage_stores_history_on_servers
+  verdict: compatible
+  reason: "One covers who controls the setting, the other covers what the setting stores."
+- pair: personal_or_org_baa_locks_cloud_storage_off|unconfirmed_org_settings_forced_off
+  verdict: compatible
+  reason: "These are two separate conditions that each force storage off, and neither conflicts."
+- pair: dictation_cloud_off_discard|revoking_baa_does_not_restore_sharing
+  verdict: compatible
+  reason: "Audio discard when storage is off and storage staying off after BAA revocation are different facts."
+- pair: admin_cloud_storage_org_wide|revoking_baa_does_not_restore_sharing
+  verdict: compatible
+  reason: "Revocation not turning storage back on does not conflict with admins being able to set storage."
+- pair: dpa_eu_scc_included|eu_uk_customers_dpa_scc
+  verdict: same-fact
+  reason: "Both say transfers are covered by a DPA that includes Standard Contractual Clauses."
+- pair: dpa_annex_iii_subprocessors|dpa_tia_wispr_support
+  verdict: compatible
+  reason: "Annex III listing subprocessors and Annex III supporting a TIA are consistent, separate facts."
+- pair: hipaa_baa_any_plan|soc2_card_enterprise_only
+  verdict: scope-gap
+  severity: high
+  type: hipaa_plan_availability
+  reason: "HIPAA is \"available on any plan\", yet the SOC 2 and HIPAA card requires Enterprise, which could mislead an approver."
+- pair: admin_cloud_storage_org_wide|signed_baa_locks_both_controls_off
+  verdict: scope-gap
+  severity: high
+  type: cloud_storage_baa_lock
+  reason: "The admin claim says storage can be left to users but does not mention that a signed BAA \"locks both controls off\"."
+- pair: hipaa_requires_baa|pdf_may_not_match_agreement
+  verdict: compatible
+  reason: "Needing a BAA and the PDF possibly differing from the agreement text are different facts."
+- pair: docs_network_bypass_tls_stays_enabled|docs_network_root_certificates_respected
+  verdict: compatible
+  reason: "Supporting TLS inspection and offering an inspection bypass are both options and do not conflict."
+- pair: dictation_cloud_off_discard|dictation_cloud_storage_scope
+  verdict: scope-gap
+  severity: high
+  type: audio_retention_scope
+  reason: "\"audio is discarded once it is transcribed\" applies to dictation only, not Notetaker or Scratchpad, and the discard claim does not say so."
+- pair: admin_cloud_storage_org_wide|dictation_cloud_storage_scope
+  verdict: compatible
+  reason: "Both are explicitly about dictation storage; one covers who controls it, the other covers what it covers."
+- pair: admin_cloud_storage_org_wide|dictation_cloud_off_discard
+  verdict: compatible
+  reason: "Who sets storage and what happens to audio when storage is off are different facts."
+- pair: baa_revoke_settings_not_restored|personal_or_org_baa_locks_cloud_storage_off
+  verdict: compatible
+  reason: "A BAA locking storage off and revocation not restoring it are consistent."
+- pair: ca_enterprise_disable_for_all_users|ca_growth_admins_cannot_enforce_off
+  verdict: compatible
+  reason: "The claims cover different plans, Enterprise and Growth, so they do not conflict."
+- pair: admin_cloud_storage_dictation|dictation_cloud_storage_scope
+  verdict: compatible
+  reason: "Admin control of the setting and the dictation-only scope of the setting do not conflict."
+- pair: teams_external_bot_organiser_approval|teams_flags_external_meeting_bots
+  verdict: compatible
+  reason: "Organiser approval and the Unverified label are two separate Teams measures from the same report."

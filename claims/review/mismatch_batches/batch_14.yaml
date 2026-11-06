@@ -1,0 +1,550 @@
+- pair: hipaa_status_verification_planned|soc2_reverification_planned
+  a:
+    id: hipaa_status_verification_planned
+    claim: A-LIGN will verify Wispr's HIPAA status; the post describes this as future work.
+    source_id: wf_new_audit
+    source_quote: verifying our HIPAA status
+    checked: '2026-11-05'
+    status: in-progress
+    plan_scope:
+    - unknown
+  b:
+    id: soc2_reverification_planned
+    claim: A-LIGN will re-verify Wispr's SOC 2 compliance; the post describes this as future work.
+    source_id: wf_new_audit
+    source_quote: A-LIGN will be reverifying our SOC 2 compliance
+    checked: '2026-11-05'
+    status: in-progress
+    plan_scope:
+    - unknown
+- pair: otter_bipa_claims_proceed|otter_wiretap_ca_claims_proceed
+  a:
+    id: otter_bipa_claims_proceed
+    claim: The court allowed Illinois BIPA biometric privacy claims against Otter to proceed.
+    source_id: legal_otter_uctoday
+    source_quote: Judge Lee allowed claims under Illinois’ Biometric Information Privacy Act (BIPA) to proceed.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: otter_wiretap_ca_claims_proceed
+    claim: The court allowed the central federal wiretap and California privacy claims against Otter to proceed.
+    source_id: legal_otter_uctoday
+    source_quote: allowed the central claims under federal wiretap, California privacy
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope:
+    - unknown
+- pair: baa_personal_model_training_off|wispr_does_not_sell_user_data
+  a:
+    id: baa_personal_model_training_off
+    claim: A personal BAA means the HIPAA agreement does not allow data to be used for model training.
+    source_id: docs_baa_revoke
+    source_quote: Your HIPAA agreement does not allow data to be used for model training.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: wispr_does_not_sell_user_data
+    claim: Wispr does not sell user data.
+    source_id: docs_data_sharing
+    source_quote: Wispr does not sell your data
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id001
+    - unknown
+- pair: baa_signing_platforms|ca_platform_support
+  a:
+    id: baa_signing_platforms
+    claim: BAA signing is available on Mac, Windows and iOS.
+    source_id: docs_hipaa
+    source_quote: BAA signing is available on Mac, Windows and iOS
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id002
+    - unknown
+  b:
+    id: ca_platform_support
+    claim: Context Awareness is available on Mac, Windows, and iOS, with iOS limited to the focused text field.
+    source_id: docs_context_awareness
+    source_quote: Mac, Windows, iOS (limited to the focused text field)
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id007
+    - unknown
+- pair: no_data_residency_outside_us|wispr_does_not_sell_user_data
+  a:
+    id: no_data_residency_outside_us
+    claim: Wispr does not currently offer data residency outside the US.
+    source_id: wf_compliance_note
+    source_quote: we don't currently offer data residency outside the US
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: wispr_does_not_sell_user_data
+    claim: Wispr does not sell user data.
+    source_id: docs_data_sharing
+    source_quote: Wispr does not sell your data
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id001
+- pair: baa_signing_platforms|dictation_controls_platforms
+  a:
+    id: baa_signing_platforms
+    claim: BAA signing is available on Mac, Windows and iOS.
+    source_id: docs_hipaa
+    source_quote: BAA signing is available on Mac, Windows and iOS
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id002
+  b:
+    id: dictation_controls_platforms
+    claim: The data sharing and cloud storage controls are available on Mac, Windows, iOS and Android.
+    source_id: docs_data_sharing
+    source_quote: Mac, Windows, iOS and Android
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id008
+    - unknown
+- pair: enterprise_audit_logs_mdm|enterprise_scim_provisioning
+  a:
+    id: enterprise_audit_logs_mdm
+    claim: The enterprise plan includes audit logs and managed deployment through MDM.
+    source_id: wf_business
+    source_quote: Audit logs and managed deployment (MDM)
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id005
+    - enterprise
+  b:
+    id: enterprise_scim_provisioning
+    claim: The enterprise plan includes user provisioning through SCIM.
+    source_id: wf_business
+    source_quote: User provisioning (SCIM)
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - enterprise
+- pair: third_party_ai_processing|third_party_no_training
+  a:
+    id: third_party_ai_processing
+    claim: Customer content is processed by third-party AI and language model providers to deliver the service.
+    source_id: wf_compliance_note
+    source_quote: Customer content is processed by third-party AI and language model providers
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id004
+    - unknown
+  b:
+    id: third_party_no_training
+    claim: Third-party AI and language model providers do not train their models on customer data.
+    source_id: wf_compliance_note
+    source_quote: don't train their models on it
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id011
+    - unknown
+- pair: dictation_storage_only_if_cloud_on|notetaker_transcripts_stored_in_cloud
+  a:
+    id: dictation_storage_only_if_cloud_on
+    claim: Dictation transcripts and audio are stored on Wispr servers only if dictation cloud storage is on.
+    source_id: wf_compliance_note
+    source_quote: stored on Wispr servers only if Dictation cloud storage is on
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id003
+    - unknown
+  b:
+    id: notetaker_transcripts_stored_in_cloud
+    claim: Notetaker transcripts and summaries are stored in Wispr's cloud.
+    source_id: docs_data_sharing
+    source_quote: Notetaker transcripts and summaries are stored in Wispr's cloud
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: admin_cloud_storage_dictation|dictation_storage_only_if_cloud_on
+  a:
+    id: admin_cloud_storage_dictation
+    claim: Admins control whether dictation is stored in the cloud.
+    source_id: wf_business
+    source_quote: whether dictation is stored in the cloud
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: dictation_storage_only_if_cloud_on
+    claim: Dictation transcripts and audio are stored on Wispr servers only if dictation cloud storage is on.
+    source_id: wf_compliance_note
+    source_quote: stored on Wispr servers only if Dictation cloud storage is on
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id003
+- pair: third_party_ai_processing|third_party_data_deleted_30_days
+  a:
+    id: third_party_ai_processing
+    claim: Customer content is processed by third-party AI and language model providers to deliver the service.
+    source_id: wf_compliance_note
+    source_quote: Customer content is processed by third-party AI and language model providers
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id004
+  b:
+    id: third_party_data_deleted_30_days
+    claim: Customer content processed by third-party providers is generally deleted within 30 days.
+    source_id: wf_compliance_note
+    source_quote: it's generally deleted within 30 days
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id012
+    - unknown
+- pair: delete_data_permanent|org_meetings_not_deletable
+  a:
+    id: delete_data_permanent
+    claim: Delete your data permanently deletes content and keeps the account.
+    source_id: docs_security_faq
+    source_quote: Permanently deletes your content, keeping your account
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: org_meetings_not_deletable
+    claim: Where an organization keeps meetings, meeting content cannot be deleted through the Delete your data control.
+    source_id: docs_security_faq
+    source_quote: If your organization keeps meetings, meeting content cannot be deleted this way
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: enterprise_audit_logs_mdm|enterprise_scim_audit_logs
+  a:
+    id: enterprise_audit_logs_mdm
+    claim: The enterprise plan includes audit logs and managed deployment through MDM.
+    source_id: wf_business
+    source_quote: Audit logs and managed deployment (MDM)
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id005
+  b:
+    id: enterprise_scim_audit_logs
+    claim: Enterprise adds controls such as SCIM user management, audit logs, and managed deployment.
+    source_id: docs_security_faq
+    source_quote: Enterprise adds controls such as SCIM user management, audit logs, and managed deployment
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - enterprise
+- pair: granola_complaint_cipa_claim|granola_complaint_ecpa_claim
+  a:
+    id: granola_complaint_cipa_claim
+    claim: The Chamberlain complaint alleges wiretapping under the California Invasion of Privacy Act (CIPA).
+    source_id: legal_granola_btlaw
+    source_quote: Wiretapping under the California Invasion of Privacy Act (CIPA)
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: granola_complaint_ecpa_claim
+    claim: The Chamberlain complaint alleges a claim under the federal Electronic Communications Privacy Act (ECPA).
+    source_id: legal_granola_btlaw
+    source_quote: Violation of the ECPA, 18 U.S.C. §§ 2510 et seq.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: willow_dictation_data_never_sold|willow_privacy_off_product_improvement
+  a:
+    id: willow_dictation_data_never_sold
+    claim: Willow states dictation data is never sold.
+    source_id: comp_willow_security
+    source_quote: it is never sold
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id006
+    - unknown
+  b:
+    id: willow_privacy_off_product_improvement
+    claim: When Privacy Mode is off, Willow states limited dictation data may be used to improve product quality.
+    source_id: comp_willow_security
+    source_quote: When Privacy Mode is off, limited dictation data may be used
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: willow_dictation_data_never_sold|willow_no_third_party_sharing
+  a:
+    id: willow_dictation_data_never_sold
+    claim: Willow states dictation data is never sold.
+    source_id: comp_willow_security
+    source_quote: it is never sold
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id006
+  b:
+    id: willow_no_third_party_sharing
+    claim: Willow states it never sells or shares customer data with third parties for advertising or resale.
+    source_id: comp_willow_security
+    source_quote: Willow never sells or shares your data with third parties for advertising or resale.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: baa_signing_turns_storage_off|sign_out_resets_cloud_storage_to_on
+  a:
+    id: baa_signing_turns_storage_off
+    claim: Signing a personal BAA turns Dictation cloud storage off for the account.
+    source_id: docs_baa_revoke
+    source_quote: and Dictation cloud storage off for your account
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: sign_out_resets_cloud_storage_to_on
+    claim: Signing out resets the cloud-storage preference to on.
+    source_id: docs_data_sharing
+    source_quote: Signing out resets the cloud-storage preference to on
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: ca_platform_support|notetaker_mac_windows_only
+  a:
+    id: ca_platform_support
+    claim: Context Awareness is available on Mac, Windows, and iOS, with iOS limited to the focused text field.
+    source_id: docs_context_awareness
+    source_quote: Mac, Windows, iOS (limited to the focused text field)
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id007
+  b:
+    id: notetaker_mac_windows_only
+    claim: The Notetaker runs on Mac and Windows.
+    source_id: wf_pricing
+    source_quote: Notetaker runs on Mac and Windows.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id009
+    - unknown
+- pair: dictation_controls_platforms|notetaker_mac_windows_only
+  a:
+    id: dictation_controls_platforms
+    claim: The data sharing and cloud storage controls are available on Mac, Windows, iOS and Android.
+    source_id: docs_data_sharing
+    source_quote: Mac, Windows, iOS and Android
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id008
+  b:
+    id: notetaker_mac_windows_only
+    claim: The Notetaker runs on Mac and Windows.
+    source_id: wf_pricing
+    source_quote: Notetaker runs on Mac and Windows.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id009
+- pair: dpa_customer_data_processed_us|third_party_ai_processing
+  a:
+    id: dpa_customer_data_processed_us
+    claim: All customer data is processed in the United States.
+    source_id: docs_dpa
+    source_quote: All customer data is processed in the United States;
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id010
+    - unknown
+  b:
+    id: third_party_ai_processing
+    claim: Customer content is processed by third-party AI and language model providers to deliver the service.
+    source_id: wf_compliance_note
+    source_quote: Customer content is processed by third-party AI and language model providers
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id004
+- pair: dpa_customer_data_processed_us|third_party_no_training
+  a:
+    id: dpa_customer_data_processed_us
+    claim: All customer data is processed in the United States.
+    source_id: docs_dpa
+    source_quote: All customer data is processed in the United States;
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id010
+  b:
+    id: third_party_no_training
+    claim: Third-party AI and language model providers do not train their models on customer data.
+    source_id: wf_compliance_note
+    source_quote: don't train their models on it
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id011
+- pair: dpa_customer_data_processed_us|third_party_data_deleted_30_days
+  a:
+    id: dpa_customer_data_processed_us
+    claim: All customer data is processed in the United States.
+    source_id: docs_dpa
+    source_quote: All customer data is processed in the United States;
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id010
+  b:
+    id: third_party_data_deleted_30_days
+    claim: Customer content processed by third-party providers is generally deleted within 30 days.
+    source_id: wf_compliance_note
+    source_quote: it's generally deleted within 30 days
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id012
+- pair: enterprise_custom_contract_terms|msa_redlines_enterprise_only
+  a:
+    id: enterprise_custom_contract_terms
+    claim: The Enterprise plan offers custom contract terms.
+    source_id: wf_pricing
+    source_quote: Custom contract terms
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - enterprise
+  b:
+    id: msa_redlines_enterprise_only
+    claim: MSA redlines or custom signed BAA documentation require the Enterprise plan and go through the sales representative.
+    source_id: docs_hipaa
+    source_quote: MSA redlines or custom signed documentation require our highest-tier Enterprise plan
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - enterprise
+- pair: baa_signing_platforms|free_plan_platform_support
+  a:
+    id: baa_signing_platforms
+    claim: BAA signing is available on Mac, Windows and iOS.
+    source_id: docs_hipaa
+    source_quote: BAA signing is available on Mac, Windows and iOS
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id002
+  b:
+    id: free_plan_platform_support
+    claim: The free plan supports dictation on Mac, Windows, iOS, and Android.
+    source_id: wf_business
+    source_quote: Dictation on Mac, Windows, iOS, and Android
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id013
+    - free
+- pair: baa_signing_platforms|notetaker_mac_windows_only
+  a:
+    id: baa_signing_platforms
+    claim: BAA signing is available on Mac, Windows and iOS.
+    source_id: docs_hipaa
+    source_quote: BAA signing is available on Mac, Windows and iOS
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id002
+  b:
+    id: notetaker_mac_windows_only
+    claim: The Notetaker runs on Mac and Windows.
+    source_id: wf_pricing
+    source_quote: Notetaker runs on Mac and Windows.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id009
+- pair: data_stored_us_aws|dictation_cloud_storage_scope
+  a:
+    id: data_stored_us_aws
+    claim: Data is stored in the United States on AWS.
+    source_id: wf_compliance_note
+    source_quote: In the United States, on AWS
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: dictation_cloud_storage_scope
+    claim: Dictation Cloud Storage controls whether dictation data is stored on Wispr's servers, not Notetaker or Scratchpad.
+    source_id: docs_security_faq
+    source_quote: Whether dictation data is stored on Wispr's servers; dictation only, not Notetaker or Scratchpad
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: iso_27001_certificate|soc2_type_ii_report
+  a:
+    id: iso_27001_certificate
+    claim: Wispr's Trust Center provides an ISO/IEC 27001:2022 certificate.
+    source_id: docs_security_faq
+    source_quote: The Trust Center provides Wispr's SOC 2 Type II report, the ISO/IEC 27001:2022 certificate
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: soc2_type_ii_report
+    claim: Wispr's Trust Center provides a SOC 2 Type II report.
+    source_id: docs_security_faq
+    source_quote: The Trust Center provides Wispr's SOC 2 Type II report
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: free_plan_includes_notetaker|free_plan_platform_support
+  a:
+    id: free_plan_includes_notetaker
+    claim: The Flow free plan includes the Notetaker.
+    source_id: wf_pricing
+    source_quote: Flow free plan includes the Notetaker
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - free
+  b:
+    id: free_plan_platform_support
+    claim: The free plan supports dictation on Mac, Windows, iOS, and Android.
+    source_id: wf_business
+    source_quote: Dictation on Mac, Windows, iOS, and Android
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id013
+- pair: free_plan_platform_support|notetaker_mac_windows_only
+  a:
+    id: free_plan_platform_support
+    claim: The free plan supports dictation on Mac, Windows, iOS, and Android.
+    source_id: wf_business
+    source_quote: Dictation on Mac, Windows, iOS, and Android
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id013
+  b:
+    id: notetaker_mac_windows_only
+    claim: The Notetaker runs on Mac and Windows.
+    source_id: wf_pricing
+    source_quote: Notetaker runs on Mac and Windows.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id009
+- pair: a_lign_audit_engagement_signed|soc2_audit_expected_eight_weeks
+  a:
+    id: a_lign_audit_engagement_signed
+    claim: Wispr has signed an engagement letter with A-LIGN for its audit, per the post dated Mar 27, 2026.
+    source_id: wf_new_audit
+    source_quote: we've signed an engagement letter with A-LIGN
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: soc2_audit_expected_eight_weeks
+    claim: As of the post dated Mar 27, 2026, Wispr expected the SOC 2 audit to finish in roughly eight weeks.
+    source_id: wf_new_audit
+    source_quote: We expect to have the SOC 2 audit completed in roughly eight weeks
+    checked: '2026-11-05'
+    status: in-progress
+    plan_scope:
+    - unknown

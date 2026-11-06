@@ -1,0 +1,96 @@
+- pair: ca_no_screenshots|ca_off_no_other_onscreen_text
+  verdict: compatible
+  reason: One says no screenshots are taken, the other limits what text is read when Context Awareness is off.
+- pair: ca_command_mode_sends_text|ca_no_screenshots
+  verdict: compatible
+  reason: Sending edited text for Command Mode does not conflict with "does not take screenshots".
+- pair: ca_improve_model_off_keeps_context_awareness|ca_no_screenshots
+  verdict: compatible
+  reason: The settings interaction and the no-screenshots behaviour are separate facts.
+- pair: ca_command_mode_sends_text|ca_context_includes_textbox
+  verdict: compatible
+  reason: One covers what context includes when on, the other what Command Mode sends regardless; neither denies the other.
+- pair: ca_improve_model_default_by_plan|model_improvement_off_enterprise
+  verdict: same-fact
+  reason: Both say model improvement is off for Enterprise; claim b adds that admins cannot re-enable it.
+- pair: ca_improve_model_default_by_plan|enterprise_model_training_locked
+  verdict: same-fact
+  reason: Both say model improvement or training is off for Enterprise.
+- pair: ca_improve_model_off_keeps_context_awareness|enterprise_model_training_off_for_everyone
+  verdict: compatible
+  reason: Enterprise training being off and Context Awareness staying on are different facts.
+- pair: ca_baa_locks_settings|enterprise_model_training_off_for_everyone
+  verdict: compatible
+  reason: A BAA locking settings off and Enterprise training being off agree and cover different triggers.
+- pair: ca_baa_locks_settings|dictation_storage_only_if_cloud_on
+  verdict: compatible
+  reason: The BAA locks cloud storage off, and storage only happens when it is on; these agree.
+- pair: delete_retains_signed_agreements|phi_requires_signed_baa
+  verdict: compatible
+  reason: Retention of signed agreements and the need to sign a BAA for PHI are different facts.
+- pair: model_improvement_off_enterprise|model_improvement_off_withholds_content
+  verdict: compatible
+  reason: One states Enterprise is off, the other describes what being off withholds; no conflict.
+- pair: model_improvement_off_enterprise|model_improvement_off_metadata_still_uploaded
+  verdict: scope-gap
+  severity: high
+  type: model_improvement_off_metadata_upload
+  reason: Enterprise "model improvement is off" omits that Flow "still uploads dictation details" like app and URL.
+- pair: model_improvement_off_enterprise|model_improvement_off_no_stop_cloud_processing
+  verdict: compatible
+  reason: Model improvement being off and cloud processing continuing are different facts that do not conflict.
+- pair: confidential_content_turn_off_before_recording|model_improvement_off_enterprise
+  verdict: compatible
+  reason: The advice to turn it off is consistent with Enterprise already having it off.
+- pair: dictation_storage_only_if_cloud_on|notetaker_cloud_storage_no_opt_out
+  verdict: scope-gap
+  severity: high
+  type: notetaker_cloud_storage
+  reason: Storage "only if Dictation cloud storage is on" does not mention Notetaker content has "no setting to opt out".
+- pair: hipaa_baa_locks_sharing_off|phi_requires_signed_baa
+  verdict: compatible
+  reason: The BAA requirement for PHI and the BAA locking sharing off are consistent, separate facts.
+- pair: dictation_storage_only_if_cloud_on|personal_or_org_baa_locks_cloud_storage_off
+  verdict: compatible
+  reason: A BAA locking cloud storage off is consistent with storage only when it is on.
+- pair: enforce_off_for_everyone_requires_enterprise|model_improvement_off_enterprise
+  verdict: compatible
+  reason: Non-Enterprise plans need an upgrade to enforce off, and Enterprise has it off; these agree.
+- pair: dictation_storage_only_if_cloud_on|revoking_baa_does_not_restore_sharing
+  verdict: compatible
+  reason: Revocation leaving cloud storage off is consistent with storage only when it is on.
+- pair: hipaa_requires_baa|phi_requires_signed_baa
+  verdict: same-fact
+  reason: Both say a signed BAA is needed for HIPAA or PHI dictation.
+- pair: hipaa_baa_any_plan|phi_requires_signed_baa
+  verdict: same-fact
+  reason: Both tie HIPAA or PHI use to a signed BAA; claim a adds plan availability.
+- pair: dictation_storage_only_if_cloud_on|signed_baa_locks_both_controls_off
+  verdict: compatible
+  reason: A BAA locking cloud storage off agrees with storage only when it is on.
+- pair: dictation_storage_only_if_cloud_on|org_model_restriction_not_cloud_storage
+  verdict: compatible
+  reason: Model restriction not implying storage off is consistent with the storage condition.
+- pair: dictation_storage_only_if_cloud_on|unconfirmed_org_settings_forced_off
+  verdict: compatible
+  reason: Forcing cloud storage off during unconfirmed settings agrees with the storage condition.
+- pair: baa_inproduct_signing_enterprise_admin|msa_redlines_enterprise_only
+  verdict: compatible
+  reason: In-product signing and custom documentation are different paths, both stated as Enterprise.
+- pair: baa_ai_providers_covered|pdf_may_not_match_agreement
+  verdict: compatible
+  reason: AI provider coverage and the PDF possibly differing from signed text are different facts.
+- pair: model_improvement_off_enterprise|model_improvement_off_stops_training
+  verdict: compatible
+  reason: One says Enterprise is off, the other says off stops training use; they agree.
+- pair: enterprise_model_training_locked|model_improvement_off_enterprise
+  verdict: same-fact
+  reason: Both say Enterprise model training is off and cannot be turned on.
+- pair: enterprise_model_training_enforced|model_improvement_off_enterprise
+  verdict: same-fact
+  reason: Both say model training is off for Enterprise; claim a adds MSA and DPA enforcement.
+- pair: iso_27001_certification_in_progress|notetaker_not_in_audits
+  verdict: stale
+  severity: high
+  type: iso27001_status
+  reason: Claim a says "in progress", "not yet certified", while b cites completed "ISO 27001 certification audits".

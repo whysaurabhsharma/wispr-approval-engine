@@ -1,0 +1,535 @@
+- pair: hipaa_baa_any_plan|hipaa_baa_dictation_only
+  a:
+    id: hipaa_baa_any_plan
+    claim: HIPAA compliance is available on any plan with a signed Business Associate Agreement.
+    source_id: wf_business
+    source_quote: Available on any plan with a signed Business Associate Agreement.
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: &id002
+    - all
+  b:
+    id: hipaa_baa_dictation_only
+    claim: The HIPAA Business Associate Agreement covers dictation only.
+    source_id: wf_business
+    source_quote: Covers dictation only.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id013
+    - all
+- pair: ca_baa_locks_settings|signed_baa_locks_both_controls_off
+  a:
+    id: ca_baa_locks_settings
+    claim: Signing the applicable Business Associate Agreement (BAA) locks Improve the model for everyone and Dictation Cloud Storage off.
+    source_id: docs_context_awareness
+    source_quote: sign the applicable Business Associate Agreement (BAA), which locks
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id009
+    - unknown
+  b:
+    id: signed_baa_locks_both_controls_off
+    claim: A signed BAA locks both the model-improvement and dictation cloud storage controls off.
+    source_id: docs_hipaa
+    source_quote: A signed BAA locks both controls off
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id005
+    - unknown
+- pair: delete_retains_signed_agreements|hipaa_baa_locks_sharing_off
+  a:
+    id: delete_retains_signed_agreements
+    claim: Wispr keeps signed agreements, such as a HIPAA Business Associate Agreement, after deletion.
+    source_id: docs_data_requests
+    source_quote: Signed agreements, such as a HIPAA Business Associate Agreement.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id001
+    - unknown
+  b:
+    id: hipaa_baa_locks_sharing_off
+    claim: A signed HIPAA Business Associate Agreement locks data sharing off.
+    source_id: docs_data_sharing
+    source_quote: A signed HIPAA Business Associate Agreement (BAA) locks sharing off
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id003
+    - unknown
+- pair: delete_retains_signed_agreements|hipaa_requires_baa
+  a:
+    id: delete_retains_signed_agreements
+    claim: Wispr keeps signed agreements, such as a HIPAA Business Associate Agreement, after deletion.
+    source_id: docs_data_requests
+    source_quote: Signed agreements, such as a HIPAA Business Associate Agreement.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id001
+  b:
+    id: hipaa_requires_baa
+    claim: HIPAA-ready dictation requires a signed Business Associate Agreement (BAA).
+    source_id: docs_security_faq
+    source_quote: HIPAA-ready dictation requires a signed
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id004
+    - unknown
+- pair: delete_retains_signed_agreements|hipaa_baa_any_plan
+  a:
+    id: delete_retains_signed_agreements
+    claim: Wispr keeps signed agreements, such as a HIPAA Business Associate Agreement, after deletion.
+    source_id: docs_data_requests
+    source_quote: Signed agreements, such as a HIPAA Business Associate Agreement.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id001
+  b:
+    id: hipaa_baa_any_plan
+    claim: HIPAA compliance is available on any plan with a signed Business Associate Agreement.
+    source_id: wf_business
+    source_quote: Available on any plan with a signed Business Associate Agreement.
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: *id002
+- pair: hipaa_baa_any_plan|hipaa_baa_locks_sharing_off
+  a:
+    id: hipaa_baa_any_plan
+    claim: HIPAA compliance is available on any plan with a signed Business Associate Agreement.
+    source_id: wf_business
+    source_quote: Available on any plan with a signed Business Associate Agreement.
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: *id002
+  b:
+    id: hipaa_baa_locks_sharing_off
+    claim: A signed HIPAA Business Associate Agreement locks data sharing off.
+    source_id: docs_data_sharing
+    source_quote: A signed HIPAA Business Associate Agreement (BAA) locks sharing off
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id003
+- pair: hipaa_baa_any_plan|hipaa_requires_baa
+  a:
+    id: hipaa_baa_any_plan
+    claim: HIPAA compliance is available on any plan with a signed Business Associate Agreement.
+    source_id: wf_business
+    source_quote: Available on any plan with a signed Business Associate Agreement.
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: *id002
+  b:
+    id: hipaa_requires_baa
+    claim: HIPAA-ready dictation requires a signed Business Associate Agreement (BAA).
+    source_id: docs_security_faq
+    source_quote: HIPAA-ready dictation requires a signed
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id004
+- pair: meeting_notetaker_not_assessed|security_soc2_iso_certified
+  a:
+    id: meeting_notetaker_not_assessed
+    claim: Meeting Notetaker was not assessed in the SOC 2 or ISO 27001 audits.
+    source_id: docs_vendor_assessments
+    source_quote: Meeting Notetaker launched after those audit periods and was not assessed
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: security_soc2_iso_certified
+    claim: Flow is SOC 2 Type II and ISO 27001 certified.
+    source_id: wf_pricing
+    source_quote: SOC 2 Type II and ISO 27001 certified.
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope:
+    - all
+- pair: flow_hipaa_ready_with_baa|growth_org_wide_hipaa_enforcement
+  a:
+    id: flow_hipaa_ready_with_baa
+    claim: Flow is HIPAA-ready for dictation with a signed BAA.
+    source_id: docs_vendor_assessments
+    source_quote: Flow is HIPAA-ready for dictation with a signed BAA
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id012
+    - unknown
+  b:
+    id: growth_org_wide_hipaa_enforcement
+    claim: The growth plan includes org-wide HIPAA enforcement with a signed BAA.
+    source_id: wf_business
+    source_quote: Org-wide HIPAA enforcement with a signed BAA
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: &id007
+    - growth
+- pair: baa_signing_turns_storage_off|signed_baa_locks_both_controls_off
+  a:
+    id: baa_signing_turns_storage_off
+    claim: Signing a personal BAA turns Dictation cloud storage off for the account.
+    source_id: docs_baa_revoke
+    source_quote: and Dictation cloud storage off for your account
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id010
+    - unknown
+  b:
+    id: signed_baa_locks_both_controls_off
+    claim: A signed BAA locks both the model-improvement and dictation cloud storage controls off.
+    source_id: docs_hipaa
+    source_quote: A signed BAA locks both controls off
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id005
+- pair: hipaa_baa_locks_sharing_off|hipaa_requires_baa
+  a:
+    id: hipaa_baa_locks_sharing_off
+    claim: A signed HIPAA Business Associate Agreement locks data sharing off.
+    source_id: docs_data_sharing
+    source_quote: A signed HIPAA Business Associate Agreement (BAA) locks sharing off
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id003
+  b:
+    id: hipaa_requires_baa
+    claim: HIPAA-ready dictation requires a signed Business Associate Agreement (BAA).
+    source_id: docs_security_faq
+    source_quote: HIPAA-ready dictation requires a signed
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id004
+- pair: personal_or_org_baa_locks_cloud_storage_off|revoking_baa_does_not_restore_sharing
+  a:
+    id: personal_or_org_baa_locks_cloud_storage_off
+    claim: A personal or organization BAA locks dictation cloud storage off, even if another organization setting permits sharing.
+    source_id: docs_data_sharing
+    source_quote: A personal or organization BAA locks
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id006
+    - unknown
+  b:
+    id: revoking_baa_does_not_restore_sharing
+    claim: Revoking a BAA does not turn sharing or dictation cloud storage back on.
+    source_id: docs_data_sharing
+    source_quote: it does not turn sharing or dictation cloud storage back on
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id011
+    - unknown
+- pair: personal_or_org_baa_locks_cloud_storage_off|signed_baa_locks_both_controls_off
+  a:
+    id: personal_or_org_baa_locks_cloud_storage_off
+    claim: A personal or organization BAA locks dictation cloud storage off, even if another organization setting permits sharing.
+    source_id: docs_data_sharing
+    source_quote: A personal or organization BAA locks
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id006
+  b:
+    id: signed_baa_locks_both_controls_off
+    claim: A signed BAA locks both the model-improvement and dictation cloud storage controls off.
+    source_id: docs_hipaa
+    source_quote: A signed BAA locks both controls off
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id005
+- pair: hipaa_baa_any_plan|security_hipaa_baa_signed
+  a:
+    id: hipaa_baa_any_plan
+    claim: HIPAA compliance is available on any plan with a signed Business Associate Agreement.
+    source_id: wf_business
+    source_quote: Available on any plan with a signed Business Associate Agreement.
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: *id002
+  b:
+    id: security_hipaa_baa_signed
+    claim: HIPAA-ready dictation is available with a signed BAA.
+    source_id: wf_pricing
+    source_quote: HIPAA-ready dictation with a signed BAA.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id008
+    - all
+- pair: growth_org_wide_hipaa_enforcement|security_hipaa_baa_signed
+  a:
+    id: growth_org_wide_hipaa_enforcement
+    claim: The growth plan includes org-wide HIPAA enforcement with a signed BAA.
+    source_id: wf_business
+    source_quote: Org-wide HIPAA enforcement with a signed BAA
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: *id007
+  b:
+    id: security_hipaa_baa_signed
+    claim: HIPAA-ready dictation is available with a signed BAA.
+    source_id: wf_pricing
+    source_quote: HIPAA-ready dictation with a signed BAA.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id008
+- pair: ca_baa_locks_settings|personal_or_org_baa_locks_cloud_storage_off
+  a:
+    id: ca_baa_locks_settings
+    claim: Signing the applicable Business Associate Agreement (BAA) locks Improve the model for everyone and Dictation Cloud Storage off.
+    source_id: docs_context_awareness
+    source_quote: sign the applicable Business Associate Agreement (BAA), which locks
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id009
+  b:
+    id: personal_or_org_baa_locks_cloud_storage_off
+    claim: A personal or organization BAA locks dictation cloud storage off, even if another organization setting permits sharing.
+    source_id: docs_data_sharing
+    source_quote: A personal or organization BAA locks
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id006
+- pair: baa_signing_turns_storage_off|revoking_baa_does_not_restore_sharing
+  a:
+    id: baa_signing_turns_storage_off
+    claim: Signing a personal BAA turns Dictation cloud storage off for the account.
+    source_id: docs_baa_revoke
+    source_quote: and Dictation cloud storage off for your account
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id010
+  b:
+    id: revoking_baa_does_not_restore_sharing
+    claim: Revoking a BAA does not turn sharing or dictation cloud storage back on.
+    source_id: docs_data_sharing
+    source_quote: it does not turn sharing or dictation cloud storage back on
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id011
+- pair: ca_baa_locks_settings|revoking_baa_does_not_restore_sharing
+  a:
+    id: ca_baa_locks_settings
+    claim: Signing the applicable Business Associate Agreement (BAA) locks Improve the model for everyone and Dictation Cloud Storage off.
+    source_id: docs_context_awareness
+    source_quote: sign the applicable Business Associate Agreement (BAA), which locks
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id009
+  b:
+    id: revoking_baa_does_not_restore_sharing
+    claim: Revoking a BAA does not turn sharing or dictation cloud storage back on.
+    source_id: docs_data_sharing
+    source_quote: it does not turn sharing or dictation cloud storage back on
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id011
+- pair: revoking_baa_does_not_restore_sharing|signed_baa_locks_both_controls_off
+  a:
+    id: revoking_baa_does_not_restore_sharing
+    claim: Revoking a BAA does not turn sharing or dictation cloud storage back on.
+    source_id: docs_data_sharing
+    source_quote: it does not turn sharing or dictation cloud storage back on
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id011
+  b:
+    id: signed_baa_locks_both_controls_off
+    claim: A signed BAA locks both the model-improvement and dictation cloud storage controls off.
+    source_id: docs_hipaa
+    source_quote: A signed BAA locks both controls off
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id005
+- pair: hipaa_business_associate_agreements|willow_hipaa_ready_baa_where_applicable
+  a:
+    id: hipaa_business_associate_agreements
+    claim: Willow offers Business Associate Agreements for HIPAA-regulated teams.
+    source_id: comp_willow_teams
+    source_quote: supports HIPAA-regulated teams with enterprise controls, privacy safeguards, and Business Associate Agreements
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: willow_hipaa_ready_baa_where_applicable
+    claim: Willow states it supports HIPAA-ready workflows through a Business Associate Agreement where applicable.
+    source_id: comp_willow_security
+    source_quote: support HIPAA-ready workflows through a Business Associate Agreement where applicable
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: baa_personal_model_training_off|flow_hipaa_ready_with_baa
+  a:
+    id: baa_personal_model_training_off
+    claim: A personal BAA means the HIPAA agreement does not allow data to be used for model training.
+    source_id: docs_baa_revoke
+    source_quote: Your HIPAA agreement does not allow data to be used for model training.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: flow_hipaa_ready_with_baa
+    claim: Flow is HIPAA-ready for dictation with a signed BAA.
+    source_id: docs_vendor_assessments
+    source_quote: Flow is HIPAA-ready for dictation with a signed BAA
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id012
+- pair: delete_retains_signed_agreements|flow_hipaa_ready_with_baa
+  a:
+    id: delete_retains_signed_agreements
+    claim: Wispr keeps signed agreements, such as a HIPAA Business Associate Agreement, after deletion.
+    source_id: docs_data_requests
+    source_quote: Signed agreements, such as a HIPAA Business Associate Agreement.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id001
+  b:
+    id: flow_hipaa_ready_with_baa
+    claim: Flow is HIPAA-ready for dictation with a signed BAA.
+    source_id: docs_vendor_assessments
+    source_quote: Flow is HIPAA-ready for dictation with a signed BAA
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id012
+- pair: flow_hipaa_ready_with_baa|hipaa_baa_locks_sharing_off
+  a:
+    id: flow_hipaa_ready_with_baa
+    claim: Flow is HIPAA-ready for dictation with a signed BAA.
+    source_id: docs_vendor_assessments
+    source_quote: Flow is HIPAA-ready for dictation with a signed BAA
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id012
+  b:
+    id: hipaa_baa_locks_sharing_off
+    claim: A signed HIPAA Business Associate Agreement locks data sharing off.
+    source_id: docs_data_sharing
+    source_quote: A signed HIPAA Business Associate Agreement (BAA) locks sharing off
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id003
+- pair: flow_hipaa_ready_with_baa|growth_enterprise_include_baa
+  a:
+    id: flow_hipaa_ready_with_baa
+    claim: Flow is HIPAA-ready for dictation with a signed BAA.
+    source_id: docs_vendor_assessments
+    source_quote: Flow is HIPAA-ready for dictation with a signed BAA
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id012
+  b:
+    id: growth_enterprise_include_baa
+    claim: Growth and Enterprise both include a standard HIPAA BAA.
+    source_id: docs_hipaa
+    source_quote: Growth and Enterprise both include a standard HIPAA BAA
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope:
+    - growth
+    - enterprise
+- pair: flow_hipaa_ready_with_baa|hipaa_baa_any_plan
+  a:
+    id: flow_hipaa_ready_with_baa
+    claim: Flow is HIPAA-ready for dictation with a signed BAA.
+    source_id: docs_vendor_assessments
+    source_quote: Flow is HIPAA-ready for dictation with a signed BAA
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id012
+  b:
+    id: hipaa_baa_any_plan
+    claim: HIPAA compliance is available on any plan with a signed Business Associate Agreement.
+    source_id: wf_business
+    source_quote: Available on any plan with a signed Business Associate Agreement.
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: *id002
+- pair: flow_hipaa_ready_with_baa|hipaa_baa_dictation_only
+  a:
+    id: flow_hipaa_ready_with_baa
+    claim: Flow is HIPAA-ready for dictation with a signed BAA.
+    source_id: docs_vendor_assessments
+    source_quote: Flow is HIPAA-ready for dictation with a signed BAA
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id012
+  b:
+    id: hipaa_baa_dictation_only
+    claim: The HIPAA Business Associate Agreement covers dictation only.
+    source_id: wf_business
+    source_quote: Covers dictation only.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id013
+- pair: growth_org_wide_hipaa_enforcement|hipaa_baa_any_plan
+  a:
+    id: growth_org_wide_hipaa_enforcement
+    claim: The growth plan includes org-wide HIPAA enforcement with a signed BAA.
+    source_id: wf_business
+    source_quote: Org-wide HIPAA enforcement with a signed BAA
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: *id007
+  b:
+    id: hipaa_baa_any_plan
+    claim: HIPAA compliance is available on any plan with a signed Business Associate Agreement.
+    source_id: wf_business
+    source_quote: Available on any plan with a signed Business Associate Agreement.
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: *id002
+- pair: ca_baa_locks_settings|unconfirmed_org_settings_forced_off
+  a:
+    id: ca_baa_locks_settings
+    claim: Signing the applicable Business Associate Agreement (BAA) locks Improve the model for everyone and Dictation Cloud Storage off.
+    source_id: docs_context_awareness
+    source_quote: sign the applicable Business Associate Agreement (BAA), which locks
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id009
+  b:
+    id: unconfirmed_org_settings_forced_off
+    claim: When an organization account's settings cannot be confirmed, model improvement and dictation cloud storage are forced off until the settings resolve.
+    source_id: docs_hipaa
+    source_quote: are forced off until the settings resolve
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: soc2_type1_complete|soc2_type2_audit_complete
+  a:
+    id: soc2_type1_complete
+    claim: The SOC 2 Type I audit is complete and was performed by A-LIGN in April 2026.
+    source_id: wf_compliance_note
+    source_quote: SOC 2 Type I is complete, audited by A-LIGN in April 2026
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: soc2_type2_audit_complete
+    claim: The SOC 2 Type II audit is complete.
+    source_id: wf_enterprise_privacy_post
+    source_quote: Our SOC 2 Type II audit is complete
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: otter_bipa_intentional_damages|otter_bipa_negligent_damages
+  a:
+    id: otter_bipa_intentional_damages
+    claim: UC Today reports BIPA permits statutory damages of up to $5,000 per intentional or reckless violation. Check with counsel.
+    source_id: legal_otter_uctoday
+    source_quote: up to $5,000 per intentional or reckless violation
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: otter_bipa_negligent_damages
+    claim: UC Today reports BIPA permits statutory damages of $1,000 per negligent violation. Check with counsel.
+    source_id: legal_otter_uctoday
+    source_quote: It permits statutory damages of $1,000 per negligent violation
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown

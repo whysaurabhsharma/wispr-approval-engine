@@ -1,0 +1,541 @@
+- pair: notetaker_not_in_audits|security_soc2_iso_certified
+  a:
+    id: notetaker_not_in_audits
+    claim: Meeting Notetaker was not assessed in the SOC 2 Type I, SOC 2 Type II, or ISO 27001 certification audits.
+    source_id: docs_security_faq
+    source_quote: Meeting Notetaker launched after those audit periods and was not assessed
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: &id010
+    - unknown
+  b:
+    id: security_soc2_iso_certified
+    claim: Flow is SOC 2 Type II and ISO 27001 certified.
+    source_id: wf_pricing
+    source_quote: SOC 2 Type II and ISO 27001 certified.
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope:
+    - all
+- pair: growth_enterprise_include_baa|growth_org_wide_hipaa_enforcement
+  a:
+    id: growth_enterprise_include_baa
+    claim: Growth and Enterprise both include a standard HIPAA BAA.
+    source_id: docs_hipaa
+    source_quote: Growth and Enterprise both include a standard HIPAA BAA
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: &id005
+    - growth
+    - enterprise
+  b:
+    id: growth_org_wide_hipaa_enforcement
+    claim: The growth plan includes org-wide HIPAA enforcement with a signed BAA.
+    source_id: wf_business
+    source_quote: Org-wide HIPAA enforcement with a signed BAA
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: &id006
+    - growth
+- pair: notetaker_works_alongside_baa|security_notetaker_disabled_baa
+  a:
+    id: notetaker_works_alongside_baa
+    claim: Notetaker works alongside a signed BAA, so the user does not need to revoke the BAA to record meetings.
+    source_id: docs_data_sharing
+    source_quote: Notetaker works alongside a signed personal or organization BAA
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope:
+    - unknown
+  b:
+    id: security_notetaker_disabled_baa
+    claim: Notetaker and Scratchpad are disabled on accounts under a BAA.
+    source_id: wf_pricing
+    source_quote: Notetaker and Scratchpad are disabled on BAA accounts.
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope:
+    - all
+- pair: soc2_type2_report_pending|soc2_type2_report_trust_criteria
+  a:
+    id: soc2_type2_report_pending
+    claim: The SOC 2 Type II report is expected in September.
+    source_id: wf_compliance_note
+    source_quote: the report is expected in September
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: &id009
+    - unknown
+  b:
+    id: soc2_type2_report_trust_criteria
+    claim: Wispr has a SOC 2 Type II report by A-LIGN covering Security, Availability, and Confidentiality.
+    source_id: docs_vendor_assessments
+    source_quote: covering the Security, Availability, and Confidentiality Trust Services Criteria together
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: &id008
+    - unknown
+- pair: iso27001_certificate_held|iso_27001_pending
+  a:
+    id: iso27001_certificate_held
+    claim: Wispr holds an ISO/IEC 27001:2022 certificate.
+    source_id: docs_vendor_assessments
+    source_quote: ISO/IEC 27001:2022 certificate
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: &id002
+    - unknown
+  b:
+    id: iso_27001_pending
+    claim: The ISO 27001 certificate is pending issue.
+    source_id: wf_compliance_note
+    source_quote: the certificate is pending issue
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: &id001
+    - unknown
+- pair: baa_inproduct_signing_enterprise_admin|baa_org_signing_requires_enterprise
+  a:
+    id: baa_inproduct_signing_enterprise_admin
+    claim: In-product BAA signing requires an Enterprise plan and an organization admin.
+    source_id: docs_vendor_assessments
+    source_quote: In-product signing requires an Enterprise plan and an organization admin
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: &id007
+    - enterprise
+  b:
+    id: baa_org_signing_requires_enterprise
+    claim: Signing an org BAA requires an active enterprise subscription.
+    source_id: docs_baa_revoke
+    source_quote: Signing requires an active enterprise subscription
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: &id004
+    - enterprise
+- pair: iso_27001_certification_in_progress|iso_27001_pending
+  a:
+    id: iso_27001_certification_in_progress
+    claim: ISO 27001 certification is in progress with A-LIGN. It is not yet certified.
+    source_id: wf_new_audit
+    source_quote: ISO 27001 certification is in progress with A-LIGN
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: &id003
+    - unknown
+  b:
+    id: iso_27001_pending
+    claim: The ISO 27001 certificate is pending issue.
+    source_id: wf_compliance_note
+    source_quote: the certificate is pending issue
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: *id001
+- pair: iso27001_certificate_held|iso_27001_certification_in_progress
+  a:
+    id: iso27001_certificate_held
+    claim: Wispr holds an ISO/IEC 27001:2022 certificate.
+    source_id: docs_vendor_assessments
+    source_quote: ISO/IEC 27001:2022 certificate
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: *id002
+  b:
+    id: iso_27001_certification_in_progress
+    claim: ISO 27001 certification is in progress with A-LIGN. It is not yet certified.
+    source_id: wf_new_audit
+    source_quote: ISO 27001 certification is in progress with A-LIGN
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: *id003
+- pair: baa_org_signing_requires_enterprise|growth_enterprise_include_baa
+  a:
+    id: baa_org_signing_requires_enterprise
+    claim: Signing an org BAA requires an active enterprise subscription.
+    source_id: docs_baa_revoke
+    source_quote: Signing requires an active enterprise subscription
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: *id004
+  b:
+    id: growth_enterprise_include_baa
+    claim: Growth and Enterprise both include a standard HIPAA BAA.
+    source_id: docs_hipaa
+    source_quote: Growth and Enterprise both include a standard HIPAA BAA
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: *id005
+- pair: baa_org_signing_requires_enterprise|growth_org_wide_hipaa_enforcement
+  a:
+    id: baa_org_signing_requires_enterprise
+    claim: Signing an org BAA requires an active enterprise subscription.
+    source_id: docs_baa_revoke
+    source_quote: Signing requires an active enterprise subscription
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: *id004
+  b:
+    id: growth_org_wide_hipaa_enforcement
+    claim: The growth plan includes org-wide HIPAA enforcement with a signed BAA.
+    source_id: wf_business
+    source_quote: Org-wide HIPAA enforcement with a signed BAA
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: *id006
+- pair: baa_inproduct_signing_enterprise_admin|growth_enterprise_include_baa
+  a:
+    id: baa_inproduct_signing_enterprise_admin
+    claim: In-product BAA signing requires an Enterprise plan and an organization admin.
+    source_id: docs_vendor_assessments
+    source_quote: In-product signing requires an Enterprise plan and an organization admin
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: *id007
+  b:
+    id: growth_enterprise_include_baa
+    claim: Growth and Enterprise both include a standard HIPAA BAA.
+    source_id: docs_hipaa
+    source_quote: Growth and Enterprise both include a standard HIPAA BAA
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: *id005
+- pair: baa_inproduct_signing_enterprise_admin|growth_org_wide_hipaa_enforcement
+  a:
+    id: baa_inproduct_signing_enterprise_admin
+    claim: In-product BAA signing requires an Enterprise plan and an organization admin.
+    source_id: docs_vendor_assessments
+    source_quote: In-product signing requires an Enterprise plan and an organization admin
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: *id007
+  b:
+    id: growth_org_wide_hipaa_enforcement
+    claim: The growth plan includes org-wide HIPAA enforcement with a signed BAA.
+    source_id: wf_business
+    source_quote: Org-wide HIPAA enforcement with a signed BAA
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: *id006
+- pair: growth_admin_model_training_control|growth_enterprise_model_improvement_locked
+  a:
+    id: growth_admin_model_training_control
+    claim: The growth plan lets admins control model training for the whole team.
+    source_id: wf_business
+    source_quote: Admin control over model training for your whole team
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope:
+    - growth
+  b:
+    id: growth_enterprise_model_improvement_locked
+    claim: On Growth and Enterprise, the model-improvement setting is locked off organization-wide.
+    source_id: docs_hipaa
+    source_quote: is locked off organization-wide
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope:
+    - growth
+    - enterprise
+- pair: iso_27001_certification_in_progress|soc2_type2_report_trust_criteria
+  a:
+    id: iso_27001_certification_in_progress
+    claim: ISO 27001 certification is in progress with A-LIGN. It is not yet certified.
+    source_id: wf_new_audit
+    source_quote: ISO 27001 certification is in progress with A-LIGN
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: *id003
+  b:
+    id: soc2_type2_report_trust_criteria
+    claim: Wispr has a SOC 2 Type II report by A-LIGN covering Security, Availability, and Confidentiality.
+    source_id: docs_vendor_assessments
+    source_quote: covering the Security, Availability, and Confidentiality Trust Services Criteria together
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: *id008
+- pair: otter_motion_to_dismiss_pending|otter_wiretap_ca_claims_proceed
+  a:
+    id: otter_motion_to_dismiss_pending
+    claim: The page says the Otter.ai motion to dismiss has been argued and remains pending.
+    source_id: legal_granola_btlaw
+    source_quote: motion to dismiss has been argued and remains pending
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope:
+    - unknown
+  b:
+    id: otter_wiretap_ca_claims_proceed
+    claim: The court allowed the central federal wiretap and California privacy claims against Otter to proceed.
+    source_id: legal_otter_uctoday
+    source_quote: allowed the central claims under federal wiretap, California privacy
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope:
+    - unknown
+- pair: iso27001_certificate_held|soc2_type2_report_trust_criteria
+  a:
+    id: iso27001_certificate_held
+    claim: Wispr holds an ISO/IEC 27001:2022 certificate.
+    source_id: docs_vendor_assessments
+    source_quote: ISO/IEC 27001:2022 certificate
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: *id002
+  b:
+    id: soc2_type2_report_trust_criteria
+    claim: Wispr has a SOC 2 Type II report by A-LIGN covering Security, Availability, and Confidentiality.
+    source_id: docs_vendor_assessments
+    source_quote: covering the Security, Availability, and Confidentiality Trust Services Criteria together
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: *id008
+- pair: iso_27001_pending|soc2_type2_report_trust_criteria
+  a:
+    id: iso_27001_pending
+    claim: The ISO 27001 certificate is pending issue.
+    source_id: wf_compliance_note
+    source_quote: the certificate is pending issue
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: *id001
+  b:
+    id: soc2_type2_report_trust_criteria
+    claim: Wispr has a SOC 2 Type II report by A-LIGN covering Security, Availability, and Confidentiality.
+    source_id: docs_vendor_assessments
+    source_quote: covering the Security, Availability, and Confidentiality Trust Services Criteria together
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: *id008
+- pair: iso27001_certificate_held|soc2_type2_report_pending
+  a:
+    id: iso27001_certificate_held
+    claim: Wispr holds an ISO/IEC 27001:2022 certificate.
+    source_id: docs_vendor_assessments
+    source_quote: ISO/IEC 27001:2022 certificate
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: *id002
+  b:
+    id: soc2_type2_report_pending
+    claim: The SOC 2 Type II report is expected in September.
+    source_id: wf_compliance_note
+    source_quote: the report is expected in September
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: *id009
+- pair: iso_27001_pending|soc2_type2_report_pending
+  a:
+    id: iso_27001_pending
+    claim: The ISO 27001 certificate is pending issue.
+    source_id: wf_compliance_note
+    source_quote: the certificate is pending issue
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: *id001
+  b:
+    id: soc2_type2_report_pending
+    claim: The SOC 2 Type II report is expected in September.
+    source_id: wf_compliance_note
+    source_quote: the report is expected in September
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: *id009
+- pair: iso_27001_certification_in_progress|soc2_type2_report_pending
+  a:
+    id: iso_27001_certification_in_progress
+    claim: ISO 27001 certification is in progress with A-LIGN. It is not yet certified.
+    source_id: wf_new_audit
+    source_quote: ISO 27001 certification is in progress with A-LIGN
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: *id003
+  b:
+    id: soc2_type2_report_pending
+    claim: The SOC 2 Type II report is expected in September.
+    source_id: wf_compliance_note
+    source_quote: the report is expected in September
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: *id009
+- pair: meeting_notetaker_not_assessed|notetaker_not_in_audits
+  a:
+    id: meeting_notetaker_not_assessed
+    claim: Meeting Notetaker was not assessed in the SOC 2 or ISO 27001 audits.
+    source_id: docs_vendor_assessments
+    source_quote: Meeting Notetaker launched after those audit periods and was not assessed
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: notetaker_not_in_audits
+    claim: Meeting Notetaker was not assessed in the SOC 2 Type I, SOC 2 Type II, or ISO 27001 certification audits.
+    source_id: docs_security_faq
+    source_quote: Meeting Notetaker launched after those audit periods and was not assessed
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope: *id010
+- pair: flow_hipaa_ready_with_baa|hipaa_requires_baa
+  a:
+    id: flow_hipaa_ready_with_baa
+    claim: Flow is HIPAA-ready for dictation with a signed BAA.
+    source_id: docs_vendor_assessments
+    source_quote: Flow is HIPAA-ready for dictation with a signed BAA
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id011
+    - unknown
+  b:
+    id: hipaa_requires_baa
+    claim: HIPAA-ready dictation requires a signed Business Associate Agreement (BAA).
+    source_id: docs_security_faq
+    source_quote: HIPAA-ready dictation requires a signed
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id012
+    - unknown
+- pair: flow_hipaa_ready_with_baa|security_hipaa_baa_signed
+  a:
+    id: flow_hipaa_ready_with_baa
+    claim: Flow is HIPAA-ready for dictation with a signed BAA.
+    source_id: docs_vendor_assessments
+    source_quote: Flow is HIPAA-ready for dictation with a signed BAA
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id011
+  b:
+    id: security_hipaa_baa_signed
+    claim: HIPAA-ready dictation is available with a signed BAA.
+    source_id: wf_pricing
+    source_quote: HIPAA-ready dictation with a signed BAA.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id013
+    - all
+- pair: hipaa_baa_dictation_only|hipaa_requires_baa
+  a:
+    id: hipaa_baa_dictation_only
+    claim: The HIPAA Business Associate Agreement covers dictation only.
+    source_id: wf_business
+    source_quote: Covers dictation only.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id015
+    - all
+  b:
+    id: hipaa_requires_baa
+    claim: HIPAA-ready dictation requires a signed Business Associate Agreement (BAA).
+    source_id: docs_security_faq
+    source_quote: HIPAA-ready dictation requires a signed
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id012
+- pair: hipaa_requires_baa|security_hipaa_baa_signed
+  a:
+    id: hipaa_requires_baa
+    claim: HIPAA-ready dictation requires a signed Business Associate Agreement (BAA).
+    source_id: docs_security_faq
+    source_quote: HIPAA-ready dictation requires a signed
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id012
+  b:
+    id: security_hipaa_baa_signed
+    claim: HIPAA-ready dictation is available with a signed BAA.
+    source_id: wf_pricing
+    source_quote: HIPAA-ready dictation with a signed BAA.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id013
+- pair: baa_signing_turns_storage_off|ca_baa_locks_settings
+  a:
+    id: baa_signing_turns_storage_off
+    claim: Signing a personal BAA turns Dictation cloud storage off for the account.
+    source_id: docs_baa_revoke
+    source_quote: and Dictation cloud storage off for your account
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id014
+    - unknown
+  b:
+    id: ca_baa_locks_settings
+    claim: Signing the applicable Business Associate Agreement (BAA) locks Improve the model for everyone and Dictation Cloud Storage off.
+    source_id: docs_context_awareness
+    source_quote: sign the applicable Business Associate Agreement (BAA), which locks
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: baa_signing_turns_storage_off|personal_or_org_baa_locks_cloud_storage_off
+  a:
+    id: baa_signing_turns_storage_off
+    claim: Signing a personal BAA turns Dictation cloud storage off for the account.
+    source_id: docs_baa_revoke
+    source_quote: and Dictation cloud storage off for your account
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id014
+  b:
+    id: personal_or_org_baa_locks_cloud_storage_off
+    claim: A personal or organization BAA locks dictation cloud storage off, even if another organization setting permits sharing.
+    source_id: docs_data_sharing
+    source_quote: A personal or organization BAA locks
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: delete_retains_signed_agreements|hipaa_baa_dictation_only
+  a:
+    id: delete_retains_signed_agreements
+    claim: Wispr keeps signed agreements, such as a HIPAA Business Associate Agreement, after deletion.
+    source_id: docs_data_requests
+    source_quote: Signed agreements, such as a HIPAA Business Associate Agreement.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: hipaa_baa_dictation_only
+    claim: The HIPAA Business Associate Agreement covers dictation only.
+    source_id: wf_business
+    source_quote: Covers dictation only.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id015
+- pair: hipaa_baa_dictation_only|hipaa_baa_locks_sharing_off
+  a:
+    id: hipaa_baa_dictation_only
+    claim: The HIPAA Business Associate Agreement covers dictation only.
+    source_id: wf_business
+    source_quote: Covers dictation only.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id015
+  b:
+    id: hipaa_baa_locks_sharing_off
+    claim: A signed HIPAA Business Associate Agreement locks data sharing off.
+    source_id: docs_data_sharing
+    source_quote: A signed HIPAA Business Associate Agreement (BAA) locks sharing off
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: model_improvement_controls_dictation_use|training_setting_covers_all_data
+  a:
+    id: model_improvement_controls_dictation_use
+    claim: The Improve the model for everyone setting controls whether Notetaker and dictation content may be used to improve Wispr's models.
+    source_id: docs_hipaa
+    source_quote: may be used to improve Wispr's models
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: training_setting_covers_all_data
+    claim: The 'Improve the model for everyone' setting covers all Wispr Flow data across Dictation and Notetaker.
+    source_id: wf_compliance_note
+    source_quote: covers all of your Wispr Flow data, across Dictation and Notetaker
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown

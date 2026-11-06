@@ -1,0 +1,94 @@
+- pair: dictation_cloud_storage_stores_history_on_servers|dictation_storage_only_if_cloud_on
+  verdict: same-fact
+  reason: Both say dictation data sits on Wispr servers through the cloud storage feature, and b adds that this happens "only if dictation cloud storage is on".
+- pair: admin_cloud_storage_off_everyone|ca_baa_locks_settings
+  verdict: compatible
+  reason: One covers an admin switch and the other covers a BAA lock, and the two fit together.
+- pair: iso27001_certificate_held|iso_27001_certificate
+  verdict: same-fact
+  reason: Both refer to the same "ISO/IEC 27001:2022 certificate" and the text does not disagree.
+- pair: ca_improve_model_default_by_plan|model_improvement_default_on
+  verdict: same-fact
+  reason: Both say the setting is "on by default for Free and Pro", and a also covers Enterprise.
+- pair: notetaker_cloud_storage_no_opt_out|notetaker_transcripts_stored_in_cloud
+  verdict: same-fact
+  reason: Both say Notetaker content is stored in the cloud, and a adds there is "no setting to opt out".
+- pair: privacy_mode_no_training|willow_privacy_mode_default_on
+  verdict: compatible
+  reason: One states what Privacy Mode does and the other states its default, and these do not conflict.
+- pair: dpa_customer_data_processed_us|us_data_location
+  verdict: same-fact
+  reason: Both say customer data is "processed in the United States".
+- pair: admin_notetaker_disable_toggle|model_improvement_controls_dictation_use
+  verdict: compatible
+  reason: One is about turning Notetaker on or off and the other is about model training, which are different controls.
+- pair: enforce_off_for_everyone_requires_enterprise|enterprise_model_training_off_for_everyone
+  verdict: compatible
+  reason: These apply to different plans and agree that Enterprise has training "off for everyone".
+- pair: dictation_cloud_storage_scope|dictation_storage_only_if_cloud_on
+  verdict: same-fact
+  reason: Both say the cloud storage setting decides whether dictation data is stored on Wispr servers.
+- pair: enterprise_plan_compliance_options|zdr_enforced_all_subprocessors
+  verdict: same-fact
+  reason: Both describe Zero Data Retention on Enterprise, and b adds that it is "enforced by Willow and all sub-processors".
+- pair: baa_revoke_settings_not_restored|revocation_removes_settings_locks
+  verdict: same-fact
+  reason: Both say revoking removes BAA enforcement, and a adds that it "does not restore those settings".
+- pair: admin_cloud_storage_off_everyone|baa_signing_turns_storage_off
+  verdict: compatible
+  reason: Admins turning storage off and a BAA turning storage off are separate routes to the same result.
+- pair: ca_on_by_default|ca_platform_support
+  verdict: compatible
+  reason: The default state and the supported platforms are different facts.
+- pair: ca_no_screenshots|ca_on_by_default
+  verdict: compatible
+  reason: How Context Awareness works and its default state are different facts.
+- pair: ca_context_includes_textbox|ca_on_by_default
+  verdict: compatible
+  reason: What context can include and the default state are different facts that do not conflict.
+- pair: ca_context_includes_user_identifier|ca_on_by_default
+  verdict: compatible
+  reason: What context can include and the default state are different facts that do not conflict.
+- pair: ca_off_still_sends_app_and_domain|ca_on_by_default
+  verdict: compatible
+  reason: What is sent when the feature is off and the default state are different facts.
+- pair: ca_off_no_other_onscreen_text|ca_on_by_default
+  verdict: compatible
+  reason: What is read when the feature is off and the default state are different facts.
+- pair: ca_command_mode_sends_text|ca_on_by_default
+  verdict: compatible
+  reason: Command Mode behaviour and the default state of Context Awareness are different facts.
+- pair: ca_improve_model_off_keeps_context_awareness|ca_on_by_default
+  verdict: compatible
+  reason: How the two settings relate and the default state are different facts.
+- pair: ca_enterprise_disable_for_all_users|ca_on_by_default
+  verdict: compatible
+  reason: An Enterprise option to turn it off does not conflict with it being "on by default".
+- pair: ca_growth_admins_cannot_enforce_off|ca_on_by_default
+  verdict: compatible
+  reason: A per-person setting on Growth does not conflict with it being "on by default".
+- pair: ca_hipaa_compatible|ca_on_by_default
+  verdict: compatible
+  reason: Saying it is HIPAA compatible and giving its default state are different facts.
+- pair: ca_on_by_default|ca_sensitive_environments_turn_off
+  verdict: compatible
+  reason: Advice to turn it off in sensitive settings fits with it being "on by default".
+- pair: admin_context_awareness_toggle|ca_on_by_default
+  verdict: compatible
+  reason: Admin control over availability and the default state are different facts.
+- pair: ca_on_by_default|context_awareness_enterprise_disable
+  verdict: compatible
+  reason: An Enterprise option to disable it org-wide does not conflict with it being "on by default".
+- pair: ca_enterprise_disable_for_all_users|context_awareness_enterprise_disable
+  verdict: scope-gap
+  severity: medium
+  type: context_awareness_disable_platforms
+  reason: b says admins can disable it "org-wide on Enterprise", but a limits the disable to "on Mac and Windows".
+- pair: ca_baa_locks_settings|hipaa_baa_dictation_only
+  verdict: compatible
+  reason: One lists the settings a BAA locks and the other limits BAA coverage to dictation, and neither denies the other.
+- pair: enterprise_admin_enforce_cloud_storage|personal_or_org_baa_locks_cloud_storage_off
+  verdict: scope-gap
+  severity: high
+  type: baa_cloud_storage_lock
+  reason: a says admins "can also enforce" the storage setting but leaves out that a BAA locks it off whatever the org setting.

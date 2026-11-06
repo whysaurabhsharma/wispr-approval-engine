@@ -1,0 +1,94 @@
+- pair: iso_27001_certificate|security_soc2_iso_certified
+  verdict: same-fact
+  reason: Both say Wispr holds an ISO 27001 certificate; one adds that the Trust Center provides it.
+- pair: notetaker_consent_confirmation|notetaker_not_in_audits
+  verdict: compatible
+  reason: A Notetaker consent control and Notetaker's audit coverage are different facts.
+- pair: notetaker_not_in_audits|soc2_type2_report_pending
+  verdict: compatible
+  reason: Notetaker being outside the audit periods does not conflict with a report "expected in September".
+- pair: iso_27001_pending|notetaker_not_in_audits
+  verdict: compatible
+  reason: Notetaker being outside the ISO audit scope fits with a certificate "pending issue".
+- pair: baa_ai_providers_covered|security_notetaker_disabled_baa
+  verdict: compatible
+  reason: Limiting AI providers under a BAA and disabling Notetaker on BAA accounts are separate, consistent controls.
+- pair: security_soc2_iso_certified|soc2_type2_report_trust_criteria
+  verdict: same-fact
+  reason: The A-LIGN report claim is a more specific version of "SOC 2 Type II" certification.
+- pair: security_soc2_iso_certified|soc2_type2_hipaa_hitech_requirements
+  verdict: compatible
+  reason: HIPAA and HITECH coverage in the report adds a detail and does not conflict with certification.
+- pair: security_soc2_iso_certified|soc2_type2_unqualified_opinion
+  verdict: compatible
+  reason: An unqualified opinion on the report fits with the claim that Flow is SOC 2 Type II certified.
+- pair: meeting_notetaker_not_assessed|notetaker_consent_confirmation
+  verdict: compatible
+  reason: Audit scope for Notetaker and an admin consent setting are different facts.
+- pair: iso_27001_pending|meeting_notetaker_not_assessed
+  verdict: compatible
+  reason: Notetaker being excluded from the audits does not conflict with a pending ISO certificate.
+- pair: iso27001_certificate_held|security_soc2_iso_certified
+  verdict: same-fact
+  reason: Both state that Wispr holds an ISO 27001 certification.
+- pair: iso27001_statement_of_applicability_nda|iso_27001_pending
+  verdict: compatible
+  reason: A Statement of Applicability can be shared under NDA while the certificate is "pending issue".
+- pair: iso27001_statement_of_applicability_nda|security_soc2_iso_certified
+  verdict: compatible
+  reason: NDA access to the Statement of Applicability is a separate fact from holding the certification.
+- pair: iso_27001_audited|iso_27001_pending
+  verdict: compatible
+  reason: Being audited against ISO 27001 fits with the certificate still "pending issue".
+- pair: iso_27001_audited|security_soc2_iso_certified
+  verdict: same-fact
+  reason: Being audited against ISO 27001 and being ISO 27001 certified describe the same status.
+- pair: admin_context_awareness_toggle|context_awareness_enterprise_disable
+  verdict: same-fact
+  reason: The Enterprise org-wide disable is a more specific version of the admin context awareness control.
+- pair: notetaker_consent_confirmation|notetaker_feeds_ai_tools
+  verdict: compatible
+  reason: A consent setting and where Notetaker sends content are different facts.
+- pair: growth_admin_model_training_control|security_model_training_optout
+  verdict: compatible
+  reason: Admin control on Growth does not say users lose the right to "opt out of model training".
+- pair: enterprise_model_training_locked|security_model_training_optout
+  verdict: compatible
+  reason: Training "locked off" on Enterprise fits with users being able to opt out.
+- pair: enterprise_model_training_enforced|security_model_training_optout
+  verdict: compatible
+  reason: Training enforced off on Enterprise fits with users being able to opt out on any plan.
+- pair: notetaker_audio_retained_encrypted|notetaker_consent_confirmation
+  verdict: compatible
+  reason: Audio retention and a consent setting are different Notetaker facts.
+- pair: soc2_type1_complete|soc2_type2_report_pending
+  verdict: compatible
+  reason: A completed Type I audit fits with a Type II report still expected later.
+- pair: security_soc2_iso_certified|soc2_type1_complete
+  verdict: compatible
+  reason: A completed Type I audit does not conflict with a claim of Type II certification.
+- pair: soc2_audit_expected_eight_weeks|soc2_type2_report_pending
+  verdict: compatible
+  reason: Both describe pending SOC 2 work, and neither shows the work as finished.
+- pair: security_soc2_iso_certified|soc2_type2_report_pending
+  verdict: stale
+  severity: high
+  type: soc2_status
+  reason: One says the Type II report is "expected in September", while the other says Flow is already certified.
+- pair: iso_27001_pending|security_soc2_iso_certified
+  verdict: stale
+  severity: high
+  type: iso27001_status
+  reason: One says the certificate is "pending issue", while the other says Flow is already ISO 27001 certified.
+- pair: willow_privacy_mode_keeps_nothing|willow_privacy_off_product_improvement
+  verdict: compatible
+  reason: The two claims describe opposite Privacy Mode settings, so they do not conflict.
+- pair: willow_privacy_off_product_improvement|willow_team_changes_privacy_settings
+  verdict: compatible
+  reason: Data use with Privacy Mode off fits with teams being able to change the setting.
+- pair: privacy_mode_no_training|willow_team_changes_privacy_settings
+  verdict: compatible
+  reason: The no-training promise depends on Privacy Mode being on, which the team can change.
+- pair: enterprise_plan_compliance_options|willow_team_changes_privacy_settings
+  verdict: compatible
+  reason: Enforced Privacy Mode as an Enterprise option fits with the customer's team controlling the settings.

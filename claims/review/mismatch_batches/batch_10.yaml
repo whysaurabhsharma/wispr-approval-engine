@@ -1,0 +1,543 @@
+- pair: soc2_type2_hipaa_hitech_requirements|soc2_type2_report_trust_criteria
+  a:
+    id: soc2_type2_hipaa_hitech_requirements
+    claim: The SOC 2 Type II report also covers HIPAA and HITECH requirements.
+    source_id: docs_vendor_assessments
+    source_quote: together with HIPAA and HITECH requirements
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id001
+    - unknown
+  b:
+    id: soc2_type2_report_trust_criteria
+    claim: Wispr has a SOC 2 Type II report by A-LIGN covering Security, Availability, and Confidentiality.
+    source_id: docs_vendor_assessments
+    source_quote: covering the Security, Availability, and Confidentiality Trust Services Criteria together
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope:
+    - unknown
+- pair: soc2_type2_hipaa_hitech_requirements|soc2_type2_unqualified_opinion
+  a:
+    id: soc2_type2_hipaa_hitech_requirements
+    claim: The SOC 2 Type II report also covers HIPAA and HITECH requirements.
+    source_id: docs_vendor_assessments
+    source_quote: together with HIPAA and HITECH requirements
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id001
+  b:
+    id: soc2_type2_unqualified_opinion
+    claim: The SOC 2 Type II report has an unqualified opinion with no exceptions noted in tests of controls.
+    source_id: docs_vendor_assessments
+    source_quote: with an unqualified opinion and no exceptions noted in the tests of controls
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: enterprise_model_training_locked|growth_admin_model_training_control
+  a:
+    id: enterprise_model_training_locked
+    claim: The enterprise plan has model training locked off.
+    source_id: wf_business
+    source_quote: Model training locked off
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - enterprise
+  b:
+    id: growth_admin_model_training_control
+    claim: The growth plan lets admins control model training for the whole team.
+    source_id: wf_business
+    source_quote: Admin control over model training for your whole team
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope:
+    - growth
+- pair: admin_cloud_storage_org_wide|dictation_storage_only_if_cloud_on
+  a:
+    id: admin_cloud_storage_org_wide
+    claim: Admins can set dictation cloud storage for the whole organization, or leave it to individual users.
+    source_id: wf_enterprise_privacy_post
+    source_quote: Set dictation cloud storage for the whole organization, or leave it to individual users.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: dictation_storage_only_if_cloud_on
+    claim: Dictation transcripts and audio are stored on Wispr servers only if dictation cloud storage is on.
+    source_id: wf_compliance_note
+    source_quote: stored on Wispr servers only if Dictation cloud storage is on
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: ca_enterprise_disable_for_all_users|ca_off_still_sends_app_and_domain
+  a:
+    id: ca_enterprise_disable_for_all_users
+    claim: On Enterprise, the Disable for all users option turns Context Awareness off for everyone on Mac and Windows and locks the setting.
+    source_id: docs_context_awareness
+    source_quote: which turns it off for everyone on Mac and Windows and locks the setting
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id008
+    - enterprise
+  b:
+    id: ca_off_still_sends_app_and_domain
+    claim: With Context Awareness off, on Mac and Windows Flow still sends the app name and website domain with each dictation.
+    source_id: docs_context_awareness
+    source_quote: Flow still sends the app name and website domain with each dictation
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id007
+    - unknown
+- pair: baa_personal_model_training_off|baa_records_excluded_from_export
+  a:
+    id: baa_personal_model_training_off
+    claim: A personal BAA means the HIPAA agreement does not allow data to be used for model training.
+    source_id: docs_baa_revoke
+    source_quote: Your HIPAA agreement does not allow data to be used for model training.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id003
+    - unknown
+  b:
+    id: baa_records_excluded_from_export
+    claim: BAA records are not part of the user data export.
+    source_id: docs_baa_revoke
+    source_quote: BAA records are not part of your data export
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id002
+    - unknown
+- pair: baa_records_excluded_from_export|enforce_zero_retention_enterprise_admins_only
+  a:
+    id: baa_records_excluded_from_export
+    claim: BAA records are not part of the user data export.
+    source_id: docs_baa_revoke
+    source_quote: BAA records are not part of your data export
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id002
+  b:
+    id: enforce_zero_retention_enterprise_admins_only
+    claim: Only Enterprise admins can change Enforce zero data retention, unless Wispr has locked it or a signed BAA prevents disabling it.
+    source_id: docs_data_sharing
+    source_quote: only Enterprise admins can change it, unless Wispr has locked it
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - enterprise
+- pair: baa_records_excluded_from_export|typed_feedback_not_stripped_by_baa
+  a:
+    id: baa_records_excluded_from_export
+    claim: BAA records are not part of the user data export.
+    source_id: docs_baa_revoke
+    source_quote: BAA records are not part of your data export
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id002
+  b:
+    id: typed_feedback_not_stripped_by_baa
+    claim: Typed in-app feedback is not stripped by the data-sharing settings or a BAA.
+    source_id: docs_hipaa
+    source_quote: is not stripped by these settings or a BAA
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: baa_signature_record_not_certificate|flow_hipaa_ready_with_baa
+  a:
+    id: baa_signature_record_not_certificate
+    claim: The Signature Record page in the signed BAA PDF is for reference, not a legal certificate.
+    source_id: docs_baa_revoke
+    source_quote: that page is for reference, not a legal certificate
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: flow_hipaa_ready_with_baa
+    claim: Flow is HIPAA-ready for dictation with a signed BAA.
+    source_id: docs_vendor_assessments
+    source_quote: Flow is HIPAA-ready for dictation with a signed BAA
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id006
+    - unknown
+- pair: android_no_baa_signing|baa_live_billing_admin_managed
+  a:
+    id: android_no_baa_signing
+    claim: Android has no BAA signing or revocation flow.
+    source_id: docs_hipaa
+    source_quote: Android has no BAA signing or revocation flow
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id004
+    - unknown
+  b:
+    id: baa_live_billing_admin_managed
+    claim: Organizations with live billing require admin management of the BAA, and self-serve signing and revoking are blocked.
+    source_id: docs_baa_revoke
+    source_quote: Organizations with live billing require admin management instead
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: baa_personal_model_training_off|security_model_training_optout
+  a:
+    id: baa_personal_model_training_off
+    claim: A personal BAA means the HIPAA agreement does not allow data to be used for model training.
+    source_id: docs_baa_revoke
+    source_quote: Your HIPAA agreement does not allow data to be used for model training.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id003
+  b:
+    id: security_model_training_optout
+    claim: Users can opt out of model training at any time.
+    source_id: wf_pricing
+    source_quote: Opt out of model training at any time.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - all
+- pair: android_no_baa_signing|baa_signing_turns_storage_off
+  a:
+    id: android_no_baa_signing
+    claim: Android has no BAA signing or revocation flow.
+    source_id: docs_hipaa
+    source_quote: Android has no BAA signing or revocation flow
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id004
+  b:
+    id: baa_signing_turns_storage_off
+    claim: Signing a personal BAA turns Dictation cloud storage off for the account.
+    source_id: docs_baa_revoke
+    source_quote: and Dictation cloud storage off for your account
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id005
+    - unknown
+- pair: baa_signing_turns_storage_off|flow_hipaa_ready_with_baa
+  a:
+    id: baa_signing_turns_storage_off
+    claim: Signing a personal BAA turns Dictation cloud storage off for the account.
+    source_id: docs_baa_revoke
+    source_quote: and Dictation cloud storage off for your account
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id005
+  b:
+    id: flow_hipaa_ready_with_baa
+    claim: Flow is HIPAA-ready for dictation with a signed BAA.
+    source_id: docs_vendor_assessments
+    source_quote: Flow is HIPAA-ready for dictation with a signed BAA
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id006
+- pair: android_no_baa_signing|baa_org_signing_requires_enterprise
+  a:
+    id: android_no_baa_signing
+    claim: Android has no BAA signing or revocation flow.
+    source_id: docs_hipaa
+    source_quote: Android has no BAA signing or revocation flow
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id004
+  b:
+    id: baa_org_signing_requires_enterprise
+    claim: Signing an org BAA requires an active enterprise subscription.
+    source_id: docs_baa_revoke
+    source_quote: Signing requires an active enterprise subscription
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope:
+    - enterprise
+- pair: ca_off_still_sends_app_and_domain|ca_platform_support
+  a:
+    id: ca_off_still_sends_app_and_domain
+    claim: With Context Awareness off, on Mac and Windows Flow still sends the app name and website domain with each dictation.
+    source_id: docs_context_awareness
+    source_quote: Flow still sends the app name and website domain with each dictation
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id007
+  b:
+    id: ca_platform_support
+    claim: Context Awareness is available on Mac, Windows, and iOS, with iOS limited to the focused text field.
+    source_id: docs_context_awareness
+    source_quote: Mac, Windows, iOS (limited to the focused text field)
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id009
+    - unknown
+- pair: ca_enterprise_disable_for_all_users|ca_platform_support
+  a:
+    id: ca_enterprise_disable_for_all_users
+    claim: On Enterprise, the Disable for all users option turns Context Awareness off for everyone on Mac and Windows and locks the setting.
+    source_id: docs_context_awareness
+    source_quote: which turns it off for everyone on Mac and Windows and locks the setting
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id008
+  b:
+    id: ca_platform_support
+    claim: Context Awareness is available on Mac, Windows, and iOS, with iOS limited to the focused text field.
+    source_id: docs_context_awareness
+    source_quote: Mac, Windows, iOS (limited to the focused text field)
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id009
+- pair: admin_context_awareness_toggle|ca_no_screenshots
+  a:
+    id: admin_context_awareness_toggle
+    claim: Admins control whether context awareness is available.
+    source_id: wf_business
+    source_quote: whether context awareness is available
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id010
+    - unknown
+  b:
+    id: ca_no_screenshots
+    claim: Context Awareness works from text and does not take screenshots.
+    source_id: docs_context_awareness
+    source_quote: Flow works from text and does not take screenshots.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: admin_context_awareness_toggle|ca_context_includes_textbox
+  a:
+    id: admin_context_awareness_toggle
+    claim: Admins control whether context awareness is available.
+    source_id: wf_business
+    source_quote: whether context awareness is available
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id010
+  b:
+    id: ca_context_includes_textbox
+    claim: When Context Awareness is on, context can include textbox contents and on-screen text.
+    source_id: docs_context_awareness
+    source_quote: textbox contents (before, selected, and after the cursor), on-screen text
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: admin_context_awareness_toggle|ca_context_includes_user_identifier
+  a:
+    id: admin_context_awareness_toggle
+    claim: Admins control whether context awareness is available.
+    source_id: wf_business
+    source_quote: whether context awareness is available
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id010
+  b:
+    id: ca_context_includes_user_identifier
+    claim: When Context Awareness is on, context can include the user's identifier within the app.
+    source_id: docs_context_awareness
+    source_quote: your user identifier within the app
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: admin_context_awareness_toggle|ca_off_still_sends_app_and_domain
+  a:
+    id: admin_context_awareness_toggle
+    claim: Admins control whether context awareness is available.
+    source_id: wf_business
+    source_quote: whether context awareness is available
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id010
+  b:
+    id: ca_off_still_sends_app_and_domain
+    claim: With Context Awareness off, on Mac and Windows Flow still sends the app name and website domain with each dictation.
+    source_id: docs_context_awareness
+    source_quote: Flow still sends the app name and website domain with each dictation
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id007
+- pair: admin_context_awareness_toggle|ca_off_no_other_onscreen_text
+  a:
+    id: admin_context_awareness_toggle
+    claim: Admins control whether context awareness is available.
+    source_id: wf_business
+    source_quote: whether context awareness is available
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id010
+  b:
+    id: ca_off_no_other_onscreen_text
+    claim: With Context Awareness off, no on-screen text beyond the text near the cursor is read.
+    source_id: docs_context_awareness
+    source_quote: no other on-screen text is read
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: admin_context_awareness_toggle|ca_command_mode_sends_text
+  a:
+    id: admin_context_awareness_toggle
+    claim: Admins control whether context awareness is available.
+    source_id: wf_business
+    source_quote: whether context awareness is available
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id010
+  b:
+    id: ca_command_mode_sends_text
+    claim: Command Mode and Polish send the text being edited so it can be changed, even when Context Awareness is off.
+    source_id: docs_context_awareness
+    source_quote: Command Mode and Polish send the text
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: admin_context_awareness_toggle|ca_improve_model_off_keeps_context_awareness
+  a:
+    id: admin_context_awareness_toggle
+    claim: Admins control whether context awareness is available.
+    source_id: wf_business
+    source_quote: whether context awareness is available
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id010
+  b:
+    id: ca_improve_model_off_keeps_context_awareness
+    claim: Turning off Improve the model for everyone does not turn off Context Awareness.
+    source_id: docs_context_awareness
+    source_quote: does not turn off Context Awareness
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: admin_context_awareness_toggle|ca_enterprise_disable_for_all_users
+  a:
+    id: admin_context_awareness_toggle
+    claim: Admins control whether context awareness is available.
+    source_id: wf_business
+    source_quote: whether context awareness is available
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id010
+  b:
+    id: ca_enterprise_disable_for_all_users
+    claim: On Enterprise, the Disable for all users option turns Context Awareness off for everyone on Mac and Windows and locks the setting.
+    source_id: docs_context_awareness
+    source_quote: which turns it off for everyone on Mac and Windows and locks the setting
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id008
+- pair: admin_context_awareness_toggle|ca_growth_admins_cannot_enforce_off
+  a:
+    id: admin_context_awareness_toggle
+    claim: Admins control whether context awareness is available.
+    source_id: wf_business
+    source_quote: whether context awareness is available
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id010
+  b:
+    id: ca_growth_admins_cannot_enforce_off
+    claim: On Growth, each person controls their own Context Awareness setting and administrators cannot enforce it off.
+    source_id: docs_context_awareness
+    source_quote: each person controls their own setting and administrators cannot enforce it off
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - growth
+- pair: admin_context_awareness_toggle|ca_hipaa_compatible
+  a:
+    id: admin_context_awareness_toggle
+    claim: Admins control whether context awareness is available.
+    source_id: wf_business
+    source_quote: whether context awareness is available
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id010
+  b:
+    id: ca_hipaa_compatible
+    claim: Context Awareness is compatible with HIPAA workflows, according to the page.
+    source_id: docs_context_awareness
+    source_quote: It is compatible with HIPAA workflows
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: android_no_baa_signing|ca_baa_locks_settings
+  a:
+    id: android_no_baa_signing
+    claim: Android has no BAA signing or revocation flow.
+    source_id: docs_hipaa
+    source_quote: Android has no BAA signing or revocation flow
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id004
+  b:
+    id: ca_baa_locks_settings
+    claim: Signing the applicable Business Associate Agreement (BAA) locks Improve the model for everyone and Dictation Cloud Storage off.
+    source_id: docs_context_awareness
+    source_quote: sign the applicable Business Associate Agreement (BAA), which locks
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id011
+    - unknown
+- pair: ca_baa_locks_settings|flow_hipaa_ready_with_baa
+  a:
+    id: ca_baa_locks_settings
+    claim: Signing the applicable Business Associate Agreement (BAA) locks Improve the model for everyone and Dictation Cloud Storage off.
+    source_id: docs_context_awareness
+    source_quote: sign the applicable Business Associate Agreement (BAA), which locks
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id011
+  b:
+    id: flow_hipaa_ready_with_baa
+    claim: Flow is HIPAA-ready for dictation with a signed BAA.
+    source_id: docs_vendor_assessments
+    source_quote: Flow is HIPAA-ready for dictation with a signed BAA
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id006
+- pair: admin_context_awareness_toggle|ca_sensitive_environments_turn_off
+  a:
+    id: admin_context_awareness_toggle
+    claim: Admins control whether context awareness is available.
+    source_id: wf_business
+    source_quote: whether context awareness is available
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id010
+  b:
+    id: ca_sensitive_environments_turn_off
+    claim: For sensitive environments such as legal, healthcare, or regulated data, the page advises turning Context Awareness off.
+    source_id: docs_context_awareness
+    source_quote: For sensitive environments (legal, healthcare, or regulated data), turn Context Awareness off
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: android_no_baa_signing|delete_account_android_no_in_app
+  a:
+    id: android_no_baa_signing
+    claim: Android has no BAA signing or revocation flow.
+    source_id: docs_hipaa
+    source_quote: Android has no BAA signing or revocation flow
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id004
+  b:
+    id: delete_account_android_no_in_app
+    claim: Android has no in-app account deletion.
+    source_id: docs_data_requests
+    source_quote: Android has no in-app deletion.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown

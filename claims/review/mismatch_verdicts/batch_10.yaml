@@ -1,0 +1,98 @@
+- pair: soc2_type2_hipaa_hitech_requirements|soc2_type2_report_trust_criteria
+  verdict: compatible
+  reason: One lists the trust criteria and the other adds HIPAA and HITECH coverage, and neither excludes the other.
+- pair: soc2_type2_hipaa_hitech_requirements|soc2_type2_unqualified_opinion
+  verdict: compatible
+  reason: Report scope and audit opinion are different facts about the same report.
+- pair: enterprise_model_training_locked|growth_admin_model_training_control
+  verdict: compatible
+  reason: The claims apply to different plans, Enterprise and Growth.
+- pair: admin_cloud_storage_org_wide|dictation_storage_only_if_cloud_on
+  verdict: compatible
+  reason: One describes who sets cloud storage and the other what happens when it is on.
+- pair: ca_enterprise_disable_for_all_users|ca_off_still_sends_app_and_domain
+  verdict: scope-gap
+  severity: medium
+  type: context_awareness_off_metadata
+  reason: Disabling Context Awareness for everyone still leaves Flow sending "the app name and website domain".
+- pair: baa_personal_model_training_off|baa_records_excluded_from_export
+  verdict: compatible
+  reason: Model training under a BAA and export contents are different facts.
+- pair: baa_records_excluded_from_export|enforce_zero_retention_enterprise_admins_only
+  verdict: compatible
+  reason: Export contents and who can change zero retention are different facts.
+- pair: baa_records_excluded_from_export|typed_feedback_not_stripped_by_baa
+  verdict: compatible
+  reason: Export contents and feedback handling under a BAA are different facts.
+- pair: baa_signature_record_not_certificate|flow_hipaa_ready_with_baa
+  verdict: compatible
+  reason: The status of the signature page does not conflict with HIPAA readiness under a signed BAA.
+- pair: android_no_baa_signing|baa_live_billing_admin_managed
+  verdict: compatible
+  reason: The Android signing gap and admin-managed BAAs for live billing are different facts.
+- pair: baa_personal_model_training_off|security_model_training_optout
+  verdict: compatible
+  reason: A BAA blocks model training, which fits with users being able to opt out at any time.
+- pair: android_no_baa_signing|baa_signing_turns_storage_off
+  verdict: compatible
+  reason: The Android signing gap and the effect of signing are different facts.
+- pair: baa_signing_turns_storage_off|flow_hipaa_ready_with_baa
+  verdict: compatible
+  reason: The effect of signing on storage fits with HIPAA readiness under a signed BAA.
+- pair: android_no_baa_signing|baa_org_signing_requires_enterprise
+  verdict: compatible
+  reason: The Android signing gap and the Enterprise requirement for org BAAs are different facts.
+- pair: ca_off_still_sends_app_and_domain|ca_platform_support
+  verdict: compatible
+  reason: Metadata sent with the feature off and platform availability are different facts.
+- pair: ca_enterprise_disable_for_all_users|ca_platform_support
+  verdict: scope-gap
+  severity: medium
+  type: context_awareness_disable_ios
+  reason: The feature runs on iOS, but "Disable for all users" only covers "Mac and Windows".
+- pair: admin_context_awareness_toggle|ca_no_screenshots
+  verdict: compatible
+  reason: Admin availability control and how the feature collects context are different facts.
+- pair: admin_context_awareness_toggle|ca_context_includes_textbox
+  verdict: compatible
+  reason: Admin availability control and what context is collected are different facts.
+- pair: admin_context_awareness_toggle|ca_context_includes_user_identifier
+  verdict: compatible
+  reason: Admin availability control and what context is collected are different facts.
+- pair: admin_context_awareness_toggle|ca_off_still_sends_app_and_domain
+  verdict: scope-gap
+  severity: medium
+  type: context_awareness_off_metadata
+  reason: Admins can turn Context Awareness off, but Flow still sends "the app name and website domain".
+- pair: admin_context_awareness_toggle|ca_off_no_other_onscreen_text
+  verdict: compatible
+  reason: Admin control and what is read when the feature is off fit together.
+- pair: admin_context_awareness_toggle|ca_command_mode_sends_text
+  verdict: compatible
+  reason: Command Mode sending the text being edited is a separate feature behaviour, not an admin control conflict.
+- pair: admin_context_awareness_toggle|ca_improve_model_off_keeps_context_awareness
+  verdict: compatible
+  reason: The model-training setting and the Context Awareness admin control are separate settings.
+- pair: admin_context_awareness_toggle|ca_enterprise_disable_for_all_users
+  verdict: same-fact
+  reason: The Enterprise "Disable for all users" option is a more specific form of admin control.
+- pair: admin_context_awareness_toggle|ca_growth_admins_cannot_enforce_off
+  verdict: scope-gap
+  severity: medium
+  type: context_awareness_admin_control_growth
+  reason: The broad admin control claim leaves out that on Growth "administrators cannot enforce it off".
+- pair: admin_context_awareness_toggle|ca_hipaa_compatible
+  verdict: compatible
+  reason: Admin control and HIPAA workflow compatibility are different facts.
+- pair: android_no_baa_signing|ca_baa_locks_settings
+  verdict: compatible
+  reason: The Android signing gap and the effects of signing a BAA are different facts.
+- pair: ca_baa_locks_settings|flow_hipaa_ready_with_baa
+  verdict: compatible
+  reason: The settings a BAA locks fit with HIPAA readiness under a signed BAA.
+- pair: admin_context_awareness_toggle|ca_sensitive_environments_turn_off
+  verdict: compatible
+  reason: Admin control and the advice to turn it off in sensitive environments fit together.
+- pair: android_no_baa_signing|delete_account_android_no_in_app
+  verdict: compatible
+  reason: Two separate Android gaps, BAA signing and in-app deletion.

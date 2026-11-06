@@ -1,0 +1,541 @@
+- pair: model_improvement_off_no_stop_cloud_processing|unconfirmed_org_settings_forced_off
+  a:
+    id: model_improvement_off_no_stop_cloud_processing
+    claim: Turning off model improvement does not stop cloud processing.
+    source_id: docs_data_sharing
+    source_quote: Turning it off does not stop cloud processing
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id001
+    - unknown
+  b:
+    id: unconfirmed_org_settings_forced_off
+    claim: When an organization account's settings cannot be confirmed, model improvement and dictation cloud storage are forced off until the settings resolve.
+    source_id: docs_hipaa
+    source_quote: are forced off until the settings resolve
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id011
+    - unknown
+- pair: model_improvement_off_no_stop_cloud_processing|model_improvement_off_stops_training
+  a:
+    id: model_improvement_off_no_stop_cloud_processing
+    claim: Turning off model improvement does not stop cloud processing.
+    source_id: docs_data_sharing
+    source_quote: Turning it off does not stop cloud processing
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id001
+  b:
+    id: model_improvement_off_stops_training
+    claim: Turning off model improvement stops your content being used to improve Wispr's models.
+    source_id: docs_security_faq
+    source_quote: Turning it off stops your content from being used to improve Wispr's models
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id007
+    - unknown
+- pair: model_improvement_controls_dictation_use|reported_dictation_used_for_training
+  a:
+    id: model_improvement_controls_dictation_use
+    claim: The Improve the model for everyone setting controls whether Notetaker and dictation content may be used to improve Wispr's models.
+    source_id: docs_hipaa
+    source_quote: may be used to improve Wispr's models
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id006
+    - unknown
+  b:
+    id: reported_dictation_used_for_training
+    claim: A reported dictation can be used by Wispr to train and evaluate its models.
+    source_id: docs_data_sharing
+    source_quote: can be used to train and evaluate its models
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: dictation_cloud_storage_stores_history_on_servers|enterprise_admin_enforce_cloud_storage
+  a:
+    id: dictation_cloud_storage_stores_history_on_servers
+    claim: Dictation cloud storage stores dictation transcripts, audio and history on Wispr's servers for cross-device access.
+    source_id: docs_data_sharing
+    source_quote: Stores dictation transcripts, audio and history on Wispr's servers
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id002
+    - unknown
+  b:
+    id: enterprise_admin_enforce_cloud_storage
+    claim: Enterprise admins can also enforce the dictation cloud storage setting.
+    source_id: docs_hipaa
+    source_quote: Enterprise admins can also enforce
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id003
+    - enterprise
+- pair: admin_cloud_storage_off_everyone|dictation_cloud_storage_stores_history_on_servers
+  a:
+    id: admin_cloud_storage_off_everyone
+    claim: Admins can turn off dictation cloud storage for everyone.
+    source_id: wf_compliance_note
+    source_quote: Dictation cloud storage can be turned off for everyone
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id012
+    - unknown
+  b:
+    id: dictation_cloud_storage_stores_history_on_servers
+    claim: Dictation cloud storage stores dictation transcripts, audio and history on Wispr's servers for cross-device access.
+    source_id: docs_data_sharing
+    source_quote: Stores dictation transcripts, audio and history on Wispr's servers
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id002
+- pair: dictation_cloud_off_discard|dictation_cloud_storage_stores_history_on_servers
+  a:
+    id: dictation_cloud_off_discard
+    claim: With Dictation cloud storage off, audio is discarded once it is transcribed.
+    source_id: wf_enterprise_privacy_post
+    source_quote: Turn it off and audio is discarded once it's transcribed.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id004
+    - unknown
+  b:
+    id: dictation_cloud_storage_stores_history_on_servers
+    claim: Dictation cloud storage stores dictation transcripts, audio and history on Wispr's servers for cross-device access.
+    source_id: docs_data_sharing
+    source_quote: Stores dictation transcripts, audio and history on Wispr's servers
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id002
+- pair: enterprise_admin_enforce_cloud_storage|notetaker_cloud_storage_no_opt_out
+  a:
+    id: enterprise_admin_enforce_cloud_storage
+    claim: Enterprise admins can also enforce the dictation cloud storage setting.
+    source_id: docs_hipaa
+    source_quote: Enterprise admins can also enforce
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id003
+  b:
+    id: notetaker_cloud_storage_no_opt_out
+    claim: Notetaker transcripts and summaries have no setting to opt out of cloud storage.
+    source_id: docs_data_sharing
+    source_quote: with no setting to opt out
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: dictation_cloud_off_discard|personal_or_org_baa_locks_cloud_storage_off
+  a:
+    id: dictation_cloud_off_discard
+    claim: With Dictation cloud storage off, audio is discarded once it is transcribed.
+    source_id: wf_enterprise_privacy_post
+    source_quote: Turn it off and audio is discarded once it's transcribed.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id004
+  b:
+    id: personal_or_org_baa_locks_cloud_storage_off
+    claim: A personal or organization BAA locks dictation cloud storage off, even if another organization setting permits sharing.
+    source_id: docs_data_sharing
+    source_quote: A personal or organization BAA locks
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id005
+    - unknown
+- pair: admin_cloud_storage_org_wide|personal_or_org_baa_locks_cloud_storage_off
+  a:
+    id: admin_cloud_storage_org_wide
+    claim: Admins can set dictation cloud storage for the whole organization, or leave it to individual users.
+    source_id: wf_enterprise_privacy_post
+    source_quote: Set dictation cloud storage for the whole organization, or leave it to individual users.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id010
+    - unknown
+  b:
+    id: personal_or_org_baa_locks_cloud_storage_off
+    claim: A personal or organization BAA locks dictation cloud storage off, even if another organization setting permits sharing.
+    source_id: docs_data_sharing
+    source_quote: A personal or organization BAA locks
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id005
+- pair: enforce_off_for_everyone_requires_enterprise|enterprise_model_training_enforced
+  a:
+    id: enforce_off_for_everyone_requires_enterprise
+    claim: Enforcing model training off for everyone requires upgrading to Enterprise.
+    source_id: docs_data_sharing
+    source_quote: so each member decides, and enforcing off for everyone requires upgrading to Enterprise
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - teams
+    - pro
+  b:
+    id: enterprise_model_training_enforced
+    claim: On Enterprise, model training is off across the organization and enforced in the MSA and DPA.
+    source_id: wf_compliance_note
+    source_quote: model training is off across the organization and enforced in your MSA and DPA
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - enterprise
+- pair: notetaker_no_meeting_bot|notetaker_works_alongside_baa
+  a:
+    id: notetaker_no_meeting_bot
+    claim: The Notetaker works on the device and does not use a bot to join meetings.
+    source_id: wf_pricing
+    source_quote: so there's no bot joining your calls
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: notetaker_works_alongside_baa
+    claim: Notetaker works alongside a signed BAA, so the user does not need to revoke the BAA to record meetings.
+    source_id: docs_data_sharing
+    source_quote: Notetaker works alongside a signed personal or organization BAA
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope:
+    - unknown
+- pair: enterprise_admin_enforce_cloud_storage|revoking_baa_does_not_restore_sharing
+  a:
+    id: enterprise_admin_enforce_cloud_storage
+    claim: Enterprise admins can also enforce the dictation cloud storage setting.
+    source_id: docs_hipaa
+    source_quote: Enterprise admins can also enforce
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id003
+  b:
+    id: revoking_baa_does_not_restore_sharing
+    claim: Revoking a BAA does not turn sharing or dictation cloud storage back on.
+    source_id: docs_data_sharing
+    source_quote: it does not turn sharing or dictation cloud storage back on
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: dictation_controls_platforms|free_plan_platform_support
+  a:
+    id: dictation_controls_platforms
+    claim: The data sharing and cloud storage controls are available on Mac, Windows, iOS and Android.
+    source_id: docs_data_sharing
+    source_quote: Mac, Windows, iOS and Android
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: free_plan_platform_support
+    claim: The free plan supports dictation on Mac, Windows, iOS, and Android.
+    source_id: wf_business
+    source_quote: Dictation on Mac, Windows, iOS, and Android
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - free
+- pair: dpa_eu_scc_included|dpa_uk_addendum_included
+  a:
+    id: dpa_eu_scc_included
+    claim: The DPA includes the EU Standard Contractual Clauses for transfers out of the EEA.
+    source_id: docs_dpa
+    source_quote: EU Standard Contractual Clauses (SCCs) for transfers of personal data
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: dpa_uk_addendum_included
+    claim: The DPA includes a UK Addendum for transfers subject to the UK GDPR.
+    source_id: docs_dpa
+    source_quote: A UK Addendum for transfers subject to the UK GDPR.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: data_stored_us_aws|dpa_customer_data_processed_us
+  a:
+    id: data_stored_us_aws
+    claim: Data is stored in the United States on AWS.
+    source_id: wf_compliance_note
+    source_quote: In the United States, on AWS
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: dpa_customer_data_processed_us
+    claim: All customer data is processed in the United States.
+    source_id: docs_dpa
+    source_quote: All customer data is processed in the United States;
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: hipaa_baa_dictation_only|phi_requires_signed_baa
+  a:
+    id: hipaa_baa_dictation_only
+    claim: The HIPAA Business Associate Agreement covers dictation only.
+    source_id: wf_business
+    source_quote: Covers dictation only.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - all
+  b:
+    id: phi_requires_signed_baa
+    claim: To dictate PHI, sign the applicable Business Associate Agreement.
+    source_id: docs_hipaa
+    source_quote: sign the applicable Business Associate Agreement (BAA)
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: model_improvement_controls_dictation_use|model_improvement_off_stops_training
+  a:
+    id: model_improvement_controls_dictation_use
+    claim: The Improve the model for everyone setting controls whether Notetaker and dictation content may be used to improve Wispr's models.
+    source_id: docs_hipaa
+    source_quote: may be used to improve Wispr's models
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id006
+  b:
+    id: model_improvement_off_stops_training
+    claim: Turning off model improvement stops your content being used to improve Wispr's models.
+    source_id: docs_security_faq
+    source_quote: Turning it off stops your content from being used to improve Wispr's models
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id007
+- pair: enterprise_admin_enforce_cloud_storage|signed_baa_locks_both_controls_off
+  a:
+    id: enterprise_admin_enforce_cloud_storage
+    claim: Enterprise admins can also enforce the dictation cloud storage setting.
+    source_id: docs_hipaa
+    source_quote: Enterprise admins can also enforce
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id003
+  b:
+    id: signed_baa_locks_both_controls_off
+    claim: A signed BAA locks both the model-improvement and dictation cloud storage controls off.
+    source_id: docs_hipaa
+    source_quote: A signed BAA locks both controls off
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id008
+    - unknown
+- pair: dictation_cloud_off_discard|signed_baa_locks_both_controls_off
+  a:
+    id: dictation_cloud_off_discard
+    claim: With Dictation cloud storage off, audio is discarded once it is transcribed.
+    source_id: wf_enterprise_privacy_post
+    source_quote: Turn it off and audio is discarded once it's transcribed.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id004
+  b:
+    id: signed_baa_locks_both_controls_off
+    claim: A signed BAA locks both the model-improvement and dictation cloud storage controls off.
+    source_id: docs_hipaa
+    source_quote: A signed BAA locks both controls off
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id008
+- pair: security_hipaa_baa_signed|signed_baa_locks_both_controls_off
+  a:
+    id: security_hipaa_baa_signed
+    claim: HIPAA-ready dictation is available with a signed BAA.
+    source_id: wf_pricing
+    source_quote: HIPAA-ready dictation with a signed BAA.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - all
+  b:
+    id: signed_baa_locks_both_controls_off
+    claim: A signed BAA locks both the model-improvement and dictation cloud storage controls off.
+    source_id: docs_hipaa
+    source_quote: A signed BAA locks both controls off
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id008
+- pair: enterprise_admin_enforce_cloud_storage|org_model_restriction_not_cloud_storage
+  a:
+    id: enterprise_admin_enforce_cloud_storage
+    claim: Enterprise admins can also enforce the dictation cloud storage setting.
+    source_id: docs_hipaa
+    source_quote: Enterprise admins can also enforce
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id003
+  b:
+    id: org_model_restriction_not_cloud_storage
+    claim: An organization model-improvement restriction alone does not mean dictation cloud storage is off.
+    source_id: docs_hipaa
+    source_quote: An organization model-improvement restriction alone does not mean cloud storage is off
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id009
+    - unknown
+- pair: dictation_cloud_off_discard|org_model_restriction_not_cloud_storage
+  a:
+    id: dictation_cloud_off_discard
+    claim: With Dictation cloud storage off, audio is discarded once it is transcribed.
+    source_id: wf_enterprise_privacy_post
+    source_quote: Turn it off and audio is discarded once it's transcribed.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id004
+  b:
+    id: org_model_restriction_not_cloud_storage
+    claim: An organization model-improvement restriction alone does not mean dictation cloud storage is off.
+    source_id: docs_hipaa
+    source_quote: An organization model-improvement restriction alone does not mean cloud storage is off
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id009
+- pair: admin_cloud_storage_org_wide|org_model_restriction_not_cloud_storage
+  a:
+    id: admin_cloud_storage_org_wide
+    claim: Admins can set dictation cloud storage for the whole organization, or leave it to individual users.
+    source_id: wf_enterprise_privacy_post
+    source_quote: Set dictation cloud storage for the whole organization, or leave it to individual users.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id010
+  b:
+    id: org_model_restriction_not_cloud_storage
+    claim: An organization model-improvement restriction alone does not mean dictation cloud storage is off.
+    source_id: docs_hipaa
+    source_quote: An organization model-improvement restriction alone does not mean cloud storage is off
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id009
+- pair: enterprise_admin_enforce_cloud_storage|unconfirmed_org_settings_forced_off
+  a:
+    id: enterprise_admin_enforce_cloud_storage
+    claim: Enterprise admins can also enforce the dictation cloud storage setting.
+    source_id: docs_hipaa
+    source_quote: Enterprise admins can also enforce
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id003
+  b:
+    id: unconfirmed_org_settings_forced_off
+    claim: When an organization account's settings cannot be confirmed, model improvement and dictation cloud storage are forced off until the settings resolve.
+    source_id: docs_hipaa
+    source_quote: are forced off until the settings resolve
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id011
+- pair: dictation_cloud_storage_scope|enterprise_admin_enforce_cloud_storage
+  a:
+    id: dictation_cloud_storage_scope
+    claim: Dictation Cloud Storage controls whether dictation data is stored on Wispr's servers, not Notetaker or Scratchpad.
+    source_id: docs_security_faq
+    source_quote: Whether dictation data is stored on Wispr's servers; dictation only, not Notetaker or Scratchpad
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: enterprise_admin_enforce_cloud_storage
+    claim: Enterprise admins can also enforce the dictation cloud storage setting.
+    source_id: docs_hipaa
+    source_quote: Enterprise admins can also enforce
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id003
+- pair: dictation_storage_only_if_cloud_on|enterprise_admin_enforce_cloud_storage
+  a:
+    id: dictation_storage_only_if_cloud_on
+    claim: Dictation transcripts and audio are stored on Wispr servers only if dictation cloud storage is on.
+    source_id: wf_compliance_note
+    source_quote: stored on Wispr servers only if Dictation cloud storage is on
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: enterprise_admin_enforce_cloud_storage
+    claim: Enterprise admins can also enforce the dictation cloud storage setting.
+    source_id: docs_hipaa
+    source_quote: Enterprise admins can also enforce
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id003
+- pair: admin_cloud_storage_off_everyone|enterprise_admin_enforce_cloud_storage
+  a:
+    id: admin_cloud_storage_off_everyone
+    claim: Admins can turn off dictation cloud storage for everyone.
+    source_id: wf_compliance_note
+    source_quote: Dictation cloud storage can be turned off for everyone
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id012
+  b:
+    id: enterprise_admin_enforce_cloud_storage
+    claim: Enterprise admins can also enforce the dictation cloud storage setting.
+    source_id: docs_hipaa
+    source_quote: Enterprise admins can also enforce
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id003
+- pair: dictation_cloud_off_discard|enterprise_admin_enforce_cloud_storage
+  a:
+    id: dictation_cloud_off_discard
+    claim: With Dictation cloud storage off, audio is discarded once it is transcribed.
+    source_id: wf_enterprise_privacy_post
+    source_quote: Turn it off and audio is discarded once it's transcribed.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id004
+  b:
+    id: enterprise_admin_enforce_cloud_storage
+    claim: Enterprise admins can also enforce the dictation cloud storage setting.
+    source_id: docs_hipaa
+    source_quote: Enterprise admins can also enforce
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id003
+- pair: admin_cloud_storage_org_wide|enterprise_admin_enforce_cloud_storage
+  a:
+    id: admin_cloud_storage_org_wide
+    claim: Admins can set dictation cloud storage for the whole organization, or leave it to individual users.
+    source_id: wf_enterprise_privacy_post
+    source_quote: Set dictation cloud storage for the whole organization, or leave it to individual users.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id010
+  b:
+    id: enterprise_admin_enforce_cloud_storage
+    claim: Enterprise admins can also enforce the dictation cloud storage setting.
+    source_id: docs_hipaa
+    source_quote: Enterprise admins can also enforce
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id003
+- pair: dictation_cloud_off_discard|unconfirmed_org_settings_forced_off
+  a:
+    id: dictation_cloud_off_discard
+    claim: With Dictation cloud storage off, audio is discarded once it is transcribed.
+    source_id: wf_enterprise_privacy_post
+    source_quote: Turn it off and audio is discarded once it's transcribed.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id004
+  b:
+    id: unconfirmed_org_settings_forced_off
+    claim: When an organization account's settings cannot be confirmed, model improvement and dictation cloud storage are forced off until the settings resolve.
+    source_id: docs_hipaa
+    source_quote: are forced off until the settings resolve
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id011
