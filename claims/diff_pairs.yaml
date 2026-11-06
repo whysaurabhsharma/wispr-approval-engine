@@ -1,0 +1,2942 @@
+- a: notetaker_not_in_audits
+  b: security_soc2_iso_certified
+  linked: true
+  subjects:
+  - iso27001
+  - soc2
+  overlap: 0.8
+  same_source: false
+- a: growth_enterprise_include_baa
+  b: growth_org_wide_hipaa_enforcement
+  linked: true
+  subjects:
+  - baa
+  - hipaa
+  overlap: 0.43
+  same_source: false
+- a: notetaker_works_alongside_baa
+  b: security_notetaker_disabled_baa
+  linked: true
+  subjects:
+  - baa
+  - notetaker
+  overlap: 0.4
+  same_source: false
+- a: soc2_type2_report_pending
+  b: soc2_type2_report_trust_criteria
+  linked: true
+  subjects:
+  - soc2
+  overlap: 0.6
+  same_source: false
+- a: iso27001_certificate_held
+  b: iso_27001_pending
+  linked: true
+  subjects:
+  - iso27001
+  overlap: 0.6
+  same_source: false
+- a: baa_inproduct_signing_enterprise_admin
+  b: baa_org_signing_requires_enterprise
+  linked: true
+  subjects:
+  - baa
+  overlap: 0.57
+  same_source: false
+- a: iso_27001_certification_in_progress
+  b: iso_27001_pending
+  linked: true
+  subjects:
+  - iso27001
+  overlap: 0.4
+  same_source: false
+- a: iso27001_certificate_held
+  b: iso_27001_certification_in_progress
+  linked: true
+  subjects:
+  - iso27001
+  overlap: 0.33
+  same_source: false
+- a: baa_org_signing_requires_enterprise
+  b: growth_enterprise_include_baa
+  linked: true
+  subjects:
+  - baa
+  overlap: 0.29
+  same_source: false
+- a: baa_org_signing_requires_enterprise
+  b: growth_org_wide_hipaa_enforcement
+  linked: true
+  subjects:
+  - baa
+  overlap: 0.29
+  same_source: false
+- a: baa_inproduct_signing_enterprise_admin
+  b: growth_enterprise_include_baa
+  linked: true
+  subjects:
+  - baa
+  overlap: 0.29
+  same_source: false
+- a: baa_inproduct_signing_enterprise_admin
+  b: growth_org_wide_hipaa_enforcement
+  linked: true
+  subjects:
+  - baa
+  overlap: 0.29
+  same_source: false
+- a: growth_admin_model_training_control
+  b: growth_enterprise_model_improvement_locked
+  linked: true
+  subjects: []
+  overlap: 0.25
+  same_source: false
+- a: iso_27001_certification_in_progress
+  b: soc2_type2_report_trust_criteria
+  linked: true
+  subjects: []
+  overlap: 0.14
+  same_source: false
+- a: otter_motion_to_dismiss_pending
+  b: otter_wiretap_ca_claims_proceed
+  linked: true
+  subjects: []
+  overlap: 0.12
+  same_source: false
+- a: iso27001_certificate_held
+  b: soc2_type2_report_trust_criteria
+  linked: true
+  subjects: []
+  overlap: 0.0
+  same_source: true
+- a: iso_27001_pending
+  b: soc2_type2_report_trust_criteria
+  linked: true
+  subjects: []
+  overlap: 0.0
+  same_source: false
+- a: iso27001_certificate_held
+  b: soc2_type2_report_pending
+  linked: true
+  subjects: []
+  overlap: 0.0
+  same_source: false
+- a: iso_27001_pending
+  b: soc2_type2_report_pending
+  linked: true
+  subjects: []
+  overlap: 0.0
+  same_source: true
+- a: iso_27001_certification_in_progress
+  b: soc2_type2_report_pending
+  linked: true
+  subjects: []
+  overlap: 0.0
+  same_source: false
+- a: meeting_notetaker_not_assessed
+  b: notetaker_not_in_audits
+  linked: false
+  subjects:
+  - iso27001
+  - notetaker
+  - soc2
+  overlap: 1.0
+  same_source: false
+- a: flow_hipaa_ready_with_baa
+  b: hipaa_requires_baa
+  linked: false
+  subjects:
+  - baa
+  - hipaa
+  overlap: 1.0
+  same_source: false
+- a: flow_hipaa_ready_with_baa
+  b: security_hipaa_baa_signed
+  linked: false
+  subjects:
+  - baa
+  - hipaa
+  overlap: 1.0
+  same_source: false
+- a: hipaa_baa_dictation_only
+  b: hipaa_requires_baa
+  linked: false
+  subjects:
+  - baa
+  - hipaa
+  overlap: 0.83
+  same_source: false
+- a: hipaa_requires_baa
+  b: security_hipaa_baa_signed
+  linked: false
+  subjects:
+  - baa
+  - hipaa
+  overlap: 0.83
+  same_source: false
+- a: baa_signing_turns_storage_off
+  b: ca_baa_locks_settings
+  linked: false
+  subjects:
+  - baa
+  - cloud_storage
+  overlap: 0.67
+  same_source: false
+- a: baa_signing_turns_storage_off
+  b: personal_or_org_baa_locks_cloud_storage_off
+  linked: false
+  subjects:
+  - baa
+  - cloud_storage
+  overlap: 0.67
+  same_source: false
+- a: delete_retains_signed_agreements
+  b: hipaa_baa_dictation_only
+  linked: false
+  subjects:
+  - baa
+  - hipaa
+  overlap: 0.67
+  same_source: false
+- a: hipaa_baa_dictation_only
+  b: hipaa_baa_locks_sharing_off
+  linked: false
+  subjects:
+  - baa
+  - hipaa
+  overlap: 0.67
+  same_source: false
+- a: model_improvement_controls_dictation_use
+  b: training_setting_covers_all_data
+  linked: false
+  subjects:
+  - notetaker
+  - training
+  overlap: 0.67
+  same_source: false
+- a: hipaa_baa_any_plan
+  b: hipaa_baa_dictation_only
+  linked: false
+  subjects:
+  - baa
+  - hipaa
+  overlap: 0.67
+  same_source: true
+- a: ca_baa_locks_settings
+  b: signed_baa_locks_both_controls_off
+  linked: false
+  subjects:
+  - baa
+  - cloud_storage
+  overlap: 0.64
+  same_source: false
+- a: delete_retains_signed_agreements
+  b: hipaa_baa_locks_sharing_off
+  linked: false
+  subjects:
+  - baa
+  - hipaa
+  overlap: 0.62
+  same_source: false
+- a: delete_retains_signed_agreements
+  b: hipaa_requires_baa
+  linked: false
+  subjects:
+  - baa
+  - hipaa
+  overlap: 0.62
+  same_source: false
+- a: delete_retains_signed_agreements
+  b: hipaa_baa_any_plan
+  linked: false
+  subjects:
+  - baa
+  - hipaa
+  overlap: 0.62
+  same_source: false
+- a: hipaa_baa_any_plan
+  b: hipaa_baa_locks_sharing_off
+  linked: false
+  subjects:
+  - baa
+  - hipaa
+  overlap: 0.62
+  same_source: false
+- a: hipaa_baa_any_plan
+  b: hipaa_requires_baa
+  linked: false
+  subjects:
+  - baa
+  - hipaa
+  overlap: 0.62
+  same_source: false
+- a: meeting_notetaker_not_assessed
+  b: security_soc2_iso_certified
+  linked: false
+  subjects:
+  - iso27001
+  - soc2
+  overlap: 0.6
+  same_source: false
+- a: flow_hipaa_ready_with_baa
+  b: growth_org_wide_hipaa_enforcement
+  linked: false
+  subjects:
+  - baa
+  - hipaa
+  overlap: 0.6
+  same_source: false
+- a: baa_signing_turns_storage_off
+  b: signed_baa_locks_both_controls_off
+  linked: false
+  subjects:
+  - baa
+  - cloud_storage
+  overlap: 0.56
+  same_source: false
+- a: hipaa_baa_locks_sharing_off
+  b: hipaa_requires_baa
+  linked: false
+  subjects:
+  - baa
+  - hipaa
+  overlap: 0.56
+  same_source: false
+- a: personal_or_org_baa_locks_cloud_storage_off
+  b: revoking_baa_does_not_restore_sharing
+  linked: false
+  subjects:
+  - baa
+  - cloud_storage
+  overlap: 0.56
+  same_source: true
+- a: personal_or_org_baa_locks_cloud_storage_off
+  b: signed_baa_locks_both_controls_off
+  linked: false
+  subjects:
+  - baa
+  - cloud_storage
+  overlap: 0.55
+  same_source: false
+- a: hipaa_baa_any_plan
+  b: security_hipaa_baa_signed
+  linked: false
+  subjects:
+  - baa
+  - hipaa
+  overlap: 0.5
+  same_source: false
+- a: growth_org_wide_hipaa_enforcement
+  b: security_hipaa_baa_signed
+  linked: false
+  subjects:
+  - baa
+  - hipaa
+  overlap: 0.5
+  same_source: false
+- a: ca_baa_locks_settings
+  b: personal_or_org_baa_locks_cloud_storage_off
+  linked: false
+  subjects:
+  - baa
+  - cloud_storage
+  overlap: 0.46
+  same_source: false
+- a: baa_signing_turns_storage_off
+  b: revoking_baa_does_not_restore_sharing
+  linked: false
+  subjects:
+  - baa
+  - cloud_storage
+  overlap: 0.44
+  same_source: false
+- a: ca_baa_locks_settings
+  b: revoking_baa_does_not_restore_sharing
+  linked: false
+  subjects:
+  - baa
+  - cloud_storage
+  overlap: 0.44
+  same_source: false
+- a: revoking_baa_does_not_restore_sharing
+  b: signed_baa_locks_both_controls_off
+  linked: false
+  subjects:
+  - baa
+  - cloud_storage
+  overlap: 0.44
+  same_source: false
+- a: hipaa_business_associate_agreements
+  b: willow_hipaa_ready_baa_where_applicable
+  linked: false
+  subjects:
+  - baa
+  - hipaa
+  overlap: 0.43
+  same_source: false
+- a: baa_personal_model_training_off
+  b: flow_hipaa_ready_with_baa
+  linked: false
+  subjects:
+  - baa
+  - hipaa
+  overlap: 0.4
+  same_source: false
+- a: delete_retains_signed_agreements
+  b: flow_hipaa_ready_with_baa
+  linked: false
+  subjects:
+  - baa
+  - hipaa
+  overlap: 0.4
+  same_source: false
+- a: flow_hipaa_ready_with_baa
+  b: hipaa_baa_locks_sharing_off
+  linked: false
+  subjects:
+  - baa
+  - hipaa
+  overlap: 0.4
+  same_source: false
+- a: flow_hipaa_ready_with_baa
+  b: growth_enterprise_include_baa
+  linked: false
+  subjects:
+  - baa
+  - hipaa
+  overlap: 0.4
+  same_source: false
+- a: flow_hipaa_ready_with_baa
+  b: hipaa_baa_any_plan
+  linked: false
+  subjects:
+  - baa
+  - hipaa
+  overlap: 0.4
+  same_source: false
+- a: flow_hipaa_ready_with_baa
+  b: hipaa_baa_dictation_only
+  linked: false
+  subjects:
+  - baa
+  - hipaa
+  overlap: 0.4
+  same_source: false
+- a: growth_org_wide_hipaa_enforcement
+  b: hipaa_baa_any_plan
+  linked: false
+  subjects:
+  - baa
+  - hipaa
+  overlap: 0.38
+  same_source: true
+- a: ca_baa_locks_settings
+  b: unconfirmed_org_settings_forced_off
+  linked: false
+  subjects:
+  - cloud_storage
+  - training
+  overlap: 0.36
+  same_source: false
+- a: soc2_type1_complete
+  b: soc2_type2_audit_complete
+  linked: false
+  subjects:
+  - soc2
+  overlap: 1.0
+  same_source: false
+- a: otter_bipa_intentional_damages
+  b: otter_bipa_negligent_damages
+  linked: false
+  subjects:
+  - pricing
+  overlap: 0.91
+  same_source: true
+- a: dictation_cloud_storage_stores_history_on_servers
+  b: dictation_storage_only_if_cloud_on
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.86
+  same_source: false
+- a: admin_cloud_storage_off_everyone
+  b: ca_baa_locks_settings
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.83
+  same_source: false
+- a: iso27001_certificate_held
+  b: iso_27001_certificate
+  linked: false
+  subjects:
+  - iso27001
+  overlap: 0.83
+  same_source: false
+- a: ca_improve_model_default_by_plan
+  b: model_improvement_default_on
+  linked: false
+  subjects:
+  - training
+  overlap: 0.8
+  same_source: false
+- a: notetaker_cloud_storage_no_opt_out
+  b: notetaker_transcripts_stored_in_cloud
+  linked: false
+  subjects:
+  - notetaker
+  overlap: 0.8
+  same_source: true
+- a: privacy_mode_no_training
+  b: willow_privacy_mode_default_on
+  linked: false
+  subjects:
+  - privacy_mode
+  overlap: 0.75
+  same_source: false
+- a: dpa_customer_data_processed_us
+  b: us_data_location
+  linked: false
+  subjects:
+  - residency
+  overlap: 0.75
+  same_source: false
+- a: admin_notetaker_disable_toggle
+  b: model_improvement_controls_dictation_use
+  linked: false
+  subjects:
+  - notetaker
+  overlap: 0.75
+  same_source: false
+- a: enforce_off_for_everyone_requires_enterprise
+  b: enterprise_model_training_off_for_everyone
+  linked: false
+  subjects:
+  - training
+  overlap: 0.71
+  same_source: true
+- a: dictation_cloud_storage_scope
+  b: dictation_storage_only_if_cloud_on
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.71
+  same_source: false
+- a: enterprise_plan_compliance_options
+  b: zdr_enforced_all_subprocessors
+  linked: false
+  subjects:
+  - retention
+  overlap: 0.67
+  same_source: true
+- a: baa_revoke_settings_not_restored
+  b: revocation_removes_settings_locks
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.67
+  same_source: false
+- a: admin_cloud_storage_off_everyone
+  b: baa_signing_turns_storage_off
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.67
+  same_source: false
+- a: ca_on_by_default
+  b: ca_platform_support
+  linked: false
+  subjects:
+  - context
+  overlap: 0.67
+  same_source: true
+- a: ca_no_screenshots
+  b: ca_on_by_default
+  linked: false
+  subjects:
+  - context
+  overlap: 0.67
+  same_source: true
+- a: ca_context_includes_textbox
+  b: ca_on_by_default
+  linked: false
+  subjects:
+  - context
+  overlap: 0.67
+  same_source: true
+- a: ca_context_includes_user_identifier
+  b: ca_on_by_default
+  linked: false
+  subjects:
+  - context
+  overlap: 0.67
+  same_source: true
+- a: ca_off_still_sends_app_and_domain
+  b: ca_on_by_default
+  linked: false
+  subjects:
+  - context
+  overlap: 0.67
+  same_source: true
+- a: ca_off_no_other_onscreen_text
+  b: ca_on_by_default
+  linked: false
+  subjects:
+  - context
+  overlap: 0.67
+  same_source: true
+- a: ca_command_mode_sends_text
+  b: ca_on_by_default
+  linked: false
+  subjects:
+  - context
+  overlap: 0.67
+  same_source: true
+- a: ca_improve_model_off_keeps_context_awareness
+  b: ca_on_by_default
+  linked: false
+  subjects:
+  - context
+  overlap: 0.67
+  same_source: true
+- a: ca_enterprise_disable_for_all_users
+  b: ca_on_by_default
+  linked: false
+  subjects:
+  - context
+  overlap: 0.67
+  same_source: true
+- a: ca_growth_admins_cannot_enforce_off
+  b: ca_on_by_default
+  linked: false
+  subjects:
+  - context
+  overlap: 0.67
+  same_source: true
+- a: ca_hipaa_compatible
+  b: ca_on_by_default
+  linked: false
+  subjects:
+  - context
+  overlap: 0.67
+  same_source: true
+- a: ca_on_by_default
+  b: ca_sensitive_environments_turn_off
+  linked: false
+  subjects:
+  - context
+  overlap: 0.67
+  same_source: true
+- a: admin_context_awareness_toggle
+  b: ca_on_by_default
+  linked: false
+  subjects:
+  - context
+  overlap: 0.67
+  same_source: false
+- a: ca_on_by_default
+  b: context_awareness_enterprise_disable
+  linked: false
+  subjects:
+  - context
+  overlap: 0.67
+  same_source: false
+- a: ca_enterprise_disable_for_all_users
+  b: context_awareness_enterprise_disable
+  linked: false
+  subjects:
+  - context
+  overlap: 0.67
+  same_source: false
+- a: ca_baa_locks_settings
+  b: hipaa_baa_dictation_only
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.67
+  same_source: false
+- a: enterprise_admin_enforce_cloud_storage
+  b: personal_or_org_baa_locks_cloud_storage_off
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.67
+  same_source: false
+- a: admin_cloud_storage_off_everyone
+  b: personal_or_org_baa_locks_cloud_storage_off
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.67
+  same_source: false
+- a: admin_cloud_storage_off_everyone
+  b: revoking_baa_does_not_restore_sharing
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.67
+  same_source: false
+- a: admin_cloud_storage_off_everyone
+  b: signed_baa_locks_both_controls_off
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.67
+  same_source: false
+- a: admin_cloud_storage_off_everyone
+  b: org_model_restriction_not_cloud_storage
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.67
+  same_source: false
+- a: admin_cloud_storage_off_everyone
+  b: unconfirmed_org_settings_forced_off
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.67
+  same_source: false
+- a: baa_ai_providers_covered
+  b: baa_ai_text_providers_covered
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.67
+  same_source: false
+- a: growth_sso_saml
+  b: saml_sso_growth_enterprise
+  linked: false
+  subjects:
+  - sso
+  overlap: 0.67
+  same_source: false
+- a: enterprise_scim_provisioning
+  b: scim_provisioning_supported
+  linked: false
+  subjects:
+  - scim
+  overlap: 0.67
+  same_source: false
+- a: admin_cloud_storage_off_everyone
+  b: dictation_cloud_off_discard
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.67
+  same_source: false
+- a: org_model_restriction_not_cloud_storage
+  b: unconfirmed_org_settings_forced_off
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.64
+  same_source: true
+- a: baa_records_excluded_from_export
+  b: baa_records_retained_after_deletion
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.6
+  same_source: true
+- a: admin_context_awareness_toggle
+  b: ca_platform_support
+  linked: false
+  subjects:
+  - context
+  overlap: 0.6
+  same_source: false
+- a: dictation_cloud_storage_scope
+  b: notetaker_transcripts_stored_in_cloud
+  linked: false
+  subjects:
+  - notetaker
+  overlap: 0.6
+  same_source: false
+- a: dpa_org_legal_contact_email
+  b: enterprise_model_training_enforced
+  linked: false
+  subjects:
+  - dpa
+  overlap: 0.6
+  same_source: false
+- a: flow_hipaa_ready_with_baa
+  b: signed_baa_locks_both_controls_off
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.6
+  same_source: false
+- a: soc2_type2_report_pending
+  b: soc2_type_ii_report
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.6
+  same_source: false
+- a: iso_27001_certificate
+  b: iso_27001_pending
+  linked: false
+  subjects:
+  - iso27001
+  overlap: 0.6
+  same_source: false
+- a: soc2_type2_hipaa_hitech_requirements
+  b: soc2_type2_report_pending
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.6
+  same_source: false
+- a: soc2_type2_report_pending
+  b: soc2_type2_unqualified_opinion
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.6
+  same_source: false
+- a: iso_27001_certification_in_progress
+  b: security_soc2_iso_certified
+  linked: false
+  subjects:
+  - iso27001
+  overlap: 0.6
+  same_source: false
+- a: baa_revoke_marked_not_deleted
+  b: baa_revoke_settings_not_restored
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.57
+  same_source: true
+- a: ca_context_includes_textbox
+  b: ca_off_no_other_onscreen_text
+  linked: false
+  subjects:
+  - context
+  overlap: 0.57
+  same_source: true
+- a: ca_improve_model_default_by_plan
+  b: enterprise_model_training_off_for_everyone
+  linked: false
+  subjects:
+  - training
+  overlap: 0.57
+  same_source: false
+- a: ca_baa_locks_settings
+  b: phi_requires_signed_baa
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.57
+  same_source: false
+- a: enterprise_model_training_off_for_everyone
+  b: model_improvement_off_enterprise
+  linked: false
+  subjects:
+  - training
+  overlap: 0.57
+  same_source: false
+- a: enterprise_model_training_locked
+  b: enterprise_model_training_off_for_everyone
+  linked: false
+  subjects:
+  - training
+  overlap: 0.57
+  same_source: false
+- a: enterprise_model_training_enforced
+  b: enterprise_model_training_off_for_everyone
+  linked: false
+  subjects:
+  - training
+  overlap: 0.57
+  same_source: false
+- a: enforce_off_for_everyone_requires_enterprise
+  b: enterprise_model_training_locked
+  linked: false
+  subjects:
+  - training
+  overlap: 0.57
+  same_source: false
+- a: model_improvement_off_enterprise
+  b: unconfirmed_org_settings_forced_off
+  linked: false
+  subjects:
+  - training
+  overlap: 0.57
+  same_source: false
+- a: enterprise_model_training_enforced
+  b: enterprise_model_training_locked
+  linked: false
+  subjects:
+  - training
+  overlap: 0.57
+  same_source: false
+- a: dictation_cloud_off_discard
+  b: dictation_storage_only_if_cloud_on
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.57
+  same_source: false
+- a: baa_revoke_settings_not_restored
+  b: revoking_baa_does_not_restore_sharing
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.56
+  same_source: false
+- a: baa_signing_turns_storage_off
+  b: unconfirmed_org_settings_forced_off
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.56
+  same_source: false
+- a: ca_baa_locks_settings
+  b: hipaa_baa_locks_sharing_off
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.56
+  same_source: false
+- a: ca_baa_locks_settings
+  b: hipaa_requires_baa
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.56
+  same_source: false
+- a: confidential_content_turn_off_before_recording
+  b: model_improvement_off_stops_training
+  linked: false
+  subjects:
+  - training
+  overlap: 0.56
+  same_source: false
+- a: org_model_restriction_not_cloud_storage
+  b: signed_baa_locks_both_controls_off
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.55
+  same_source: true
+- a: signed_baa_locks_both_controls_off
+  b: unconfirmed_org_settings_forced_off
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.55
+  same_source: true
+- a: willow_privacy_mode_default_on
+  b: willow_privacy_mode_keeps_nothing
+  linked: false
+  subjects:
+  - privacy_mode
+  overlap: 0.5
+  same_source: true
+- a: willow_privacy_mode_default_on
+  b: willow_privacy_off_product_improvement
+  linked: false
+  subjects:
+  - privacy_mode
+  overlap: 0.5
+  same_source: true
+- a: willow_enterprise_enforce_privacy_mode
+  b: willow_privacy_mode_default_on
+  linked: false
+  subjects:
+  - privacy_mode
+  overlap: 0.5
+  same_source: true
+- a: willow_enforced_users_cannot_disable
+  b: willow_privacy_mode_default_on
+  linked: false
+  subjects:
+  - privacy_mode
+  overlap: 0.5
+  same_source: true
+- a: willow_privacy_mode_default_on
+  b: willow_team_changes_privacy_settings
+  linked: false
+  subjects:
+  - privacy_mode
+  overlap: 0.5
+  same_source: true
+- a: enterprise_plan_compliance_options
+  b: willow_privacy_mode_default_on
+  linked: false
+  subjects:
+  - privacy_mode
+  overlap: 0.5
+  same_source: false
+- a: sso_saml_login
+  b: willow_sso_identity_provider
+  linked: false
+  subjects:
+  - sso
+  overlap: 0.5
+  same_source: false
+- a: sso_enforce_admin
+  b: willow_sso_identity_provider
+  linked: false
+  subjects:
+  - sso
+  overlap: 0.5
+  same_source: false
+- a: enterprise_plan_compliance_options
+  b: willow_soc2_type_ii_reported
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.5
+  same_source: false
+- a: sso_enforce_admin
+  b: sso_saml_login
+  linked: false
+  subjects:
+  - sso
+  overlap: 0.5
+  same_source: true
+- a: enterprise_plan_compliance_options
+  b: sso_enforce_admin
+  linked: false
+  subjects:
+  - sso
+  overlap: 0.5
+  same_source: true
+- a: zdr_enforced_all_subprocessors
+  b: zdr_model_provider_agreements
+  linked: false
+  subjects:
+  - retention
+  overlap: 0.5
+  same_source: true
+- a: baa_signing_turns_storage_off
+  b: enterprise_admin_enforce_cloud_storage
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.5
+  same_source: false
+- a: baa_signing_turns_storage_off
+  b: dictation_cloud_off_discard
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.5
+  same_source: false
+- a: ca_context_includes_textbox
+  b: ca_context_includes_user_identifier
+  linked: false
+  subjects:
+  - context
+  overlap: 0.5
+  same_source: true
+- a: ca_context_includes_user_identifier
+  b: ca_off_still_sends_app_and_domain
+  linked: false
+  subjects:
+  - context
+  overlap: 0.5
+  same_source: true
+- a: ca_improve_model_default_by_plan
+  b: enforce_off_for_everyone_requires_enterprise
+  linked: false
+  subjects:
+  - training
+  overlap: 0.5
+  same_source: false
+- a: ca_improve_model_off_keeps_context_awareness
+  b: model_improvement_off_no_stop_cloud_processing
+  linked: false
+  subjects:
+  - training
+  overlap: 0.5
+  same_source: false
+- a: ca_baa_locks_settings
+  b: enterprise_admin_enforce_cloud_storage
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.5
+  same_source: false
+- a: ca_baa_locks_settings
+  b: revocation_removes_settings_locks
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.5
+  same_source: false
+- a: ca_baa_locks_settings
+  b: dictation_cloud_off_discard
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.5
+  same_source: false
+- a: confidential_content_turn_off_before_recording
+  b: model_improvement_off_no_stop_cloud_processing
+  linked: false
+  subjects:
+  - training
+  overlap: 0.5
+  same_source: true
+- a: model_improvement_off_no_stop_cloud_processing
+  b: unconfirmed_org_settings_forced_off
+  linked: false
+  subjects:
+  - training
+  overlap: 0.5
+  same_source: false
+- a: model_improvement_off_no_stop_cloud_processing
+  b: model_improvement_off_stops_training
+  linked: false
+  subjects:
+  - training
+  overlap: 0.5
+  same_source: false
+- a: model_improvement_controls_dictation_use
+  b: reported_dictation_used_for_training
+  linked: false
+  subjects:
+  - training
+  overlap: 0.5
+  same_source: false
+- a: dictation_cloud_storage_stores_history_on_servers
+  b: enterprise_admin_enforce_cloud_storage
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.5
+  same_source: false
+- a: admin_cloud_storage_off_everyone
+  b: dictation_cloud_storage_stores_history_on_servers
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.5
+  same_source: false
+- a: dictation_cloud_off_discard
+  b: dictation_cloud_storage_stores_history_on_servers
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.5
+  same_source: false
+- a: enterprise_admin_enforce_cloud_storage
+  b: notetaker_cloud_storage_no_opt_out
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.5
+  same_source: false
+- a: dictation_cloud_off_discard
+  b: personal_or_org_baa_locks_cloud_storage_off
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.5
+  same_source: false
+- a: admin_cloud_storage_org_wide
+  b: personal_or_org_baa_locks_cloud_storage_off
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.5
+  same_source: false
+- a: enforce_off_for_everyone_requires_enterprise
+  b: enterprise_model_training_enforced
+  linked: false
+  subjects:
+  - training
+  overlap: 0.5
+  same_source: false
+- a: notetaker_no_meeting_bot
+  b: notetaker_works_alongside_baa
+  linked: false
+  subjects:
+  - notetaker
+  overlap: 0.5
+  same_source: false
+- a: enterprise_admin_enforce_cloud_storage
+  b: revoking_baa_does_not_restore_sharing
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.5
+  same_source: false
+- a: dictation_controls_platforms
+  b: free_plan_platform_support
+  linked: false
+  subjects:
+  - android
+  overlap: 0.5
+  same_source: false
+- a: dpa_eu_scc_included
+  b: dpa_uk_addendum_included
+  linked: false
+  subjects:
+  - dpa
+  overlap: 0.5
+  same_source: true
+- a: data_stored_us_aws
+  b: dpa_customer_data_processed_us
+  linked: false
+  subjects:
+  - residency
+  overlap: 0.5
+  same_source: false
+- a: hipaa_baa_dictation_only
+  b: phi_requires_signed_baa
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.5
+  same_source: false
+- a: model_improvement_controls_dictation_use
+  b: model_improvement_off_stops_training
+  linked: false
+  subjects:
+  - training
+  overlap: 0.5
+  same_source: false
+- a: enterprise_admin_enforce_cloud_storage
+  b: signed_baa_locks_both_controls_off
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.5
+  same_source: true
+- a: dictation_cloud_off_discard
+  b: signed_baa_locks_both_controls_off
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.5
+  same_source: false
+- a: security_hipaa_baa_signed
+  b: signed_baa_locks_both_controls_off
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.5
+  same_source: false
+- a: enterprise_admin_enforce_cloud_storage
+  b: org_model_restriction_not_cloud_storage
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.5
+  same_source: true
+- a: dictation_cloud_off_discard
+  b: org_model_restriction_not_cloud_storage
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.5
+  same_source: false
+- a: admin_cloud_storage_org_wide
+  b: org_model_restriction_not_cloud_storage
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.5
+  same_source: false
+- a: enterprise_admin_enforce_cloud_storage
+  b: unconfirmed_org_settings_forced_off
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.5
+  same_source: true
+- a: dictation_cloud_storage_scope
+  b: enterprise_admin_enforce_cloud_storage
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.5
+  same_source: false
+- a: dictation_storage_only_if_cloud_on
+  b: enterprise_admin_enforce_cloud_storage
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.5
+  same_source: false
+- a: admin_cloud_storage_off_everyone
+  b: enterprise_admin_enforce_cloud_storage
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.5
+  same_source: false
+- a: dictation_cloud_off_discard
+  b: enterprise_admin_enforce_cloud_storage
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.5
+  same_source: false
+- a: admin_cloud_storage_org_wide
+  b: enterprise_admin_enforce_cloud_storage
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.5
+  same_source: false
+- a: dictation_cloud_off_discard
+  b: unconfirmed_org_settings_forced_off
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.5
+  same_source: false
+- a: admin_cloud_storage_org_wide
+  b: unconfirmed_org_settings_forced_off
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.5
+  same_source: false
+- a: admin_notetaker_disable_toggle
+  b: dictation_cloud_storage_scope
+  linked: false
+  subjects:
+  - notetaker
+  overlap: 0.5
+  same_source: false
+- a: admin_cloud_storage_off_everyone
+  b: dictation_cloud_storage_scope
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.5
+  same_source: false
+- a: soc2_type2_report_trust_criteria
+  b: soc2_type_ii_report
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.5
+  same_source: false
+- a: soc2_type2_hipaa_hitech_requirements
+  b: soc2_type_ii_report
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.5
+  same_source: false
+- a: soc2_type2_unqualified_opinion
+  b: soc2_type_ii_report
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.5
+  same_source: false
+- a: soc2_type_ii_audited
+  b: soc2_type_ii_report
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.5
+  same_source: false
+- a: soc2_type2_audit_complete
+  b: soc2_type_ii_report
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.5
+  same_source: false
+- a: notetaker_not_in_audits
+  b: soc2_type_ii_audited
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.5
+  same_source: false
+- a: notetaker_not_in_audits
+  b: soc2_type2_audit_complete
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.5
+  same_source: false
+- a: data_stored_us_aws
+  b: us_data_location
+  linked: false
+  subjects:
+  - residency
+  overlap: 0.5
+  same_source: false
+- a: soc2_type2_report_trust_criteria
+  b: soc2_type_ii_audited
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.5
+  same_source: false
+- a: soc2_type2_audit_complete
+  b: soc2_type2_report_trust_criteria
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.5
+  same_source: false
+- a: soc2_type2_hipaa_hitech_requirements
+  b: soc2_type_ii_audited
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.5
+  same_source: false
+- a: soc2_type2_audit_complete
+  b: soc2_type2_hipaa_hitech_requirements
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.5
+  same_source: false
+- a: soc2_type2_unqualified_opinion
+  b: soc2_type_ii_audited
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.5
+  same_source: false
+- a: soc2_type2_audit_complete
+  b: soc2_type2_unqualified_opinion
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.5
+  same_source: false
+- a: subprocessor_list_published
+  b: subprocessor_list_published_no_request
+  linked: false
+  subjects:
+  - subprocessor
+  overlap: 0.5
+  same_source: false
+- a: soc2_type1_complete
+  b: soc2_type_ii_audited
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.5
+  same_source: false
+- a: soc2_type2_report_pending
+  b: soc2_type_ii_audited
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.5
+  same_source: false
+- a: soc2_type2_audit_complete
+  b: soc2_type_ii_audited
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.5
+  same_source: false
+- a: security_soc2_iso_certified
+  b: soc2_type_ii_audited
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.5
+  same_source: false
+- a: admin_cloud_storage_off_everyone
+  b: dictation_storage_only_if_cloud_on
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.5
+  same_source: true
+- a: admin_cloud_storage_off_everyone
+  b: admin_cloud_storage_org_wide
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.5
+  same_source: false
+- a: soc2_type2_audit_complete
+  b: soc2_type2_report_pending
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.5
+  same_source: false
+- a: soc2_audit_expected_eight_weeks
+  b: soc2_type2_audit_complete
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.5
+  same_source: false
+- a: security_soc2_iso_certified
+  b: soc2_type2_audit_complete
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.5
+  same_source: false
+- a: notetaker_mac_windows_only
+  b: notetaker_windows_available
+  linked: false
+  subjects:
+  - notetaker
+  overlap: 0.5
+  same_source: false
+- a: free_plan_includes_notetaker
+  b: notetaker_limited_after_offer
+  linked: false
+  subjects:
+  - notetaker
+  overlap: 0.5
+  same_source: true
+- a: ca_baa_locks_settings
+  b: org_model_restriction_not_cloud_storage
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.45
+  same_source: false
+- a: org_model_restriction_not_cloud_storage
+  b: personal_or_org_baa_locks_cloud_storage_off
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.45
+  same_source: false
+- a: baa_signing_turns_storage_off
+  b: org_model_restriction_not_cloud_storage
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.44
+  same_source: false
+- a: ca_command_mode_sends_text
+  b: ca_off_no_other_onscreen_text
+  linked: false
+  subjects:
+  - context
+  overlap: 0.44
+  same_source: true
+- a: ca_improve_model_default_by_plan
+  b: ca_improve_model_off_keeps_context_awareness
+  linked: false
+  subjects:
+  - training
+  overlap: 0.44
+  same_source: true
+- a: ca_baa_locks_settings
+  b: ca_improve_model_default_by_plan
+  linked: false
+  subjects:
+  - training
+  overlap: 0.44
+  same_source: true
+- a: ca_improve_model_default_by_plan
+  b: model_improvement_controls_dictation_use
+  linked: false
+  subjects:
+  - training
+  overlap: 0.44
+  same_source: false
+- a: ca_improve_model_default_by_plan
+  b: training_setting_covers_all_data
+  linked: false
+  subjects:
+  - training
+  overlap: 0.44
+  same_source: false
+- a: ca_enterprise_disable_for_all_users
+  b: ca_improve_model_off_keeps_context_awareness
+  linked: false
+  subjects:
+  - context
+  overlap: 0.44
+  same_source: true
+- a: ca_baa_locks_settings
+  b: ca_improve_model_off_keeps_context_awareness
+  linked: false
+  subjects:
+  - training
+  overlap: 0.44
+  same_source: true
+- a: ca_improve_model_off_keeps_context_awareness
+  b: ca_sensitive_environments_turn_off
+  linked: false
+  subjects:
+  - context
+  overlap: 0.44
+  same_source: true
+- a: ca_improve_model_off_keeps_context_awareness
+  b: model_improvement_off_stops_training
+  linked: false
+  subjects:
+  - training
+  overlap: 0.44
+  same_source: false
+- a: ca_baa_locks_settings
+  b: training_setting_covers_all_data
+  linked: false
+  subjects:
+  - training
+  overlap: 0.44
+  same_source: false
+- a: confidential_content_turn_off_before_recording
+  b: model_improvement_off_withholds_content
+  linked: false
+  subjects:
+  - training
+  overlap: 0.44
+  same_source: true
+- a: org_model_restriction_not_cloud_storage
+  b: revoking_baa_does_not_restore_sharing
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.44
+  same_source: false
+- a: soc2_type2_report_trust_criteria
+  b: soc2_type2_unqualified_opinion
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.44
+  same_source: true
+- a: willow_enforced_users_cannot_disable
+  b: willow_privacy_off_product_improvement
+  linked: false
+  subjects:
+  - privacy_mode
+  overlap: 0.43
+  same_source: true
+- a: enterprise_plan_compliance_options
+  b: willow_enterprise_enforce_privacy_mode
+  linked: false
+  subjects:
+  - privacy_mode
+  overlap: 0.43
+  same_source: false
+- a: enterprise_plan_compliance_options
+  b: willow_enforced_users_cannot_disable
+  linked: false
+  subjects:
+  - privacy_mode
+  overlap: 0.43
+  same_source: false
+- a: willow_enterprise_contractual_retention_controls
+  b: willow_zero_retention_ai_subprocessors
+  linked: false
+  subjects:
+  - retention
+  overlap: 0.43
+  same_source: true
+- a: enterprise_plan_compliance_options
+  b: zdr_model_provider_agreements
+  linked: false
+  subjects:
+  - retention
+  overlap: 0.43
+  same_source: true
+- a: baa_org_keeps_storage_locked
+  b: baa_revoke_settings_not_restored
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.43
+  same_source: true
+- a: baa_personal_model_training_off
+  b: baa_revoke_marked_not_deleted
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.43
+  same_source: true
+- a: baa_org_keeps_storage_locked
+  b: baa_revoke_marked_not_deleted
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.43
+  same_source: true
+- a: baa_revoke_marked_not_deleted
+  b: revoking_baa_does_not_restore_sharing
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.43
+  same_source: false
+- a: baa_org_keeps_storage_locked
+  b: baa_signing_turns_storage_off
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.43
+  same_source: true
+- a: baa_signing_turns_storage_off
+  b: dictation_storage_only_if_cloud_on
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.43
+  same_source: false
+- a: baa_org_keeps_storage_locked
+  b: personal_or_org_baa_locks_cloud_storage_off
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.43
+  same_source: false
+- a: ca_no_screenshots
+  b: ca_platform_support
+  linked: false
+  subjects:
+  - context
+  overlap: 0.43
+  same_source: true
+- a: ca_context_includes_textbox
+  b: ca_platform_support
+  linked: false
+  subjects:
+  - context
+  overlap: 0.43
+  same_source: true
+- a: ca_context_includes_textbox
+  b: ca_no_screenshots
+  linked: false
+  subjects:
+  - context
+  overlap: 0.43
+  same_source: true
+- a: ca_no_screenshots
+  b: ca_off_no_other_onscreen_text
+  linked: false
+  subjects:
+  - context
+  overlap: 0.43
+  same_source: true
+- a: ca_command_mode_sends_text
+  b: ca_no_screenshots
+  linked: false
+  subjects:
+  - context
+  overlap: 0.43
+  same_source: true
+- a: ca_improve_model_off_keeps_context_awareness
+  b: ca_no_screenshots
+  linked: false
+  subjects:
+  - context
+  overlap: 0.43
+  same_source: true
+- a: ca_command_mode_sends_text
+  b: ca_context_includes_textbox
+  linked: false
+  subjects:
+  - context
+  overlap: 0.43
+  same_source: true
+- a: ca_improve_model_default_by_plan
+  b: model_improvement_off_enterprise
+  linked: false
+  subjects:
+  - training
+  overlap: 0.43
+  same_source: false
+- a: ca_improve_model_default_by_plan
+  b: enterprise_model_training_locked
+  linked: false
+  subjects:
+  - training
+  overlap: 0.43
+  same_source: false
+- a: ca_improve_model_off_keeps_context_awareness
+  b: enterprise_model_training_off_for_everyone
+  linked: false
+  subjects:
+  - training
+  overlap: 0.43
+  same_source: false
+- a: ca_baa_locks_settings
+  b: enterprise_model_training_off_for_everyone
+  linked: false
+  subjects:
+  - training
+  overlap: 0.43
+  same_source: false
+- a: ca_baa_locks_settings
+  b: dictation_storage_only_if_cloud_on
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.43
+  same_source: false
+- a: delete_retains_signed_agreements
+  b: phi_requires_signed_baa
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.43
+  same_source: false
+- a: model_improvement_off_enterprise
+  b: model_improvement_off_withholds_content
+  linked: false
+  subjects:
+  - training
+  overlap: 0.43
+  same_source: false
+- a: model_improvement_off_enterprise
+  b: model_improvement_off_metadata_still_uploaded
+  linked: false
+  subjects:
+  - training
+  overlap: 0.43
+  same_source: false
+- a: model_improvement_off_enterprise
+  b: model_improvement_off_no_stop_cloud_processing
+  linked: false
+  subjects:
+  - training
+  overlap: 0.43
+  same_source: false
+- a: confidential_content_turn_off_before_recording
+  b: model_improvement_off_enterprise
+  linked: false
+  subjects:
+  - training
+  overlap: 0.43
+  same_source: false
+- a: dictation_storage_only_if_cloud_on
+  b: notetaker_cloud_storage_no_opt_out
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.43
+  same_source: false
+- a: hipaa_baa_locks_sharing_off
+  b: phi_requires_signed_baa
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.43
+  same_source: false
+- a: dictation_storage_only_if_cloud_on
+  b: personal_or_org_baa_locks_cloud_storage_off
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.43
+  same_source: false
+- a: enforce_off_for_everyone_requires_enterprise
+  b: model_improvement_off_enterprise
+  linked: false
+  subjects:
+  - training
+  overlap: 0.43
+  same_source: false
+- a: dictation_storage_only_if_cloud_on
+  b: revoking_baa_does_not_restore_sharing
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.43
+  same_source: false
+- a: hipaa_requires_baa
+  b: phi_requires_signed_baa
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.43
+  same_source: false
+- a: hipaa_baa_any_plan
+  b: phi_requires_signed_baa
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.43
+  same_source: false
+- a: dictation_storage_only_if_cloud_on
+  b: signed_baa_locks_both_controls_off
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.43
+  same_source: false
+- a: dictation_storage_only_if_cloud_on
+  b: org_model_restriction_not_cloud_storage
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.43
+  same_source: false
+- a: dictation_storage_only_if_cloud_on
+  b: unconfirmed_org_settings_forced_off
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.43
+  same_source: false
+- a: baa_inproduct_signing_enterprise_admin
+  b: msa_redlines_enterprise_only
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.43
+  same_source: false
+- a: baa_ai_providers_covered
+  b: pdf_may_not_match_agreement
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.43
+  same_source: false
+- a: model_improvement_off_enterprise
+  b: model_improvement_off_stops_training
+  linked: false
+  subjects:
+  - training
+  overlap: 0.43
+  same_source: true
+- a: enterprise_model_training_locked
+  b: model_improvement_off_enterprise
+  linked: false
+  subjects:
+  - training
+  overlap: 0.43
+  same_source: false
+- a: enterprise_model_training_enforced
+  b: model_improvement_off_enterprise
+  linked: false
+  subjects:
+  - training
+  overlap: 0.43
+  same_source: false
+- a: iso_27001_certification_in_progress
+  b: notetaker_not_in_audits
+  linked: false
+  subjects:
+  - iso27001
+  overlap: 0.43
+  same_source: false
+- a: soc2_type2_hipaa_hitech_requirements
+  b: soc2_type2_report_trust_criteria
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.43
+  same_source: true
+- a: soc2_type2_hipaa_hitech_requirements
+  b: soc2_type2_unqualified_opinion
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.43
+  same_source: true
+- a: enterprise_model_training_locked
+  b: growth_admin_model_training_control
+  linked: false
+  subjects:
+  - training
+  overlap: 0.43
+  same_source: true
+- a: admin_cloud_storage_org_wide
+  b: dictation_storage_only_if_cloud_on
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.43
+  same_source: false
+- a: ca_enterprise_disable_for_all_users
+  b: ca_off_still_sends_app_and_domain
+  linked: false
+  subjects:
+  - context
+  overlap: 0.42
+  same_source: true
+- a: baa_personal_model_training_off
+  b: baa_records_excluded_from_export
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.4
+  same_source: true
+- a: baa_records_excluded_from_export
+  b: enforce_zero_retention_enterprise_admins_only
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.4
+  same_source: false
+- a: baa_records_excluded_from_export
+  b: typed_feedback_not_stripped_by_baa
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.4
+  same_source: false
+- a: baa_signature_record_not_certificate
+  b: flow_hipaa_ready_with_baa
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.4
+  same_source: false
+- a: android_no_baa_signing
+  b: baa_live_billing_admin_managed
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.4
+  same_source: false
+- a: baa_personal_model_training_off
+  b: security_model_training_optout
+  linked: false
+  subjects:
+  - training
+  overlap: 0.4
+  same_source: false
+- a: android_no_baa_signing
+  b: baa_signing_turns_storage_off
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.4
+  same_source: false
+- a: baa_signing_turns_storage_off
+  b: flow_hipaa_ready_with_baa
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.4
+  same_source: false
+- a: android_no_baa_signing
+  b: baa_org_signing_requires_enterprise
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.4
+  same_source: false
+- a: ca_off_still_sends_app_and_domain
+  b: ca_platform_support
+  linked: false
+  subjects:
+  - context
+  overlap: 0.4
+  same_source: true
+- a: ca_enterprise_disable_for_all_users
+  b: ca_platform_support
+  linked: false
+  subjects:
+  - context
+  overlap: 0.4
+  same_source: true
+- a: admin_context_awareness_toggle
+  b: ca_no_screenshots
+  linked: false
+  subjects:
+  - context
+  overlap: 0.4
+  same_source: false
+- a: admin_context_awareness_toggle
+  b: ca_context_includes_textbox
+  linked: false
+  subjects:
+  - context
+  overlap: 0.4
+  same_source: false
+- a: admin_context_awareness_toggle
+  b: ca_context_includes_user_identifier
+  linked: false
+  subjects:
+  - context
+  overlap: 0.4
+  same_source: false
+- a: admin_context_awareness_toggle
+  b: ca_off_still_sends_app_and_domain
+  linked: false
+  subjects:
+  - context
+  overlap: 0.4
+  same_source: false
+- a: admin_context_awareness_toggle
+  b: ca_off_no_other_onscreen_text
+  linked: false
+  subjects:
+  - context
+  overlap: 0.4
+  same_source: false
+- a: admin_context_awareness_toggle
+  b: ca_command_mode_sends_text
+  linked: false
+  subjects:
+  - context
+  overlap: 0.4
+  same_source: false
+- a: admin_context_awareness_toggle
+  b: ca_improve_model_off_keeps_context_awareness
+  linked: false
+  subjects:
+  - context
+  overlap: 0.4
+  same_source: false
+- a: admin_context_awareness_toggle
+  b: ca_enterprise_disable_for_all_users
+  linked: false
+  subjects:
+  - context
+  overlap: 0.4
+  same_source: false
+- a: admin_context_awareness_toggle
+  b: ca_growth_admins_cannot_enforce_off
+  linked: false
+  subjects:
+  - context
+  overlap: 0.4
+  same_source: false
+- a: admin_context_awareness_toggle
+  b: ca_hipaa_compatible
+  linked: false
+  subjects:
+  - context
+  overlap: 0.4
+  same_source: false
+- a: android_no_baa_signing
+  b: ca_baa_locks_settings
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.4
+  same_source: false
+- a: ca_baa_locks_settings
+  b: flow_hipaa_ready_with_baa
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.4
+  same_source: false
+- a: admin_context_awareness_toggle
+  b: ca_sensitive_environments_turn_off
+  linked: false
+  subjects:
+  - context
+  overlap: 0.4
+  same_source: false
+- a: android_no_baa_signing
+  b: delete_account_android_no_in_app
+  linked: false
+  subjects:
+  - android
+  overlap: 0.4
+  same_source: false
+- a: model_improvement_default_on
+  b: model_improvement_off_withholds_content
+  linked: false
+  subjects:
+  - training
+  overlap: 0.4
+  same_source: false
+- a: model_improvement_off_stops_training
+  b: model_improvement_off_withholds_content
+  linked: false
+  subjects:
+  - training
+  overlap: 0.4
+  same_source: false
+- a: model_improvement_default_on
+  b: model_improvement_off_metadata_still_uploaded
+  linked: false
+  subjects:
+  - training
+  overlap: 0.4
+  same_source: false
+- a: model_improvement_default_on
+  b: model_improvement_off_no_stop_cloud_processing
+  linked: false
+  subjects:
+  - training
+  overlap: 0.4
+  same_source: false
+- a: confidential_content_turn_off_before_recording
+  b: model_improvement_default_on
+  linked: false
+  subjects:
+  - training
+  overlap: 0.4
+  same_source: false
+- a: dictation_cloud_storage_scope
+  b: dictation_cloud_storage_stores_history_on_servers
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.4
+  same_source: false
+- a: notetaker_recordings_private
+  b: notetaker_transcripts_stored_in_cloud
+  linked: false
+  subjects:
+  - notetaker
+  overlap: 0.4
+  same_source: false
+- a: flow_hipaa_ready_with_baa
+  b: personal_or_org_baa_locks_cloud_storage_off
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.4
+  same_source: false
+- a: enterprise_model_training_off_for_everyone
+  b: security_model_training_optout
+  linked: false
+  subjects:
+  - training
+  overlap: 0.4
+  same_source: false
+- a: model_improvement_default_on
+  b: teams_pro_model_training_managed_individually
+  linked: false
+  subjects:
+  - training
+  overlap: 0.4
+  same_source: false
+- a: security_model_training_optout
+  b: teams_pro_model_training_managed_individually
+  linked: false
+  subjects:
+  - training
+  overlap: 0.4
+  same_source: false
+- a: enforce_off_for_everyone_requires_enterprise
+  b: security_model_training_optout
+  linked: false
+  subjects:
+  - training
+  overlap: 0.4
+  same_source: false
+- a: android_no_baa_signing
+  b: enforce_zero_retention_enterprise_admins_only
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.4
+  same_source: false
+- a: enforce_zero_retention_enterprise_admins_only
+  b: flow_hipaa_ready_with_baa
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.4
+  same_source: false
+- a: flow_hipaa_ready_with_baa
+  b: notetaker_works_alongside_baa
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.4
+  same_source: false
+- a: flow_hipaa_ready_with_baa
+  b: revoking_baa_does_not_restore_sharing
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.4
+  same_source: false
+- a: dictation_cloud_storage_scope
+  b: dictation_controls_platforms
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.4
+  same_source: false
+- a: dpa_billing_separate_url
+  b: dpa_org_legal_contact_email
+  linked: false
+  subjects:
+  - dpa
+  overlap: 0.4
+  same_source: true
+- a: dictation_cloud_storage_scope
+  b: model_improvement_controls_dictation_use
+  linked: false
+  subjects:
+  - notetaker
+  overlap: 0.4
+  same_source: false
+- a: dictation_cloud_storage_scope
+  b: signed_baa_locks_both_controls_off
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.4
+  same_source: false
+- a: model_improvement_default_on
+  b: unconfirmed_org_settings_forced_off
+  linked: false
+  subjects:
+  - training
+  overlap: 0.4
+  same_source: false
+- a: flow_hipaa_ready_with_baa
+  b: msa_redlines_enterprise_only
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.4
+  same_source: false
+- a: android_no_baa_signing
+  b: baa_signing_platforms
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.4
+  same_source: true
+- a: android_no_baa_signing
+  b: pdf_may_not_match_agreement
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.4
+  same_source: true
+- a: android_no_baa_signing
+  b: baa_inproduct_signing_enterprise_admin
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.4
+  same_source: false
+- a: flow_hipaa_ready_with_baa
+  b: pdf_may_not_match_agreement
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.4
+  same_source: false
+- a: model_improvement_default_on
+  b: model_improvement_off_enterprise
+  linked: false
+  subjects:
+  - training
+  overlap: 0.4
+  same_source: true
+- a: model_improvement_default_on
+  b: model_improvement_off_stops_training
+  linked: false
+  subjects:
+  - training
+  overlap: 0.4
+  same_source: true
+- a: dictation_cloud_storage_scope
+  b: security_notetaker_disabled_baa
+  linked: false
+  subjects:
+  - notetaker
+  overlap: 0.4
+  same_source: false
+- a: security_soc2_iso_certified
+  b: soc2_type_ii_report
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.4
+  same_source: false
+- a: iso_27001_certificate
+  b: security_soc2_iso_certified
+  linked: false
+  subjects:
+  - iso27001
+  overlap: 0.4
+  same_source: false
+- a: notetaker_consent_confirmation
+  b: notetaker_not_in_audits
+  linked: false
+  subjects:
+  - notetaker
+  overlap: 0.4
+  same_source: false
+- a: notetaker_not_in_audits
+  b: soc2_type2_report_pending
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.4
+  same_source: false
+- a: iso_27001_pending
+  b: notetaker_not_in_audits
+  linked: false
+  subjects:
+  - iso27001
+  overlap: 0.4
+  same_source: false
+- a: baa_ai_providers_covered
+  b: security_notetaker_disabled_baa
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.4
+  same_source: false
+- a: security_soc2_iso_certified
+  b: soc2_type2_report_trust_criteria
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.4
+  same_source: false
+- a: security_soc2_iso_certified
+  b: soc2_type2_hipaa_hitech_requirements
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.4
+  same_source: false
+- a: security_soc2_iso_certified
+  b: soc2_type2_unqualified_opinion
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.4
+  same_source: false
+- a: meeting_notetaker_not_assessed
+  b: notetaker_consent_confirmation
+  linked: false
+  subjects:
+  - notetaker
+  overlap: 0.4
+  same_source: false
+- a: iso_27001_pending
+  b: meeting_notetaker_not_assessed
+  linked: false
+  subjects:
+  - iso27001
+  overlap: 0.4
+  same_source: false
+- a: iso27001_certificate_held
+  b: security_soc2_iso_certified
+  linked: false
+  subjects:
+  - iso27001
+  overlap: 0.4
+  same_source: false
+- a: iso27001_statement_of_applicability_nda
+  b: iso_27001_pending
+  linked: false
+  subjects:
+  - iso27001
+  overlap: 0.4
+  same_source: false
+- a: iso27001_statement_of_applicability_nda
+  b: security_soc2_iso_certified
+  linked: false
+  subjects:
+  - iso27001
+  overlap: 0.4
+  same_source: false
+- a: iso_27001_audited
+  b: iso_27001_pending
+  linked: false
+  subjects:
+  - iso27001
+  overlap: 0.4
+  same_source: false
+- a: iso_27001_audited
+  b: security_soc2_iso_certified
+  linked: false
+  subjects:
+  - iso27001
+  overlap: 0.4
+  same_source: false
+- a: admin_context_awareness_toggle
+  b: context_awareness_enterprise_disable
+  linked: false
+  subjects:
+  - context
+  overlap: 0.4
+  same_source: false
+- a: notetaker_consent_confirmation
+  b: notetaker_feeds_ai_tools
+  linked: false
+  subjects:
+  - notetaker
+  overlap: 0.4
+  same_source: false
+- a: growth_admin_model_training_control
+  b: security_model_training_optout
+  linked: false
+  subjects:
+  - training
+  overlap: 0.4
+  same_source: false
+- a: enterprise_model_training_locked
+  b: security_model_training_optout
+  linked: false
+  subjects:
+  - training
+  overlap: 0.4
+  same_source: false
+- a: enterprise_model_training_enforced
+  b: security_model_training_optout
+  linked: false
+  subjects:
+  - training
+  overlap: 0.4
+  same_source: false
+- a: notetaker_audio_retained_encrypted
+  b: notetaker_consent_confirmation
+  linked: false
+  subjects:
+  - notetaker
+  overlap: 0.4
+  same_source: true
+- a: soc2_type1_complete
+  b: soc2_type2_report_pending
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.4
+  same_source: true
+- a: security_soc2_iso_certified
+  b: soc2_type1_complete
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.4
+  same_source: false
+- a: soc2_audit_expected_eight_weeks
+  b: soc2_type2_report_pending
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.4
+  same_source: false
+- a: security_soc2_iso_certified
+  b: soc2_type2_report_pending
+  linked: false
+  subjects:
+  - soc2
+  overlap: 0.4
+  same_source: false
+- a: iso_27001_pending
+  b: security_soc2_iso_certified
+  linked: false
+  subjects:
+  - iso27001
+  overlap: 0.4
+  same_source: false
+- a: willow_privacy_mode_keeps_nothing
+  b: willow_privacy_off_product_improvement
+  linked: false
+  subjects:
+  - privacy_mode
+  overlap: 0.38
+  same_source: true
+- a: willow_privacy_off_product_improvement
+  b: willow_team_changes_privacy_settings
+  linked: false
+  subjects:
+  - privacy_mode
+  overlap: 0.38
+  same_source: true
+- a: privacy_mode_no_training
+  b: willow_team_changes_privacy_settings
+  linked: false
+  subjects:
+  - privacy_mode
+  overlap: 0.38
+  same_source: false
+- a: enterprise_plan_compliance_options
+  b: willow_team_changes_privacy_settings
+  linked: false
+  subjects:
+  - privacy_mode
+  overlap: 0.38
+  same_source: false
+- a: baa_revoke_settings_not_restored
+  b: typed_feedback_not_stripped_by_baa
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.38
+  same_source: false
+- a: baa_signature_record_not_certificate
+  b: notetaker_works_alongside_baa
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.38
+  same_source: false
+- a: baa_signature_record_not_certificate
+  b: pdf_may_not_match_agreement
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.38
+  same_source: false
+- a: admin_cloud_storage_org_wide
+  b: baa_signing_turns_storage_off
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.38
+  same_source: false
+- a: ca_improve_model_off_keeps_context_awareness
+  b: enforce_off_for_everyone_requires_enterprise
+  linked: false
+  subjects:
+  - training
+  overlap: 0.38
+  same_source: false
+- a: ca_baa_locks_settings
+  b: delete_retains_signed_agreements
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.38
+  same_source: false
+- a: ca_baa_locks_settings
+  b: model_improvement_off_no_stop_cloud_processing
+  linked: false
+  subjects:
+  - training
+  overlap: 0.38
+  same_source: false
+- a: ca_baa_locks_settings
+  b: enforce_off_for_everyone_requires_enterprise
+  linked: false
+  subjects:
+  - training
+  overlap: 0.38
+  same_source: false
+- a: ca_baa_locks_settings
+  b: pdf_may_not_match_agreement
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.38
+  same_source: false
+- a: ca_baa_locks_settings
+  b: hipaa_baa_any_plan
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.38
+  same_source: false
+- a: admin_cloud_storage_org_wide
+  b: ca_baa_locks_settings
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.38
+  same_source: false
+- a: model_improvement_off_no_stop_cloud_processing
+  b: model_improvement_off_withholds_content
+  linked: false
+  subjects:
+  - training
+  overlap: 0.38
+  same_source: true
+- a: model_improvement_off_metadata_still_uploaded
+  b: model_improvement_off_no_stop_cloud_processing
+  linked: false
+  subjects:
+  - training
+  overlap: 0.38
+  same_source: true
+- a: admin_cloud_storage_org_wide
+  b: dictation_cloud_storage_stores_history_on_servers
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.38
+  same_source: false
+- a: personal_or_org_baa_locks_cloud_storage_off
+  b: unconfirmed_org_settings_forced_off
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.38
+  same_source: false
+- a: dictation_cloud_off_discard
+  b: revoking_baa_does_not_restore_sharing
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.38
+  same_source: false
+- a: admin_cloud_storage_org_wide
+  b: revoking_baa_does_not_restore_sharing
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.38
+  same_source: false
+- a: dpa_eu_scc_included
+  b: eu_uk_customers_dpa_scc
+  linked: false
+  subjects:
+  - dpa
+  overlap: 0.38
+  same_source: false
+- a: dpa_annex_iii_subprocessors
+  b: dpa_tia_wispr_support
+  linked: false
+  subjects:
+  - dpa
+  overlap: 0.38
+  same_source: true
+- a: hipaa_baa_any_plan
+  b: soc2_card_enterprise_only
+  linked: false
+  subjects:
+  - hipaa
+  overlap: 0.38
+  same_source: false
+- a: admin_cloud_storage_org_wide
+  b: signed_baa_locks_both_controls_off
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.38
+  same_source: false
+- a: hipaa_requires_baa
+  b: pdf_may_not_match_agreement
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.38
+  same_source: false
+- a: docs_network_bypass_tls_stays_enabled
+  b: docs_network_root_certificates_respected
+  linked: false
+  subjects:
+  - encryption
+  overlap: 0.38
+  same_source: true
+- a: dictation_cloud_off_discard
+  b: dictation_cloud_storage_scope
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.38
+  same_source: false
+- a: admin_cloud_storage_org_wide
+  b: dictation_cloud_storage_scope
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.38
+  same_source: false
+- a: admin_cloud_storage_org_wide
+  b: dictation_cloud_off_discard
+  linked: false
+  subjects:
+  - cloud_storage
+  overlap: 0.38
+  same_source: true
+- a: baa_revoke_settings_not_restored
+  b: personal_or_org_baa_locks_cloud_storage_off
+  linked: false
+  subjects:
+  - baa
+  overlap: 0.36
+  same_source: false
+- a: ca_enterprise_disable_for_all_users
+  b: ca_growth_admins_cannot_enforce_off
+  linked: false
+  subjects:
+  - context
+  overlap: 0.36
+  same_source: true
+- a: admin_cloud_storage_dictation
+  b: dictation_cloud_storage_scope
+  linked: false
+  subjects: []
+  overlap: 0.8
+  same_source: false
+- a: teams_external_bot_organiser_approval
+  b: teams_flags_external_meeting_bots
+  linked: false
+  subjects: []
+  overlap: 0.78
+  same_source: true
+- a: hipaa_status_verification_planned
+  b: soc2_reverification_planned
+  linked: false
+  subjects: []
+  overlap: 0.78
+  same_source: true
+- a: otter_bipa_claims_proceed
+  b: otter_wiretap_ca_claims_proceed
+  linked: false
+  subjects: []
+  overlap: 0.7
+  same_source: true
+- a: baa_personal_model_training_off
+  b: wispr_does_not_sell_user_data
+  linked: false
+  subjects: []
+  overlap: 0.67
+  same_source: false
+- a: baa_signing_platforms
+  b: ca_platform_support
+  linked: false
+  subjects: []
+  overlap: 0.67
+  same_source: false
+- a: no_data_residency_outside_us
+  b: wispr_does_not_sell_user_data
+  linked: false
+  subjects: []
+  overlap: 0.67
+  same_source: false
+- a: baa_signing_platforms
+  b: dictation_controls_platforms
+  linked: false
+  subjects: []
+  overlap: 0.67
+  same_source: false
+- a: enterprise_audit_logs_mdm
+  b: enterprise_scim_provisioning
+  linked: false
+  subjects: []
+  overlap: 0.67
+  same_source: true
+- a: third_party_ai_processing
+  b: third_party_no_training
+  linked: false
+  subjects: []
+  overlap: 0.67
+  same_source: true
+- a: dictation_storage_only_if_cloud_on
+  b: notetaker_transcripts_stored_in_cloud
+  linked: false
+  subjects: []
+  overlap: 0.6
+  same_source: false
+- a: admin_cloud_storage_dictation
+  b: dictation_storage_only_if_cloud_on
+  linked: false
+  subjects: []
+  overlap: 0.6
+  same_source: false
+- a: third_party_ai_processing
+  b: third_party_data_deleted_30_days
+  linked: false
+  subjects: []
+  overlap: 0.6
+  same_source: true
+- a: delete_data_permanent
+  b: org_meetings_not_deletable
+  linked: false
+  subjects: []
+  overlap: 0.57
+  same_source: true
+- a: enterprise_audit_logs_mdm
+  b: enterprise_scim_audit_logs
+  linked: false
+  subjects: []
+  overlap: 0.56
+  same_source: false
+- a: granola_complaint_cipa_claim
+  b: granola_complaint_ecpa_claim
+  linked: false
+  subjects: []
+  overlap: 0.56
+  same_source: true
+- a: willow_dictation_data_never_sold
+  b: willow_privacy_off_product_improvement
+  linked: false
+  subjects: []
+  overlap: 0.5
+  same_source: true
+- a: willow_dictation_data_never_sold
+  b: willow_no_third_party_sharing
+  linked: false
+  subjects: []
+  overlap: 0.5
+  same_source: true
+- a: baa_signing_turns_storage_off
+  b: sign_out_resets_cloud_storage_to_on
+  linked: false
+  subjects: []
+  overlap: 0.5
+  same_source: false
+- a: ca_platform_support
+  b: notetaker_mac_windows_only
+  linked: false
+  subjects: []
+  overlap: 0.5
+  same_source: false
+- a: dictation_controls_platforms
+  b: notetaker_mac_windows_only
+  linked: false
+  subjects: []
+  overlap: 0.5
+  same_source: false
+- a: dpa_customer_data_processed_us
+  b: third_party_ai_processing
+  linked: false
+  subjects: []
+  overlap: 0.5
+  same_source: false
+- a: dpa_customer_data_processed_us
+  b: third_party_no_training
+  linked: false
+  subjects: []
+  overlap: 0.5
+  same_source: false
+- a: dpa_customer_data_processed_us
+  b: third_party_data_deleted_30_days
+  linked: false
+  subjects: []
+  overlap: 0.5
+  same_source: false
+- a: enterprise_custom_contract_terms
+  b: msa_redlines_enterprise_only
+  linked: false
+  subjects: []
+  overlap: 0.5
+  same_source: false
+- a: baa_signing_platforms
+  b: free_plan_platform_support
+  linked: false
+  subjects: []
+  overlap: 0.5
+  same_source: false
+- a: baa_signing_platforms
+  b: notetaker_mac_windows_only
+  linked: false
+  subjects: []
+  overlap: 0.5
+  same_source: false
+- a: data_stored_us_aws
+  b: dictation_cloud_storage_scope
+  linked: false
+  subjects: []
+  overlap: 0.5
+  same_source: false
+- a: iso_27001_certificate
+  b: soc2_type_ii_report
+  linked: false
+  subjects: []
+  overlap: 0.5
+  same_source: true
+- a: free_plan_includes_notetaker
+  b: free_plan_platform_support
+  linked: false
+  subjects: []
+  overlap: 0.5
+  same_source: false
+- a: free_plan_platform_support
+  b: notetaker_mac_windows_only
+  linked: false
+  subjects: []
+  overlap: 0.5
+  same_source: false
+- a: a_lign_audit_engagement_signed
+  b: soc2_audit_expected_eight_weeks
+  linked: false
+  subjects: []
+  overlap: 0.5
+  same_source: true
