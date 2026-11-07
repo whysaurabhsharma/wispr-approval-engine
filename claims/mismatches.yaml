@@ -31,8 +31,8 @@
   type: admin_cloud_storage_baa_override
   verdict: scope-gap
   severity: high
-  status: open
-  note: ''
+  status: false-positive
+  note: BAA lock overrides the admin setting; compatible
   reason: Admins can enforce cloud storage, but "A signed BAA locks both controls off", which the admin claim does not mention.
   first_seen: '2026-11-07'
   claim_a:
@@ -249,8 +249,8 @@
   type: baa_plan_availability
   verdict: scope-gap
   severity: high
-  status: open
-  note: ''
+  status: accepted
+  note: dup of M067
   reason: One claim says HIPAA-ready with a BAA "on every plan", but the admin-portal signing claim covers only Growth and Enterprise.
   first_seen: '2026-11-07'
   claim_a:
@@ -305,7 +305,7 @@
   verdict: contradiction
   severity: high
   status: open
-  note: ''
+  note: 'Which plan can sign the org BAA: BAA-revoke page says an active Enterprise subscription; HIPAA docs say Growth and Enterprise'
   reason: One limits org BAA signing to Enterprise while the other says signing is "available on the Growth and Enterprise plans".
   first_seen: '2026-11-07'
   claim_a:
@@ -411,8 +411,8 @@
   type: baa_process
   verdict: scope-gap
   severity: high
-  status: open
-  note: ''
+  status: false-positive
+  note: standard click-through BAA and custom BAA documentation via sales are different things
   reason: The "click-through agreement" claim does not say that custom signed BAA documentation needs the Enterprise plan and a sales representative.
   first_seen: '2026-11-07'
   claim_a:
@@ -438,8 +438,8 @@
   type: baa_process
   verdict: scope-gap
   severity: high
-  status: open
-  note: ''
+  status: accepted
+  note: dup of M072
   reason: Claim b says the BAA "is signed by an authorized administrator" but does not mention that "a personal BAA can be signed on iOS".
   first_seen: '2026-11-07'
   claim_a:
@@ -466,8 +466,8 @@
   type: baa_process
   verdict: scope-gap
   severity: high
-  status: open
-  note: ''
+  status: false-positive
+  note: standard admin-signed BAA and custom BAA documentation via sales are different things
   reason: The admin-portal signing claim covers Growth, but custom signed BAA documentation "require our highest-tier Enterprise plan" and goes through sales.
   first_seen: '2026-11-07'
   claim_a:
@@ -494,8 +494,8 @@
   type: baa_resign_after_revoke
   verdict: scope-gap
   severity: high
-  status: open
-  note: ''
+  status: accepted
+  note: dup of M072
   reason: The iOS claim says a personal BAA "can be signed" without noting it cannot be signed again after revoking.
   first_seen: '2026-11-07'
   claim_a:
@@ -522,7 +522,7 @@
   verdict: scope-gap
   severity: high
   status: open
-  note: ''
+  note: 'Signed BAA copy: Enterprise HIPAA rows offer no download of the signed BAA; ask how an organization gets its signed copy'
   reason: BAA signing is "available on the Growth and Enterprise plans" but enterprise rows offer no download of the signed BAA, which the broad claim does not mention.
   first_seen: '2026-11-07'
   claim_a:
@@ -549,8 +549,8 @@
   type: baa_signed_copy_download
   verdict: scope-gap
   severity: high
-  status: open
-  note: ''
+  status: accepted
+  note: dup of M076
   reason: HIPAA is offered on Enterprise "with a signed Business Associate Agreement" but enterprise rows offer no download of that signed BAA.
   first_seen: '2026-11-07'
   claim_a:
@@ -794,7 +794,7 @@
   verdict: contradiction
   severity: high
   status: open
-  note: 'HIPAA plan availability: business page says Growth and Enterprise; pricing page section headed On every plan says HIPAA-ready with a signed BAA (context verified 2026-11-06)'
+  note: 'HIPAA plan availability: pricing page section headed On every plan says HIPAA-ready with a signed BAA; business page and HIPAA docs say Growth and Enterprise only, and docs say Free and Pro are not HIPAA-ready'
   reason: One limits HIPAA to Growth and Enterprise while the other says HIPAA-ready "on every plan".
   first_seen: '2026-11-06'
   claim_a:
@@ -821,8 +821,8 @@
   type: hipaa_plan_availability
   verdict: contradiction
   severity: high
-  status: open
-  note: ''
+  status: accepted
+  note: 'dup of M067 (docs: Free and Pro not HIPAA-ready vs pricing every plan)'
   reason: One says HIPAA-ready "on every plan" while the other says Free and Pro are not HIPAA-ready.
   first_seen: '2026-11-07'
   claim_a:
@@ -848,8 +848,8 @@
   type: iso27001_scope_notetaker
   verdict: scope-gap
   severity: high
-  status: open
-  note: ''
+  status: accepted
+  note: dup of M001
   reason: The certificate is "maintained through annual surveillance audits", but Notetaker "was not assessed".
   first_seen: '2026-11-07'
   claim_a:
@@ -1036,8 +1036,8 @@
   type: iso27001_status
   verdict: stale
   severity: high
-  status: open
-  note: ''
+  status: accepted
+  note: dup of M004
   reason: The newer claim describes a certificate 'maintained through annual surveillance audits', while the older one says it is pending issue.
   first_seen: '2026-11-07'
   claim_a:
@@ -1116,8 +1116,8 @@
   type: model_training_after_baa_revoke
   verdict: scope-gap
   severity: high
-  status: open
-  note: ''
+  status: false-positive
+  note: revoke behaviour and Enterprise training lock are compatible
   reason: The revoke claim says sharing stays off "until the user turns them back on" but does not mention the Enterprise lock that blocks this.
   first_seen: '2026-11-07'
   claim_a:
@@ -1362,8 +1362,8 @@
   type: notetaker_cloud_storage
   verdict: scope-gap
   severity: high
-  status: open
-  note: ''
+  status: accepted
+  note: dup of M033
   reason: Admins can enforce dictation cloud storage, but Notetaker content has "no setting to opt out", which an approver could miss.
   first_seen: '2026-11-07'
   claim_a:
@@ -1443,8 +1443,8 @@
   type: org_baa_sharing_control
   verdict: scope-gap
   severity: high
-  status: open
-  note: ''
+  status: false-positive
+  note: BAA lock overrides organization policy; compatible
   reason: The text says "organization policy controls sharing" under an org-only BAA, yet an org BAA locks cloud storage off whatever the org setting.
   first_seen: '2026-11-07'
   claim_a:
@@ -1470,7 +1470,7 @@
   verdict: contradiction
   severity: high
   status: open
-  note: ''
+  note: 'Personal BAA: BAA-revoke page says it can be signed on iOS; HIPAA docs say personal BAAs cannot be signed from the app'
   reason: One says a personal BAA "can be signed on iOS" while the other says personal BAAs "cannot be signed from the app".
   first_seen: '2026-11-07'
   claim_a:
@@ -1575,8 +1575,8 @@
   type: platform_android
   verdict: scope-gap
   severity: high
-  status: open
-  note: ''
+  status: accepted
+  note: dup of M057
   reason: BAA signing is offered on Growth and Enterprise, but the claim omits that "Android has no BAA signing" flow.
   first_seen: '2026-11-07'
   claim_a:
@@ -2142,8 +2142,8 @@
   type: context_awareness_off_still_sends_text
   verdict: scope-gap
   severity: medium
-  status: open
-  note: ''
+  status: accepted
+  note: 'true nuance: Command Mode and Polish send the edited text even with Context Awareness off; cover in IT brief'
   reason: An admin who turns context awareness off may not know that Command Mode and Polish still send text "even when Context Awareness is off".
   first_seen: '2026-11-07'
   claim_a:
@@ -2168,8 +2168,8 @@
   type: growth_pricing
   verdict: scope-gap
   severity: medium
-  status: open
-  note: ''
+  status: false-positive
+  note: two Growth price sets reflect the monthly and annual toggle (20% annual discount shown)
   reason: The same page lists Growth at both $18 and $23 per user per month, with no billing basis stated, so quoting one alone would mislead.
   first_seen: '2026-11-07'
   claim_a:
@@ -2276,8 +2276,8 @@
   type: pricing_pro
   verdict: contradiction
   severity: medium
-  status: open
-  note: ''
+  status: false-positive
+  note: two Pro prices reflect the monthly and annual toggle (20% annual discount shown)
   reason: The same pricing page lists Pro at "$12 /user/mo" and "$15 /user/mo".
   first_seen: '2026-11-07'
   claim_a:
@@ -2304,7 +2304,7 @@
   verdict: scope-gap
   severity: medium
   status: open
-  note: ''
+  note: 'Pro price: plan table shows $15 per user per month, while the ROI calculator labels $12 the Pro monthly cost; ask which applies to monthly billing'
   reason: 'The same page shows Pro at $15 per user per month and uses "Flow Pro monthly cost: $12", with no billing basis stated.'
   first_seen: '2026-11-07'
   claim_a:
@@ -2358,7 +2358,7 @@
   verdict: stale
   severity: medium
   status: open
-  note: ''
+  note: 'SIEM: compliance note says API and SIEM connectors are in progress; audit-log docs describe SIEM streaming on Enterprise (successor of M059)'
   reason: One says SIEM connectors "are in progress, not yet available" while the newer one describes SIEM streaming on Enterprise.
   first_seen: '2026-11-07'
   claim_a:
@@ -2412,7 +2412,7 @@
   verdict: contradiction
   severity: medium
   status: open
-  note: ''
+  note: 'Vulnerability reporting: network docs say email security@wispr.ai; vendor-assessment docs say the programme does not accept emailed reports (successor of M056)'
   reason: One says report to security@wispr.ai while the other says email to a security@ inbox is not accepted.
   first_seen: '2026-11-07'
   claim_a:
