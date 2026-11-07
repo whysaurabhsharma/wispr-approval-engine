@@ -67,3 +67,8 @@
 - {id: M060, status: accepted, note: "true nuance: model improvement off does not stop cloud processing; cover in IT brief"}
 - {id: M062, status: accepted, note: "competitor wording; not part of the Wispr report"}
 - {id: M067, status: open, note: "HIPAA plan availability: business page says Growth and Enterprise; pricing page section headed On every plan says HIPAA-ready with a signed BAA (context verified 2026-11-06)"}
+- {id: M006, status: accepted, note: "superseded by M068: Wispr reworded the page on 2026-11-07, but the conflict continues"}
+- {id: M008, status: accepted, note: "superseded by M068: Wispr reworded the page on 2026-11-07, but the conflict continues"}
+- {id: M009, status: accepted, note: "superseded by M068"}
+- {id: M056, status: accepted, note: "superseded by M074: Wispr reworded the page on 2026-11-07, but the conflict continues"}
+- {id: M059, status: accepted, note: "superseded by M073: Wispr reworded the page on 2026-11-07, but the conflict continues"}

@@ -1,0 +1,92 @@
+- pair: iso27001_surveillance_recertification|security_soc2_iso_certified
+  verdict: same-fact
+  reason: Both say ISO 27001 is held, and one adds that it is "maintained through annual surveillance audits".
+- pair: baa_settings_stay_off_after_revoke|security_model_training_optout
+  verdict: compatible
+  reason: A general opt-out right and the state of settings after a BAA revoke are different facts that do not conflict.
+- pair: hipaa_baa_growth_enterprise|hipaa_free_pro_not_ready
+  verdict: compatible
+  reason: HIPAA on Growth and Enterprise fits with "Free and Pro plans are not HIPAA-ready".
+- pair: hipaa_baa_signed_by_admin|hipaa_ready_all_plans
+  verdict: scope-gap
+  severity: high
+  type: baa_plan_availability
+  reason: One claim says HIPAA-ready with a BAA "on every plan", but the admin-portal signing claim covers only Growth and Enterprise.
+- pair: baa_signed_copy_individual_only|hipaa_baa_signed_by_admin
+  verdict: compatible
+  reason: Individual-only signed-copy downloads and admin signing in the portal describe different steps without conflict.
+- pair: baa_enterprise_no_signed_download|hipaa_baa_signed_by_admin
+  verdict: compatible
+  reason: Admin signing in the portal does not conflict with enterprise rows not offering "Download signed BAA".
+- pair: hipaa_baa_signing_plans|hipaa_free_pro_not_ready
+  verdict: compatible
+  reason: BAA signing on Growth and Enterprise fits with Free and Pro not being HIPAA-ready.
+- pair: hipaa_free_pro_not_ready|hipaa_ready_with_signed_baa
+  verdict: compatible
+  reason: HIPAA-ready with a signed BAA is scoped to Growth and Enterprise, so it does not clash with Free and Pro.
+- pair: hipaa_free_pro_not_ready|hipaa_row_disabled_other_plans
+  verdict: same-fact
+  reason: The HIPAA row being "disabled on other plans" matches Free and Pro not being HIPAA-ready.
+- pair: hipaa_baa_revocation_permanent|hipaa_baa_signed_by_admin
+  verdict: compatible
+  reason: Permanent personal BAA revocation and admin signing of the BAA are different facts.
+- pair: hipaa_baa_signed_by_admin|hipaa_notetaker_under_baa
+  verdict: compatible
+  reason: Who signs the BAA and Notetaker use under a BAA on Mac and Windows do not conflict.
+- pair: willow_privacy_mode_keeps_nothing|willow_privacy_off_product_improvement
+  verdict: compatible
+  reason: The claims describe Privacy Mode on and off as separate cases, so they do not conflict.
+- pair: willow_privacy_off_product_improvement|willow_team_changes_privacy_settings
+  verdict: compatible
+  reason: Data use when Privacy Mode is off and the team's ability to change settings are different facts.
+- pair: privacy_mode_no_training|willow_team_changes_privacy_settings
+  verdict: compatible
+  reason: No training when Privacy Mode is "enabled org-wide" fits with the team being able to change settings.
+- pair: enterprise_plan_compliance_options|willow_team_changes_privacy_settings
+  verdict: compatible
+  reason: Enforced Privacy Mode as an Enterprise option fits with the team controlling privacy settings.
+- pair: baa_revoke_settings_not_restored|typed_feedback_not_stripped_by_baa
+  verdict: compatible
+  reason: Settings not restored after a revoke and typed feedback not being stripped are separate facts.
+- pair: baa_signature_record_not_certificate|notetaker_works_alongside_baa
+  verdict: compatible
+  reason: A PDF page being "not a legal certificate" is unrelated to Notetaker working alongside a BAA.
+- pair: baa_signature_record_not_certificate|pdf_may_not_match_agreement
+  verdict: compatible
+  reason: Both are separate caveats about the signed BAA PDF and do not contradict each other.
+- pair: admin_cloud_storage_org_wide|baa_signing_turns_storage_off
+  verdict: compatible
+  reason: The org-wide admin control and a personal BAA turning storage off for one account can both hold.
+- pair: ca_improve_model_off_keeps_context_awareness|enforce_off_for_everyone_requires_enterprise
+  verdict: compatible
+  reason: Context Awareness staying on and the Enterprise requirement for enforcement are different facts.
+- pair: ca_baa_locks_settings|delete_retains_signed_agreements
+  verdict: compatible
+  reason: The BAA locking settings and Wispr keeping signed agreements after deletion are different facts.
+- pair: ca_baa_locks_settings|model_improvement_off_no_stop_cloud_processing
+  verdict: compatible
+  reason: The BAA locking model improvement off fits with "does not stop cloud processing".
+- pair: ca_baa_locks_settings|enforce_off_for_everyone_requires_enterprise
+  verdict: compatible
+  reason: The Enterprise requirement is scoped to Teams and Pro, while BAA locking applies where a BAA is signed.
+- pair: ca_baa_locks_settings|pdf_may_not_match_agreement
+  verdict: compatible
+  reason: Settings locked by the BAA and the PDF possibly differing from the agreement text are separate facts.
+- pair: admin_cloud_storage_org_wide|ca_baa_locks_settings
+  verdict: compatible
+  reason: The admin storage control and the BAA locking "Dictation Cloud Storage off" can both hold.
+- pair: admin_accepts_baa_portal|ca_baa_locks_settings
+  verdict: compatible
+  reason: An admin accepting the BAA and the BAA then locking settings describe linked steps without conflict.
+- pair: baa_available_healthcare_growth_enterprise|delete_retains_signed_agreements
+  verdict: compatible
+  reason: BAA availability by plan and keeping signed agreements after deletion are different facts.
+- pair: model_improvement_off_no_stop_cloud_processing|model_improvement_off_withholds_content
+  verdict: compatible
+  reason: Content withheld from model improvement fits with cloud processing continuing.
+- pair: model_improvement_off_metadata_still_uploaded|model_improvement_off_no_stop_cloud_processing
+  verdict: same-fact
+  reason: Flow "still uploads dictation details" is a more specific version of cloud processing continuing.
+- pair: baa_settings_stay_off_after_revoke|model_improvement_off_no_stop_cloud_processing
+  verdict: compatible
+  reason: Settings staying off after a revoke and cloud processing continuing do not conflict.

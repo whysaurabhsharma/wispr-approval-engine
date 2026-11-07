@@ -1,0 +1,96 @@
+- pair: admin_cloud_storage_org_wide|dictation_cloud_storage_stores_history_on_servers
+  verdict: compatible
+  reason: One covers who sets cloud storage, the other what it stores on Wispr's servers.
+- pair: personal_or_org_baa_locks_cloud_storage_off|unconfirmed_org_settings_forced_off
+  verdict: compatible
+  reason: Two separate triggers turn storage off, a BAA and unconfirmed organization settings.
+- pair: baa_settings_stay_off_after_revoke|personal_or_org_baa_locks_cloud_storage_off
+  verdict: compatible
+  reason: One covers settings while a BAA is active, the other what happens after a revoke.
+- pair: baa_settings_stay_off_after_revoke|enforce_off_for_everyone_requires_enterprise
+  verdict: compatible
+  reason: Revoke behaviour and the Enterprise requirement to enforce training off are different facts.
+- pair: baa_enterprise_no_signed_download|enforce_zero_retention_enterprise_admins_only
+  verdict: compatible
+  reason: BAA download availability and who can change zero retention are unrelated facts.
+- pair: dictation_cloud_off_discard|revoking_baa_does_not_restore_sharing
+  verdict: compatible
+  reason: Audio discard when storage is off and revoke behaviour are different facts that agree.
+- pair: admin_cloud_storage_org_wide|revoking_baa_does_not_restore_sharing
+  verdict: compatible
+  reason: Admin control of storage and post-revoke behaviour do not conflict.
+- pair: dpa_eu_scc_included|eu_uk_customers_dpa_scc
+  verdict: same-fact
+  reason: Both say the DPA includes Standard Contractual Clauses for EU transfers.
+- pair: dpa_annex_iii_subprocessors|dpa_tia_wispr_support
+  verdict: compatible
+  reason: Annex III contents and TIA support are separate DPA facts that agree.
+- pair: hipaa_baa_growth_enterprise|soc2_card_enterprise_only
+  verdict: scope-gap
+  severity: high
+  type: hipaa_plan_availability
+  reason: HIPAA is "available on Growth and Enterprise", but the HIPAA card "requires an Enterprise plan".
+- pair: admin_cloud_storage_org_wide|signed_baa_locks_both_controls_off
+  verdict: scope-gap
+  severity: high
+  type: cloud_storage_baa_lock
+  reason: Admins can "leave it to individual users", but a signed BAA locks storage off regardless.
+- pair: baa_enterprise_no_signed_download|msa_redlines_enterprise_only
+  verdict: compatible
+  reason: No signed BAA download and custom documentation through sales are consistent facts.
+- pair: hipaa_requires_baa|pdf_may_not_match_agreement
+  verdict: compatible
+  reason: The BAA requirement and the PDF caveat are different facts with no conflict.
+- pair: docs_network_bypass_tls_stays_enabled|docs_network_root_certificates_respected
+  verdict: compatible
+  reason: TLS inspection support and the optional inspection bypass describe different configurations.
+- pair: dictation_cloud_off_discard|dictation_cloud_storage_scope
+  verdict: compatible
+  reason: Discard behaviour and the dictation-only scope of the control are different facts.
+- pair: admin_cloud_storage_org_wide|dictation_cloud_storage_scope
+  verdict: compatible
+  reason: Both refer to dictation cloud storage only, and they do not conflict.
+- pair: iso27001_surveillance_recertification|meeting_notetaker_not_assessed
+  verdict: scope-gap
+  severity: high
+  type: iso27001_scope_notetaker
+  reason: The certificate is "maintained through annual surveillance audits", but Notetaker "was not assessed".
+- pair: admin_cloud_storage_org_wide|dictation_cloud_off_discard
+  verdict: compatible
+  reason: Who sets storage and what happens when it is off are different facts.
+- pair: admin_cloud_storage_org_wide|baa_settings_stay_off_after_revoke
+  verdict: compatible
+  reason: Admin storage control and post-revoke defaults do not conflict as stated.
+- pair: admin_accepts_baa_portal|baa_available_healthcare_growth_enterprise
+  verdict: compatible
+  reason: The BAA acceptance process and plan availability agree on Growth and Enterprise.
+- pair: growth_price_listed_23_33|pro_price_listed_15
+  verdict: compatible
+  reason: These are prices for different plans, Growth and Pro.
+- pair: growth_price_listed_18_26|pro_price_listed_15
+  verdict: compatible
+  reason: These are prices for different plans, Growth and Pro.
+- pair: baa_revoke_settings_not_restored|personal_or_org_baa_locks_cloud_storage_off
+  verdict: compatible
+  reason: The lock while a BAA is active and non-restoration after revoke are consistent.
+- pair: ca_enterprise_disable_for_all_users|ca_growth_admins_cannot_enforce_off
+  verdict: compatible
+  reason: Different plans have different Context Awareness admin controls, and both claims say so.
+- pair: enterprise_only_completed_assessments|vendor_assessment_enterprise_only
+  verdict: same-fact
+  reason: Both say assessments and review calls are "reserved for Enterprise customers and prospects".
+- pair: admin_cloud_storage_dictation|dictation_cloud_storage_scope
+  verdict: same-fact
+  reason: Both describe the dictation cloud storage control, and one adds its scope.
+- pair: teams_external_bot_organiser_approval|teams_flags_external_meeting_bots
+  verdict: compatible
+  reason: Organiser approval and Unverified flagging are separate Teams measures from one report.
+- pair: hipaa_status_verification_planned|soc2_reverification_planned
+  verdict: compatible
+  reason: Two separate planned A-LIGN audit activities, both described as future work.
+- pair: assessment_requires_signed_nda|vendor_assessment_nda_required
+  verdict: same-fact
+  reason: Both say completed assessments "require a signed NDA".
+- pair: otter_bipa_claims_proceed|otter_wiretap_ca_claims_proceed
+  verdict: compatible
+  reason: The BIPA claims and the wiretap claims proceeding are separate rulings that agree.

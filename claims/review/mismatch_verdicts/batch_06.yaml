@@ -1,0 +1,90 @@
+- pair: willow_privacy_mode_default_on|willow_privacy_mode_keeps_nothing
+  verdict: compatible
+  reason: One states the default setting, the other states what is kept when Privacy Mode is on; no conflict.
+- pair: willow_privacy_mode_default_on|willow_privacy_off_product_improvement
+  verdict: compatible
+  reason: The default-on claim and the data use "when Privacy Mode is off" cover different states.
+- pair: willow_enterprise_enforce_privacy_mode|willow_privacy_mode_default_on
+  verdict: compatible
+  reason: Admin enforcement on Enterprise and the default setting are separate facts that fit together.
+- pair: willow_enforced_users_cannot_disable|willow_privacy_mode_default_on
+  verdict: compatible
+  reason: Users being unable to turn off an enforced setting does not conflict with it being on by default.
+- pair: willow_privacy_mode_default_on|willow_team_changes_privacy_settings
+  verdict: compatible
+  reason: A setting can be "enabled by default" and still be changeable by the customer's team.
+- pair: enterprise_plan_compliance_options|willow_privacy_mode_default_on
+  verdict: compatible
+  reason: Enforced Privacy Mode as an Enterprise option is a different fact from the default setting.
+- pair: sso_saml_login|willow_sso_identity_provider
+  verdict: same-fact
+  reason: Both say users sign in through the organization's "existing identity provider"; one adds SAML.
+- pair: sso_enforce_admin|willow_sso_identity_provider
+  verdict: compatible
+  reason: SSO support and admins being able to enforce SSO are related but different facts.
+- pair: enterprise_plan_compliance_options|willow_soc2_type_ii_reported
+  verdict: same-fact
+  reason: Both name SOC 2 Type II, and nothing in either text contradicts the other.
+- pair: sso_enforce_admin|sso_saml_login
+  verdict: compatible
+  reason: SAML sign-in and admin enforcement of SSO are related but different facts.
+- pair: enterprise_plan_compliance_options|sso_enforce_admin
+  verdict: compatible
+  reason: SSO listed as an Enterprise option and admins able to "enforce SSO" fit together.
+- pair: zdr_enforced_all_subprocessors|zdr_model_provider_agreements
+  verdict: same-fact
+  reason: Both describe zero data retention reaching third parties, and model providers are one kind of sub-processor.
+- pair: baa_personal_sign_ios|baa_revoke_settings_not_restored
+  verdict: compatible
+  reason: Where a personal BAA can be signed and what happens on revoking it are separate facts.
+- pair: baa_personal_sign_ios|baa_revoke_marked_not_deleted
+  verdict: compatible
+  reason: Signing on iOS and a revoked BAA being "marked as revoked" are separate facts.
+- pair: baa_personal_sign_ios|baa_signature_record_not_certificate
+  verdict: compatible
+  reason: Where to sign and the Signature Record being "not a legal certificate" are separate facts.
+- pair: baa_personal_model_training_off|baa_personal_sign_ios
+  verdict: compatible
+  reason: The ban on model training and signing on iOS are separate facts.
+- pair: baa_personal_model_training_off|hipaa_baa_click_through
+  verdict: compatible
+  reason: The model training restriction and the "click-through agreement" format are separate facts.
+- pair: baa_signing_turns_storage_off|enterprise_admin_enforce_cloud_storage
+  verdict: compatible
+  reason: A personal BAA turning storage off and admins able to enforce the setting do not conflict.
+- pair: baa_signing_turns_storage_off|dictation_cloud_off_discard
+  verdict: compatible
+  reason: One says signing turns storage off; the other says what happens when storage is off.
+- pair: baa_personal_sign_ios|baa_signing_turns_storage_off
+  verdict: compatible
+  reason: Where to sign and the effect of signing on cloud storage are separate facts.
+- pair: baa_org_keeps_storage_locked|baa_personal_sign_ios
+  verdict: compatible
+  reason: The org BAA keeping storage locked after revoking is separate from signing on iOS.
+- pair: ca_context_includes_textbox|ca_context_includes_user_identifier
+  verdict: compatible
+  reason: Both list different items that Context Awareness context can include.
+- pair: ca_context_includes_user_identifier|ca_off_still_sends_app_and_domain
+  verdict: compatible
+  reason: One covers Context Awareness on, the other covers it off; no conflict in the text.
+- pair: ca_improve_model_default_by_plan|enforce_off_for_everyone_requires_enterprise
+  verdict: compatible
+  reason: The default being "off for Enterprise" fits with enforcement needing an Enterprise upgrade.
+- pair: ca_improve_model_off_keeps_context_awareness|model_improvement_off_no_stop_cloud_processing
+  verdict: compatible
+  reason: Each names a different thing that turning off model improvement does not stop.
+- pair: ca_baa_locks_settings|enterprise_admin_enforce_cloud_storage
+  verdict: compatible
+  reason: A BAA locking storage off and admins able to enforce the setting are separate controls and do not conflict.
+- pair: ca_baa_locks_settings|revocation_removes_settings_locks
+  verdict: compatible
+  reason: Signing adds the locks and revoking "removes the agreement's settings locks"; these are consistent.
+- pair: ca_baa_locks_settings|dictation_cloud_off_discard
+  verdict: compatible
+  reason: One says the BAA locks storage off; the other says what happens when storage is off.
+- pair: ca_baa_locks_settings|hipaa_baa_click_through
+  verdict: compatible
+  reason: The BAA's effect on settings and its click-through format are separate facts.
+- pair: baa_signed_by_org_admin|ca_baa_locks_settings
+  verdict: compatible
+  reason: Who signs the BAA and what signing it locks are separate facts.

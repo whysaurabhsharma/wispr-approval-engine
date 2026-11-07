@@ -1,0 +1,92 @@
+- pair: admin_cloud_storage_off_everyone|baa_signing_turns_storage_off
+  verdict: compatible
+  reason: One is an admin control and the other is an effect of signing a personal BAA; both turn storage off and do not conflict.
+- pair: ca_on_by_default|ca_platform_support
+  verdict: compatible
+  reason: The default setting and the list of supported platforms are separate facts.
+- pair: ca_no_screenshots|ca_on_by_default
+  verdict: compatible
+  reason: How Context Awareness works and its default state are separate facts.
+- pair: ca_context_includes_textbox|ca_on_by_default
+  verdict: compatible
+  reason: What context can include and the default state are separate facts that do not conflict.
+- pair: ca_context_includes_user_identifier|ca_on_by_default
+  verdict: compatible
+  reason: The user identifier being in context and the default state are separate facts.
+- pair: ca_off_still_sends_app_and_domain|ca_on_by_default
+  verdict: compatible
+  reason: What is sent when the feature is off does not conflict with it being "on by default".
+- pair: ca_off_no_other_onscreen_text|ca_on_by_default
+  verdict: compatible
+  reason: Behaviour when the feature is off does not conflict with the default state.
+- pair: ca_command_mode_sends_text|ca_on_by_default
+  verdict: compatible
+  reason: Command Mode and Polish sending text is separate from the Context Awareness default.
+- pair: ca_improve_model_off_keeps_context_awareness|ca_on_by_default
+  verdict: compatible
+  reason: The independence of two settings does not conflict with the default state.
+- pair: ca_enterprise_disable_for_all_users|ca_on_by_default
+  verdict: compatible
+  reason: An Enterprise admin override does not conflict with the feature being on by default.
+- pair: ca_growth_admins_cannot_enforce_off|ca_on_by_default
+  verdict: compatible
+  reason: Growth users controlling their own setting does not conflict with the default being on.
+- pair: ca_hipaa_compatible|ca_on_by_default
+  verdict: compatible
+  reason: A HIPAA-compatibility statement and the default state are separate facts.
+- pair: ca_on_by_default|ca_sensitive_environments_turn_off
+  verdict: compatible
+  reason: Advice to turn the feature off in sensitive environments fits with it being on by default.
+- pair: admin_context_awareness_toggle|ca_on_by_default
+  verdict: compatible
+  reason: An admin availability control and the default state are separate facts.
+- pair: ca_on_by_default|context_awareness_enterprise_disable
+  verdict: compatible
+  reason: An Enterprise org-wide disable option does not conflict with the feature being on by default.
+- pair: ca_enterprise_disable_for_all_users|context_awareness_enterprise_disable
+  verdict: scope-gap
+  severity: medium
+  type: context_awareness_disable_platforms
+  reason: One says "org-wide" but the other limits it to "everyone on Mac and Windows", so iOS is not covered.
+- pair: enterprise_admin_enforce_cloud_storage|personal_or_org_baa_locks_cloud_storage_off
+  verdict: compatible
+  reason: Admin enforcement and the BAA lock are separate controls that both keep storage off.
+- pair: admin_cloud_storage_off_everyone|personal_or_org_baa_locks_cloud_storage_off
+  verdict: compatible
+  reason: An admin turn-off control and a BAA lock are separate ways to keep storage off.
+- pair: admin_cloud_storage_off_everyone|revoking_baa_does_not_restore_sharing
+  verdict: compatible
+  reason: An admin control and what happens after a BAA revoke are separate facts.
+- pair: admin_cloud_storage_off_everyone|signed_baa_locks_both_controls_off
+  verdict: compatible
+  reason: An admin control and a BAA lock on both controls do not conflict.
+- pair: admin_cloud_storage_off_everyone|org_model_restriction_not_cloud_storage
+  verdict: compatible
+  reason: The model-improvement restriction being separate from storage does not conflict with the admin storage control.
+- pair: admin_cloud_storage_off_everyone|unconfirmed_org_settings_forced_off
+  verdict: compatible
+  reason: A fail-safe for unconfirmed settings is separate from the admin turn-off control.
+- pair: baa_ai_providers_covered|baa_ai_text_providers_covered
+  verdict: same-fact
+  reason: Both say covered text goes only to AI providers covered by the BAA.
+- pair: growth_sso_saml|saml_sso_growth_enterprise
+  verdict: same-fact
+  reason: Both say SAML single sign-on is available on Growth.
+- pair: soc2_type2_criteria_scope|soc2_type_ii_report
+  verdict: same-fact
+  reason: Both describe the SOC 2 Type II report, one adding the criteria covered.
+- pair: iso27001_certificate_held|iso27001_surveillance_recertification
+  verdict: same-fact
+  reason: The text of both describes a held ISO 27001 certificate and does not conflict.
+- pair: enterprise_scim_provisioning|scim_provisioning_supported
+  verdict: same-fact
+  reason: Both say SCIM provisioning is supported, one naming the Enterprise plan, and neither says it is limited to that plan.
+- pair: admin_cloud_storage_off_everyone|dictation_cloud_off_discard
+  verdict: compatible
+  reason: The admin control and what happens to audio when storage is off are separate facts.
+- pair: admin_cloud_storage_off_everyone|baa_settings_stay_off_after_revoke
+  verdict: compatible
+  reason: An admin control and settings staying off after a revoke do not conflict.
+- pair: admin_accepts_baa_portal|baa_signed_by_org_admin
+  verdict: same-fact
+  reason: Both say an admin accepts or signs the BAA in the admin portal.

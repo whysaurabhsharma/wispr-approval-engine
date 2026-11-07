@@ -1,0 +1,98 @@
+- pair: enterprise_model_training_locked|model_improvement_off_enterprise
+  verdict: same-fact
+  reason: Both say model training is off for Enterprise and cannot be turned on again.
+- pair: enterprise_model_training_enforced|model_improvement_off_enterprise
+  verdict: same-fact
+  reason: Both say Enterprise model training is off; one adds contract enforcement, the other adds that admins cannot re-enable it.
+- pair: iso_27001_certification_in_progress|notetaker_not_in_audits
+  verdict: compatible
+  reason: Saying Notetaker was not assessed in the ISO audits does not claim certification is complete, so it fits with "in progress with A-LIGN".
+- pair: soc2_type2_hipaa_hitech_scope|soc2_type2_unqualified_opinion
+  verdict: compatible
+  reason: One describes the report's HIPAA and HITECH coverage and the other its audit opinion, which are separate facts.
+- pair: enterprise_model_training_locked|growth_admin_model_training_control
+  verdict: compatible
+  reason: The claims cover different plans, Enterprise locked off versus Growth admin control, so they do not conflict.
+- pair: baa_settings_stay_off_after_revoke|enterprise_model_training_locked
+  verdict: scope-gap
+  severity: high
+  type: model_training_after_baa_revoke
+  reason: The revoke claim says sharing stays off "until the user turns them back on" but does not mention the Enterprise lock that blocks this.
+- pair: admin_cloud_storage_org_wide|dictation_storage_only_if_cloud_on
+  verdict: compatible
+  reason: One says who controls the cloud storage setting and the other says what is stored when it is on.
+- pair: baa_settings_stay_off_after_revoke|dictation_storage_only_if_cloud_on
+  verdict: compatible
+  reason: Storage staying off after a revoke fits with data being stored only if cloud storage is on.
+- pair: iso_27001_certification_in_progress|soc2_iso_in_scope_system_dictation
+  verdict: compatible
+  reason: Naming dictation as the in-scope system for the ISO audit does not say certification is complete.
+- pair: growth_price_listed_23_33|pro_price_listed_12
+  verdict: compatible
+  reason: These are prices for two different plans, Growth and Pro.
+- pair: growth_price_listed_18_26|pro_price_listed_12
+  verdict: compatible
+  reason: These are prices for two different plans, Growth and Pro.
+- pair: baa_enterprise_no_signed_download|baa_signed_copy_individual_only
+  verdict: same-fact
+  reason: Both say signed BAA downloads are not offered to enterprise users, only to individual users.
+- pair: baa_available_healthcare_growth_enterprise|hipaa_ready_with_signed_baa
+  verdict: compatible
+  reason: One says which plans can get a BAA and the other says Flow is HIPAA-ready once the BAA is signed.
+- pair: ca_enterprise_disable_for_all_users|ca_off_still_sends_app_and_domain
+  verdict: scope-gap
+  severity: medium
+  type: context_awareness_off_residual_data
+  reason: '"Turns it off for everyone" does not mention that Flow still sends the app name and website domain.'
+- pair: baa_personal_model_training_off|baa_records_excluded_from_export
+  verdict: compatible
+  reason: One covers model training under a BAA and the other covers what the data export includes.
+- pair: baa_records_excluded_from_export|enforce_zero_retention_enterprise_admins_only
+  verdict: compatible
+  reason: Data export contents and who can change zero data retention are separate facts.
+- pair: baa_records_excluded_from_export|typed_feedback_not_stripped_by_baa
+  verdict: compatible
+  reason: Data export contents and how typed feedback is handled under a BAA are separate facts.
+- pair: baa_signature_record_not_certificate|hipaa_baa_signed_by_admin
+  verdict: compatible
+  reason: One describes the status of the Signature Record page and the other describes who signs the BAA.
+- pair: android_no_baa_signing|baa_live_billing_admin_managed
+  verdict: compatible
+  reason: One is about the Android platform and the other about billing-based admin management, which are separate facts.
+- pair: baa_personal_model_training_off|security_model_training_optout
+  verdict: compatible
+  reason: A general opt-out from model training fits with a BAA that does not allow training.
+- pair: android_no_baa_signing|baa_signing_turns_storage_off
+  verdict: compatible
+  reason: One covers which platforms have a BAA flow and the other covers what happens when a BAA is signed.
+- pair: baa_org_admin_portal_only|hipaa_baa_signed_by_admin
+  verdict: same-fact
+  reason: Both say an administrator handles the org BAA in the admin portal.
+- pair: android_no_baa_signing|baa_org_signing_requires_enterprise
+  verdict: compatible
+  reason: One is about the Android platform and the other about the subscription needed to sign, which are separate facts.
+- pair: ca_off_still_sends_app_and_domain|ca_platform_support
+  verdict: compatible
+  reason: One says what is sent when the feature is off and the other lists the supported platforms.
+- pair: ca_enterprise_disable_for_all_users|ca_platform_support
+  verdict: scope-gap
+  severity: medium
+  type: context_awareness_disable_ios
+  reason: Context Awareness runs on iOS too, but "Disable for all users" only covers "Mac and Windows".
+- pair: admin_context_awareness_toggle|ca_no_screenshots
+  verdict: compatible
+  reason: The admin toggle and the absence of screenshots are separate facts.
+- pair: admin_context_awareness_toggle|ca_context_includes_textbox
+  verdict: compatible
+  reason: One says admins can control the feature and the other says what it collects when on.
+- pair: admin_context_awareness_toggle|ca_context_includes_user_identifier
+  verdict: compatible
+  reason: One says admins can control the feature and the other says what it collects when on.
+- pair: admin_context_awareness_toggle|ca_off_still_sends_app_and_domain
+  verdict: scope-gap
+  severity: medium
+  type: context_awareness_off_residual_data
+  reason: The admin control claim does not mention that Flow "still sends the app name and website domain" when the feature is off.
+- pair: admin_context_awareness_toggle|ca_off_no_other_onscreen_text
+  verdict: compatible
+  reason: One says admins can control the feature and the other limits what is read when it is off.

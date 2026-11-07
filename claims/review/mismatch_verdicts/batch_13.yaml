@@ -1,0 +1,98 @@
+- pair: admin_context_awareness_toggle|ca_command_mode_sends_text
+  verdict: scope-gap
+  severity: medium
+  type: context_awareness_off_still_sends_text
+  reason: An admin who turns context awareness off may not know that Command Mode and Polish still send text "even when Context Awareness is off".
+- pair: admin_context_awareness_toggle|ca_improve_model_off_keeps_context_awareness
+  verdict: compatible
+  reason: One is about admin control of context awareness and the other is about how the model-improvement setting interacts with it, so they do not conflict.
+- pair: admin_context_awareness_toggle|ca_enterprise_disable_for_all_users
+  verdict: same-fact
+  reason: The Enterprise "Disable for all users" option is a more specific version of admins controlling context awareness.
+- pair: admin_context_awareness_toggle|ca_growth_admins_cannot_enforce_off
+  verdict: scope-gap
+  severity: medium
+  type: context_awareness_admin_control
+  reason: The broad admin-control claim leaves out that on Growth "administrators cannot enforce it off".
+- pair: admin_context_awareness_toggle|ca_hipaa_compatible
+  verdict: compatible
+  reason: Admin control and HIPAA-workflow compatibility are separate facts that do not conflict.
+- pair: android_no_baa_signing|ca_baa_locks_settings
+  verdict: compatible
+  reason: One says Android lacks a BAA flow and the other says what a signed BAA locks, so they are different facts.
+- pair: admin_context_awareness_toggle|ca_sensitive_environments_turn_off
+  verdict: compatible
+  reason: The advice to turn context awareness off in sensitive environments is consistent with admins controlling it.
+- pair: android_no_baa_signing|delete_account_android_no_in_app
+  verdict: compatible
+  reason: Both describe separate Android gaps, BAA signing and in-app deletion, and neither conflicts with the other.
+- pair: model_improvement_default_on|model_improvement_off_withholds_content
+  verdict: compatible
+  reason: The default setting and what happens when the setting is off are different facts.
+- pair: model_improvement_off_stops_training|model_improvement_off_withholds_content
+  verdict: same-fact
+  reason: Both say that turning model improvement off keeps personal content out of model improvement, and one gives more detail.
+- pair: model_improvement_default_on|model_improvement_off_metadata_still_uploaded
+  verdict: compatible
+  reason: The default state and the metadata still uploaded when the setting is off are different facts.
+- pair: model_improvement_default_on|model_improvement_off_no_stop_cloud_processing
+  verdict: compatible
+  reason: The default state and the fact that turning it off "does not stop cloud processing" do not conflict.
+- pair: confidential_content_turn_off_before_recording|model_improvement_default_on
+  verdict: compatible
+  reason: Advice to turn model improvement off fits with it being on by default for Free and Pro.
+- pair: dictation_cloud_storage_scope|dictation_cloud_storage_stores_history_on_servers
+  verdict: same-fact
+  reason: Both describe Dictation Cloud Storage as storing dictation data on Wispr's servers.
+- pair: notetaker_recordings_private|notetaker_transcripts_stored_in_cloud
+  verdict: compatible
+  reason: Keeping recordings private does not conflict with transcripts being "stored in Wispr's cloud".
+- pair: enterprise_model_training_off_for_everyone|security_model_training_optout
+  verdict: compatible
+  reason: Training already off on Enterprise does not conflict with users being able to opt out at any time.
+- pair: model_improvement_default_on|teams_pro_model_training_managed_individually
+  verdict: compatible
+  reason: The default being on for Free and Pro fits with each member deciding on Teams and Pro.
+- pair: security_model_training_optout|teams_pro_model_training_managed_individually
+  verdict: same-fact
+  reason: Each member deciding on Teams and Pro is a more specific version of users opting out at any time.
+- pair: enforce_off_for_everyone_requires_enterprise|security_model_training_optout
+  verdict: scope-gap
+  severity: high
+  type: model_training_org_enforcement
+  reason: The opt-out claim leaves out that "enforcing off for everyone requires upgrading to Enterprise", so a Teams or Pro approver could assume they can enforce it for the whole organization.
+- pair: android_no_baa_signing|enforce_zero_retention_enterprise_admins_only
+  verdict: compatible
+  reason: The Android BAA gap and who can change zero data retention are different facts.
+- pair: enforce_zero_retention_enterprise_admins_only|hipaa_baa_signed_by_admin
+  verdict: compatible
+  reason: Who can change zero retention and who signs the BAA are different facts that do not conflict.
+- pair: hipaa_baa_signed_by_admin|notetaker_works_alongside_baa
+  verdict: compatible
+  reason: Who signs the BAA and whether Notetaker works alongside a BAA are different facts in the text given.
+- pair: dictation_cloud_storage_scope|dictation_controls_platforms
+  verdict: compatible
+  reason: What the storage control covers and which platforms have it are different facts.
+- pair: dpa_billing_separate_url|dpa_org_legal_contact_email
+  verdict: compatible
+  reason: The billing DPA URL and the contact for organization DPA requests are different facts.
+- pair: dictation_cloud_storage_scope|model_improvement_controls_dictation_use
+  verdict: compatible
+  reason: The two claims describe two different settings, storage and model improvement, with different scopes.
+- pair: dictation_cloud_storage_scope|signed_baa_locks_both_controls_off
+  verdict: compatible
+  reason: A signed BAA locking the dictation storage control off fits with what that control covers.
+- pair: hipaa_baa_signed_by_admin|signed_baa_locks_both_controls_off
+  verdict: compatible
+  reason: Who signs the BAA and what a signed BAA locks are different facts.
+- pair: model_improvement_default_on|unconfirmed_org_settings_forced_off
+  verdict: compatible
+  reason: The Free and Pro default does not conflict with settings being forced off when an organization's settings cannot be confirmed.
+- pair: hipaa_baa_signed_by_admin|msa_redlines_enterprise_only
+  verdict: scope-gap
+  severity: high
+  type: baa_process
+  reason: The admin-portal signing claim covers Growth, but custom signed BAA documentation "require our highest-tier Enterprise plan" and goes through sales.
+- pair: android_no_baa_signing|pdf_may_not_match_agreement
+  verdict: compatible
+  reason: The Android BAA gap and the PDF possibly not matching the agreement text are different facts.

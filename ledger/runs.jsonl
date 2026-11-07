@@ -22,3 +22,4 @@
 {"t": "2026-11-06T18:48:35", "skill": "it-brief", "input": "ps-10", "result": "pass", "cost_usd": 0.0}
 {"t": "2026-11-06T19:05:53", "skill": "business-case", "input": "ps-01", "result": "pass", "cost_usd": 0.0}
 {"t": "2026-11-07T16:51:07", "skill": "claims-refresh", "input": "docs_audit_logs,docs_baa_revoke,docs_hipaa,docs_vendor_assessments", "result": "pass", "cost_usd": 0.0}
+{"t": "2026-11-07T17:03:20", "skill": "mismatch-report", "input": "all", "result": "pass", "cost_usd": 0.0}

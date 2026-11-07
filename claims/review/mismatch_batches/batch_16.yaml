@@ -1,0 +1,558 @@
+- pair: admin_cloud_storage_org_wide|dictation_cloud_storage_stores_history_on_servers
+  a:
+    id: admin_cloud_storage_org_wide
+    claim: Admins can set dictation cloud storage for the whole organization, or leave it to individual users.
+    source_id: wf_enterprise_privacy_post
+    source_quote: Set dictation cloud storage for the whole organization, or leave it to individual users.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id003
+    - unknown
+  b:
+    id: dictation_cloud_storage_stores_history_on_servers
+    claim: Dictation cloud storage stores dictation transcripts, audio and history on Wispr's servers for cross-device access.
+    source_id: docs_data_sharing
+    source_quote: Stores dictation transcripts, audio and history on Wispr's servers
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: personal_or_org_baa_locks_cloud_storage_off|unconfirmed_org_settings_forced_off
+  a:
+    id: personal_or_org_baa_locks_cloud_storage_off
+    claim: A personal or organization BAA locks dictation cloud storage off, even if another organization setting permits sharing.
+    source_id: docs_data_sharing
+    source_quote: A personal or organization BAA locks
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id001
+    - unknown
+  b:
+    id: unconfirmed_org_settings_forced_off
+    claim: When an organization account's settings cannot be confirmed, model improvement and dictation cloud storage are forced off until the settings resolve.
+    source_id: docs_hipaa
+    source_quote: are forced off until the settings resolve
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: baa_settings_stay_off_after_revoke|personal_or_org_baa_locks_cloud_storage_off
+  a:
+    id: baa_settings_stay_off_after_revoke
+    claim: After a revoke, Dictation cloud storage and model training sharing stay off until the user turns them back on.
+    source_id: docs_baa_revoke
+    source_quote: storage and sharing stay off until you turn them back on
+    checked: '2026-11-07'
+    status: confirmed
+    plan_scope: &id002
+    - unknown
+  b:
+    id: personal_or_org_baa_locks_cloud_storage_off
+    claim: A personal or organization BAA locks dictation cloud storage off, even if another organization setting permits sharing.
+    source_id: docs_data_sharing
+    source_quote: A personal or organization BAA locks
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id001
+- pair: baa_settings_stay_off_after_revoke|enforce_off_for_everyone_requires_enterprise
+  a:
+    id: baa_settings_stay_off_after_revoke
+    claim: After a revoke, Dictation cloud storage and model training sharing stay off until the user turns them back on.
+    source_id: docs_baa_revoke
+    source_quote: storage and sharing stay off until you turn them back on
+    checked: '2026-11-07'
+    status: confirmed
+    plan_scope: *id002
+  b:
+    id: enforce_off_for_everyone_requires_enterprise
+    claim: Enforcing model training off for everyone requires upgrading to Enterprise.
+    source_id: docs_data_sharing
+    source_quote: so each member decides, and enforcing off for everyone requires upgrading to Enterprise
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - teams
+    - pro
+- pair: baa_enterprise_no_signed_download|enforce_zero_retention_enterprise_admins_only
+  a:
+    id: baa_enterprise_no_signed_download
+    claim: Neither enterprise HIPAA row offers a download of the signed BAA.
+    source_id: docs_baa_revoke
+    source_quote: Neither enterprise row offers Download signed BAA
+    checked: '2026-11-07'
+    status: confirmed
+    plan_scope: &id005
+    - enterprise
+  b:
+    id: enforce_zero_retention_enterprise_admins_only
+    claim: Only Enterprise admins can change Enforce zero data retention, unless Wispr has locked it or a signed BAA prevents disabling it.
+    source_id: docs_data_sharing
+    source_quote: only Enterprise admins can change it, unless Wispr has locked it
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - enterprise
+- pair: dictation_cloud_off_discard|revoking_baa_does_not_restore_sharing
+  a:
+    id: dictation_cloud_off_discard
+    claim: With Dictation cloud storage off, audio is discarded once it is transcribed.
+    source_id: wf_enterprise_privacy_post
+    source_quote: Turn it off and audio is discarded once it's transcribed.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id006
+    - unknown
+  b:
+    id: revoking_baa_does_not_restore_sharing
+    claim: Revoking a BAA does not turn sharing or dictation cloud storage back on.
+    source_id: docs_data_sharing
+    source_quote: it does not turn sharing or dictation cloud storage back on
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id004
+    - unknown
+- pair: admin_cloud_storage_org_wide|revoking_baa_does_not_restore_sharing
+  a:
+    id: admin_cloud_storage_org_wide
+    claim: Admins can set dictation cloud storage for the whole organization, or leave it to individual users.
+    source_id: wf_enterprise_privacy_post
+    source_quote: Set dictation cloud storage for the whole organization, or leave it to individual users.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id003
+  b:
+    id: revoking_baa_does_not_restore_sharing
+    claim: Revoking a BAA does not turn sharing or dictation cloud storage back on.
+    source_id: docs_data_sharing
+    source_quote: it does not turn sharing or dictation cloud storage back on
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id004
+- pair: dpa_eu_scc_included|eu_uk_customers_dpa_scc
+  a:
+    id: dpa_eu_scc_included
+    claim: The DPA includes the EU Standard Contractual Clauses for transfers out of the EEA.
+    source_id: docs_dpa
+    source_quote: EU Standard Contractual Clauses (SCCs) for transfers of personal data
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: eu_uk_customers_dpa_scc
+    claim: EU and UK customers are served under a Data Processing Agreement with Standard Contractual Clauses.
+    source_id: wf_compliance_note
+    source_quote: under a Data Processing Agreement with Standard Contractual Clauses
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: dpa_annex_iii_subprocessors|dpa_tia_wispr_support
+  a:
+    id: dpa_annex_iii_subprocessors
+    claim: The DPA includes Annex III, which lists current subprocessors.
+    source_id: docs_dpa
+    source_quote: Annex III, listing current subprocessors.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: dpa_tia_wispr_support
+    claim: Wispr supports the customer's TIA with the DPA, including the SCCs and Annex III.
+    source_id: docs_dpa
+    source_quote: Wispr supports it with the DPA (including the SCCs and Annex III)
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: hipaa_baa_growth_enterprise|soc2_card_enterprise_only
+  a:
+    id: hipaa_baa_growth_enterprise
+    claim: HIPAA compliance is available on the Growth and Enterprise plans with a signed Business Associate Agreement.
+    source_id: wf_business
+    source_quote: Available on Growth and Enterprise with a signed Business Associate Agreement.
+    checked: '2026-11-06'
+    status: confirmed
+    plan_scope:
+    - growth
+    - enterprise
+  b:
+    id: soc2_card_enterprise_only
+    claim: The SOC 2 and HIPAA compliance card on Privacy requires an Enterprise plan.
+    source_id: docs_dpa
+    source_quote: is the only card requiring an Enterprise plan
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - enterprise
+- pair: admin_cloud_storage_org_wide|signed_baa_locks_both_controls_off
+  a:
+    id: admin_cloud_storage_org_wide
+    claim: Admins can set dictation cloud storage for the whole organization, or leave it to individual users.
+    source_id: wf_enterprise_privacy_post
+    source_quote: Set dictation cloud storage for the whole organization, or leave it to individual users.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id003
+  b:
+    id: signed_baa_locks_both_controls_off
+    claim: A signed BAA locks both the model-improvement and dictation cloud storage controls off.
+    source_id: docs_hipaa
+    source_quote: A signed BAA locks both controls off
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: baa_enterprise_no_signed_download|msa_redlines_enterprise_only
+  a:
+    id: baa_enterprise_no_signed_download
+    claim: Neither enterprise HIPAA row offers a download of the signed BAA.
+    source_id: docs_baa_revoke
+    source_quote: Neither enterprise row offers Download signed BAA
+    checked: '2026-11-07'
+    status: confirmed
+    plan_scope: *id005
+  b:
+    id: msa_redlines_enterprise_only
+    claim: MSA redlines or custom signed BAA documentation require the Enterprise plan and go through the sales representative.
+    source_id: docs_hipaa
+    source_quote: MSA redlines or custom signed documentation require our highest-tier Enterprise plan
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - enterprise
+- pair: hipaa_requires_baa|pdf_may_not_match_agreement
+  a:
+    id: hipaa_requires_baa
+    claim: HIPAA-ready dictation requires a signed Business Associate Agreement (BAA).
+    source_id: docs_security_faq
+    source_quote: HIPAA-ready dictation requires a signed
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: pdf_may_not_match_agreement
+    claim: The signed BAA PDF may not match the agreement text at signing.
+    source_id: docs_hipaa
+    source_quote: the PDF may not match the agreement text at signing
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: docs_network_bypass_tls_stays_enabled|docs_network_root_certificates_respected
+  a:
+    id: docs_network_bypass_tls_stays_enabled
+    claim: On the dictation inspection bypass, TLS stays enabled and the gateway stops intercepting and re-encrypting the connections.
+    source_id: docs_network
+    source_quote: TLS stays enabled. The gateway stops intercepting and re-encrypting these connections
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: docs_network_root_certificates_respected
+    claim: Flow respects organizational root certificates, including TLS inspection, for dictation.
+    source_id: docs_network
+    source_quote: Flow respects system proxy settings and organizational root certificates, including TLS inspection
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: dictation_cloud_off_discard|dictation_cloud_storage_scope
+  a:
+    id: dictation_cloud_off_discard
+    claim: With Dictation cloud storage off, audio is discarded once it is transcribed.
+    source_id: wf_enterprise_privacy_post
+    source_quote: Turn it off and audio is discarded once it's transcribed.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id006
+  b:
+    id: dictation_cloud_storage_scope
+    claim: Dictation Cloud Storage controls whether dictation data is stored on Wispr's servers, not Notetaker or Scratchpad.
+    source_id: docs_security_faq
+    source_quote: Whether dictation data is stored on Wispr's servers; dictation only, not Notetaker or Scratchpad
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id007
+    - unknown
+- pair: admin_cloud_storage_org_wide|dictation_cloud_storage_scope
+  a:
+    id: admin_cloud_storage_org_wide
+    claim: Admins can set dictation cloud storage for the whole organization, or leave it to individual users.
+    source_id: wf_enterprise_privacy_post
+    source_quote: Set dictation cloud storage for the whole organization, or leave it to individual users.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id003
+  b:
+    id: dictation_cloud_storage_scope
+    claim: Dictation Cloud Storage controls whether dictation data is stored on Wispr's servers, not Notetaker or Scratchpad.
+    source_id: docs_security_faq
+    source_quote: Whether dictation data is stored on Wispr's servers; dictation only, not Notetaker or Scratchpad
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id007
+- pair: iso27001_surveillance_recertification|meeting_notetaker_not_assessed
+  a:
+    id: iso27001_surveillance_recertification
+    claim: The ISO/IEC 27001 certificate is maintained through annual surveillance audits, with recertification every three years.
+    source_id: docs_vendor_assessments
+    source_quote: maintained through annual surveillance audits with recertification every three years
+    checked: '2026-11-07'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: meeting_notetaker_not_assessed
+    claim: Meeting Notetaker was not assessed in the SOC 2 or ISO 27001 audits.
+    source_id: docs_vendor_assessments
+    source_quote: Meeting Notetaker launched after those audit periods and was not assessed
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: admin_cloud_storage_org_wide|dictation_cloud_off_discard
+  a:
+    id: admin_cloud_storage_org_wide
+    claim: Admins can set dictation cloud storage for the whole organization, or leave it to individual users.
+    source_id: wf_enterprise_privacy_post
+    source_quote: Set dictation cloud storage for the whole organization, or leave it to individual users.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id003
+  b:
+    id: dictation_cloud_off_discard
+    claim: With Dictation cloud storage off, audio is discarded once it is transcribed.
+    source_id: wf_enterprise_privacy_post
+    source_quote: Turn it off and audio is discarded once it's transcribed.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id006
+- pair: admin_cloud_storage_org_wide|baa_settings_stay_off_after_revoke
+  a:
+    id: admin_cloud_storage_org_wide
+    claim: Admins can set dictation cloud storage for the whole organization, or leave it to individual users.
+    source_id: wf_enterprise_privacy_post
+    source_quote: Set dictation cloud storage for the whole organization, or leave it to individual users.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id003
+  b:
+    id: baa_settings_stay_off_after_revoke
+    claim: After a revoke, Dictation cloud storage and model training sharing stay off until the user turns them back on.
+    source_id: docs_baa_revoke
+    source_quote: storage and sharing stay off until you turn them back on
+    checked: '2026-11-07'
+    status: confirmed
+    plan_scope: *id002
+- pair: admin_accepts_baa_portal|baa_available_healthcare_growth_enterprise
+  a:
+    id: admin_accepts_baa_portal
+    claim: An admin accepts the Business Associate Agreement from the admin portal to enable HIPAA support.
+    source_id: wf_compliance_note
+    source_quote: an admin accepts the Business Associate Agreement from the admin portal
+    checked: '2026-11-06'
+    status: confirmed
+    plan_scope:
+    - growth
+    - enterprise
+  b:
+    id: baa_available_healthcare_growth_enterprise
+    claim: A Business Associate Agreement is available for healthcare customers on the Growth and Enterprise plans.
+    source_id: docs_vendor_assessments
+    source_quote: for healthcare customers on the Growth and Enterprise plans
+    checked: '2026-11-07'
+    status: confirmed
+    plan_scope:
+    - growth
+    - enterprise
+- pair: growth_price_listed_23_33|pro_price_listed_15
+  a:
+    id: growth_price_listed_23_33
+    claim: The pricing page lists Growth at $23 per user per month, with $33 per user per month shown beside Unlimited Notetaker access.
+    source_id: wf_pricing
+    source_quote: Growth Basic admin controls $23 /user/mo $33 /user/mo Unlimited Notetaker access
+    checked: '2026-11-06'
+    status: confirmed
+    plan_scope:
+    - growth
+  b:
+    id: pro_price_listed_15
+    claim: The pricing page lists Pro at $15 per user per month in one view of the plan table.
+    source_id: wf_pricing
+    source_quote: Pro For individuals and teams $15 /user/mo
+    checked: '2026-11-06'
+    status: confirmed
+    plan_scope: &id008
+    - pro
+- pair: growth_price_listed_18_26|pro_price_listed_15
+  a:
+    id: growth_price_listed_18_26
+    claim: The pricing page also lists Growth at $18 per user per month, with $26 per user per month shown beside Unlimited Notetaker access.
+    source_id: wf_pricing
+    source_quote: Growth Basic admin controls $18 /user/mo $26 /user/mo Unlimited Notetaker access
+    checked: '2026-11-06'
+    status: confirmed
+    plan_scope:
+    - growth
+  b:
+    id: pro_price_listed_15
+    claim: The pricing page lists Pro at $15 per user per month in one view of the plan table.
+    source_id: wf_pricing
+    source_quote: Pro For individuals and teams $15 /user/mo
+    checked: '2026-11-06'
+    status: confirmed
+    plan_scope: *id008
+- pair: baa_revoke_settings_not_restored|personal_or_org_baa_locks_cloud_storage_off
+  a:
+    id: baa_revoke_settings_not_restored
+    claim: Revoking a personal BAA removes BAA enforcement but does not restore the storage and sharing settings.
+    source_id: docs_baa_revoke
+    source_quote: Revoking removes personal-BAA enforcement but does not restore those settings
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: personal_or_org_baa_locks_cloud_storage_off
+    claim: A personal or organization BAA locks dictation cloud storage off, even if another organization setting permits sharing.
+    source_id: docs_data_sharing
+    source_quote: A personal or organization BAA locks
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id001
+- pair: ca_enterprise_disable_for_all_users|ca_growth_admins_cannot_enforce_off
+  a:
+    id: ca_enterprise_disable_for_all_users
+    claim: On Enterprise, the Disable for all users option turns Context Awareness off for everyone on Mac and Windows and locks the setting.
+    source_id: docs_context_awareness
+    source_quote: which turns it off for everyone on Mac and Windows and locks the setting
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - enterprise
+  b:
+    id: ca_growth_admins_cannot_enforce_off
+    claim: On Growth, each person controls their own Context Awareness setting and administrators cannot enforce it off.
+    source_id: docs_context_awareness
+    source_quote: each person controls their own setting and administrators cannot enforce it off
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - growth
+- pair: enterprise_only_completed_assessments|vendor_assessment_enterprise_only
+  a:
+    id: enterprise_only_completed_assessments
+    claim: Completed vendor security assessments and security review calls are reserved for Enterprise customers and prospects.
+    source_id: docs_vendor_assessments
+    source_quote: reserved for Enterprise customers and prospects
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - enterprise
+  b:
+    id: vendor_assessment_enterprise_only
+    claim: Completed vendor security assessments, questionnaires and security review calls are reserved for Enterprise customers and prospects.
+    source_id: docs_vendor_assessments
+    source_quote: are reserved for Enterprise customers and prospects, and require a signed NDA
+    checked: '2026-11-07'
+    status: confirmed
+    plan_scope:
+    - enterprise
+- pair: admin_cloud_storage_dictation|dictation_cloud_storage_scope
+  a:
+    id: admin_cloud_storage_dictation
+    claim: Admins control whether dictation is stored in the cloud.
+    source_id: wf_business
+    source_quote: whether dictation is stored in the cloud
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: dictation_cloud_storage_scope
+    claim: Dictation Cloud Storage controls whether dictation data is stored on Wispr's servers, not Notetaker or Scratchpad.
+    source_id: docs_security_faq
+    source_quote: Whether dictation data is stored on Wispr's servers; dictation only, not Notetaker or Scratchpad
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id007
+- pair: teams_external_bot_organiser_approval|teams_flags_external_meeting_bots
+  a:
+    id: teams_external_bot_organiser_approval
+    claim: UC Today reports Microsoft Teams requires organiser approval for some external meeting bots.
+    source_id: legal_otter_uctoday
+    source_quote: require organiser approval
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: teams_flags_external_meeting_bots
+    claim: UC Today reports Microsoft Teams flags some external meeting bots as Unverified.
+    source_id: legal_otter_uctoday
+    source_quote: Microsoft Teams has moved to flag some external meeting bots as “Unverified”
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: hipaa_status_verification_planned|soc2_reverification_planned
+  a:
+    id: hipaa_status_verification_planned
+    claim: A-LIGN will verify Wispr's HIPAA status; the post describes this as future work.
+    source_id: wf_new_audit
+    source_quote: verifying our HIPAA status
+    checked: '2026-11-05'
+    status: in-progress
+    plan_scope:
+    - unknown
+  b:
+    id: soc2_reverification_planned
+    claim: A-LIGN will re-verify Wispr's SOC 2 compliance; the post describes this as future work.
+    source_id: wf_new_audit
+    source_quote: A-LIGN will be reverifying our SOC 2 compliance
+    checked: '2026-11-05'
+    status: in-progress
+    plan_scope:
+    - unknown
+- pair: assessment_requires_signed_nda|vendor_assessment_nda_required
+  a:
+    id: assessment_requires_signed_nda
+    claim: Completed vendor security assessments require a signed NDA.
+    source_id: docs_vendor_assessments
+    source_quote: and require a signed NDA
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - enterprise
+  b:
+    id: vendor_assessment_nda_required
+    claim: A signed NDA is required before a completed vendor security assessment or security call is provided.
+    source_id: docs_vendor_assessments
+    source_quote: require a signed NDA
+    checked: '2026-11-07'
+    status: confirmed
+    plan_scope:
+    - enterprise
+- pair: otter_bipa_claims_proceed|otter_wiretap_ca_claims_proceed
+  a:
+    id: otter_bipa_claims_proceed
+    claim: The court allowed Illinois BIPA biometric privacy claims against Otter to proceed.
+    source_id: legal_otter_uctoday
+    source_quote: Judge Lee allowed claims under Illinois’ Biometric Information Privacy Act (BIPA) to proceed.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: otter_wiretap_ca_claims_proceed
+    claim: The court allowed the central federal wiretap and California privacy claims against Otter to proceed.
+    source_id: legal_otter_uctoday
+    source_quote: allowed the central claims under federal wiretap, California privacy
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope:
+    - unknown

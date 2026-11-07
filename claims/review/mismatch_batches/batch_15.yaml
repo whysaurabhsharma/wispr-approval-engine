@@ -1,0 +1,555 @@
+- pair: iso27001_surveillance_recertification|security_soc2_iso_certified
+  a:
+    id: iso27001_surveillance_recertification
+    claim: The ISO/IEC 27001 certificate is maintained through annual surveillance audits, with recertification every three years.
+    source_id: docs_vendor_assessments
+    source_quote: maintained through annual surveillance audits with recertification every three years
+    checked: '2026-11-07'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: security_soc2_iso_certified
+    claim: Flow is SOC 2 Type II and ISO 27001 certified.
+    source_id: wf_pricing
+    source_quote: SOC 2 Type II and ISO 27001 certified.
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope:
+    - all
+- pair: baa_settings_stay_off_after_revoke|security_model_training_optout
+  a:
+    id: baa_settings_stay_off_after_revoke
+    claim: After a revoke, Dictation cloud storage and model training sharing stay off until the user turns them back on.
+    source_id: docs_baa_revoke
+    source_quote: storage and sharing stay off until you turn them back on
+    checked: '2026-11-07'
+    status: confirmed
+    plan_scope: &id012
+    - unknown
+  b:
+    id: security_model_training_optout
+    claim: Users can opt out of model training at any time.
+    source_id: wf_pricing
+    source_quote: Opt out of model training at any time.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - all
+- pair: hipaa_baa_growth_enterprise|hipaa_free_pro_not_ready
+  a:
+    id: hipaa_baa_growth_enterprise
+    claim: HIPAA compliance is available on the Growth and Enterprise plans with a signed Business Associate Agreement.
+    source_id: wf_business
+    source_quote: Available on Growth and Enterprise with a signed Business Associate Agreement.
+    checked: '2026-11-06'
+    status: confirmed
+    plan_scope:
+    - growth
+    - enterprise
+  b:
+    id: hipaa_free_pro_not_ready
+    claim: Free and Pro plans are not HIPAA-ready.
+    source_id: docs_hipaa
+    source_quote: Free and Pro plans are not HIPAA-ready
+    checked: '2026-11-07'
+    status: confirmed
+    plan_scope: &id002
+    - free
+    - pro
+- pair: hipaa_baa_signed_by_admin|hipaa_ready_all_plans
+  a:
+    id: hipaa_baa_signed_by_admin
+    claim: The BAA is signed by an authorized administrator in the admin portal.
+    source_id: docs_hipaa
+    source_quote: is done by an authorized administrator in the admin portal
+    checked: '2026-11-07'
+    status: confirmed
+    plan_scope: &id001
+    - growth
+    - enterprise
+  b:
+    id: hipaa_ready_all_plans
+    claim: Dictation and Notetaker are HIPAA-ready with a signed BAA on every plan.
+    source_id: wf_pricing
+    source_quote: HIPAA-ready dictation and Notetaker with a signed BAA.
+    checked: '2026-11-06'
+    status: confirmed
+    plan_scope:
+    - all
+- pair: baa_signed_copy_individual_only|hipaa_baa_signed_by_admin
+  a:
+    id: baa_signed_copy_individual_only
+    claim: Signed BAA copy downloads are for individual, non-enterprise users only.
+    source_id: docs_baa_revoke
+    source_quote: Signed-copy downloads are for individual (non-enterprise) users
+    checked: '2026-11-07'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: hipaa_baa_signed_by_admin
+    claim: The BAA is signed by an authorized administrator in the admin portal.
+    source_id: docs_hipaa
+    source_quote: is done by an authorized administrator in the admin portal
+    checked: '2026-11-07'
+    status: confirmed
+    plan_scope: *id001
+- pair: baa_enterprise_no_signed_download|hipaa_baa_signed_by_admin
+  a:
+    id: baa_enterprise_no_signed_download
+    claim: Neither enterprise HIPAA row offers a download of the signed BAA.
+    source_id: docs_baa_revoke
+    source_quote: Neither enterprise row offers Download signed BAA
+    checked: '2026-11-07'
+    status: confirmed
+    plan_scope:
+    - enterprise
+  b:
+    id: hipaa_baa_signed_by_admin
+    claim: The BAA is signed by an authorized administrator in the admin portal.
+    source_id: docs_hipaa
+    source_quote: is done by an authorized administrator in the admin portal
+    checked: '2026-11-07'
+    status: confirmed
+    plan_scope: *id001
+- pair: hipaa_baa_signing_plans|hipaa_free_pro_not_ready
+  a:
+    id: hipaa_baa_signing_plans
+    claim: HIPAA BAA signing is available on the Growth and Enterprise plans.
+    source_id: docs_hipaa
+    source_quote: HIPAA BAA signing is available on Growth and Enterprise
+    checked: '2026-11-07'
+    status: confirmed
+    plan_scope:
+    - growth
+    - enterprise
+  b:
+    id: hipaa_free_pro_not_ready
+    claim: Free and Pro plans are not HIPAA-ready.
+    source_id: docs_hipaa
+    source_quote: Free and Pro plans are not HIPAA-ready
+    checked: '2026-11-07'
+    status: confirmed
+    plan_scope: *id002
+- pair: hipaa_free_pro_not_ready|hipaa_ready_with_signed_baa
+  a:
+    id: hipaa_free_pro_not_ready
+    claim: Free and Pro plans are not HIPAA-ready.
+    source_id: docs_hipaa
+    source_quote: Free and Pro plans are not HIPAA-ready
+    checked: '2026-11-07'
+    status: confirmed
+    plan_scope: *id002
+  b:
+    id: hipaa_ready_with_signed_baa
+    claim: Flow is HIPAA-ready once a Business Associate Agreement is signed.
+    source_id: docs_vendor_assessments
+    source_quote: Flow is HIPAA-ready with a signed BAA
+    checked: '2026-11-07'
+    status: confirmed
+    plan_scope:
+    - growth
+    - enterprise
+- pair: hipaa_free_pro_not_ready|hipaa_row_disabled_other_plans
+  a:
+    id: hipaa_free_pro_not_ready
+    claim: Free and Pro plans are not HIPAA-ready.
+    source_id: docs_hipaa
+    source_quote: Free and Pro plans are not HIPAA-ready
+    checked: '2026-11-07'
+    status: confirmed
+    plan_scope: *id002
+  b:
+    id: hipaa_row_disabled_other_plans
+    claim: The org-wide HIPAA setting is disabled on plans other than Growth and Enterprise, and for non-admins.
+    source_id: docs_vendor_assessments
+    source_quote: the org-wide HIPAA row is disabled on other plans and for non-admins
+    checked: '2026-11-07'
+    status: confirmed
+    plan_scope:
+    - growth
+    - enterprise
+- pair: hipaa_baa_revocation_permanent|hipaa_baa_signed_by_admin
+  a:
+    id: hipaa_baa_revocation_permanent
+    claim: Revoking a personal BAA is permanent, and a personal BAA cannot be signed again.
+    source_id: docs_hipaa
+    source_quote: Revoking is permanent — a personal BAA cannot be signed again
+    checked: '2026-11-07'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: hipaa_baa_signed_by_admin
+    claim: The BAA is signed by an authorized administrator in the admin portal.
+    source_id: docs_hipaa
+    source_quote: is done by an authorized administrator in the admin portal
+    checked: '2026-11-07'
+    status: confirmed
+    plan_scope: *id001
+- pair: hipaa_baa_signed_by_admin|hipaa_notetaker_under_baa
+  a:
+    id: hipaa_baa_signed_by_admin
+    claim: The BAA is signed by an authorized administrator in the admin portal.
+    source_id: docs_hipaa
+    source_quote: is done by an authorized administrator in the admin portal
+    checked: '2026-11-07'
+    status: confirmed
+    plan_scope: *id001
+  b:
+    id: hipaa_notetaker_under_baa
+    claim: Teams and individuals under a signed BAA can use Notetaker on Mac and Windows.
+    source_id: docs_hipaa
+    source_quote: under a signed BAA can use Notetaker on Mac and Windows
+    checked: '2026-11-07'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: willow_privacy_mode_keeps_nothing|willow_privacy_off_product_improvement
+  a:
+    id: willow_privacy_mode_keeps_nothing
+    claim: With Privacy Mode on, Willow states it keeps no audio, transcripts or edits from dictation sessions.
+    source_id: comp_willow_security
+    source_quote: Willow keeps nothing from your dictation sessions
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: willow_privacy_off_product_improvement
+    claim: When Privacy Mode is off, Willow states limited dictation data may be used to improve product quality.
+    source_id: comp_willow_security
+    source_quote: When Privacy Mode is off, limited dictation data may be used
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id003
+    - unknown
+- pair: willow_privacy_off_product_improvement|willow_team_changes_privacy_settings
+  a:
+    id: willow_privacy_off_product_improvement
+    claim: When Privacy Mode is off, Willow states limited dictation data may be used to improve product quality.
+    source_id: comp_willow_security
+    source_quote: When Privacy Mode is off, limited dictation data may be used
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id003
+  b:
+    id: willow_team_changes_privacy_settings
+    claim: Willow states privacy mode and data permissions can be changed at any time by the customer's team.
+    source_id: comp_willow_security
+    source_quote: Privacy mode and data permissions can be changed anytime by your team.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id004
+    - unknown
+- pair: privacy_mode_no_training|willow_team_changes_privacy_settings
+  a:
+    id: privacy_mode_no_training
+    claim: With Privacy Mode enabled org-wide, customer code is never used for training, per the page.
+    source_id: comp_willow_teams
+    source_quote: With Privacy Mode enabled org-wide, your code is never used for training.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: willow_team_changes_privacy_settings
+    claim: Willow states privacy mode and data permissions can be changed at any time by the customer's team.
+    source_id: comp_willow_security
+    source_quote: Privacy mode and data permissions can be changed anytime by your team.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id004
+- pair: enterprise_plan_compliance_options|willow_team_changes_privacy_settings
+  a:
+    id: enterprise_plan_compliance_options
+    claim: The page lists SOC 2 Type II, HIPAA, SSO, enforced Privacy Mode and Zero Data Retention as Enterprise Plan options.
+    source_id: comp_willow_teams
+    source_quote: like SOC 2 Type II, HIPAA, SSO, enforced Privacy Mode, or Zero Data Retention
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - enterprise
+  b:
+    id: willow_team_changes_privacy_settings
+    claim: Willow states privacy mode and data permissions can be changed at any time by the customer's team.
+    source_id: comp_willow_security
+    source_quote: Privacy mode and data permissions can be changed anytime by your team.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id004
+- pair: baa_revoke_settings_not_restored|typed_feedback_not_stripped_by_baa
+  a:
+    id: baa_revoke_settings_not_restored
+    claim: Revoking a personal BAA removes BAA enforcement but does not restore the storage and sharing settings.
+    source_id: docs_baa_revoke
+    source_quote: Revoking removes personal-BAA enforcement but does not restore those settings
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: typed_feedback_not_stripped_by_baa
+    claim: Typed in-app feedback is not stripped by the data-sharing settings or a BAA.
+    source_id: docs_hipaa
+    source_quote: is not stripped by these settings or a BAA
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: baa_signature_record_not_certificate|notetaker_works_alongside_baa
+  a:
+    id: baa_signature_record_not_certificate
+    claim: The Signature Record page in the signed BAA PDF is for reference, not a legal certificate.
+    source_id: docs_baa_revoke
+    source_quote: that page is for reference, not a legal certificate
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id005
+    - unknown
+  b:
+    id: notetaker_works_alongside_baa
+    claim: Notetaker works alongside a signed BAA, so the user does not need to revoke the BAA to record meetings.
+    source_id: docs_data_sharing
+    source_quote: Notetaker works alongside a signed personal or organization BAA
+    checked: '2026-11-05'
+    status: conflicting
+    plan_scope:
+    - unknown
+- pair: baa_signature_record_not_certificate|pdf_may_not_match_agreement
+  a:
+    id: baa_signature_record_not_certificate
+    claim: The Signature Record page in the signed BAA PDF is for reference, not a legal certificate.
+    source_id: docs_baa_revoke
+    source_quote: that page is for reference, not a legal certificate
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id005
+  b:
+    id: pdf_may_not_match_agreement
+    claim: The signed BAA PDF may not match the agreement text at signing.
+    source_id: docs_hipaa
+    source_quote: the PDF may not match the agreement text at signing
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id008
+    - unknown
+- pair: admin_cloud_storage_org_wide|baa_signing_turns_storage_off
+  a:
+    id: admin_cloud_storage_org_wide
+    claim: Admins can set dictation cloud storage for the whole organization, or leave it to individual users.
+    source_id: wf_enterprise_privacy_post
+    source_quote: Set dictation cloud storage for the whole organization, or leave it to individual users.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id009
+    - unknown
+  b:
+    id: baa_signing_turns_storage_off
+    claim: Signing a personal BAA turns Dictation cloud storage off for the account.
+    source_id: docs_baa_revoke
+    source_quote: and Dictation cloud storage off for your account
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: ca_improve_model_off_keeps_context_awareness|enforce_off_for_everyone_requires_enterprise
+  a:
+    id: ca_improve_model_off_keeps_context_awareness
+    claim: Turning off Improve the model for everyone does not turn off Context Awareness.
+    source_id: docs_context_awareness
+    source_quote: does not turn off Context Awareness
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: enforce_off_for_everyone_requires_enterprise
+    claim: Enforcing model training off for everyone requires upgrading to Enterprise.
+    source_id: docs_data_sharing
+    source_quote: so each member decides, and enforcing off for everyone requires upgrading to Enterprise
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id007
+    - teams
+    - pro
+- pair: ca_baa_locks_settings|delete_retains_signed_agreements
+  a:
+    id: ca_baa_locks_settings
+    claim: Signing the applicable Business Associate Agreement (BAA) locks Improve the model for everyone and Dictation Cloud Storage off.
+    source_id: docs_context_awareness
+    source_quote: sign the applicable Business Associate Agreement (BAA), which locks
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id006
+    - unknown
+  b:
+    id: delete_retains_signed_agreements
+    claim: Wispr keeps signed agreements, such as a HIPAA Business Associate Agreement, after deletion.
+    source_id: docs_data_requests
+    source_quote: Signed agreements, such as a HIPAA Business Associate Agreement.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id010
+    - unknown
+- pair: ca_baa_locks_settings|model_improvement_off_no_stop_cloud_processing
+  a:
+    id: ca_baa_locks_settings
+    claim: Signing the applicable Business Associate Agreement (BAA) locks Improve the model for everyone and Dictation Cloud Storage off.
+    source_id: docs_context_awareness
+    source_quote: sign the applicable Business Associate Agreement (BAA), which locks
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id006
+  b:
+    id: model_improvement_off_no_stop_cloud_processing
+    claim: Turning off model improvement does not stop cloud processing.
+    source_id: docs_data_sharing
+    source_quote: Turning it off does not stop cloud processing
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: &id011
+    - unknown
+- pair: ca_baa_locks_settings|enforce_off_for_everyone_requires_enterprise
+  a:
+    id: ca_baa_locks_settings
+    claim: Signing the applicable Business Associate Agreement (BAA) locks Improve the model for everyone and Dictation Cloud Storage off.
+    source_id: docs_context_awareness
+    source_quote: sign the applicable Business Associate Agreement (BAA), which locks
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id006
+  b:
+    id: enforce_off_for_everyone_requires_enterprise
+    claim: Enforcing model training off for everyone requires upgrading to Enterprise.
+    source_id: docs_data_sharing
+    source_quote: so each member decides, and enforcing off for everyone requires upgrading to Enterprise
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id007
+- pair: ca_baa_locks_settings|pdf_may_not_match_agreement
+  a:
+    id: ca_baa_locks_settings
+    claim: Signing the applicable Business Associate Agreement (BAA) locks Improve the model for everyone and Dictation Cloud Storage off.
+    source_id: docs_context_awareness
+    source_quote: sign the applicable Business Associate Agreement (BAA), which locks
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id006
+  b:
+    id: pdf_may_not_match_agreement
+    claim: The signed BAA PDF may not match the agreement text at signing.
+    source_id: docs_hipaa
+    source_quote: the PDF may not match the agreement text at signing
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id008
+- pair: admin_cloud_storage_org_wide|ca_baa_locks_settings
+  a:
+    id: admin_cloud_storage_org_wide
+    claim: Admins can set dictation cloud storage for the whole organization, or leave it to individual users.
+    source_id: wf_enterprise_privacy_post
+    source_quote: Set dictation cloud storage for the whole organization, or leave it to individual users.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id009
+  b:
+    id: ca_baa_locks_settings
+    claim: Signing the applicable Business Associate Agreement (BAA) locks Improve the model for everyone and Dictation Cloud Storage off.
+    source_id: docs_context_awareness
+    source_quote: sign the applicable Business Associate Agreement (BAA), which locks
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id006
+- pair: admin_accepts_baa_portal|ca_baa_locks_settings
+  a:
+    id: admin_accepts_baa_portal
+    claim: An admin accepts the Business Associate Agreement from the admin portal to enable HIPAA support.
+    source_id: wf_compliance_note
+    source_quote: an admin accepts the Business Associate Agreement from the admin portal
+    checked: '2026-11-06'
+    status: confirmed
+    plan_scope:
+    - growth
+    - enterprise
+  b:
+    id: ca_baa_locks_settings
+    claim: Signing the applicable Business Associate Agreement (BAA) locks Improve the model for everyone and Dictation Cloud Storage off.
+    source_id: docs_context_awareness
+    source_quote: sign the applicable Business Associate Agreement (BAA), which locks
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id006
+- pair: baa_available_healthcare_growth_enterprise|delete_retains_signed_agreements
+  a:
+    id: baa_available_healthcare_growth_enterprise
+    claim: A Business Associate Agreement is available for healthcare customers on the Growth and Enterprise plans.
+    source_id: docs_vendor_assessments
+    source_quote: for healthcare customers on the Growth and Enterprise plans
+    checked: '2026-11-07'
+    status: confirmed
+    plan_scope:
+    - growth
+    - enterprise
+  b:
+    id: delete_retains_signed_agreements
+    claim: Wispr keeps signed agreements, such as a HIPAA Business Associate Agreement, after deletion.
+    source_id: docs_data_requests
+    source_quote: Signed agreements, such as a HIPAA Business Associate Agreement.
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id010
+- pair: model_improvement_off_no_stop_cloud_processing|model_improvement_off_withholds_content
+  a:
+    id: model_improvement_off_no_stop_cloud_processing
+    claim: Turning off model improvement does not stop cloud processing.
+    source_id: docs_data_sharing
+    source_quote: Turning it off does not stop cloud processing
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id011
+  b:
+    id: model_improvement_off_withholds_content
+    claim: With model improvement off, audio, transcripts, edits and other personal content are withheld from model improvement and evaluation.
+    source_id: docs_data_sharing
+    source_quote: For model improvement and evaluation, audio, transcripts, edits and other personal content are withheld
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+- pair: model_improvement_off_metadata_still_uploaded|model_improvement_off_no_stop_cloud_processing
+  a:
+    id: model_improvement_off_metadata_still_uploaded
+    claim: With model improvement off, Flow still uploads dictation details such as word count, duration, app, URL and timestamp.
+    source_id: docs_data_sharing
+    source_quote: Flow still uploads dictation details such as word count, duration
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope:
+    - unknown
+  b:
+    id: model_improvement_off_no_stop_cloud_processing
+    claim: Turning off model improvement does not stop cloud processing.
+    source_id: docs_data_sharing
+    source_quote: Turning it off does not stop cloud processing
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id011
+- pair: baa_settings_stay_off_after_revoke|model_improvement_off_no_stop_cloud_processing
+  a:
+    id: baa_settings_stay_off_after_revoke
+    claim: After a revoke, Dictation cloud storage and model training sharing stay off until the user turns them back on.
+    source_id: docs_baa_revoke
+    source_quote: storage and sharing stay off until you turn them back on
+    checked: '2026-11-07'
+    status: confirmed
+    plan_scope: *id012
+  b:
+    id: model_improvement_off_no_stop_cloud_processing
+    claim: Turning off model improvement does not stop cloud processing.
+    source_id: docs_data_sharing
+    source_quote: Turning it off does not stop cloud processing
+    checked: '2026-11-05'
+    status: confirmed
+    plan_scope: *id011

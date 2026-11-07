@@ -1,0 +1,90 @@
+- pair: baa_signing_turns_storage_off|org_model_restriction_not_cloud_storage
+  verdict: compatible
+  reason: One says a personal BAA turns storage off, the other says a model-improvement restriction alone does not, which are different mechanisms.
+- pair: ca_command_mode_sends_text|ca_off_no_other_onscreen_text
+  verdict: compatible
+  reason: Command Mode sends "the text being edited", which fits with only text near the cursor being read when Context Awareness is off.
+- pair: ca_improve_model_default_by_plan|ca_improve_model_off_keeps_context_awareness
+  verdict: compatible
+  reason: One gives default settings by plan, the other says the setting is separate from Context Awareness.
+- pair: ca_baa_locks_settings|ca_improve_model_default_by_plan
+  verdict: compatible
+  reason: Plan defaults and a BAA locking the setting off are different facts that do not conflict.
+- pair: ca_improve_model_default_by_plan|model_improvement_controls_dictation_use
+  verdict: compatible
+  reason: One gives the plan defaults, the other says what the setting controls.
+- pair: ca_improve_model_default_by_plan|training_setting_covers_all_data
+  verdict: compatible
+  reason: One gives the plan defaults, the other says the setting "covers all Wispr Flow data".
+- pair: ca_enterprise_disable_for_all_users|ca_improve_model_off_keeps_context_awareness
+  verdict: compatible
+  reason: The Enterprise admin control for Context Awareness is separate from the model improvement setting.
+- pair: ca_baa_locks_settings|ca_improve_model_off_keeps_context_awareness
+  verdict: compatible
+  reason: The BAA locks two named settings off, and the other claim only says model improvement is separate from Context Awareness.
+- pair: ca_improve_model_off_keeps_context_awareness|ca_sensitive_environments_turn_off
+  verdict: compatible
+  reason: Advice to turn Context Awareness off fits with it being a separate setting from model improvement.
+- pair: ca_improve_model_off_keeps_context_awareness|model_improvement_off_stops_training
+  verdict: compatible
+  reason: One says what turning model improvement off does not affect, the other says what it stops.
+- pair: ca_baa_locks_settings|training_setting_covers_all_data
+  verdict: compatible
+  reason: The BAA locks the setting off, and the other claim describes which data the setting covers.
+- pair: confidential_content_turn_off_before_recording|model_improvement_off_withholds_content
+  verdict: compatible
+  reason: The advice to turn it off before recording fits with what the off setting withholds.
+- pair: org_model_restriction_not_cloud_storage|revoking_baa_does_not_restore_sharing
+  verdict: compatible
+  reason: These are different facts about cloud storage state and do not conflict.
+- pair: growth_org_wide_hipaa_enforcement|hipaa_row_disabled_other_plans
+  verdict: same-fact
+  reason: Both place org-wide HIPAA enforcement on Growth, and the second also names Enterprise.
+- pair: hipaa_baa_growth_enterprise|hipaa_row_disabled_other_plans
+  verdict: same-fact
+  reason: Both limit HIPAA to Growth and Enterprise, one as availability and one as a disabled setting elsewhere.
+- pair: willow_enforced_users_cannot_disable|willow_privacy_off_product_improvement
+  verdict: compatible
+  reason: One covers enforcement of Privacy Mode, the other covers data use when it is off.
+- pair: enterprise_plan_compliance_options|willow_enterprise_enforce_privacy_mode
+  verdict: same-fact
+  reason: Both say enforced Privacy Mode is an Enterprise capability.
+- pair: enterprise_plan_compliance_options|willow_enforced_users_cannot_disable
+  verdict: compatible
+  reason: One lists Enterprise options, the other says what enforcement means for individual users.
+- pair: willow_enterprise_contractual_retention_controls|willow_zero_retention_ai_subprocessors
+  verdict: compatible
+  reason: Processing "without retention" and contractual controls for enterprise teams can both be true.
+- pair: enterprise_plan_compliance_options|zdr_model_provider_agreements
+  verdict: compatible
+  reason: Zero Data Retention as a customer plan option is a different fact from agreements with model providers.
+- pair: baa_org_keeps_storage_locked|baa_revoke_settings_not_restored
+  verdict: compatible
+  reason: Both describe what happens after a personal revoke, and neither conflicts with the other.
+- pair: baa_revoke_settings_not_restored|hipaa_baa_revocation_permanent
+  verdict: compatible
+  reason: Settings not being restored and revocation being permanent are different facts about revoking.
+- pair: baa_personal_model_training_off|baa_revoke_marked_not_deleted
+  verdict: compatible
+  reason: One covers training under a BAA, the other covers how revocation is recorded.
+- pair: baa_org_keeps_storage_locked|baa_revoke_marked_not_deleted
+  verdict: compatible
+  reason: Storage staying locked and the BAA being "marked as revoked" are different facts.
+- pair: baa_revoke_marked_not_deleted|revoking_baa_does_not_restore_sharing
+  verdict: compatible
+  reason: How revocation is recorded and the settings not being restored are different facts.
+- pair: baa_revoke_marked_not_deleted|hipaa_baa_revocation_permanent
+  verdict: compatible
+  reason: A revoked BAA being kept on record fits with revocation being permanent.
+- pair: baa_org_keeps_storage_locked|baa_signing_turns_storage_off
+  verdict: compatible
+  reason: Signing turns storage off and an org BAA keeps it locked after a revoke, which are consistent.
+- pair: baa_signing_turns_storage_off|dictation_storage_only_if_cloud_on
+  verdict: compatible
+  reason: Storage happens "only if Dictation cloud storage is on", which fits with a BAA turning it off.
+- pair: baa_org_keeps_storage_locked|personal_or_org_baa_locks_cloud_storage_off
+  verdict: same-fact
+  reason: Both say an org BAA keeps dictation cloud storage locked off.
+- pair: ca_no_screenshots|ca_platform_support
+  verdict: compatible
+  reason: How Context Awareness works and which platforms it runs on are different facts.

@@ -1,0 +1,96 @@
+- pair: baa_personal_model_training_off|wispr_does_not_sell_user_data
+  verdict: compatible
+  reason: One covers model training under a BAA, the other covers not selling data; different facts.
+- pair: no_data_residency_outside_us|wispr_does_not_sell_user_data
+  verdict: compatible
+  reason: Data residency location and not selling data are unrelated facts.
+- pair: enterprise_audit_logs_mdm|enterprise_scim_provisioning
+  verdict: compatible
+  reason: Both list different Enterprise features, audit logs/MDM and SCIM, with no conflict.
+- pair: third_party_ai_processing|third_party_no_training
+  verdict: compatible
+  reason: One says third parties process content, the other says they "don't train their models on it"; these fit together.
+- pair: dictation_storage_only_if_cloud_on|notetaker_transcripts_stored_in_cloud
+  verdict: compatible
+  reason: The storage toggle claim is limited to dictation, while the other covers Notetaker; they describe different products.
+- pair: assessments_not_offered_lower_plans|hipaa_free_pro_not_ready
+  verdict: compatible
+  reason: Vendor assessment availability and HIPAA readiness on lower plans are different facts that do not conflict.
+- pair: admin_cloud_storage_dictation|dictation_storage_only_if_cloud_on
+  verdict: compatible
+  reason: Admins controlling the setting and storage depending on the setting are related but distinct facts.
+- pair: enterprise_free_it_admin_seats|enterprise_sla_support
+  verdict: compatible
+  reason: Free IT admin seats and SLA support are separate Enterprise features.
+- pair: third_party_ai_processing|third_party_data_deleted_30_days
+  verdict: compatible
+  reason: Third-party processing and deletion "generally deleted within 30 days" are complementary facts.
+- pair: hipaa_baa_revocation_permanent|hipaa_personal_baa_not_in_app
+  verdict: compatible
+  reason: Permanent revocation and no in-app signing are different facts about personal BAAs.
+- pair: delete_data_permanent|org_meetings_not_deletable
+  verdict: scope-gap
+  severity: high
+  type: data_deletion_org_meetings
+  reason: The broad "permanently deletes your content" claim omits that kept organization meeting content cannot be deleted this way.
+- pair: enterprise_audit_logs_mdm|enterprise_scim_audit_logs
+  verdict: same-fact
+  reason: Both say Enterprise includes audit logs and managed deployment; claim b also adds SCIM.
+- pair: granola_complaint_cipa_claim|granola_complaint_ecpa_claim
+  verdict: compatible
+  reason: The complaint alleges both a CIPA and an ECPA claim; these are separate counts.
+- pair: willow_dictation_data_never_sold|willow_privacy_off_product_improvement
+  verdict: compatible
+  reason: Never selling data and using limited data for product improvement are different practices.
+- pair: willow_dictation_data_never_sold|willow_no_third_party_sharing
+  verdict: same-fact
+  reason: Both state Willow never sells data; claim b adds detail about advertising or resale sharing.
+- pair: audit_logs_admin_roles_only|audit_logs_records_membership_seat_changes
+  verdict: compatible
+  reason: Who can access Audit Logs and what they record are different facts.
+- pair: baa_signing_turns_storage_off|sign_out_resets_cloud_storage_to_on
+  verdict: scope-gap
+  severity: high
+  type: baa_cloud_storage_sign_out
+  reason: A BAA turns storage off, but "Signing out resets the cloud-storage preference to on" with no stated BAA exception.
+- pair: ca_platform_support|notetaker_mac_windows_only
+  verdict: compatible
+  reason: Context Awareness and Notetaker are different features with their own platform lists.
+- pair: dictation_controls_platforms|notetaker_mac_windows_only
+  verdict: compatible
+  reason: Data controls and Notetaker are different features with their own platform lists.
+- pair: dpa_customer_data_processed_us|third_party_ai_processing
+  verdict: compatible
+  reason: The text does not place third-party processing outside the US, so the two claims do not conflict.
+- pair: dpa_customer_data_processed_us|third_party_no_training
+  verdict: compatible
+  reason: Processing location and third-party training limits are different facts.
+- pair: dpa_customer_data_processed_us|third_party_data_deleted_30_days
+  verdict: compatible
+  reason: Processing location and third-party deletion timing are different facts.
+- pair: enterprise_custom_contract_terms|msa_redlines_enterprise_only
+  verdict: same-fact
+  reason: Both say custom contract terms come with Enterprise; claim b is a more specific version.
+- pair: docs_network_domain_list_incomplete|network_tls_bypass_port_443
+  verdict: scope-gap
+  severity: medium
+  type: network_allowlist_completeness
+  reason: The listed domains are "not the complete outbound host list," but the bypass advice covers the complete list, so allowlisting only the listed domains would miss hosts.
+- pair: data_stored_us_aws|dictation_cloud_storage_scope
+  verdict: compatible
+  reason: Storage location and what the dictation storage toggle covers are different facts.
+- pair: iso_27001_certificate|soc2_type_ii_report
+  verdict: compatible
+  reason: The Trust Center provides both documents; these are separate certifications.
+- pair: free_plan_includes_notetaker|free_plan_platform_support
+  verdict: compatible
+  reason: Notetaker inclusion and dictation platform support on Free are different facts.
+- pair: free_plan_platform_support|notetaker_mac_windows_only
+  verdict: compatible
+  reason: The four-platform claim covers dictation only, and the Notetaker claim covers a different feature.
+- pair: a_lign_audit_engagement_signed|soc2_audit_expected_eight_weeks
+  verdict: compatible
+  reason: Both come from the same Mar 27, 2026 post, and neither shows a later status for the other.
+- pair: free_plan_includes_notetaker|growth_individual_usage_reporting
+  verdict: compatible
+  reason: These are features of different plans with no overlap.

@@ -1,0 +1,96 @@
+- pair: ca_context_includes_textbox|ca_platform_support
+  verdict: compatible
+  reason: One lists what context can include, the other lists platforms, with iOS "limited to the focused text field".
+- pair: ca_context_includes_textbox|ca_no_screenshots
+  verdict: compatible
+  reason: Reading textbox and on-screen text is consistent with Flow working "from text" without screenshots.
+- pair: ca_no_screenshots|ca_off_no_other_onscreen_text
+  verdict: compatible
+  reason: One covers screenshots, the other covers what is read when Context Awareness is off.
+- pair: ca_command_mode_sends_text|ca_no_screenshots
+  verdict: compatible
+  reason: Sending edited text for Command Mode does not conflict with "does not take screenshots".
+- pair: ca_improve_model_off_keeps_context_awareness|ca_no_screenshots
+  verdict: compatible
+  reason: One covers how two settings interact, the other covers the screenshot behaviour.
+- pair: ca_command_mode_sends_text|ca_context_includes_textbox
+  verdict: compatible
+  reason: Claim a already says text is sent "even when Context Awareness is off", so neither hides the other.
+- pair: ca_improve_model_default_by_plan|model_improvement_off_enterprise
+  verdict: same-fact
+  reason: Both say model improvement is off for Enterprise, and claim b adds that admins "cannot re-enable it".
+- pair: ca_improve_model_default_by_plan|enterprise_model_training_locked
+  verdict: same-fact
+  reason: Both say Enterprise has model training off, and claim b adds that it is "locked off".
+- pair: ca_improve_model_off_keeps_context_awareness|enterprise_model_training_off_for_everyone
+  verdict: compatible
+  reason: Enterprise training being off is a separate fact, and claim a says Context Awareness stays on independently.
+- pair: ca_baa_locks_settings|enterprise_model_training_off_for_everyone
+  verdict: compatible
+  reason: The BAA lock and the Enterprise default both leave model training off, so they agree.
+- pair: ca_baa_locks_settings|dictation_storage_only_if_cloud_on
+  verdict: compatible
+  reason: A BAA locking cloud storage off fits with storage happening "only if Dictation cloud storage is on".
+- pair: ca_baa_locks_settings|hipaa_ready_with_signed_baa
+  verdict: compatible
+  reason: One describes what a BAA locks and the other says Flow is "HIPAA-ready with a signed BAA".
+- pair: model_improvement_off_enterprise|model_improvement_off_withholds_content
+  verdict: compatible
+  reason: One says Enterprise has model improvement off, the other describes what being off withholds.
+- pair: model_improvement_off_enterprise|model_improvement_off_metadata_still_uploaded
+  verdict: scope-gap
+  severity: high
+  type: model_improvement_metadata_upload
+  reason: An approver told Enterprise model improvement is locked off may not expect Flow to still upload "word count, duration, app, URL and timestamp".
+- pair: model_improvement_off_enterprise|model_improvement_off_no_stop_cloud_processing
+  verdict: compatible
+  reason: The Enterprise claim says nothing about cloud processing, so "does not stop cloud processing" adds a fact without conflict.
+- pair: confidential_content_turn_off_before_recording|model_improvement_off_enterprise
+  verdict: compatible
+  reason: General advice to turn model improvement off does not conflict with Enterprise having it off already.
+- pair: dictation_storage_only_if_cloud_on|notetaker_cloud_storage_no_opt_out
+  verdict: scope-gap
+  severity: high
+  type: notetaker_cloud_storage
+  reason: Storage "only if Dictation cloud storage is on" covers dictation only, while Notetaker content has "no setting to opt out".
+- pair: dictation_storage_only_if_cloud_on|personal_or_org_baa_locks_cloud_storage_off
+  verdict: compatible
+  reason: A BAA locking cloud storage off fits with storage happening only when the setting is on.
+- pair: baa_settings_stay_off_after_revoke|enterprise_model_training_off_for_everyone
+  verdict: compatible
+  reason: The revoke claim is not scoped to Enterprise, and both leave training sharing off.
+- pair: enforce_off_for_everyone_requires_enterprise|model_improvement_off_enterprise
+  verdict: compatible
+  reason: Teams and Pro need an upgrade to enforce training off, which fits with Enterprise having it off.
+- pair: baa_signed_copy_individual_only|enforce_zero_retention_enterprise_admins_only
+  verdict: compatible
+  reason: One covers who can download signed BAA copies, the other covers who controls zero retention.
+- pair: dictation_storage_only_if_cloud_on|revoking_baa_does_not_restore_sharing
+  verdict: compatible
+  reason: Revoking a BAA leaves cloud storage off, which fits with storage depending on the setting.
+- pair: dictation_storage_only_if_cloud_on|signed_baa_locks_both_controls_off
+  verdict: compatible
+  reason: A signed BAA locking cloud storage off fits with storage happening only when the setting is on.
+- pair: hipaa_ready_all_plans|signed_baa_locks_both_controls_off
+  verdict: compatible
+  reason: One says when Flow is HIPAA-ready, the other says what a signed BAA "locks both controls off".
+- pair: dictation_storage_only_if_cloud_on|org_model_restriction_not_cloud_storage
+  verdict: compatible
+  reason: Both treat dictation cloud storage as its own setting that decides whether content is stored.
+- pair: dictation_storage_only_if_cloud_on|unconfirmed_org_settings_forced_off
+  verdict: compatible
+  reason: Storage being forced off when settings are unconfirmed fits with storage depending on the setting.
+- pair: hipaa_ready_all_plans|msa_redlines_enterprise_only
+  verdict: scope-gap
+  severity: high
+  type: baa_plan_availability
+  reason: '"HIPAA-ready ... on every plan" leaves out that custom signed BAA documentation requires Enterprise.'
+- pair: baa_signed_copy_individual_only|msa_redlines_enterprise_only
+  verdict: compatible
+  reason: Self-serve signed copies are for individual users, and custom documentation is a separate Enterprise route.
+- pair: baa_ai_providers_covered|pdf_may_not_match_agreement
+  verdict: compatible
+  reason: One covers which AI providers receive text, the other covers whether the PDF matches the agreement text.
+- pair: model_improvement_off_enterprise|model_improvement_off_stops_training
+  verdict: compatible
+  reason: Enterprise having model improvement off fits with "off stops your content" being used for training.

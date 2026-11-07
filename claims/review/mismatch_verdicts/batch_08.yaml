@@ -1,0 +1,96 @@
+- pair: dictation_cloud_storage_scope|enterprise_admin_enforce_cloud_storage
+  verdict: compatible
+  reason: One defines what the setting covers and the other says Enterprise admins can enforce it, so they are different facts.
+- pair: dictation_storage_only_if_cloud_on|enterprise_admin_enforce_cloud_storage
+  verdict: compatible
+  reason: One says when dictation data is stored and the other says who can enforce the setting.
+- pair: admin_cloud_storage_off_everyone|enterprise_admin_enforce_cloud_storage
+  verdict: same-fact
+  reason: Turning storage off "for everyone" and admins who "can also enforce" the setting describe the same admin control.
+- pair: dictation_cloud_off_discard|enterprise_admin_enforce_cloud_storage
+  verdict: compatible
+  reason: One says what happens to audio when storage is off and the other says who can enforce the setting.
+- pair: admin_cloud_storage_org_wide|enterprise_admin_enforce_cloud_storage
+  verdict: same-fact
+  reason: Setting storage "for the whole organization" and enforcing it as an admin describe the same control.
+- pair: baa_settings_stay_off_after_revoke|enterprise_admin_enforce_cloud_storage
+  verdict: compatible
+  reason: One covers settings after a BAA revoke and the other covers admin enforcement, and the text shows no conflict.
+- pair: dictation_cloud_off_discard|unconfirmed_org_settings_forced_off
+  verdict: compatible
+  reason: One says what happens when storage is off and the other says when it is forced off.
+- pair: admin_cloud_storage_org_wide|unconfirmed_org_settings_forced_off
+  verdict: compatible
+  reason: Admin org-wide control and the "forced off until the settings resolve" fallback are separate facts.
+- pair: hipaa_baa_click_through|revocation_removes_settings_locks
+  verdict: compatible
+  reason: One says how the BAA is accepted and the other says what revoking it does.
+- pair: baa_personal_sign_ios|msa_redlines_enterprise_only
+  verdict: compatible
+  reason: Signing a personal BAA on iOS and custom BAA documentation for Enterprise are different paths.
+- pair: hipaa_baa_click_through|msa_redlines_enterprise_only
+  verdict: scope-gap
+  severity: high
+  type: baa_process
+  reason: The "click-through agreement" claim does not say that custom signed BAA documentation needs the Enterprise plan and a sales representative.
+- pair: baa_personal_sign_ios|pdf_may_not_match_agreement
+  verdict: compatible
+  reason: One names a platform for signing and the other is a caveat about the PDF copy.
+- pair: hipaa_baa_click_through|pdf_may_not_match_agreement
+  verdict: compatible
+  reason: How the BAA is accepted and the PDF caveat are different facts that do not conflict.
+- pair: admin_notetaker_disable_toggle|dictation_cloud_storage_scope
+  verdict: compatible
+  reason: One is the Notetaker on/off control and the other limits the storage setting to dictation.
+- pair: admin_cloud_storage_off_everyone|dictation_cloud_storage_scope
+  verdict: compatible
+  reason: Both claims name dictation explicitly, so the admin claim does not imply it covers Notetaker or Scratchpad.
+- pair: soc2_type2_unqualified_opinion|soc2_type_ii_report
+  verdict: same-fact
+  reason: The unqualified opinion claim is a more specific version of the same SOC 2 Type II report.
+- pair: soc2_type_ii_audited|soc2_type_ii_report
+  verdict: same-fact
+  reason: Being "independently audited" and the Trust Center providing the report describe the same SOC 2 Type II status.
+- pair: soc2_type2_audit_complete|soc2_type_ii_report
+  verdict: same-fact
+  reason: A completed audit and an available report state the same SOC 2 Type II status.
+- pair: soc2_type2_hipaa_hitech_scope|soc2_type_ii_report
+  verdict: same-fact
+  reason: The HIPAA and HITECH coverage claim adds detail about the same report without conflict.
+- pair: iso27001_surveillance_recertification|iso_27001_certificate
+  verdict: same-fact
+  reason: The surveillance and recertification claim adds detail about the same ISO/IEC 27001 certificate.
+- pair: notetaker_not_in_audits|soc2_type_ii_audited
+  verdict: scope-gap
+  severity: high
+  type: soc2_scope_notetaker
+  reason: '"Independently audited" for SOC 2 Type II does not say that Meeting Notetaker "was not assessed".'
+- pair: notetaker_not_in_audits|soc2_type2_audit_complete
+  verdict: scope-gap
+  severity: high
+  type: soc2_scope_notetaker
+  reason: '"SOC 2 Type II audit is complete" does not say that Meeting Notetaker was left out of the audit.'
+- pair: baa_personal_sign_ios|hipaa_requires_baa
+  verdict: compatible
+  reason: One says a BAA is required and the other names a platform where a personal BAA can be signed.
+- pair: hipaa_baa_click_through|hipaa_requires_baa
+  verdict: compatible
+  reason: One says a BAA is required and the other says how it is accepted.
+- pair: baa_signed_by_org_admin|hipaa_requires_baa
+  verdict: compatible
+  reason: One says a BAA is required and the other says who signs it and where.
+- pair: baa_ai_providers_covered|hipaa_baa_click_through
+  verdict: compatible
+  reason: Where covered text is sent and how the BAA is accepted are separate facts.
+- pair: data_stored_us_aws|us_data_location
+  verdict: same-fact
+  reason: Both say data is stored in the United States, and one adds "on AWS".
+- pair: soc2_type2_unqualified_opinion|soc2_type_ii_audited
+  verdict: same-fact
+  reason: The unqualified opinion is a more specific version of the independent SOC 2 Type II audit claim.
+- pair: soc2_type2_audit_complete|soc2_type2_unqualified_opinion
+  verdict: same-fact
+  reason: A completed audit with an unqualified opinion is the same SOC 2 Type II status in more detail.
+- pair: soc2_type1_complete|soc2_type_ii_audited
+  verdict: compatible
+  reason: The SOC 2 Type I and SOC 2 Type II audits are different reports, and neither claim conflicts with the other.
