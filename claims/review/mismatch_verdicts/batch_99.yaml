@@ -1,5 +1,0 @@
-- pair: hipaa_baa_growth_enterprise|hipaa_ready_all_plans
-  verdict: contradiction
-  severity: high
-  type: hipaa_plan_availability
-  reason: One limits HIPAA with a BAA to "Growth and Enterprise plans", the other says "with a signed BAA on every plan", so both cannot be true for lower plans.
