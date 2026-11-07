@@ -2,10 +2,10 @@
 
 **What it is.** A small engine that answers the people who approve a company-wide Flow purchase (IT, security, legal, finance) using only Wispr's own public pages, with a source and exact quote behind every sentence. It is built for the moment after employees already use Flow and someone has to say yes.
 
-**What it found (pages checked 5 to 6 November 2026).**
-- 22 public pages read; 344 facts extracted, each with a quote checked word for word against the page.
-- 14 open places where two Wispr pages could leave an approver unsure, including 3 direct contradictions: which plan includes a BAA, whether Growth admins control model training, and HIPAA "Growth and Enterprise" versus "every plan".
-- Wispr's page changes on 6 November were detected within a day: 9 statements retired, and 4 earlier issues (SOC 2 "expected", Notetaker under a BAA, two HIPAA "any plan" items) credited as fixed.
+**What it found (pages checked 5 to 7 November 2026).**
+- 22 public pages read; 361 live facts, each with a quote checked word for word against the page.
+- 16 open places where two Wispr pages could leave an approver unsure, including direct contradictions on which plan can sign a BAA, whether Growth admins control model training, HIPAA "Growth and Enterprise" versus "every plan", and whether a personal BAA can be signed in the app.
+- Wispr's page changes were detected within a day, twice: 9 statements retired on 6 November and 15 on 7 November, and 4 earlier issues (SOC 2 "expected", Notetaker under a BAA, two HIPAA "any plan" items) credited as fixed.
 
 **What it produces.**
 - Approval pack: 38 questions seeded from the CSA CAIQ v4.1 domains plus the governance questions no standard form asks. Current answers: 7 ready, 18 partial, 10 confirm-with-Wispr, 3 escalations.
