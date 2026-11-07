@@ -1,250 +1,260 @@
-- id: phi_requires_data_sharing_off
-  version: 1
-  topic: privacy
-  claim: "To dictate PHI, turn off Flow's data-sharing controls."
-  source_id: docs_hipaa
-  source_quote: "To dictate protected health information (PHI), turn off Flow's data-sharing controls"
-  checked: 2026-11-05
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: phi_requires_signed_baa
+- id: hipaa_baa_signing_plans
   version: 1
   topic: compliance
-  claim: "To dictate PHI, sign the applicable Business Associate Agreement."
+  claim: "HIPAA BAA signing is available on the Growth and Enterprise plans."
   source_id: docs_hipaa
-  source_quote: "sign the applicable Business Associate Agreement (BAA)"
-  checked: 2026-11-05
+  source_quote: "HIPAA BAA signing is available on Growth and Enterprise"
+  checked: 2026-11-07
   status: confirmed
-  plan_scope: [unknown]
+  plan_scope: [growth, enterprise]
   conflicts_with: []
-- id: model_improvement_controls_dictation_use
+- id: hipaa_free_pro_not_ready
   version: 1
-  topic: consent
-  claim: "The Improve the model for everyone setting controls whether Notetaker and dictation content may be used to improve Wispr's models."
+  topic: compliance
+  claim: "Free and Pro plans are not HIPAA-ready."
   source_id: docs_hipaa
-  source_quote: "may be used to improve Wispr's models"
-  checked: 2026-11-05
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: model_improvement_default_free_pro
-  version: 1
-  topic: consent
-  claim: "Improve the model for everyone is on by default for Free and Pro."
-  source_id: docs_hipaa
-  source_quote: "is on by default for Free and Pro"
-  checked: 2026-11-05
+  source_quote: "Free and Pro plans are not HIPAA-ready"
+  checked: 2026-11-07
   status: confirmed
   plan_scope: [free, pro]
   conflicts_with: []
-- id: cloud_storage_stores_dictation_on_servers
-  version: 1
-  topic: privacy
-  claim: "Dictation cloud storage stores dictation transcripts, audio and history on Wispr servers for cross-device access."
-  source_id: docs_hipaa
-  source_quote: "Stores dictation transcripts, audio and history on Wispr servers"
-  checked: 2026-11-05
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: signed_baa_locks_both_controls_off
-  version: 1
-  topic: compliance
-  claim: "A signed BAA locks both the model-improvement and dictation cloud storage controls off."
-  source_id: docs_hipaa
-  source_quote: "A signed BAA locks both controls off"
-  checked: 2026-11-05
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: org_model_restriction_not_cloud_storage
-  version: 1
-  topic: governance
-  claim: "An organization model-improvement restriction alone does not mean dictation cloud storage is off."
-  source_id: docs_hipaa
-  source_quote: "An organization model-improvement restriction alone does not mean cloud storage is off"
-  checked: 2026-11-05
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: growth_enterprise_model_improvement_locked
-  version: 1
-  topic: governance
-  claim: "On Growth and Enterprise, the model-improvement setting is locked off organization-wide."
-  source_id: docs_hipaa
-  source_quote: "is locked off organization-wide"
-  checked: 2026-11-05
-  status: confirmed
-  plan_scope: [growth, enterprise]
-  conflicts_with: []
-- id: enterprise_admin_enforce_cloud_storage
-  version: 1
-  topic: governance
-  claim: "Enterprise admins can also enforce the dictation cloud storage setting."
-  source_id: docs_hipaa
-  source_quote: "Enterprise admins can also enforce"
-  checked: 2026-11-05
-  status: confirmed
-  plan_scope: [enterprise]
-  conflicts_with: []
-- id: unconfirmed_org_settings_forced_off
-  version: 1
-  topic: governance
-  claim: "When an organization account's settings cannot be confirmed, model improvement and dictation cloud storage are forced off until the settings resolve."
-  source_id: docs_hipaa
-  source_quote: "are forced off until the settings resolve"
-  checked: 2026-11-05
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: baa_ai_text_providers_covered
-  version: 1
-  topic: privacy
-  claim: "Under a BAA, text from AI text features is only processed by AI providers covered by Wispr's BAA."
-  source_id: docs_hipaa
-  source_quote: "their text is only ever processed by AI providers covered by Wispr's BAA"
-  checked: 2026-11-05
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: revocation_removes_settings_locks
-  version: 1
-  topic: compliance
-  claim: "Revoking a BAA removes the agreement's settings locks."
-  source_id: docs_hipaa
-  source_quote: "Revoking removes the agreement's settings locks"
-  checked: 2026-11-05
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: revocation_keeps_privacy_choices
-  version: 1
-  topic: privacy
-  claim: "Revoking a BAA does not change stored model-improvement or cloud-storage choices."
-  source_id: docs_hipaa
-  source_quote: "without changing your stored model-improvement or cloud-storage choices"
-  checked: 2026-11-05
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: growth_enterprise_include_baa
-  version: 1
-  topic: compliance
-  claim: "Growth and Enterprise both include a standard HIPAA BAA."
-  source_id: docs_hipaa
-  source_quote: "Growth and Enterprise both include a standard HIPAA BAA"
-  checked: 2026-11-05
-  status: confirmed
-  plan_scope: [growth, enterprise]
-  conflicts_with: []
-- id: msa_redlines_enterprise_only
+- id: hipaa_personal_baa_not_in_app
   version: 1
   topic: legal
-  claim: "MSA redlines or custom signed BAA documentation require the Enterprise plan and go through the sales representative."
+  claim: "Personal BAAs cannot be signed from the app."
   source_id: docs_hipaa
-  source_quote: "MSA redlines or custom signed documentation require our highest-tier Enterprise plan"
-  checked: 2026-11-05
+  source_quote: "personal BAAs cannot be signed from the app"
+  checked: 2026-11-07
   status: confirmed
-  plan_scope: [enterprise]
+  plan_scope: [unknown]
   conflicts_with: []
-- id: wispr_no_countersign
+- id: hipaa_baa_signed_by_admin
+  version: 1
+  topic: governance
+  claim: "The BAA is signed by an authorized administrator in the admin portal."
+  source_id: docs_hipaa
+  source_quote: "is done by an authorized administrator in the admin portal"
+  checked: 2026-11-07
+  status: confirmed
+  plan_scope: [growth, enterprise]
+  conflicts_with: []
+- id: hipaa_no_wispr_countersign
   version: 1
   topic: legal
   claim: "Wispr does not countersign BAAs."
   source_id: docs_hipaa
   source_quote: "Wispr does not countersign BAAs"
-  checked: 2026-11-05
+  checked: 2026-11-07
   status: confirmed
   plan_scope: [unknown]
   conflicts_with: []
-- id: baa_signing_platforms
+- id: hipaa_baa_click_through
   version: 1
-  topic: product
-  claim: "BAA signing is available on Mac, Windows and iOS."
+  topic: legal
+  claim: "The BAA is a click-through agreement."
   source_id: docs_hipaa
-  source_quote: "BAA signing is available on Mac, Windows and iOS"
-  checked: 2026-11-05
+  source_quote: "The BAA is a click-through agreement"
+  checked: 2026-11-07
   status: confirmed
   plan_scope: [unknown]
   conflicts_with: []
-- id: android_no_baa_signing
+- id: hipaa_signed_baa_locks_controls
+  version: 1
+  topic: privacy
+  claim: "A signed BAA locks the model-improvement and dictation cloud storage controls off."
+  source_id: docs_hipaa
+  source_quote: "A signed BAA locks both controls off"
+  checked: 2026-11-07
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: hipaa_phi_settings_off
+  version: 1
+  topic: privacy
+  claim: "Before dictating PHI, both Settings → Data & Privacy controls must be confirmed off."
+  source_id: docs_hipaa
+  source_quote: "confirm both settings are off before dictating PHI"
+  checked: 2026-11-07
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: hipaa_cloud_storage_stores_dictation
+  version: 1
+  topic: privacy
+  claim: "When on, dictation cloud storage stores dictation transcripts, audio and history on Wispr servers."
+  source_id: docs_hipaa
+  source_quote: "Stores dictation transcripts, audio and history on Wispr servers"
+  checked: 2026-11-07
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: hipaa_model_improvement_scope
+  version: 1
+  topic: consent
+  claim: "The model-improvement setting controls whether Notetaker and dictation audio, transcripts and edits may be used to improve Wispr's models."
+  source_id: docs_hipaa
+  source_quote: "may be used to improve Wispr's models"
+  checked: 2026-11-07
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: hipaa_model_improvement_default_on
+  version: 1
+  topic: consent
+  claim: "Model improvement is on by default for Free and Pro accounts."
+  source_id: docs_hipaa
+  source_quote: "is on by default for Free and Pro"
+  checked: 2026-11-07
+  status: confirmed
+  plan_scope: [free, pro]
+  conflicts_with: []
+- id: hipaa_signed_baa_documentation
+  version: 1
+  topic: compliance
+  claim: "The signed BAA copy with its Signature Record is the documentation to provide."
+  source_id: docs_hipaa
+  source_quote: "the signed copy with its Signature Record is the documentation"
+  checked: 2026-11-07
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: hipaa_org_model_restriction_not_storage
+  version: 1
+  topic: privacy
+  claim: "An organization model-improvement restriction does not by itself mean dictation cloud storage is off."
+  source_id: docs_hipaa
+  source_quote: "An organization model-improvement restriction alone does not mean cloud storage is off"
+  checked: 2026-11-07
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: hipaa_enterprise_enforce_cloud_storage
+  version: 1
+  topic: governance
+  claim: "Enterprise admins can also enforce the dictation cloud storage lock."
+  source_id: docs_hipaa
+  source_quote: "Enterprise admins can also enforce"
+  checked: 2026-11-07
+  status: confirmed
+  plan_scope: [enterprise]
+  conflicts_with: []
+- id: hipaa_org_model_locked_off
+  version: 1
+  topic: governance
+  claim: "Model improvement is locked off organization-wide."
+  source_id: docs_hipaa
+  source_quote: "is locked off organization-wide"
+  checked: 2026-11-07
+  status: confirmed
+  plan_scope: [growth, enterprise]
+  conflicts_with: []
+- id: hipaa_unconfirmed_settings_forced_off
+  version: 1
+  topic: security
+  claim: "When an organization account's settings cannot be confirmed, both controls are forced off until the settings resolve."
+  source_id: docs_hipaa
+  source_quote: "both controls are forced off until the settings resolve"
+  checked: 2026-11-07
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: hipaa_forced_off_excludes_individuals
+  version: 1
+  topic: security
+  claim: "The forced-off rule for unconfirmed settings does not apply to unaffiliated individual accounts."
+  source_id: docs_hipaa
+  source_quote: "this does not apply to unaffiliated individual accounts"
+  checked: 2026-11-07
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: hipaa_baa_revocation_permanent
+  version: 1
+  topic: legal
+  claim: "Revoking a personal BAA is permanent, and a personal BAA cannot be signed again."
+  source_id: docs_hipaa
+  source_quote: "Revoking is permanent — a personal BAA cannot be signed again"
+  checked: 2026-11-07
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: hipaa_android_no_baa_flow
   version: 1
   topic: product
   claim: "Android has no BAA signing or revocation flow."
   source_id: docs_hipaa
   source_quote: "Android has no BAA signing or revocation flow"
-  checked: 2026-11-05
+  checked: 2026-11-07
   status: confirmed
   plan_scope: [unknown]
   conflicts_with: []
-- id: baa_download_mac_windows
-  version: 1
-  topic: product
-  claim: "Downloading an individual signed BAA copy requires Mac or Windows."
-  source_id: docs_hipaa
-  source_quote: "downloading an individual signed copy requires Mac or Windows"
-  checked: 2026-11-05
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: signature_record_contents
-  version: 1
-  topic: legal
-  claim: "The signed BAA PDF appends a Signature Record with the signer's name, account email and signing date and time."
-  source_id: docs_hipaa
-  source_quote: "Signature Record with the signer's name, account email and signing date and time"
-  checked: 2026-11-05
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: pdf_may_not_match_agreement
-  version: 1
-  topic: legal
-  claim: "The signed BAA PDF may not match the agreement text at signing."
-  source_id: docs_hipaa
-  source_quote: "the PDF may not match the agreement text at signing"
-  checked: 2026-11-05
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: phi_not_in_support_feedback
+- id: hipaa_android_audio_blocked_unknown
   version: 1
   topic: privacy
-  claim: "Users should not include PHI in support feedback."
+  claim: "On Android, audio sharing stays blocked while BAA status is unknown."
   source_id: docs_hipaa
-  source_quote: "Do not include PHI in support feedback"
-  checked: 2026-11-05
+  source_quote: "audio sharing stays blocked until that status is known"
+  checked: 2026-11-07
   status: confirmed
   plan_scope: [unknown]
   conflicts_with: []
-- id: feedback_logs_not_filtered
+- id: hipaa_feedback_not_stripped
   version: 1
   topic: privacy
-  claim: "General feedback logs are not filtered."
-  source_id: docs_hipaa
-  source_quote: "general feedback logs are not filtered"
-  checked: 2026-11-05
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: org_members_no_personal_baa
-  version: 1
-  topic: governance
-  claim: "Members of organizations with active billing cannot sign personal BAAs and must ask their admin."
-  source_id: docs_hipaa
-  source_quote: "Members of organizations with active billing cannot sign personal BAAs"
-  checked: 2026-11-05
-  status: confirmed
-  plan_scope: [unknown]
-  conflicts_with: []
-- id: typed_feedback_not_stripped_by_baa
-  version: 1
-  topic: privacy
-  claim: "Typed in-app feedback is not stripped by the data-sharing settings or a BAA."
+  claim: "Typed in-app feedback is not stripped by the PHI settings or a BAA."
   source_id: docs_hipaa
   source_quote: "is not stripped by these settings or a BAA"
-  checked: 2026-11-05
+  checked: 2026-11-07
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: hipaa_support_feedback_no_phi
+  version: 1
+  topic: security
+  claim: "Wispr advises customers not to include PHI in support feedback."
+  source_id: docs_hipaa
+  source_quote: "Do not include PHI in support feedback"
+  checked: 2026-11-07
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: hipaa_notetaker_under_baa
+  version: 1
+  topic: product
+  claim: "Teams and individuals under a signed BAA can use Notetaker on Mac and Windows."
+  source_id: docs_hipaa
+  source_quote: "under a signed BAA can use Notetaker on Mac and Windows"
+  checked: 2026-11-07
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: hipaa_premeeting_briefs_not_under_baa
+  version: 1
+  topic: product
+  claim: "Pre-meeting briefs do not run under a BAA."
+  source_id: docs_hipaa
+  source_quote: "such as pre-meeting briefs, don't run under a BAA"
+  checked: 2026-11-07
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: hipaa_ai_text_baa_providers
+  version: 1
+  topic: privacy
+  claim: "Under a BAA, AI text features process text only with AI providers covered by Wispr's BAA."
+  source_id: docs_hipaa
+  source_quote: "their text is only ever processed by AI providers covered by Wispr's BAA"
+  checked: 2026-11-07
+  status: confirmed
+  plan_scope: [unknown]
+  conflicts_with: []
+- id: hipaa_revoke_keeps_stored_choices
+  version: 1
+  topic: privacy
+  claim: "Revoking a BAA removes its settings locks without changing stored model-improvement or cloud-storage choices."
+  source_id: docs_hipaa
+  source_quote: "without changing your stored model-improvement or cloud-storage choices"
+  checked: 2026-11-07
   status: confirmed
   plan_scope: [unknown]
   conflicts_with: []

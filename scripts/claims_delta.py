@@ -49,7 +49,8 @@ def apply():
             lib.append(row); by_id[row["id"]] = row; added += 1
     problems = check_rows(lib)
     if problems: sys.exit("quote check failed, library NOT written:\n - " + "\n - ".join(problems))
-    save_lib(lib); done = DELTA.with_name(f"delta_applied_{today}.csv"); DELTA.rename(done)
+    save_lib(lib); stamp = datetime.datetime.now().strftime("%Y-%m-%d_%H%M%S")
+    done = DELTA.with_name(f"delta_applied_{stamp}.csv"); DELTA.rename(done)
     print(f"library: {retired} retired, {added} added -> {len([r for r in lib if r['status'] != 'retired'])} live claims; delta saved as {done.name}")
 if __name__ == "__main__":
     {"build": build, "apply": apply}[sys.argv[1]](*sys.argv[2:])
